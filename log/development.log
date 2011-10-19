@@ -1,0 +1,16 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2011-10-19 16:39:28 -0400
+Served asset /rails.png - 304 Not Modified (3ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2011-10-19 16:39:29 -0400
+  Processing by Rails::InfoController#properties as HTML
+Rendered inline template (7.5ms)
+Completed 200 OK in 60ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2011-10-19 16:39:31 -0400
+  Processing by Rails::InfoController#properties as HTML
+Rendered inline template (0.4ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
