@@ -47,6 +47,6 @@ end
 group :test do
   gem 'turn', :require => false # Pretty printed test output
   gem "capybara", "~> 1.1.1"
-  gem "spork", "~> 0.8.5"
+  gem "spork", "~> 0.9.0.rc9"
 end
 
