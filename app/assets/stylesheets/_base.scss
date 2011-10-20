@@ -1,0 +1,21 @@
+// Imports -------------------------------------------------------------------
+@import "compass";
+@import "susy";
+
+// Settings ------------------------------------------------------------------
+
+$legacy-support-for-ie6         : false;
+$legacy-support-for-ie7         : false !default;
+$legacy-support-for-ie8         : false !default;
+$ie                             : false !default;
+
+$show-column-grid-backgrounds   : true;
+$show-baseline-grid-backgrounds : false;
+$show-grid-backgrounds          : true;
+
+$total-cols                     : 12;  /* 12-column grid */
+$col-width                      : 4em; /* each column is 4em wide */
+$gutter-width                   : 1em; /* 1em gutters between columns */
+$side-gutter-width              : 0em; /* 0em padding at the edges of the page as well */
+
+
