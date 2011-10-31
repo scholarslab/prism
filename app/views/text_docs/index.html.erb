@@ -1,0 +1,29 @@
+<h1>Listing text_docs</h1>
+
+<table>
+  <tr>
+    <th>Markup</th>
+    <th>Format</th>
+    <th>Text</th>
+    <th>Span</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @text_docs.each do |text_doc| %>
+  <tr>
+    <td><%= text_doc.markup %></td>
+    <td><%= text_doc.format %></td>
+    <td><%= text_doc.text %></td>
+    <td><%= text_doc.span %></td>
+    <td><%= link_to 'Show', text_doc %></td>
+    <td><%= link_to 'Edit', edit_text_doc_path(text_doc) %></td>
+    <td><%= link_to 'Destroy', text_doc, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Text doc', new_text_doc_path %>

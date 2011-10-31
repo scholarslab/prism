@@ -1,4 +1,16 @@
 Testing::Application.routes.draw do
+  resources :img_docs
+
+  resources :img_spans
+
+  resources :tags
+
+  resources :text_spans
+
+  resources :text_docs
+
+  resources :texts
+
   get "pages/index"
 
   # The priority is based upon order of creation:

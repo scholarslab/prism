@@ -1,0 +1,33 @@
+<h1>Listing texts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Pub date</th>
+    <th>Tags</th>
+    <th>Text doc</th>
+    <th>Img doc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @texts.each do |text| %>
+  <tr>
+    <td><%= text.title %></td>
+    <td><%= text.author %></td>
+    <td><%= text.pub_date %></td>
+    <td><%= text.tags %></td>
+    <td><%= text.text_doc %></td>
+    <td><%= text.img_doc %></td>
+    <td><%= link_to 'Show', text %></td>
+    <td><%= link_to 'Edit', edit_text_path(text) %></td>
+    <td><%= link_to 'Destroy', text, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Text', new_text_path %>
