@@ -1,0 +1,33 @@
+<%= form_for(@img_span) do |f| %>
+  <% if @img_span.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@img_span.errors.count, "error") %> prohibited this img_span from being saved:</h2>
+
+      <ul>
+      <% @img_span.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vector %><br />
+    <%= f.text_field :vector %>
+  </div>
+  <div class="field">
+    <%= f.label :session %><br />
+    <%= f.text_field :session %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </div>
+  <div class="field">
+    <%= f.label :doc %><br />
+    <%= f.text_field :doc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @text.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @text.author %>
+</p>
+
+<p>
+  <b>Pub date:</b>
+  <%= @text.pub_date %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @text.tags %>
+</p>
+
+<p>
+  <b>Text doc:</b>
+  <%= @text.text_doc %>
+</p>
+
+<p>
+  <b>Img doc:</b>
+  <%= @text.img_doc %>
+</p>
+
+
+<%= link_to 'Edit', edit_text_path(@text) %> |
+<%= link_to 'Back', texts_path %>

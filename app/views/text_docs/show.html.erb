@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Markup:</b>
+  <%= @text_doc.markup %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%= @text_doc.format %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @text_doc.text %>
+</p>
+
+<p>
+  <b>Span:</b>
+  <%= @text_doc.span %>
+</p>
+
+
+<%= link_to 'Edit', edit_text_doc_path(@text_doc) %> |
+<%= link_to 'Back', text_docs_path %>

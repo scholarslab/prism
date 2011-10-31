@@ -1,0 +1,6 @@
+.DS_Store
+Gemfile.lock
+config/database.yml
+tmp/
+log/
+db/*.sqlite3

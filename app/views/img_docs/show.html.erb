@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Img:</b>
+  <%= @img_doc.img %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%= @img_doc.format %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @img_doc.text %>
+</p>
+
+<p>
+  <b>Span:</b>
+  <%= @img_doc.span %>
+</p>
+
+
+<%= link_to 'Edit', edit_img_doc_path(@img_doc) %> |
+<%= link_to 'Back', img_docs_path %>

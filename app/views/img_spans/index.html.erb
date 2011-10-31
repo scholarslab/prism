@@ -1,0 +1,29 @@
+<h1>Listing img_spans</h1>
+
+<table>
+  <tr>
+    <th>Vector</th>
+    <th>Session</th>
+    <th>Tag</th>
+    <th>Doc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @img_spans.each do |img_span| %>
+  <tr>
+    <td><%= img_span.vector %></td>
+    <td><%= img_span.session %></td>
+    <td><%= img_span.tag %></td>
+    <td><%= img_span.doc %></td>
+    <td><%= link_to 'Show', img_span %></td>
+    <td><%= link_to 'Edit', edit_img_span_path(img_span) %></td>
+    <td><%= link_to 'Destroy', img_span, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Img span', new_img_span_path %>

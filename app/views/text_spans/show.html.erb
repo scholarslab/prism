@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start:</b>
+  <%= @text_span.start %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @text_span.length %>
+</p>
+
+<p>
+  <b>Session:</b>
+  <%= @text_span.session %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @text_span.tag %>
+</p>
+
+<p>
+  <b>Doc:</b>
+  <%= @text_span.doc %>
+</p>
+
+
+<%= link_to 'Edit', edit_text_span_path(@text_span) %> |
+<%= link_to 'Back', text_spans_path %>

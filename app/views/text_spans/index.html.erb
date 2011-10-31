@@ -1,0 +1,31 @@
+<h1>Listing text_spans</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>Length</th>
+    <th>Session</th>
+    <th>Tag</th>
+    <th>Doc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @text_spans.each do |text_span| %>
+  <tr>
+    <td><%= text_span.start %></td>
+    <td><%= text_span.length %></td>
+    <td><%= text_span.session %></td>
+    <td><%= text_span.tag %></td>
+    <td><%= text_span.doc %></td>
+    <td><%= link_to 'Show', text_span %></td>
+    <td><%= link_to 'Edit', edit_text_span_path(text_span) %></td>
+    <td><%= link_to 'Destroy', text_span, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Text span', new_text_span_path %>

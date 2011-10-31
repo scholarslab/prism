@@ -1,0 +1,29 @@
+<h1>Listing img_docs</h1>
+
+<table>
+  <tr>
+    <th>Img</th>
+    <th>Format</th>
+    <th>Text</th>
+    <th>Span</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @img_docs.each do |img_doc| %>
+  <tr>
+    <td><%= img_doc.img %></td>
+    <td><%= img_doc.format %></td>
+    <td><%= img_doc.text %></td>
+    <td><%= img_doc.span %></td>
+    <td><%= link_to 'Show', img_doc %></td>
+    <td><%= link_to 'Edit', edit_img_doc_path(img_doc) %></td>
+    <td><%= link_to 'Destroy', img_doc, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Img doc', new_img_doc_path %>
