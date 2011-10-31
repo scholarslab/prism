@@ -1,5 +1,5 @@
 class Text < ActiveRecord::Base
-  belongs_to :tags
+  has_many :tags
   belongs_to :text_doc
   belongs_to :img_doc
 end

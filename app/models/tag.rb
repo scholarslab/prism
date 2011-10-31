@@ -1,5 +1,5 @@
 class Tag < ActiveRecord::Base
   belongs_to :text
-  belongs_to :img_spans
-  belongs_to :text_spans
+  has_many :img_spans
+  has_many :text_spans
 end

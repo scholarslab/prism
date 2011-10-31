@@ -1,4 +1,4 @@
 class ImgDoc < ActiveRecord::Base
   belongs_to :text
-  belongs_to :span
+  has_many :span
 end
