@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.1.2'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -35,6 +35,7 @@ group :development do
    gem "rails-footnotes", "~> 3.7.5"
    gem "rails_best_practices", "~> 1.1.0"
    gem "heroku", "~> 2.9.0"
+   # gem 'rails-dev-tweaks', '~> 0.5.1'
 end
 
 group :development, :test do
