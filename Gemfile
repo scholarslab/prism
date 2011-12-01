@@ -43,6 +43,7 @@ group :development, :test do
   gem "rspec-rails", "~> 2.7.0"
   gem "simplecov", "~> 0.5.4"
   gem "factory_girl_rails", "~> 1.3.0"
+  gem "nyan-cat-formatter", "~> 0.0.3"
 end
 
 group :test do
