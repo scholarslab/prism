@@ -9,9 +9,9 @@ $legacy-support-for-ie7         : false !default;
 $legacy-support-for-ie8         : false !default;
 $ie                             : false !default;
 
-$show-column-grid-backgrounds   : true;
+$show-column-grid-backgrounds   : false;
 $show-baseline-grid-backgrounds : false;
-$show-grid-backgrounds          : true;
+$show-grid-backgrounds          : false;
 
 $total-cols                     : 12;  /* 12-column grid */
 $col-width                      : 4em; /* each column is 4em wide */
