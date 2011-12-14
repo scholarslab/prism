@@ -1,6 +1,12 @@
 Testing::Application.routes.draw do
   get "pages/index"
 
+  # Add routes to your pages, using get "pages/pagename"
+  get "pages/about"
+
+  # To rewrite URLs, match the desired route to a current route:
+  match "about" => "pages#about"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
