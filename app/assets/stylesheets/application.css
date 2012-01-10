@@ -6,34 +6,4 @@
  *= require styles
 */
 
-h1 {
-  float: left;
-  margin: 10px;
-}
-
-p {
-  font-family: corbel, sans-serif;
-  font-size: 18px;
-  color: #003333;
-  float: right;
-  padding-top: 30px;
- 
-}
-
-ul {
-  font-family: corbel, sans-serif; 
-  font-size: 28px;
-  color: #003333;
-  clear: both;
-  li {
-    border: 2px solid gray;
-    margin: 4px;
-}
-}
-
-footer {
-clear: both;
-margin: 5px;
-border-top: 1px solid gray;
-}
 
