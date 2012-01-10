@@ -8,3 +8,8 @@
   @include container;
   @include susy-grid-background;
 }
+
+.warn {
+  color: red;
+  font-size: 16pt;
+}
