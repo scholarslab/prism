@@ -3,9 +3,84 @@
 @import "base";
 @import "normalize";
 @import "fonts";
-@import "Lindsaystyle";
 
 #container {
   @include container;
   @include susy-grid-background;
 }
+
+header {
+  background-color: lightgreen;
+
+h1 {
+  float: left;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+p {
+  font-family: corbel, sans-serif;
+  font-size: 20px;
+  color: #003333;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 5px;
+}
+ ul {
+   font-family: corbel, sans-serif; 
+   font-size: 28px;
+   color: #003333;
+    li {
+     background-color: lightblue;
+     float: left;
+     border: 2px solid gray;
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-top: 2px;
+     padding-bottom: 2px;
+     margin: 1px;
+    }
+  }
+}
+
+body {
+  background-color: lightgreen;
+  border-right: 2px solid gray;
+  border-left: 2px solid gray;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding-top: 50px;
+  padding-bottom: 5px;
+  font-family: constantia, serif;
+  clear: both;
+ 
+  h3 {
+   font-size: 30px;
+   border-top: 2px solid gray;
+   padding-left: 5px;
+   margin-bottom: 5px;
+   margin-left: 5px;
+   margin-right: 5px;
+   clear: both;
+ }
+  p {
+    font-size: 18px;
+      }
+}
+
+footer {
+  background-color: lightgreen;
+  margin: 5px;
+  border-top: 1px solid gray;
+  img {
+  float: right;
+  margin: 20px;
+    slab-logo {
+      padding-top: 20px
+}
+  }
+}
+
