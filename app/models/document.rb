@@ -1,28 +1,7 @@
 class Document < ActiveRecord::Base
-  
-  # empty methods
-  def title
+ attr_accessible :title, :author, :content
 
-  end
-  
-  def author
-
-  end
-  
-  def pub_date
-
-  end
-  
-  def desc
-
-  end
-
-  def format
-
-  end
-
-  def content
-
-  end
-
+  validates :title,  :presence => true
+  validates :author, :presence => true 
+  validates :content, :presence => true 
 end
