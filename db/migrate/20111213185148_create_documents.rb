@@ -7,6 +7,7 @@ class CreateDocuments < ActiveRecord::Migration
         t.integer :pub_date
         t.text :description
         t.string :format
+        t.text :content
 
         t.timestamps
       end
