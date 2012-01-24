@@ -33,7 +33,7 @@ group :development do
    gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
    gem "ffaker", "~> 1.8.1"
    gem "rails-footnotes", "~> 3.7.5"
-   gem "rails_best_practices", "~> 1.6"
+   gem "rails_best_practices", "~> 1.5.0"
    gem "heroku", "~> 2.9.0"
    # gem 'rails-dev-tweaks', '~> 0.5.1'
 end
@@ -51,4 +51,6 @@ group :test do
   gem "capybara", "~> 1.1.1"
   gem "spork", "~> 0.9.0.rc9"
 end
+
+
 
