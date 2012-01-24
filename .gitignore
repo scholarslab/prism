@@ -1,4 +1,5 @@
 .DS_Store
+bin/
 Gemfile.lock
 config/database.yml
 tmp/
