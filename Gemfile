@@ -35,6 +35,7 @@ group :development do
    gem "rails-footnotes", "~> 3.7.5"
    gem "rails_best_practices", "~> 1.6"
    gem "heroku", "~> 2.9.0"
+   gem "nokogiri", "~> 1.5.0"
    # gem 'rails-dev-tweaks', '~> 0.5.1'
 end
 
