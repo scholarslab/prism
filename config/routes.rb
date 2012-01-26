@@ -1,4 +1,8 @@
 Testing::Application.routes.draw do
+  get "documents/index"
+
+  get "documents/show"
+
   get "pages/index"
 
   # Add routes to your pages, using get "pages/pagename"
@@ -7,6 +11,7 @@ Testing::Application.routes.draw do
   # To rewrite URLs, match the desired route to a current route:
   match "about" => "pages#about"
 
+  resources :documents
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

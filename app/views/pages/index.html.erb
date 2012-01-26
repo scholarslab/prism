@@ -5,4 +5,8 @@
   <p>Prism is being developed at warp speed. Keep checking back to see if there is something here.</p>
 </div>
 
-
+<ul id="texts">
+  <% @documents.each do | document | %>
+    <li><%= link_to document.title, document %></li>
+  <% end %>
+</ul>
