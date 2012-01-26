@@ -22,7 +22,8 @@ namespace :import do
     description = doc.xpath("//div[@id='bib']/div[@class='description']").text
     pub_date = doc.xpath("//div[@id='bib']/div[@class='pub_date']").text
     format = doc.xpath("//div[@id='bib']/div[@class='format']").text
-    content = doc.xpath("//body/p")
+    body_p = doc.xpath("//body/p")
+    content = body_p.to_s
 
     html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, content: content)
 
