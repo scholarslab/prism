@@ -1,12 +1,11 @@
 require 'spec_helper'
 
 describe PagesController do
-
+  include Devise::TestHelpers # to give your spec access to helpers
   render_views
-
   describe "GET 'index'" do
     it "returns http success" do
-      get :index
+      get 'index'
       response.should be_success
     end
 

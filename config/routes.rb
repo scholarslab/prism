@@ -12,7 +12,7 @@ Testing::Application.routes.draw do
 
   # To rewrite URLs, match the desired route to a current route:
   match "about" => "pages#about"
-
+  
   resources :documents
   # The priority is based upon order of creation:
   # first created -> highest priority.
