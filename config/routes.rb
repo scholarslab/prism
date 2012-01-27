@@ -1,4 +1,6 @@
 Testing::Application.routes.draw do
+  devise_for :users
+
   get "documents/index"
 
   get "documents/show"

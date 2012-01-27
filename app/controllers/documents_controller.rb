@@ -1,4 +1,7 @@
 class DocumentsController < ApplicationController
+  #The following line authenticates users for this controller using devise
+  before_filter :authenticate_user!
+ 
   def index
     @title = "Browse Texts"
     @documents = Document.find(:all)
