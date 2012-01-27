@@ -2,5 +2,5 @@
 <h2>By <%= @document.author %></h2>
 
 <div id="text">
-  <%= @document.content.inspect %>
+  <%= @document.content.html_safe %>
 </div>
