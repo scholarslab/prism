@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20111213185148) do
     t.integer  "pub_date"
     t.text     "description"
     t.string   "format"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
