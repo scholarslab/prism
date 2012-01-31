@@ -5,24 +5,26 @@ describe PagesController do
   render_views
   describe "GET 'index'" do
     it "returns http success" do
-      get 'index'
+      visit 'index'
       response.should be_success
     end
 
     describe "when user is not signed in" do
       it "should have a sign in link" do
-        get 'index'
-        response.should have_selector('a', :content => 'sign in')
+        visit 'index'
+        page.should have_selector("a", :text => 'sign in')
       end
       it "should have a sign up link" do
-        get 'index'
-        response.should have_selector('a', :content => 'Sign up')
+        visit 'index'
+        page.should have_selector('a', :text => 'Sign up')
       end
     end
 
     describe "when user is signed in" do
       it "should have a sign out link" do
-        pending
+        visit 'index'
+        pending "need to set user in capybara"
+        page.should have_selector('a', :text => 'Sign out')
       end 
     end
   end
