@@ -35,6 +35,7 @@ group :development do
    gem "rails-footnotes", "~> 3.7.5"
    gem "rails_best_practices", "~> 1.5.0"
    gem "heroku", "~> 2.9.0"
+   gem "nokogiri", "~> 1.5.0"
    # gem 'rails-dev-tweaks', '~> 0.5.1'
 end
 
@@ -44,12 +45,14 @@ group :development, :test do
   gem "simplecov", "~> 0.5.4"
   gem "factory_girl_rails", "~> 1.3.0"
   gem "nyan-cat-formatter", "~> 0.0.3"
+  gem "devise", "~> 2.0.0"
 end
 
 group :test do
   gem 'turn', :require => false # Pretty printed test output
   gem "capybara", "~> 1.1.1"
-  gem "spork", "~> 0.9.0.rc9"
+  gem "spork", "~> 1.0rc"
+  gem 'rake'
 end
 
 

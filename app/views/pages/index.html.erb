@@ -9,90 +9,10 @@
 <p> Magna four loko excepteur, sed gluten-free accusamus fugiat non readymade. Sunt sed stumptown seitan, terry richardson culpa you probably haven't heard of them odio velit deserunt eu wolf organic. DIY photo booth laboris id, et terry richardson seitan mustache cosby sweater. Voluptate eu before they sold out, retro tumblr viral iphone magna photo booth ex portland vegan laboris cardigan eiusmod. VHS biodiesel cosby sweater, high life marfa keytar raw denim nesciunt velit ethical fugiat jean shorts beard irure. Yr brunch blog odio brooklyn. Vero pitchfork ex butcher accusamus aliquip aliqua irony adipisicing fugiat, carles tofu wayfarers viral artisan.</p>
 </div>
 
-<div id="Jefferson">
-  <p> Thomas Jefferson, <i>Notes on the State of Virginia, Query VI </i></p>
-<div id="text1img">
-  <p>Before we condemn the Indians of this continent as wanting genius, we must consider that letters   
-have not yet been introduced among them. Were we to compare them in their present state with the 
-Europeans North of the Alps, when the Roman arms and arts first crossed those mountains, the 
-comparison would be unequal, because, at that time, those parts of Europe were swarming with numbers; 
-because numbers produce emulation, and multiply the chances of improvement, and one improvement 
-begets another. Yet I may safely ask, How many good poets, how many able mathematicians, how many 
-great inventors in arts or sciences, had Europe North of the Alps then produced? And it was sixteen 
-centuries after this before a Newton could be formed. I do not mean to deny, that there are varieties in the 
-race of man, distinguished by their powers both of body and mind. I believe there are, as I see to be the 
-case in the races of other animals. I only mean to suggest a doubt, whether the bulk and faculties of 
-animals depend on the side of the Atlantic on which their food happens to grow, or which furnishes the 
-elements of which they are compounded? Whether nature has enlisted herself as a Cis or Trans-Atlantic 
-partisan? I am induced to suspect, there has been more eloquence than sound reasoning displayed in 
-support of this theory; that it is one of those cases where the judgment has been seduced by a glowing 
-110  pen: and whilst I render every tribute of honor and esteem to the celebrated Zoologist, who has added, and 
-is still adding, so many precious things to the treasures of science, I must doubt whether in this instance 
-he has not cherished error also, by lending her for a moment his vivid imagination and bewitching 
-language. </p> 
+<div id="texts">
+  <% @documents.each do | document | %>
+    <div>
+      <p><%= document.author %> <i><%= link_to document.title, document %></i></p>
+    </div>
+  <% end %>
 </div>
-</div>
-
-<div id="Poe">
-  <p> Edgar Allan Poe, "The Raven" </p>
-<div id="text2img">
-  <p>Once upon a midnight dreary, while I pondered weak and weary,<br>
-  Over many a quaint and curious volume of forgotten lore,<br>
-  While I nodded, nearly napping, suddenly there came a tapping,<br>
-  As of some one gently rapping, rapping at my chamber door.<br>
-  `'Tis some visitor,' I muttered, `tapping at my chamber door -<br>
-Only this, and nothing more.'</p>
-
-<p>Ah, distinctly I remember it was in the bleak December,<br>
-And each separate dying ember wrought its ghost upon the floor.<br>
-Eagerly I wished the morrow; - vainly I had sought to borrow<br>
-From my books surcease of sorrow - sorrow for the lost Lenore -<br>
-For the rare and radiant maiden whom the angels named Lenore -<br>
-Nameless here for evermore.</p>
-
-<p>And the silken sad uncertain rustling of each purple curtain<br>
-Thrilled me - filled me with fantastic terrors never felt before;<br>
-So that now, to still the beating of my heart, I stood repeating<br>
-`'Tis some visitor entreating entrance at my chamber door -<br>
-Some late visitor entreating entrance at my chamber door; -<br>
-This it is, and nothing more,'</p>
-</div>
-</div>
-
-<div id="Joyce">
-  <p> James Joyce, <i>A Portrait of the Artist as a Young Man </i></p>
-<div id="text3img">
-  <p>Once upon a time and a very good time it was there was a moocow coming
-down along the road and this moocow that was coming down along the road
-met a nicens little boy named baby tuckoo...</p>
-
-<p>His father told him that story: his father looked at him through a
-glass: he had a hairy face.</p>
-
-<p>He was baby tuckoo. The moocow came down the road where Betty Byrne
-lived: she sold lemon platt.</p>
-
-<p>O, the wild rose blossoms
-On the little green place.</p>
-
-<p>He sang that song. That was his song.</p>
-
-<p>O, the green wothe botheth.</p>
-
-<p>When you wet the bed first it is warm then it gets cold. His mother put
-on the oilsheet. That had the queer smell.</p>
-
-<p>His mother had a nicer smell than his father. She played on the piano
-the sailor's hornpipe for him to dance. He danced:</p>
-
-<p>Tralala lala,<br>
-Tralala tralaladdy,<br>
-Tralala lala,<br>
-Tralala lala.</p>
-
-<p>Uncle Charles and Dante clapped. They were older than his father and
-mother but uncle Charles was older than Dante.</p>
-  </div>
-</div>
-</div>
-
