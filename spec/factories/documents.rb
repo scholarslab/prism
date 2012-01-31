@@ -1,11 +1,10 @@
 # Read about factories at http://github.com/thoughtbot/factory_girl
 
-FactoryGirl.define do
-  factory :document do
-    title "MyString"
-    author "MyString"
-    pub_date 1
-    description "MyText"
-    format "MyString"
-  end
+Factory.define :document do |document|
+  document.title "Test Document"
+  document.author "Author McAuthor"
+  document.pub_date 1
+  document.description "Description."
+  document.format "Book"
+  document.content "Poesy."
 end

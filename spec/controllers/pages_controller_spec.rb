@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'factory_girl'
 
 describe PagesController do
   include Devise::TestHelpers # to give your spec access to helpers
@@ -22,9 +23,12 @@ describe PagesController do
 
     describe "when user is signed in" do
       it "should have a sign out link" do
+        @user = Factory(:user)
+        sign_in "jswaffor@gmail.com"
         visit 'index'
-        pending "need to set user in capybara"
+        within('#session') do
         page.should have_selector('a', :text => 'Sign out')
+        end
       end 
     end
   end
