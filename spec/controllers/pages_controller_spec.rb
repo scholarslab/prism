@@ -6,7 +6,7 @@ describe PagesController do
   render_views
   describe "GET 'index'" do
     it "returns http success" do
-      visit 'index'
+      get 'index'
       response.should be_success
     end
 

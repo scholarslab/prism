@@ -5,16 +5,20 @@ describe DocumentsController do
   include Devise::TestHelpers # to give your spec access to helpers
   render_views
 
-  describe "GET 'index'" do
+  before(:each) do
+    @doc = Factory(:document)
+  end
+
+  describe "GET 'index'" do 
     it "returns http success" do
-      visit 'index'
+      get 'index'
       response.should be_success
     end
   end
 
-  describe "GET 'show'" do
+  describe "GET 'show'" do #Tests that each document page will load
     it "returns http success" do
-      visit '3'
+      get 'show', :id => @doc.id
       response.should be_success
     end
   end
