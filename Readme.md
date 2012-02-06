@@ -3,7 +3,7 @@
 This is the landing page for the prism project.
 
 # Build Status
-[![Build Status](https://secure.travis-ci.org/scholarslab/prism.png?branch=master,develop)](http://travis-ci.org/scholarslab/prism?branch=master,develop)
+[![Build Status](https://secure.travis-ci.org/scholarslab/prism.png?branch=master,production)](http://travis-ci.org/scholarslab/prism)
 
 
 # Getting Started

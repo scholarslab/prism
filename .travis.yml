@@ -6,5 +6,5 @@ notifications:
   irc: "irc.freenode.org#slab"
 
 before_script:
-  - "rake db:migrate"
+  - "bundle exec rake db:migrate"
 
