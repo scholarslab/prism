@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'spork'
 
+require 'simplecov'
+SimpleCov.start 'rails'
+
 # Devise.stretches = 1   # speed up password generation from bcrypt passes
 # Rails.logger.level = 4 # Reduce IO during tests
 
