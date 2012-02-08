@@ -2,6 +2,10 @@
 
 This is the landing page for the prism project.
 
+# Build Status
+[![Build Status](https://secure.travis-ci.org/scholarslab/prism.png)](http://travis-ci.org/scholarslab/prism?branch=master,production)
+
+
 # Getting Started
 
 * Clone the repository

@@ -6,20 +6,19 @@ describe DocumentsController do
   render_views
 
   before(:each) do
-    @doc = Document.create(title: 'test', author: 'test', description: 'test', pub_date: 1, format: 'text', content: 'test')
-    @doc.save
+    @doc = Factory(:document)
   end
 
-  describe "GET 'index'" do
+  describe "GET 'index'" do 
     it "returns http success" do
-      visit 'index'
+      get 'index'
       response.should be_success
     end
   end
 
-  describe "GET 'show'" do
+  describe "GET 'show'" do #Tests that each document page will load
     it "returns http success" do
-      visit 'show', @doc.id
+      get 'show', :id => @doc.id
       response.should be_success
     end
   end

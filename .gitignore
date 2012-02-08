@@ -2,6 +2,7 @@
 bin/
 Gemfile.lock
 config/database.yml
+coverage/
 tmp/
 log/
 db/*.sqlite3
