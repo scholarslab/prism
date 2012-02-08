@@ -1,18 +1,15 @@
-<div id="page-content">
-<h2>Coming soon </h2>
-<div id="homepage-image">
-  <%= image_tag('demo-video-placeholder.png') %>
+
+<h1>Welcome</h1>
+
+<div class="warn">
+  <p>Prism is being developed at warp speed. Keep checking back to see if there is something here.</p>
 </div>
 
-<div id="intro">
-<p> Messenger bag four loko salvia synth farm-to-table gentrify. Helvetica 8-bit wes anderson, sartorial dreamcatcher VHS keffiyeh jean shorts. Squid seitan blog, vice DIY leggings Austin lo-fi ra denim. Etsy irony mustache, put a bird on it mlkshk organic mcsweeney's quinoa chambray helvetica whatever viral. Letterpress PBR you probably haven't heard about them, buthcer retro keytar marfa williamsburg beards. Cardigan aesthetic vegan thundercats. Lomo keytar portland mustaches sustainable vegan helvetica DIY 8-bit. </p>
-<p> Magna four loko excepteur, sed gluten-free accusamus fugiat non readymade. Sunt sed stumptown seitan, terry richardson culpa you probably haven't heard of them odio velit deserunt eu wolf organic. DIY photo booth laboris id, et terry richardson seitan mustache cosby sweater. Voluptate eu before they sold out, retro tumblr viral iphone magna photo booth ex portland vegan laboris cardigan eiusmod. VHS biodiesel cosby sweater, high life marfa keytar raw denim nesciunt velit ethical fugiat jean shorts beard irure. Yr brunch blog odio brooklyn. Vero pitchfork ex butcher accusamus aliquip aliqua irony adipisicing fugiat, carles tofu wayfarers viral artisan.</p>
-</div>
-
-<div id="texts">
+<ul id="texts">
   <% @documents.each do | document | %>
-    <div>
-      <p><%= document.author %> <i><%= link_to document.title, document %></i></p>
-    </div>
+    <li><%= link_to document.title, document %></li>
   <% end %>
-</div>
+</ul>
+
+
+
