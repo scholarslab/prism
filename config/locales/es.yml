@@ -13,11 +13,14 @@ es:
     link_instructions: "Instrucciones"
     link_documents: "Documentos"
     link_about: "Información"
-    signed_in: "Conectado como "
+    signed_in: "Conectad@ como "
     form_email: "Email:"
     form_username: "Nombre de usuario:"
-    remember_me: "Mantenga la conexión"
+    remember_me: "Manten la conexión"
     sign_in: "Iniciar sesión"
+    sign_out: "Terminar sesión"
+    forgot: "¿Olvidó la contraseña?"
+    register: "Regístrate"
 
 
 

@@ -18,4 +18,7 @@ en:
     form_username: "Username:"
     remember_me: "Remember me"
     sign_in: "Sign in"
+    sign_out: "Sign out"
+    forgot: "Forgot your password?"
+    register: "Sign up"
 

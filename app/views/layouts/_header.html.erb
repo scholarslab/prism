@@ -12,7 +12,7 @@
 </nav>
 <% if user_signed_in? %>
   <%= t 'header.signed_in'%><%= current_user.email %>.
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete %>
 <% else %>
 <%= form_for("user", :url => user_session_path) do |f| %>
 <%=t 'header.form_email'%>
@@ -22,9 +22,9 @@
 <%= f.check_box :remember_me %>
 <%= f.label t('header.remember_me') %>
 <%= f.submit t('header.sign_in') %>
-<%= link_to "Forgot your password?", new_password_path('user') %>
+<%= link_to t('header.forgot'), new_password_path('user') %>
 <% end %>
-<%= link_to "Sign up", new_user_registration_path %>
+<%= link_to t('header.register'), new_user_registration_path %>
 
 <% end %>
 

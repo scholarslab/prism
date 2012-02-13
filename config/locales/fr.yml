@@ -18,6 +18,9 @@ fr:
     form_username: "Nom d'utilisateur:"
     remember_me: "Garder la connection"
     sign_in: "Accès"
+    sign_out: "Départ"
+    forgot: "Mot de passe oublié?"
+    register: "Inscrivez-vous"
 
 
 
