@@ -5,7 +5,21 @@ es:
   index:
     welcome: "Bienvenidos!"
     in_development: "Estamos trabajando a la velocidad de la luz."
+
   header:
     description: "Prism es un conjunto de herramientas digitales para colectivizar la interpretación. El
-            proyecto forma parte del Praxis Program, una iniciativa del Scholars' Lab de la Universidad
-            de Virginia."
+            proyecto forma parte del Praxis Program, una iniciativa del Scholars' Lab de la Universidad de Virginia."
+    link_home: "Portada"
+    link_instructions: "Instrucciones"
+    link_documents: "Documentos"
+    link_about: "Información"
+    signed_in: "Conectado como "
+    form_email: "Email:"
+    form_username: "Nombre de usuario:"
+    remember_me: "Mantenga la conexión"
+    sign_in: "Iniciar sesión"
+
+
+
+
+

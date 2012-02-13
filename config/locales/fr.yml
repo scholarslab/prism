@@ -5,6 +5,19 @@ fr:
   index:
     welcome: "Bienvenu!"
     in_development: "Nous travaillons à la vitesse de la lumière."
+
   header:
-    description: "Prism est un ensemble d'outils numériques pour l'externalisation ouverte de l'interprétation. Il s'agit d'un projet en
-         cours du Programme Praxis au Scholars' Lab de l'Université de Virginie."
+    description: "Prism est un ensemble d'outils numériques pour l'externalisation ouverte de l'interprétation. 
+         Il s'agit d'un projet en cours du Programme Praxis au Scholars' Lab de l'Université de Virginie."
+    link_home: "Accueil"
+    link_instructions: "Instructions"
+    link_documents: "Documents"
+    link_about: "Informations"
+    signed_in: "Connecté comme "
+    form_email: "Email:"
+    form_username: "Nom d'utilisateur:"
+    remember_me: "Garder la connection"
+    sign_in: "Accès"
+
+
+
