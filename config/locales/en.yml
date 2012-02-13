@@ -2,4 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  index:
+    welcome: "Welcome!"
+    in_development: "Prism is being developed at warp speed.
+                  Keep checking back."
+  header:
+    description: "Prism is a set of digital tools for crowdsourcing interpretation. It is an ongoing project of the 
+            Praxis Program at the University of Virginia Scholars’ Lab."
