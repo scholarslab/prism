@@ -15,7 +15,7 @@ en:
     link_about: "About"
     signed_in: "Signed in as "
     form_email: "Email:"
-    form_username: "Username:"
+    form_password: "Password:"
     remember_me: "Remember me"
     sign_in: "Sign in"
     sign_out: "Sign out"

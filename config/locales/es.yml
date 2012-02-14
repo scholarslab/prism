@@ -15,7 +15,7 @@ es:
     link_about: "Información"
     signed_in: "Conectad@ como "
     form_email: "Email:"
-    form_username: "Nombre de usuario:"
+    form_password: "Contraseña:"
     remember_me: "Manten la conexión"
     sign_in: "Iniciar sesión"
     sign_out: "Terminar sesión"

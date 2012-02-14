@@ -15,7 +15,7 @@ fr:
     link_about: "Informations"
     signed_in: "Connecté comme "
     form_email: "Email:"
-    form_username: "Nom d'utilisateur:"
+    form_password: "Mot de passe:"
     remember_me: "Garder la connection"
     sign_in: "Accès"
     sign_out: "Départ"
