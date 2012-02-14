@@ -11,7 +11,7 @@
   </ul>
 </nav>
 <% if user_signed_in? %>
-  <%= t 'header.signed_in'%><%= current_user.email %>.
+  <%=t 'header.signed_in'%><%= current_user.email %>.
 <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete %>
 <% else %>
 <%= form_for("user", :url => user_session_path) do |f| %>
