@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120127181536) do
+ActiveRecord::Schema.define(:version => 20120207163308) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -25,6 +25,19 @@ ActiveRecord::Schema.define(:version => 20120127181536) do
   end
 
   add_index "documents", ["title"], :name => "index_documents_on_title"
+
+  create_table "facets", :force => true do |t|
+    t.string   "color"
+    t.string   "category"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "prisms", :force => true do |t|
+    t.text     "prompt"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
