@@ -9,6 +9,11 @@
   @include susy-grid-background;
   }
 
+.warn {
+  color: red;
+  font-size: 16pt;
+}
+  
 a:link {text-decoration:none;
   font-weight:bold;
         color: Teal;}
@@ -21,25 +26,18 @@ a:active {text-decoration:none;
           background-color: lightgreen;}
 header {
    border-bottom: 2px solid gray;
+   font-family: corbel, sans-serif;
+}
 
-h1 {
+header h1 {
   float: left;
   margin-bottom: 20px;
   margin-right: 20px;
 }
 
-p {
-  float: right;
-  font-family: corbel, sans-serif;
-  font-size: 16px;
- } 
+header p {font-size: 16px} 
 
-.warn {
-  color: red;
-  font-size: 16pt;
-}
-
-ul {
+header ul {
    font-family: corbel, sans-serif; 
    font-size: 28px;
    color: #003333;
@@ -59,62 +57,32 @@ ul {
      padding-right: 10px;
      padding-top: 2px;
      padding-bottom: 2px;
-     margin-right: i1px;
+     margin-right: 1px;
     }
   }
-}
 
 body {
-  color: #003333;
- #page-content {
-  padding-bottom: 10px;
-  font-family: constantia, serif;
-  font-size: 18px;
-  clear: both;
-  }
-  h2 {
+  font-color: #003333;
+}
+ 
+body h1 {
    size: 30px;
    margin-bottom: 5px;
    clear: both;
  }
- #homepage-image {
-     width: 30%;
-     float: left;
-     margin-right: 10px;
-     img {
-       max-width: 100%;
-     }
-} 
- #Jefferson, #Poe, #Joyce {
-   font-size: 20px;
-   float: left;
-   width: 30%;
-   border: 1px solid gray;
-    }
-  #Jefferson {
-    margin-right: 2.4%;
-  }
-  #text1img {
-    font-size: 16px;
-    padding: 5px;
-  }
-  #Poe {
-    margin-left: 2.4%;
-    margin-right: 2.4%;
-  }
-  #text2img {
-   font-size: 16px;
-    padding: 5px;
-  }
- #Joyce {
-   margin-left: 2.4%;
-   }
 
-  #text3img {
-    font-size: 16px;
-    padding: 5px;
-  }
- }
+#texts {
+  font-family: corbel, sans serif;
+  margin-left: 0;
+li {
+  float: left;
+  border: 3px lightgray;
+  border-style: outset;
+  padding: 2%;
+  margin: 3%;
+}
+}
+
 footer {
   display: table;
   clear: both;
@@ -130,7 +98,5 @@ footer {
        padding-right: 20px;
        padding-top: 10px;
         }
-  
- 
   }
 
