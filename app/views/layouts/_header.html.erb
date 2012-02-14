@@ -1,24 +1,20 @@
 <header>
 <h1><a href="/"><%= image_tag('prism-logo.png') %></a></h1>
-
-<p class="description">Prism is a set of digital tools for crowdsourcing interpretation. It is an ongoing project of the Praxis Program at the University of Virginia Scholars’ Lab. <a href="/about.html"> More info </a></p>
+<p class="description"><%= t 'header.description' %></p>
 
 <% if user_signed_in? %>
-Signed in as <%= current_user.email %>.
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <%= t 'header.signed_in'%><%= current_user.email %>.
+<%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete %>
 <% else %>
 <%= form_for("user", :url => user_session_path) do |f| %>
-Email:
+<%=t 'header.form_email'%>
 <%= f.text_field :email %>
-Password:
-<%= f.password_field :password %>
-<%= f.check_box :remember_me %>
-<%= f.label :remember_me %>
-<%= f.submit 'Sign in' %>
-<%= link_to "Forgot your password?", new_password_path('user') %>
+<%=t 'header.form_username'%>
+<%= f.label t('header.remember_me') %>
+<%= f.submit t('header.sign_in') %>
+<%= link_to t('header.forgot'), new_password_path('user') %>
 <% end %>
-<%= link_to "Sign up", new_user_registration_path %>
-
+<%= link_to t('header.register'), new_user_registration_path %>
 <% end %>
 
 </header>
