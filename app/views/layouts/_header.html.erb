@@ -2,6 +2,7 @@
 <h1><a href="/"><%= image_tag('prism-logo.png') %></a></h1>
 <p class="description"><%= t 'header.description' %></p>
 
+<div id="user-meta">
 <% if user_signed_in? %>
   <%= t 'header.signed_in'%><%= current_user.email %>.
 <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete %>
@@ -14,9 +15,10 @@
 <%= f.check_box :remember_me %>
 <%= f.label t('header.remember_me') %>
 <%= f.submit t('header.sign_in') %>
-<%= link_to t('header.forgot'), new_password_path('user') %>
 <% end %>
+<p><%= link_to t('header.forgot'), new_password_path('user') %>
 <%= link_to t('header.register'), new_user_registration_path %>
+</p>
 <% end %>
-
+</div>
 </header>

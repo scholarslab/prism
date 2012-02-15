@@ -26,7 +26,33 @@ a:active {text-decoration:none;
           background-color: lightgreen;}
 header {
    border-bottom: 2px solid gray;
+   background-color: black;
    font-family: corbel, sans-serif;
+   color: white;
+   overflow: hidden;
+}
+
+#user-meta {
+  float: right;
+  width: 25%;
+}
+
+#user-meta input[type="text"], 
+#user-meta input[type="password"] {
+  display: block;
+  margin-bottom: 10px;
+}
+#user-meta input[type="submit"] {
+  float:right;
+  margin-right: 12px;
+  font-family: corbel, sans-serif;
+  font-size: 16px;
+}
+
+#user-meta p a:not(:last-child):after {
+  content:" | ";
+  margin: 0 10px;
+  color: #999;
 }
 
 header h1 {
@@ -35,7 +61,9 @@ header h1 {
   margin-right: 20px;
 }
 
-header p {font-size: 16px} 
+p.description {
+  float: left;
+  width: 40%;}
 
 header ul {
    font-family: corbel, sans-serif; 
@@ -77,11 +105,17 @@ body h1 {
   padding-left: 0;
   list-style: none;
 li {
+  width: 20%;
+  height: 200px;
+  text-align: center;
   float: left;
-  border: 3px lightgray;
-  border-style: outset;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
   padding: 2%;
   margin: 3%;
+  a {
+    font-size: 20px;
+    display:block;
+  }
 }
 }
 
@@ -89,7 +123,6 @@ footer {
   display: table;
   clear: both;
   float: right;
-  background-color: mintcream;
   margin-top: 20px;
   
   #uva-lib-logo, 

@@ -8,7 +8,8 @@
 
 <ul id="texts">
   <% @documents.each do | document | %>
-    <li><%= link_to document.title, document %></li>
+    <li><%= link_to document.title, document %>
+    <%= document.author %></li>
   <% end %>
 </ul>
 
