@@ -7,10 +7,11 @@
 <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete %>
 <% else %>
 <%= form_for("user", :url => user_session_path) do |f| %>
-<%=t 'header.form_email'%>
+<%= f.label t('header.form_email') %>
 <%= f.text_field :email %>
-<%=t 'header.form_password'%>
-<%= f.text_field :password %>
+<%= f.label t('header.form_password') %>
+<%= f.password_field :password %>
+<%= f.check_box :remember_me %>
 <%= f.label t('header.remember_me') %>
 <%= f.submit t('header.sign_in') %>
 <%= link_to t('header.forgot'), new_password_path('user') %>
