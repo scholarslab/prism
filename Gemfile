@@ -56,5 +56,7 @@ group :test do
   gem 'rake'
 end
 
-
-
+group :production do
+  gem "heroku", "~>2.9.0"
+  gem "pg"
+end
