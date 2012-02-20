@@ -8,8 +8,11 @@ en:
                   Keep checking back."
     about_text: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox."
   header:
-    description: "Prism is a set of digital tools for crowdsourcing interpretation. It is an ongoing project of the 
-            Praxis Program at the University of Virginia Scholars’ Lab."
+    description1: "Prism is a tool for collective interpretation of texts. It is an ongoing project of the"
+    link_Praxis: "Praxis Program"
+    description2: "at the University of Virginia"
+    link_Slab: "Scholars' Lab." 
+
     link_home: "Home"
     link_instructions: "Instructions"
     link_documents: "Documents"

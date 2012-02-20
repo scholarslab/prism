@@ -11,8 +11,8 @@
 
 .warn {
   color: red;
-  font-size: 16pt;
-}
+  font-size: 20px;
+  }
   
 a:link {text-decoration:none;
   font-weight:bold;
@@ -22,10 +22,9 @@ a:visited {text-decoration:none;
 a:hover {text-decoration:none;
          color: lightseagreen;}
 a:active {text-decoration:none;
-          color: Dimgray;
-          background-color: lightgreen;}
+          color: Dimgray;}
+
 header {
-   border-bottom: 2px solid gray;
    background-color: black;
    font-family: corbel, sans-serif;
    color: white;
@@ -40,11 +39,11 @@ header {
 #user-meta input[type="text"], 
 #user-meta input[type="password"] {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 #user-meta input[type="submit"] {
   float:right;
-  margin-right: 12px;
+  margin-right: 9%;
   font-family: corbel, sans-serif;
   font-size: 16px;
 }
@@ -57,56 +56,36 @@ header {
 
 header h1 {
   float: left;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin-left: 1%;
+  margin-right: 2%; 
 }
 
 p.description {
   float: left;
-  width: 40%;}
+  width: 35%;
+  margin-left: 2%;
+ }
 
-header ul {
-   font-family: corbel, sans-serif; 
-   font-size: 28px;
-   color: #003333;
-   margin-left: 0;
-   padding-left: 0;
-     li {
-     background-color: MediumSeaGreen;
-     float: left;
-     -moz-border-radius-topleft: 50px 100px;
-     -moz-border-radius-topright: 50px 100px;
-     border-top-left-radius: 50px 100px;
-     border-top-right-radius: 50px 100px;
-     border-top: 2px solid gray;
-     border-left: 2px solid gray;
-     border-right: 2px solid gray;
-     padding-left: 10px;
-     padding-right: 10px;
-     padding-top: 2px;
-     padding-bottom: 2px;
-     margin-right: 1px;
-    }
-  }
 
 body {
   font-color: #003333;
-}
+  font-family: Corbel, sans-serif;
+  }
  
 body h1 {
    size: 30px;
    margin-bottom: 5px;
    clear: both;
  }
-
+ 
 #texts {
   font-family: corbel, sans serif;
   margin-left: 0;
   padding-left: 0;
   list-style: none;
 li {
-  width: 20%;
-  height: 200px;
+  width: 22%;
+  height: 250px;
   text-align: center;
   float: left;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
