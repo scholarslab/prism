@@ -7,7 +7,7 @@ es:
     in_development: "Estamos trabajando a la velocidad de la luz."
 
   header:
-    description: "Prism es un conjunto de herramientas digitales para colectivizar la interpretación. El
+    description: "Prism es un conjunto de herramientas que sirven para colectivizar la interpretación. El
             proyecto forma parte del Praxis Program, una iniciativa del Scholars' Lab de la Universidad de Virginia."
     link_home: "Portada"
     link_instructions: "Instrucciones"
@@ -15,12 +15,13 @@ es:
     link_about: "Información"
     signed_in: "Conectad@ como "
     form_email: "Email:"
-    form_username: "Nombre de usuario:"
+    form_password: "Contraseña:"
     remember_me: "Manten la conexión"
     sign_in: "Iniciar sesión"
     sign_out: "Terminar sesión"
     forgot: "¿Olvidó la contraseña?"
     register: "Regístrate"
+
 
 
 

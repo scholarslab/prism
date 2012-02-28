@@ -1,24 +1,24 @@
 # Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
-en:
+de:
   index:
-    welcome: "Welcome!"
-    in_development: "Prism is being developed at warp speed.
-                  Keep checking back."
+    welcome: "Wilkommen!"
+    in_development: "Prism wird mit Warp-Geschwindigkeit entwickelt.
+                   Behalten Sie die Kontrolle zurück."
   header:
-    description: "Prism is a set of digital tools for crowdsourcing interpretation. It is an ongoing project of the 
-            Praxis Program at the University of Virginia Scholars’ Lab."
-    link_home: "Home"
-    link_instructions: "Instructions"
-    link_documents: "Documents"
-    link_about: "About"
-    signed_in: "Signed in as "
+    description: "Prism ist ein Satz von digitalen Werkzeugen für Crowdsourcing Interpretation. Es ist ein 
+laufendes Projekt der Praxis Program an der Scholars' Lab, University of Virginia."
+    link_home: "Startseite"
+    link_instructions: "Anleitung"
+    link_documents: "Dokumente"
+    link_about: "Über"
+    signed_in: "Angemeldet als "
     form_email: "Email:"
-    form_username: "Username:"
-    remember_me: "Remember me"
+    form_password: "Kennwort:"
+    remember_me: "Bleiben in Verbindung."
     sign_in: "Sign in"
     sign_out: "Sign out"
-    forgot: "Forgot your password?"
-    register: "Sign up"
+    forgot: "Passwort vergessen?"
+    register: "Registrieren"
 
