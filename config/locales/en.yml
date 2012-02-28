@@ -3,12 +3,12 @@
 
 en:
   index:
-    welcome: "Welcome!"
-    in_development: "Prism is being developed at warp speed.
-                  Keep checking back."
+    welcome: Welcome!
+    in_development: Prism is being developed at warp speed.
+                  Keep checking back.
   header:
-    description: "Prism is a tool for collective interpretation of texts. It is an ongoing project of the
-            Praxis Program at the University of Virginia Scholars’ Lab."
+    description: Prism is a tool for collective interpretation of texts. It is an ongoing project of the
+            Praxis Program at the University of Virginia Scholars' Lab.
     link_home: "Home"
     link_instructions: "Instructions"
     link_documents: "Documents"
