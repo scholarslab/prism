@@ -9,55 +9,57 @@ en:
   header:
     description: Prism is a tool for collective interpretation of texts. It is an ongoing project of the
             Praxis Program at the University of Virginia Scholars' Lab.
-    link_home: "Home"
-    link_instructions: "Instructions"
-    link_documents: "Documents"
-    link_about: "About"
-    signed_in: "Signed in as "
+    link_home: Home
+    link_instructions: Instructions
+    link_documents: Documents
+    link_about: About
+    signed_in: Signed in as
     form_email: "Email:"
     form_password: "Password:"
-    remember_me: "Remember me"
-    sign_in: "Sign in"
-    sign_out: "Sign out"
-    forgot: "Forgot your password?"
-    register: "Sign up"
+    remember_me: Remember me
+    sign_in: Sign in
+    sign_out: Sign out
+    forgot: Forgot your password?
+    register: Sign up
 
   about:
-    prism_title: "About Prism"
-    description_p1_html: 'Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation 
-    which took place at the University of Virginia and elsewhere, and specifically from transparency mark-up games <a href="http://www.google.com/url?q=
-      http%3A%2F%2Fwww.scholarslab.org%2Fdigital-humanities%2Fcrowdsourcing-interpretation%2F&sa=D&sntz=1&usg=AFQjCNGTXomsmdD9ABphhmIzKZA9R56mGQ">implemented by
-      Bethany Nowviskie</a> for her Media Studies students and her colleagues in <a href="http://www.google.com/url?q=http%3A%2F%2Fbooks.google.com%2Fbooks%2Fabout%2FSpecLab.html%3Fid%3DVPXCk396uPYC">
-      SpecLab</a>: '
-    description_p2: 'the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
-  somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion.'
-    description_p3_html: 'At SpecLab, Jerome McGann <a href="http://www.google.com/url?q=http%3A%2F%2Fdigitalhumanities.org%2Fcompanion%2Fview%3FdocId%3Dblackwell%2F9781405103213%2F9781405103213
-      .xml%26chunk.id%3Dss1-3-4&sa=D&sntz=1&usg=AFQjCNEzunrc9zEf83KzWiujAvkr4QL5oA">further developed the concept</a>, which became known as "the 
-    ‘Patacritical Demon."'
-    description_p4_html: 'The Scholars’ Lab offered these ideas as inspiration for the first project to be undertaken by graduate student fellows of 
-    <a href="http://praxis.scholarslab.org/">the Praxis Program</a> in its inaugural year. Our first task was to determine how to translate the physical exercise 
-    of marking a text into a digital one. We decided that we would continue to employ a constrained interpretive vocabulary and limit the length of the text in
-    order to stay true to the transparency game, during which texts would be marked up fairly quickly--ideally in one session. Also, like the transparency 
-    exercise, the end goal of Prism is to produce "aesthetic provocations," that is, visualizations which provoke further discussion. But because it is a 
-    digital project, Prism can integrate many individual interpretations and create a wide range of visualizations while maintaining data integrity.'
-    description_p5: 'Prism expands upon current notions of crowdsourcing to allow for more meaningful interaction with "the crowd." Users interact subjectively with a text
-    and contribute to a collective interpretive energy that has infinite possibilities beyond the highlighting exercise itself -- in research, in the classroom, 
-    or in engaging and experimenting with larger data in the humanities (computational linguistics and text mining, for example).'
-    praxis_title: 'The Praxis Program'
-    praxis_description_html: "<a href='http://praxis.scholarslab.org/'>The Praxis Program</a> is a 2011-12 pilot project of the <a href='http://www2.lib.virginia.edu/scholarslab/'>
+    prism_title: About Prism
+    description_p1_html: |
+      Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation
+      which took place at the University of Virginia and elsewhere, and specifically from transparency mark-up games <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">implemented by
+      Bethany Nowviskie</a> for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">
+      SpecLab</a> ":"
+    description_p2: |
+      the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
+      somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion.
+    description_p3_html: |
+      At SpecLab, Jerome McGann <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">further 
+      developed the concept</a>, which became known as the "Patacritical Demon".
+    description_p4_html: |
+      The Scholars' Lab offered these ideas as inspiration for the first project to be undertaken by graduate student fellows of 
+      <a href="http://praxis.scholarslab.org/">the Praxis Program</a> in its inaugural year. Our first task was to determine how to translate the physical exercise 
+      of marking a text into a digital one. We decided that we would continue to employ a constrained interpretive vocabulary and limit the length of the text in
+      order to stay true to the transparency game, during which texts would be marked up fairly quickly&mdash;ideally in one session. Also, like the transparency 
+      exercise, the end goal of Prism is to produce "aesthetic provocations," that is, visualizations which provoke further discussion. But because it is a 
+      digital project, Prism can integrate many individual interpretations and create a wide range of visualizations while maintaining data integrity.
+    description_p5: |
+      Prism expands upon current notions of crowdsourcing to allow for more meaningful interaction with "the crowd." Users interact subjectively with a text
+      and contribute to a collective interpretive energy that has infinite possibilities beyond the highlighting exercise itself &ndash; in research, in the classroom, 
+      or in engaging and experimenting with larger data in the humanities (computational linguistics and text mining, for example).
+    praxis_title: The Praxis Program
+    praxis_description_html: |
+      <a href='http://praxis.scholarslab.org/'>The Praxis Program</a> is a 2011-12 pilot project of the <a href='http://www2.lib.virginia.edu/scholarslab/'>
       Scholars' Lab</a> at the <a href='http://www.lib.virginia.edu/index.html'>University of Virginia Library</a> in which six humanities graduate students 
-    spend a year in a collaborative, hands-on, digital humanities apprenticeship. The Praxis Program’s goal is to better equip knowledge workers for emerging 
-    faculty positions and <a href='http://www.google.com/url?q=http%3A%2F%2Fmediacommons.futureofthebook.org%2Falt-ac&sa=D&sntz=1&usg=AFQjCNG_YsFM6n2OVWb6gw
-      -2CzUIO8PP5w'>alternative academic careers</a> at a moment in which new questions can be asked and new systems built. Visit the Praxis Program 
-    site to learn more about the program’s evolving curriculum, including bibliographies for each topic, and to hear directly from Praxis Fellows and Scholars’ 
-    Lab faculty and staff as they <a href='http://www.google.com/url?q=http%3A%2F%2Fwww.scholarslab.org%2Fblog%2F&sa=D&sntz=1&usg=AFQjCNF2AEE1lanPIZjZ_
-      Fo4XdAn-mI7XA'>blog</a> about their experience."
-    scholarslab_title: "The Scholars' Lab"
-    scholarslab_description_html: "<a href='http://www.google.com/url?q=http%3A%2F%2Flib.virginia.edu%2Fscholarslab&sa=D&sntz=1&usg=AFQjCNG7dqC_4ALXTOFGxQ5tlDgCzzwVkg'>The Scholars’ Lab</a>
-    was established in 2006 at the <a href='http://www.lib.virginia.edu/index.html'>UVa Library</a> as a site for innovation in the humanities and social sciences.
-    The Scholars' Lab is a place where faculty and advanced students can explore digital resources, find expert help, and collaborate on innovative research projects.
-    The SLab also hosts events, such as workshops, talks, and roundtables, and sponsors the Praxis Program and a prestigious <a href='http://www.google.com/url?q=
-    http%3A%2F%2Fwww2.lib.virginia.edu%2Fscholarslab%2Fabout%2Ffellowship.html&sa=D&sntz=1&usg=AFQjCNGq-qcgZ_-JBKJYx87DnHEx8KSF6Q'>
-    graduate student fellowship</a> in the digital humanities."
-    contributors_title: "Contributors"
+      spend a year in a collaborative, hands-on, digital humanities apprenticeship. The Praxis Program’s goal is to better equip knowledge workers for emerging 
+      faculty positions and <a href=http://mediacommons.futureofthebook.org/alt-ac/'>alternative academic careers</a> at a moment in which new questions can be asked and new systems built. Visit the Praxis Program 
+      site to learn more about the program’s evolving curriculum, including bibliographies for each topic, and to hear directly from Praxis Fellows and Scholars’ 
+      Lab faculty and staff as they <a href='http://www.scholarslab.org/blog/'>blog</a> about their experience.
+    scholarslab_title: The Scholars' Lab
+    scholarslab_description_html: |
+      <a href='http://www2.lib.virginia.edu/scholarslab/'>The Scholars’ Lab</a>
+      was established in 2006 at the <a href='http://www.lib.virginia.edu/index.html'>UVa Library</a> as a site for innovation in the humanities and social sciences.
+      The Scholars' Lab is a place where faculty and advanced students can explore digital resources, find expert help, and collaborate on innovative research projects.
+      The SLab also hosts events, such as workshops, talks, and roundtables, and sponsors the Praxis Program and a prestigious <a href='http://www2.lib.virginia.edu/scholarslab/about/fellowship.html'>
+      graduate student fellowship</a> in the digital humanities.
+    contributors_title: Contributors
     contributors_description: ""
