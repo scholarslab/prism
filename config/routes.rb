@@ -4,6 +4,8 @@ Testing::Application.routes.draw do
   get "documents/index"
 
   get "documents/show"
+  get "documents/visualize"
+  get "documents/highlight"
 
   get "pages/index"
 

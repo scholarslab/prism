@@ -13,4 +13,13 @@ class DocumentsController < ApplicationController
       format.json { render json: @document }
     end
   end
+
+  def highlight
+   @document = Document.find(params[:id])
+  end
+
+  def visualize
+
+   @document = Document.find(params[:id])
+  end
 end
