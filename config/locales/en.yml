@@ -3,26 +3,26 @@
 
 en:
   index:
-    welcome: Welcome!
-    in_development: Prism is being developed at warp speed.
-                  Keep checking back.
-    about_text: Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox.
+    welcome: "Welcome!"
+    in_development: "Prism is being developed at warp speed.
+                  Keep checking back."
+    about_text: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox."
  
- header:
-    description_html: Prism is a tool for <a href='about.html'>collective interpretation</a> of texts. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>.
-    link_home: Home
-    link_instructions: Instructions
-    link_documents: Documents
-    link_about: About
-    signed_in: Signed in as
-    form_email: Email:
-    form_username: Username:
-    form_password: Password:
-    remember_me: Remember me
-    sign_in: Sign in
-    sign_out: Sign out
-    forgot: Forgot your password?
-    register: Sign up
+  header:
+    description_html: "Prism is a tool for <a href='/pages/about'>collective interpretation</a> of texts. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
+    link_home: "Home"
+    link_instructions: "Instructions"
+    link_documents: "Documents"
+    link_about: "About"
+    signed_in: "Signed in as"
+    form_email: "Email:"
+    form_username: "Username:"
+    form_password: "Password:"
+    remember_me: "Remember me"
+    sign_in: "Sign in"
+    sign_out: "Sign out"
+    forgot: "Forgot your password?"
+    register: "Sign up"
 
   about:
     prism_title: About Prism
