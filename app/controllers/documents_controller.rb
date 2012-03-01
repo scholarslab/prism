@@ -15,11 +15,12 @@ class DocumentsController < ApplicationController
   end
 
   def highlight
-   @document = Document.find(params[:id])
+    @title = "Highlight"
+    @document = Document.find(params[:id])
   end
 
   def visualize
-
-   @document = Document.find(params[:id])
+    @title = "Visualize"
+    @document = Document.find(params[:id])
   end
 end
