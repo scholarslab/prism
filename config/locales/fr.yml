@@ -5,6 +5,8 @@ fr:
   index:
     welcome: "Bienvenu!"
     in_development: "Nous travaillons à la vitesse de la lumière."
+    highlight: Surbillance
+    visualize: Visualizer
 
   header:
     description: "Prism est un ensemble d'outils pour collectiviser l'interprétation.

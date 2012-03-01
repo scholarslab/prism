@@ -3,7 +3,9 @@
 
 en:
   index:
-    welcome: "Welcome!"
+    highlight: Highlight
+    visualize: Visualize
+    welcome: Welcome!
     in_development: "Prism is being developed at warp speed.
                   Keep checking back."
     about_text: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox."

@@ -8,8 +8,14 @@
 
 <ul id="texts">
   <% @documents.each do | document | %>
-    <li><%= link_to document.title, document %>
-    <%= document.author %></li>
+    <li>
+    <div class="doc-tools">
+      <%= link_to t(:visualize), visualize_path(document) %>
+      <%= link_to t(:highlight), highlight_path(document) %>
+      
+      <%= link_to document.title, document %>
+      <%= document.author %>
+    </li>
   <% end %>
 </ul>
 

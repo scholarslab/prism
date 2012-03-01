@@ -2,18 +2,20 @@ Testing::Application.routes.draw do
   devise_for :users
 
   resources :documents
-  #get "/documents/index"
-  #get "/documents/show"
+
+  #get "/documents/visualize"
+  #get "/documents/highlight"
 
   # Add routes to your pages, using get "pages/pagename"
-  get "pages/index"
-  get "pages/about"
+  get "pages/index", :as => :home
+  get "pages/about", :as => :about
+  
 
   # To rewrite URLs, match the desired route to a current route:
   #match "about" => "pages#about"
 
-  match '/documents/visualize/:id' => 'documents#visualize'
-  match '/documents/highlight/:id' => 'documents#highlight'
+  match '/documents/:id/visualize(.:format)' => 'documents#visualize', :as => :visualize
+  match '/documents/:id/highlight(.:format)' => 'documents#highlight', :as => :highlight
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
