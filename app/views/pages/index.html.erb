@@ -10,9 +10,9 @@
   <% @documents.each do | document | %>
     <li>
     <div class="doc-tools">
-      <%= link_to t(:visualize), visualize_path(document) %>
-      <%= link_to t(:highlight), highlight_path(document) %>
-      
+      <%= link_to t(:visualize), visualize_path(document), :class => 'visualize'  %>
+      <%= link_to t(:highlight), highlight_path(document), :class => 'highlight' %>
+
       <%= link_to document.title, document %>
       <%= document.author %>
     </li>
