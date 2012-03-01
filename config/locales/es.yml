@@ -3,6 +3,8 @@
 
 es:
   index:
+    highlight: Highlight
+    visualize: Visualize
     welcome: "Bienvenidos!"
     in_development: "Estamos trabajando a la velocidad de la luz."
 

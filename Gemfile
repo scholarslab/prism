@@ -43,10 +43,11 @@ end
 
 group :development, :test do
   gem 'sqlite3', "~> 1.3.4"
-  gem "rspec-rails", "~> 2.7.0"
+  gem "rspec-rails", "~> 2.8.0"
   gem "simplecov", "~> 0.5.4"
   gem "factory_girl_rails", "~> 1.3.0"
   gem "nyan-cat-formatter", "~> 0.0.3"
+  gem 'forgery', '0.3.12'
 end
 
 group :test do

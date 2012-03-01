@@ -3,6 +3,8 @@
 
 de:
   index:
+    highlight: Highlight
+    visualize: Visualize
     welcome: "Wilkommen!"
     in_development: "Prism wird mit Warp-Geschwindigkeit entwickelt.
                    Behalten Sie die Kontrolle zurück."
