@@ -78,8 +78,17 @@ body h1 {
    margin-bottom: 5px;
  }
  
+iframe {
+  float:left;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+  margin-right: 3%; 
+}
+
 #texts {
-   list-style: none;
+  list-style:none; 
+  display:block;
+  clear:all;
+  margin-top: 120px;
 }
 
 #texts li {
