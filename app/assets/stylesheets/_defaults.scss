@@ -78,8 +78,17 @@ body h1 {
    margin-bottom: 5px;
  }
  
+iframe {
+  float:left;
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+  margin-right: 3%; 
+}
+
 #texts {
-   list-style: none;
+  list-style:none; 
+  display:block;
+  clear:all;
+  margin-top: 120px;
 }
 
 #texts li {
@@ -98,16 +107,17 @@ a.visualize, a.highlight {
     }
 a.highlight {margin-right: 18%}
 
-.doc-display {
+div.doc-display {
   box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
   height: 250px;
   padding: 2%;
   margin-top: 5%;
   font-size: 20px;
-  display: block;
   font-family: constantia, times, serif;
   text-align: center;
 }
+
+  a.doc-display {display: block}
 
 footer {
   display: table;
