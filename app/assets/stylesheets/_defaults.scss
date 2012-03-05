@@ -14,7 +14,11 @@
   font-size: 20px;
   }
   
-a:link {text-decoration:none;
+.page-margin {
+    margin-left: 9%;
+    margin-right: 9%;}
+
+a:link {text-decoration:none;      /*styles all the links on the site*/
   font-weight:bold;
         color: Teal;}
 a:visited {text-decoration:none;
@@ -25,46 +29,57 @@ a:active {text-decoration:none;
           color: Dimgray;}
 
 header {
-   background-color: black;
-   font-family: corbel, sans-serif;
+margin-top: 3%;
+background-color: rgb(14,14,14);
+@include filter-gradient(#0e0e0e, #4e5c5a, horizontal);
+@include background-image(linear-gradient(left, rgba(14,14,14,1) 0%,rgba(78,92,90,1) 58%)); /*SCSS magic from the internet!*/
+font-family: corbel, sans-serif;
    color: white;
-   overflow: hidden;
+   overflow: hidden;            /* clears header floats so body doesn't follow them*/
 }
 
 #user-meta {
+background-image: -webkit-gradient(linear,  left top,  left bottom, 
+		color-stop(0.00, royalblue), 
+		color-stop(40%, turquoise),
+		color-stop(90%, goldenrod),
+		color-stop(1.00, darkorange));
   float: right;
   width: 26%;
-  padding-top: 1%;
+  padding-right: 5%;
+  padding-left: 2%;
+  padding-top: 1%;     /*styles for entirety of log-in form*/
 }
 
 #user-meta input[type="text"], 
 #user-meta input[type="password"] {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 5px;  /*displays user ID and password form boxes on separate lines and puts small space b/t them */
 }
 #user-meta input[type="submit"] {
   float:right;
-  margin-right: 7%;
+  margin-right: 23%;
   font-family: corbel, sans-serif;
-  font-size: 16px;
+  font-size: 16px;   /*gives submit button same font as rest, moves button in line with right edge of form*/
 }
 
 #user-meta p a:not(:last-child):after {
   content:" | ";
   margin: 0 10px;
-  color: #999;
+  color: #999;   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
 }
 
 header h1 {
   float: left;
-  margin-left: 1%;
-  margin-right: 2%; 
+  margin-left: 9%;
+  margin-right: 2%; /*styles anything with the H1 html tag in the header file. In this case, that's just the Prism logo */
 }
 
 p.description {
   float: left;
-  width: 40%;
+  width: 35%;
   margin-left: 2%;
+  margin-top: 2%;
  }
 
 
@@ -140,6 +155,26 @@ footer {
 p.blockquote {
   float: left;
 padding-left: 7%;}
+
+#Praxis {
+  float: right;
+  width: 30%;
+  padding: 1%;
+  margin-top: 2%;
+  border: 1px solid black;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+ }
+
+#page-content {
+  float: left;
+  border: 1px solid black;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+  width: 60%;
+  padding: 1%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
 
 #Prismabob {
   width: 60%;
