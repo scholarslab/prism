@@ -3,7 +3,7 @@
 @import "base";
 @import "normalize";
 @import "fonts";
-@import url(http://fonts.googleapis.com/css?family=Lustria|Mako|Noticia+Text|Andada);
+@import url(http://fonts.googleapis.com/css?family=Lustria|Mako|Carme|Noticia+Text|Andada);
 
 #container {
   @include container;
@@ -31,20 +31,35 @@ a:active {text-decoration:none;
 
 header {
 margin-top: 3%;
-background-color: rgb(14,14,14);
-@include filter-gradient(#0e0e0e, #4e5c5a, horizontal);
-@include background-image(linear-gradient(left, rgba(14,14,14,1) 0%,rgba(78,92,90,1) 58%)); /*SCSS magic from the internet!*/
-font-family: mako, sans-serif;
+background: rgb(40,52,59);
+background: -moz-linear-gradient(left,  rgba(40,52,59,1) 0%, rgba(130,140,149,1) 50%, rgba(181,189,200,1) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(40,52,59,1)), color-stop(50%,rgba(130,140,149,1)), color-stop(100%,rgba(181,189,200,1)));
+background: -webkit-linear-gradient(left,  rgba(40,52,59,1) 0%,rgba(130,140,149,1) 50%,rgba(181,189,200,1) 100%);
+background: -o-linear-gradient(left,  rgba(40,52,59,1) 0%,rgba(130,140,149,1) 50%,rgba(181,189,200,1) 100%);
+background: -ms-linear-gradient(left,  rgba(40,52,59,1) 0%,rgba(130,140,149,1) 50%,rgba(181,189,200,1) 100%);
+background: linear-gradient(left,  rgba(40,52,59,1) 0%,rgba(130,140,149,1) 50%,rgba(181,189,200,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28343b', endColorstr='#b5bdc8',GradientType=1 );
+    /* gradient magic from the internet with browser compatibility*/
+
+font-family: carme, sans-serif;
    color: white;
    overflow: hidden;            /* clears header floats so body doesn't follow them*/
 }
 
 #user-meta {
-background-image: -webkit-gradient(linear,  left top,  left bottom, 
+background-image: (-webkit-gradient(linear,  left top,  left bottom, 
 		color-stop(0.00, royalblue), 
 		color-stop(40%, turquoise),
 		color-stop(90%, goldenrod),
-		color-stop(1.00, darkorange));
+		color-stop(1.00, darkorange)));
+   /* here I'm trying to make a second gradient lay on top of the colorful one on right edge of header
+   (-webkit-gradient(linear, right top, right bottom,
+    color-stop(0.00, #FFFFFF),
+    color-stop(20%, #BFBFBF),
+    color-stop(40%, #262626),
+    color-stop(60%, #BFBFBF),
+    color-stop(80%, #262626),
+    color-stop(1.00, #FFFFFF))); */
   float: right;
   width: 26%;
   padding-right: 5%;
@@ -60,7 +75,7 @@ background-image: -webkit-gradient(linear,  left top,  left bottom,
 #user-meta input[type="submit"] {
   float:right;
   margin-right: 23%;
-  font-family: corbel, sans-serif;
+  font-family: carme, sans-serif;
   font-size: 16px;   /*gives submit button same font as rest, moves button in line with right edge of form*/
 }
  #user-meta a {
@@ -82,27 +97,27 @@ header h1 {
 
 p.description {
   float: left;
-  width: 35%;
+  width: 32%;
   margin-left: 2%;
   margin-top: 2%;
- }
+ }  /*styles short description in header*/
 
 
 body {
   font-color: #003333;
-  font-family: mako, sans-serif;
-  }
+  font-family: carme, sans-serif;
+  }  /*font and color of all body text, unless otherwise specified in stylesheet*/
  
 body h1 {
    size: 30px;
    margin-bottom: 5px;
-   text-shadow: 0px 2px 3px rgba(0,0,0,0.5);
+   text-shadow: 0px 2px 3px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
  }
  
 iframe {
   float:left;
   box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
-  margin-right: 3%; 
+  margin-right: 3%;   /*styles for video on homepage, including 50% transparent black box shadow all around */
 }
 
 #texts {
@@ -119,7 +134,8 @@ iframe {
   margin: 2%;
 }
 a.visualize, a.highlight {
-    font-size: 16px;
+  font-family: lustria, times, serif;
+  font-size: 15px;
     border: 1px gray;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
     padding: 2px 10px;
@@ -133,7 +149,7 @@ div.doc-display {
   padding: 2%;
   margin-top: 5%;
   font-size: 20px;
-  font-family: andada, times, serif;
+  font-family: lustria, times, serif;
   text-align: center;
   a {display: block}
 }
@@ -161,15 +177,16 @@ p.blockquote {
   float: right;
   width: 30%;
   padding: 1%;
-  margin-top: 2%;
-  border: 1px solid black;
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
- }
+  margin-top: 18%;
+   }
+
+   #Praxis h2 {
+     font-size: 26px;
+     text-shadow: 0px 2px 3px rgba(0,0,0,0.5);
+}
 
 #page-content {
   float: left;
-  border: 1px solid black;
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
   width: 60%;
   padding: 1%;
   margin-right: 2%;
