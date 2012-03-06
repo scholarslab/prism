@@ -3,6 +3,7 @@
 @import "base";
 @import "normalize";
 @import "fonts";
+@import url(http://fonts.googleapis.com/css?family=Lustria|Mako|Noticia+Text|Andada);
 
 #container {
   @include container;
@@ -33,7 +34,7 @@ margin-top: 3%;
 background-color: rgb(14,14,14);
 @include filter-gradient(#0e0e0e, #4e5c5a, horizontal);
 @include background-image(linear-gradient(left, rgba(14,14,14,1) 0%,rgba(78,92,90,1) 58%)); /*SCSS magic from the internet!*/
-font-family: corbel, sans-serif;
+font-family: mako, sans-serif;
    color: white;
    overflow: hidden;            /* clears header floats so body doesn't follow them*/
 }
@@ -62,6 +63,10 @@ background-image: -webkit-gradient(linear,  left top,  left bottom,
   font-family: corbel, sans-serif;
   font-size: 16px;   /*gives submit button same font as rest, moves button in line with right edge of form*/
 }
+ #user-meta a {
+   text-decoration: none;
+   font-weight: normal;
+   }
 
 #user-meta p a:not(:last-child):after {
   content:" | ";
@@ -85,12 +90,13 @@ p.description {
 
 body {
   font-color: #003333;
-  font-family: Corbel, sans-serif;
+  font-family: mako, sans-serif;
   }
  
 body h1 {
    size: 30px;
    margin-bottom: 5px;
+   text-shadow: 0px 2px 3px rgba(0,0,0,0.5);
  }
  
 iframe {
@@ -114,7 +120,6 @@ iframe {
 }
 a.visualize, a.highlight {
     font-size: 16px;
-    font-family: constantia, times, serif;
     border: 1px gray;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
     padding: 2px 10px;
@@ -128,7 +133,7 @@ div.doc-display {
   padding: 2%;
   margin-top: 5%;
   font-size: 20px;
-  font-family: constantia, times, serif;
+  font-family: andada, times, serif;
   text-align: center;
   a {display: block}
 }
@@ -149,12 +154,8 @@ footer {
         }
   }
 
-#page-content p {
-  font-family: constantia, times, serif;
-}
 p.blockquote {
-  float: left;
-padding-left: 7%;}
+ padding-left: 8%;}
 
 #Praxis {
   float: right;
