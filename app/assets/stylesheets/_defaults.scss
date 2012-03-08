@@ -3,7 +3,7 @@
 @import "base";
 @import "normalize";
 @import "fonts";
-@import url(http://fonts.googleapis.com/css?family=Lustria|Mako|Carme|Noticia+Text|Andada);
+@import url(http://fonts.googleapis.com/css?family=Lustria|Mako|Carme|Noticia+Text|Andada|PT+Serif|PT+Sans);
 
 #container {
   @include container;
@@ -31,6 +31,7 @@ a:active {text-decoration:none;
 
 header {
 margin-top: 3%;
+margin-bottom: 5%;
 background: rgb(40,52,59);
 background: -moz-linear-gradient(left,  rgba(40,52,59,1) 0%, rgba(130,140,149,1) 50%, rgba(181,189,200,1) 100%);
 background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(40,52,59,1)), color-stop(50%,rgba(130,140,149,1)), color-stop(100%,rgba(181,189,200,1)));
@@ -195,8 +196,10 @@ p.blockquote {
 
 
 #Prismabob {
+  float: left;
   width: 60%;
-  padding: 1%;
+  padding: 1.5%;
+  margin-top: 1%;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
 }
 
@@ -213,4 +216,28 @@ p.blockquote {
 #Prismabob h3 {
   font-size: 18px;
   text-align: center;
+}
+
+.text {
+  font-family: "PT Serif", Times, serif;
+}
+
+
+#tools {
+  float: right;
+  width: 30%;
+  padding: 1.5%;
+  margin-top: 1%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+}
+
+#highlighters {
+  list-style: none;
+  font-size: 20px;
+  font-family: "PT Sans", sans serif;
+}
+
+#tools p {
+  font-size: 14px;
+  font-family: "PT Sans", sans serif;
 }
