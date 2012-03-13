@@ -11,8 +11,12 @@
   <% @documents.each do | document | %>
     <li>
     <div class="doc-tools">
-      <%= link_to t(:highlight), highlight_path(document), :class => 'highlight' %>
-      <%= link_to t(:visualize), visualize_path(document), :class => 'visualize' %>
+      <%= link_to(highlight_path(document), :class => 'highlight') do %>
+        <%= t 'index.highlight' %><span></span>
+      <% end %>
+      <%= link_to(visualize_path(document), :class => 'visualize') do %>
+        <span></span><%= t 'index.visualize' %>
+      <% end %>
      </div>
     <div class="doc-display">
       <%= link_to document.title, document %>
