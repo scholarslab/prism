@@ -4,6 +4,13 @@ require 'factory_girl'
 describe PagesController do
   include Devise::TestHelpers # to give your spec access to helpers
   render_views
+  
+  before(:each) do
+    10.times do |populate|
+      Factory.create(:document)
+    end
+  end
+
   describe "GET 'index'" do
     it "returns http success" do
       get 'index'
