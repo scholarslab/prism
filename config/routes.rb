@@ -2,6 +2,7 @@ Testing::Application.routes.draw do
   devise_for :users
 
   resources :documents
+  resources :markings
 
   #get "/documents/visualize"
   #get "/documents/highlight"

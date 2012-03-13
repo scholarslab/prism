@@ -24,3 +24,4 @@ class DocumentsController < ApplicationController
     @document = Document.find(params[:id])
   end
 end
+
