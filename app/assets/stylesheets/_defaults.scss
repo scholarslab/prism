@@ -121,21 +121,19 @@ a.highlight, a.visualize {
     font-family: lustria, times, serif;
     font-size: 14px;
     background: #C0C0C0;
-    padding: 2px 10px;
     margin-bottom: 3%;
+    padding: 1%;
     }
 
-.arrow-right {
-    float: left;  
+.highlight span {
     width: 0;
     height: 0;
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
-    border-left: 22px solid #C0C0C0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 16px solid #C0C0C0;
      }
 
-.arrow-inset {
-  float: left;
+.visualize span {
   width: 0;
   height: 0;
   border-top: 11px solid #C0C0C0;
