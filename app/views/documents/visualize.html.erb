@@ -1,4 +1,6 @@
 <div class="page-margin">
+  <p> Congratulations! You have arrived at the most magical of places--the Visualization page!
+  </p>
   <div id="Prismabob">
     <h1><%= @document.title %></h1>
     <h2><%= @document.author %></h2>
@@ -7,15 +9,15 @@
      <%= @document.content.html_safe %>
     </div>
   </div>
+
   <div id="visualizations">
-      <ul id="visualization-types">
-        <li>Type 1</li>
-        <li>Type 2</li>
-        <li>Type 3</li>
-        <li>Type 4</li>
-      </ul>
-      <p>Select one of the options above to display a visualization of collected data for this text.
-      </p>
+    <p id="visualization-help">Select one of the options below to display a visualization of collected data for this text.
+    </p>
+    <ul id="visualization-types">
+        <li><%= image_tag('cats-in-sink.jpg') %></li>
+        <li><%= image_tag('cat-sheen-1.jpg') %></li>
+        <li><%= image_tag('cat-sheen-7.jpg') %></li>
+        <li><%= image_tag('cat-sheen-9.jpg') %></li>
+    </ul>
   </div>
-</div>
 </div>
