@@ -32,35 +32,18 @@ a:active {text-decoration:none;
 header {
 margin-top: 3%;
 margin-bottom: 5%;
-background: rgb(40,52,59);
-background: -moz-linear-gradient(left,  rgba(40,52,59,1) 0%, rgba(130,140,149,1) 50%, rgba(181,189,200,1) 100%);
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(40,52,59,1)), color-stop(50%,rgba(130,140,149,1)), color-stop(100%,rgba(181,189,200,1)));
-background: -webkit-linear-gradient(left,  rgba(40,52,59,1) 0%,rgba(130,140,149,1) 50%,rgba(181,189,200,1) 100%);
-background: -o-linear-gradient(left,  rgba(40,52,59,1) 0%,rgba(130,140,149,1) 50%,rgba(181,189,200,1) 100%);
-background: -ms-linear-gradient(left,  rgba(40,52,59,1) 0%,rgba(130,140,149,1) 50%,rgba(181,189,200,1) 100%);
-background: linear-gradient(left,  rgba(40,52,59,1) 0%,rgba(130,140,149,1) 50%,rgba(181,189,200,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28343b', endColorstr='#b5bdc8',GradientType=1 );
-    /* gradient magic from the internet with browser compatibility*/
-
+background-image: -webkit-linear-gradient(top, rgba(51,51,51,0.1) 0%,rgba(0,0,0,0.1) 3%,rgba(165,165,165,0.1) 4%,rgba(0,0,0,0.1) 6%,rgba(51,51,51,0.1) 8%,rgba(0,0,0,0.1) 9%,rgba(51,51,51,0.1) 10%,rgba(165,165,165,0.1) 12%,rgba(165,165,165,0.1) 13%,rgba(0,0,0,0.1) 14%,rgba(165,165,165,0.1) 16%,rgba(0,0,0,0.1) 17%,rgba(51,51,51,0.1) 19%,rgba(0,0,0,0.1) 20%,rgba(165,165,165,0.1) 21%,rgba(0,0,0,0.1) 23%,rgba(165,165,165,0.1) 25%,rgba(51,51,51,0.1) 26%,rgba(51,51,51,0.1) 28%,rgba(165,165,165,0.1) 29%,rgba(165,165,165,0.1) 30%,rgba(0,0,0,0.1) 31%,rgba(165,165,165,0.1) 32%,rgba(51,51,51,0.1) 33%,rgba(51,51,51,0.1) 34%,rgba(165,165,165,0.1) 35%,rgba(0,0,0,0.1) 36%,rgba(165,165,165,0.1) 38%,rgba(0,0,0,0.1) 40%,rgba(51,51,51,0.1) 41%,rgba(165,165,165,0.1) 43%,rgba(165,165,165,0.1) 44%,rgba(51,51,51,0.1) 45%,rgba(0,0,0,0.1) 47%,rgba(51,51,51,0.1) 48%,rgba(165,165,165,0.1) 49%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1) 51%,rgba(51,51,51,0.1) 53%,rgba(0,0,0,0.1) 55%,rgba(0,0,0,0.1) 56%,rgba(165,165,165,0.1) 57%,rgba(0,0,0,0.1) 58%,rgba(51,51,51,0.1) 60%,rgba(165,165,165,0.1) 61%,rgba(0,0,0,0.1) 63%,rgba(0,0,0,0.1) 64%,rgba(165,165,165,0.1) 65%,rgba(0,0,0,0.1) 66%,rgba(0,0,0,0.1) 67%,rgba(0,0,0,0.1) 69%,rgba(165,165,165,0.1) 71%,rgba(51,51,51,0.1) 72%,rgba(0,0,0,0.1) 73%,rgba(165,165,165,0.1) 75%,rgba(51,51,51,0.1) 77%,rgba(0,0,0,0.1) 78%,rgba(165,165,165,0.1) 79%,rgba(0,0,0,0.1) 80%,rgba(0,0,0,0.1) 82%,rgba(165,165,165,0.1) 83%,rgba(51,51,51,0.1) 84%,rgba(0,0,0,0.1) 86%,rgba(165,165,165,0.1) 88%,rgba(0,0,0,0.1) 89%,rgba(165,165,165,0.1) 91%,rgba(0,0,0,0.1) 92%,rgba(0,0,0,0.1) 94%,rgba(0,0,0,0.1) 95%,rgba(51,51,51,0.1) 96%,rgba(165,165,165,0.1) 98%,rgba(0,0,0,0.1) 99%,rgba(0,0,0,0.1) 100%),
+-webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(49,53,56,1) 50%,rgba(181,189,200,1) 100%);
+/*two gradients-- first one is transparent and displays on top, creating the horizontal lines; second one is slight fade from black to gray, left to right */
 font-family: carme, sans-serif;
    color: white;
    overflow: hidden;            /* clears header floats so body doesn't follow them*/
 }
 
 #user-meta {
-background-image: (-webkit-gradient(linear,  left top,  left bottom, 
-		color-stop(0.00, royalblue), 
-		color-stop(40%, turquoise),
-		color-stop(90%, goldenrod),
-		color-stop(1.00, darkorange)));
-   /* here I'm trying to make a second gradient lay on top of the colorful one on right edge of header
-   (-webkit-gradient(linear, right top, right bottom,
-    color-stop(0.00, #FFFFFF),
-    color-stop(20%, #BFBFBF),
-    color-stop(40%, #262626),
-    color-stop(60%, #BFBFBF),
-    color-stop(80%, #262626),
-    color-stop(1.00, #FFFFFF))); */
+background-image: -webkit-linear-gradient(top, rgba(51,51,51,0.1) 0%,rgba(0,0,0,0.1) 3%,rgba(165,165,165,0.1) 4%,rgba(0,0,0,0.1) 6%,rgba(51,51,51,0.1) 8%,rgba(0,0,0,0.1) 9%,rgba(51,51,51,0.1) 10%,rgba(165,165,165,0.1) 12%,rgba(165,165,165,0.1) 13%,rgba(0,0,0,0.1) 14%,rgba(165,165,165,0.1) 16%,rgba(0,0,0,0.1) 17%,rgba(51,51,51,0.1) 19%,rgba(0,0,0,0.1) 20%,rgba(165,165,165,0.1) 21%,rgba(0,0,0,0.1) 23%,rgba(165,165,165,0.1) 25%,rgba(51,51,51,0.1) 26%,rgba(51,51,51,0.1) 28%,rgba(165,165,165,0.1) 29%,rgba(165,165,165,0.1) 30%,rgba(0,0,0,0.1) 31%,rgba(165,165,165,0.1) 32%,rgba(51,51,51,0.1) 33%,rgba(51,51,51,0.1) 34%,rgba(165,165,165,0.1) 35%,rgba(0,0,0,0.1) 36%,rgba(165,165,165,0.1) 38%,rgba(0,0,0,0.1) 40%,rgba(51,51,51,0.1) 41%,rgba(165,165,165,0.1) 43%,rgba(165,165,165,0.1) 44%,rgba(51,51,51,0.1) 45%,rgba(0,0,0,0.1) 47%,rgba(51,51,51,0.1) 48%,rgba(165,165,165,0.1) 49%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1) 51%,rgba(51,51,51,0.1) 53%,rgba(0,0,0,0.1) 55%,rgba(0,0,0,0.1) 56%,rgba(165,165,165,0.1) 57%,rgba(0,0,0,0.1) 58%,rgba(51,51,51,0.1) 60%,rgba(165,165,165,0.1) 61%,rgba(0,0,0,0.1) 63%,rgba(0,0,0,0.1) 64%,rgba(165,165,165,0.1) 65%,rgba(0,0,0,0.1) 66%,rgba(0,0,0,0.1) 67%,rgba(0,0,0,0.1) 69%,rgba(165,165,165,0.1) 71%,rgba(51,51,51,0.1) 72%,rgba(0,0,0,0.1) 73%,rgba(165,165,165,0.1) 75%,rgba(51,51,51,0.1) 77%,rgba(0,0,0,0.1) 78%,rgba(165,165,165,0.1) 79%,rgba(0,0,0,0.1) 80%,rgba(0,0,0,0.1) 82%,rgba(165,165,165,0.1) 83%,rgba(51,51,51,0.1) 84%,rgba(0,0,0,0.1) 86%,rgba(165,165,165,0.1) 88%,rgba(0,0,0,0.1) 89%,rgba(165,165,165,0.1) 91%,rgba(0,0,0,0.1) 92%,rgba(0,0,0,0.1) 94%,rgba(0,0,0,0.1) 95%,rgba(51,51,51,0.1) 96%,rgba(165,165,165,0.1) 98%,rgba(0,0,0,0.1) 99%,rgba(0,0,0,0.1) 100%),
+  -webkit-gradient(linear,  left top,  left bottom, color-stop(0.00, royalblue), color-stop(40%, turquoise), color-stop(90%, goldenrod), color-stop(1.00, darkorange));
+/*two gradients-- transparent grays on top of opaque "rainbow" */
   float: right;
   width: 26%;
   padding-right: 5%;
