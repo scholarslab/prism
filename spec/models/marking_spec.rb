@@ -2,6 +2,14 @@ require 'spec_helper'
 
 describe Marking do
   pending "add some examples to (or delete) #{__FILE__}"
+
+  before(:each) do
+    @document = Factory(:document)
+  end
+
+
+
+  
 end
 # == Schema Information
 #
