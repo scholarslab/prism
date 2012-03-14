@@ -1,4 +1,14 @@
 Testing::Application.routes.draw do
+  get "markings/index"
+
+  get "markings/new"
+
+  get "markings/create"
+
+  get "markings/delete"
+
+  get "markings/update"
+
   devise_for :users
 
   resources :documents
