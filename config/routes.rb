@@ -1,19 +1,21 @@
 Testing::Application.routes.draw do
-  get "markings/index"
+  #get "markings/index"
 
-  get "markings/new"
+  #get "markings/new"
 
-  get "markings/create"
+  #get "markings/create"
 
-  get "markings/delete"
+  #get "markings/delete"
 
-  get "markings/update"
+  #get "markings/update"
 
   devise_for :users
 
-  resources :documents
-  resources :markings
+  resources :documents do
+    resources :markings
 
+  end
+  
   #get "/documents/visualize"
   #get "/documents/highlight"
 
