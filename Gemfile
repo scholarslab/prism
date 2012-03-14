@@ -56,6 +56,7 @@ group :test do
   gem "capybara", "~> 1.1.1"
   gem "spork", "~> 1.0rc"
   gem 'rake'
+  gem 'database_cleaner'
 end
 
 group :production do
