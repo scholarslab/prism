@@ -32,10 +32,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 #gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+   #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+   gem 'annotate',"2.4.1.beta1"
    gem "ffaker", "~> 1.8.1"
    gem "rails-footnotes", "~> 3.7.5"
-   gem "rails_best_practices", "~> 1.7"
+   gem "rails_best_practices"
    gem "heroku", "~> 2.9.0"
    gem "nokogiri", "~> 1.5.0"
    # gem 'rails-dev-tweaks', '~> 0.5.1'
