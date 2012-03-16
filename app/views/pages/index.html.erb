@@ -11,7 +11,7 @@
   <% @documents.each do | document | %>
     <li>
     <div class="doc-tools">
-      <%= link_to t(:highlight), new_document_marking_path(document), :class => 'highlight' %>
+      <%= link_to t(:highlight), highlight_path(document), :class => 'highlight' %>
       <%= link_to t(:visualize), visualize_path(document), :class => 'visualize'  %>
      </div>
     <div class="doc-display">

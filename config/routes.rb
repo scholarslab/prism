@@ -1,28 +1,13 @@
 Testing::Application.routes.draw do
-  #get "markings/index"
-
-  #get "markings/new"
-
-  #get "markings/create"
-
-  #get "markings/delete"
-
-  #get "markings/update"
-
   devise_for :users
 
   resources :documents do
     resources :markings
-
   end
   
-  #get "/documents/visualize"
-  #get "/documents/highlight"
-
   # Add routes to your pages, using get "pages/pagename"
   get "pages/index", :as => :home
   get "pages/about", :as => :about
-  
 
   # To rewrite URLs, match the desired route to a current route:
   #match "about" => "pages#about"

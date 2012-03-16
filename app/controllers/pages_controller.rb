@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   def index
     @title = "Home"
-    @documents = Document.find([1,2,3])
+    @documents = Document.all()[0..2]
   end
   
   def about

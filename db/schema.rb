@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120314004258) do
+ActiveRecord::Schema.define(:version => 20120316033122) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -34,12 +34,11 @@ ActiveRecord::Schema.define(:version => 20120314004258) do
   end
 
   create_table "markings", :force => true do |t|
-    t.integer  "start_pos"
-    t.integer  "end_pos"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "document_id"
     t.integer  "user_id"
+    t.text     "word_array"
   end
 
   create_table "prisms", :force => true do |t|
