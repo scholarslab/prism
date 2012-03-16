@@ -3,11 +3,13 @@ def count_words(text)
 end
 
 def numberize(node, counter=0)
-  node.set_attribute('prev_words', counter.to_s)
   node.children.each do |child|
-    if child.class == Nokogiri::XML::Text
-      counter += count_words(child.to_s)
-    elsif child.class == Nokogiri::XML::Element
+    if child.text?
+      num_words = count_words(child.to_s)
+      new_node = node.document.create_element("span", child.to_s, :class => "prev_"+counter.to_s)
+      counter += num_words
+      child.replace(new_node)
+    elsif child.element?
       counter = numberize(child, counter)
     end
   end
@@ -39,8 +41,9 @@ namespace :import do
     pub_date = doc.xpath("//div[@id='bib']/div[@class='pub_date']").text
     format = doc.xpath("//div[@id='bib']/div[@class='format']").text
     body_p = doc.xpath("//body/p")
+    counter = 0
     body_p.each do |ptag|
-      numberize(ptag)
+      counter = numberize(ptag, counter)
     end
     content = body_p.to_s
 
