@@ -5,10 +5,15 @@ end
 def numberize(node, counter=0)
   node.children.each do |child|
     if child.text?
-      num_words = count_words(child.to_s)
-      new_node = node.document.create_element("span", child.to_s, :class => "prev_"+counter.to_s)
-      counter += num_words
-      child.replace(new_node)
+      words_list = child.to_s.split
+      span_list = words_list.map do |word|
+        span = node.document.create_element("span", word+' ', :class => "word_"+counter.to_s)
+        counter += 1
+        span
+      end
+      puts span_list[0].class
+      span_nodeset = Nokogiri::XML::NodeSet.new(node.document, span_list)
+      child.replace(span_nodeset)
     elsif child.element?
       counter = numberize(child, counter)
     end

@@ -23,6 +23,9 @@
                       return;
                     }
                     // Step 2: Find the elements in which it starts and stops
+                    var start_pos = selection.getStart()
+                    var end_pos = selection.getEnd() 
+                    
                     // Step 3: Figure out which word # the endpoints fall in
                     // Step 4: Figure out the character indices of the start of the first word and end of the last word, respectively, and move the selection to include the whole words
                     // Step 5: Highlight the selected area in tinymce
