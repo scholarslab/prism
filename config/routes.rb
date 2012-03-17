@@ -13,7 +13,8 @@ Testing::Application.routes.draw do
   #match "about" => "pages#about"
 
   match '/documents/:id/visualize(.:format)' => 'documents#visualize', :as => :visualize
-  match '/documents/:id/highlight(.:format)' => 'documents#highlight', :as => :highlight
+  match '/documents/:id/highlight(.:format)' => 'documents#highlight', :as => :highlight, :via => :get
+  match '/documents/:id/highlight(.:format)' => 'documents#highlight_post', :as => :highlight_post, :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

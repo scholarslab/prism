@@ -18,6 +18,12 @@ class DocumentsController < ApplicationController
     @title = "Highlight"
     @document = Document.find(params[:id])
   end
+  
+  def highlight_post
+    document = Document.find(params[:id])
+    puts params[:class1_indices]
+    redirect_to(visualize_path(document))
+  end
 
   def visualize
     @title = "Visualize"

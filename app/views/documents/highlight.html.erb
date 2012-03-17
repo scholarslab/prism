@@ -1,62 +1,141 @@
-<script type='text/javascript' src="http://people.virginia.edu/~err8n/html-editor/tinymce/jquery.tinymce.js"></script>
-<script type="text/javascript" charset="utf-8">
-  jQuery().ready(function() {
-      var textarea = jQuery('textarea.tinymce');
-      var tiny = textarea.tinymce({
-          script_url: 'http://people.virginia.edu/~err8n/html-editor/tinymce/tiny_mce.js',
-          readonly: true,
+<style>
+.word {
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    line-height:200%;
+}
+.class1 {
+    background:#FCC;
+}
 
-          theme: 'advanced',
-          theme_advanced_buttons1: "",
-          theme_advanced_buttons2: "",
-          theme_advanced_buttons3: "",
-          theme_advanced_toolbar_location: "external",
-          content_css: 'http://people.virginia.edu/~err8n/html-editor/tinymce.css',
+.class2 {
+    border-top: 5px solid #CFC;
+}
 
-          setup: function(ed) {
-            ed.onInit.add(function(ed) {
-                ed.dom.bind(ed.dom.get('tinymce'), 'mouseup', function(e) {
-                    var selection = ed.selection;
-                    // Step 1: Abort if it's empty
-                    var content = selection.getContent();
-                    if (content.length === 0) {
-                      return;
-                    }
-                    // Step 2: Find the elements in which it starts and stops
-                    var start_pos = selection.getStart()
-                    var end_pos = selection.getEnd() 
-                    
-                    // Step 3: Figure out which word # the endpoints fall in
-                    // Step 4: Figure out the character indices of the start of the first word and end of the last word, respectively, and move the selection to include the whole words
-                    // Step 5: Highlight the selected area in tinymce
-                    ed.execCommand('hilitecolor', false, 'silver');
-                    // Step 6: Add the indices of the highlighted words to the hidden input
-                  });
-              });
-          }
-        });
-      });
+.class3 {
+    border-bottom: 5px solid #CCF;
+}
+
+/*.class1.class2 {
+    background:#FCC;
+    border-top: 3px solid #CFC;
+}
+
+.class1.class3 {
+    background:#FCC;
+    border-top: 3px solid #CCF;
+}
+
+.class2.class3 {
+    background:#FCC;
+    border-top: 3px solid #CCF;
+}
+
+.class1.class2.class3 {
+    background:#FCC;
+    border-top: 3px solid #CCF;
+}*/
+
+
+</style>
+
+<script>
+function clear_selection() {
+    if (window.getSelection) {
+      if (window.getSelection().empty) {  // Chrome
+        window.getSelection().empty();
+      } else if (window.getSelection().removeAllRanges) {  // Firefox
+        window.getSelection().removeAllRanges();
+      }
+    } else if (document.selection) {  // IE?
+      document.selection.empty();
+    }
+}
+
+$(function(){
+    var first_clicked = null;
+    var category = "class1";
+    var all_categories = $("li.category_option").map(function(){
+        var val = $("input", this).val()
+        if (val != 'delete')
+            return val;
+    })
+    var re = new RegExp("word_\\d+");
+    var storage = {}
+    $.each(all_categories, function(i,x) {
+        storage[x] = {}
+    })
+
+    function get_word_index(elt) {
+        var match = re.exec($(elt).attr("class"))[0]
+        return parseInt(match.substring(5))
+    }
+    
+    function mark(elt, category) {
+        var index = get_word_index(elt);
+        if (category == "delete") {
+            $.each(all_categories, function(index, category) {
+                $(elt).removeClass(category)
+            })
+            for (var key in storage) {
+                delete storage[key][index];
+            }
+        } else {
+            $(elt).addClass(category)
+            storage[category][index] = true
+        }
+        for (var key in storage) {
+            var s = JSON.stringify($.map(storage[key], function(i,x){return x}))
+            $("#"+key+"_indices").val(s);
+        }
+    }
+    
+    $("span.word")
+        .mousedown(function(event) {
+            event.preventDefault();
+            first_clicked = this;
+            mark(this, category)
+        })
+        .mouseover(function() {
+            if (first_clicked != null)
+                mark(this, category)
+        })
+        
+    $("html").mouseup(function() {
+        first_clicked = null;
+    })
+    
+    $("li.category_option").click(function() {
+        category = $("input", this).val()
+    })
+    
+    
+})
 </script>
+
+
 <div class="page-margin">
   <div id="Prismabob">
     <h1><%= @document.title %></h1>
     <h2><%= @document.author %></h2>
 
-    <textarea id='editor' name="editor" class='tinymce' cols="80" rows="20">
+    <div id='document'>
       <%= @document.content.html_safe %>
-    </textarea>
+    </div>
     </div>
   </div>
-  <form action="." method="POST">
-      <input type="hidden" value="" name="indices" id="indices"/>
+  <form action="./highlight" method="POST">
+      <input type="hidden" value="" name="class1_indices" id="class1_indices"/>
+      <input type="hidden" value="" name="class2_indices" id="class2_indices"/>
+      <input type="hidden" value="" name="class3_indices" id="class3_indices"/>
       <input type="submit" value="Submit" />
   </form>
   <div id="tools">
       <ul id="highlighters">
-        <li>Daddy Issues</li>
-        <li>Dumpling Truck</li>
-        <li>Pesky Bird Issues</li>
-        <li class="selected">Eyebrow Threading Problems</li>
+        <li class="category_option"><input type="hidden" value="class1"/>Happy</li>
+        <li class="category_option"><input type="hidden" value="class2"/>Boring</li>
+        <li class="category_option"><input type="hidden" value="class3"/>About Peaches</li>
+        <li class="category_option"><input type="hidden" value="delete"/>Eraser</li>
       </ul>
       <p id="highlighter-help">Twee umami carles whatever wes anderson, pitchfork williamsburg +1 brunch DIY letterpress sustainable mixtape sriracha master cleanse. Ethnic whatever messenger bag, cliche portland irony thundercats butcher vegan brunch master cleanse bushwick. Kale chips lo-fi semiotics pour-over viral, squid tofu brooklyn before they sold out twee letterpress ethical. Brunch before they sold out PBR tattooed terry richardson, echo park keffiyeh VHS sustainable authentic brooklyn mcsweeney's readymade. Put a bird on it odd future beard, pinterest narwhal messenger bag marfa. Fingerstache hoodie gentrify salvia synth. Flexitarian retro before they sold out squid post-ironic etsy VHS tattooed, cray pinterest single-origin coffee tumblr.
       </p>
