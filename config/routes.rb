@@ -12,10 +12,9 @@ Testing::Application.routes.draw do
   # To rewrite URLs, match the desired route to a current route:
   #match "about" => "pages#about"
 
-  match '/documents/:id/visualize(.:format)' => 'documents#visualize', :as => :visualize
-  match '/documents/:id/highlight(.:format)' => 'documents#highlight', :as => :highlight, :via => :get
-  match '/documents/:id/highlight(.:format)' => 'documents#highlight_post', :as => :highlight_post, :via => :post
-
+  match '/prisms/:id/visualize(.:format)' => 'prisms#visualize', :as => :visualize
+  match '/prisms/:id/highlight(.:format)' => 'prisms#highlight', :as => :highlight, :via => :get
+  match '/prisms/:id/highlight(.:format)' => 'prisms#highlight_post', :as => :highlight_post, :via => :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

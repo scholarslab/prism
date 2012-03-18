@@ -4,15 +4,15 @@
     border-bottom: 5px solid white;
     line-height:200%;
 }
-.class1 {
+.red {
     background:#FCC;
 }
 
-.class2 {
+.green {
     border-top: 5px solid #CFC;
 }
 
-.class3 {
+.blue {
     border-bottom: 5px solid #CCF;
 }
 
@@ -54,7 +54,7 @@ function clear_selection() {
 
 $(function(){
     var first_clicked = null;
-    var category = "class1";
+    var category = "<%=@prism.facets[0].color%>";
     var all_categories = $("li.category_option").map(function(){
         var val = $("input", this).val()
         if (val != 'delete')
@@ -85,7 +85,7 @@ $(function(){
             storage[category][index] = true
         }
         for (var key in storage) {
-            var s = JSON.stringify($.map(storage[key], function(i,x){return x}))
+            var s = JSON.stringify($.map(storage[key], function(i,x){return parseInt(x)}))
             $("#"+key+"_indices").val(s);
         }
     }
@@ -125,16 +125,16 @@ $(function(){
     </div>
   </div>
   <form action="./highlight" method="POST">
-      <input type="hidden" value="" name="class1_indices" id="class1_indices"/>
-      <input type="hidden" value="" name="class2_indices" id="class2_indices"/>
-      <input type="hidden" value="" name="class3_indices" id="class3_indices"/>
+    <% for facet in @prism.facets %>
+      <input type="hidden" value="" name="<%=facet.color%>_indices" id="<%=facet.color%>_indices"/>
+      <% end %>
       <input type="submit" value="Submit" />
   </form>
   <div id="tools">
       <ul id="highlighters">
-        <li class="category_option"><input type="hidden" value="class1"/>Happy</li>
-        <li class="category_option"><input type="hidden" value="class2"/>Boring</li>
-        <li class="category_option"><input type="hidden" value="class3"/>About Peaches</li>
+        <% for facet in @prism.facets %>
+          <li class="category_option"><input type="hidden" value="<%=facet.color%>"/><%=facet.category%></li>
+        <% end %>
         <li class="category_option"><input type="hidden" value="delete"/>Eraser</li>
       </ul>
       <p id="highlighter-help">Twee umami carles whatever wes anderson, pitchfork williamsburg +1 brunch DIY letterpress sustainable mixtape sriracha master cleanse. Ethnic whatever messenger bag, cliche portland irony thundercats butcher vegan brunch master cleanse bushwick. Kale chips lo-fi semiotics pour-over viral, squid tofu brooklyn before they sold out twee letterpress ethical. Brunch before they sold out PBR tattooed terry richardson, echo park keffiyeh VHS sustainable authentic brooklyn mcsweeney's readymade. Put a bird on it odd future beard, pinterest narwhal messenger bag marfa. Fingerstache hoodie gentrify salvia synth. Flexitarian retro before they sold out squid post-ironic etsy VHS tattooed, cray pinterest single-origin coffee tumblr.

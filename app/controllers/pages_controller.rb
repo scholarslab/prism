@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   def index
     @title = "Home"
-    @documents = Document.all()[0..2]
+    @prisms = Prism.all()[0..2]
   end
   
   def about

@@ -8,15 +8,15 @@
 <p id=index-text> <%=t 'index.about_text'%></p>
 
 <ul id="texts">
-  <% @documents.each do | document | %>
+  <% @prisms.each do | prism | %>
     <li>
     <div class="doc-tools">
-      <%= link_to t(:highlight), highlight_path(document), :class => 'highlight' %>
-      <%= link_to t(:visualize), visualize_path(document), :class => 'visualize'  %>
+      <%= link_to t(:highlight), highlight_path(prism), :class => 'highlight' %>
+      <%= link_to t(:visualize), visualize_path(prism), :class => 'visualize'  %>
      </div>
     <div class="doc-display">
-      <%= link_to document.title, document %>
-      <%= document.author %>
+      <%= link_to prism.document.title, prism.document %>
+      <%= prism.document.author %>
     </div>
     </li>
   <% end %>
