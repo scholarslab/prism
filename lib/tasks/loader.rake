@@ -1,15 +1,46 @@
+def count_words(text)
+  text.split.length
+end
+
+def numberize(node, counter=0)
+  node.children.each do |child|
+    if child.text?
+      words_list = child.to_s.split
+      span_list = words_list.map do |word|
+        span = node.document.create_element("span", word+' ', :class => "word word_"+counter.to_s)
+        counter += 1
+        span
+      end
+      span_nodeset = Nokogiri::XML::NodeSet.new(node.document, span_list)
+      child.replace(span_nodeset)
+    elsif child.element?
+      counter = numberize(child, counter)
+    end
+  end
+  counter
+end
+
 namespace :import do
   desc "Import the data from the files"
   task :docs => :environment do
     puts "Importing..."
-
     files = "./spec/fixtures/html"
-
     Dir["#{files}/*.html"].each do |file|
-      record = builder(file)
-      record.save
+      doc, prism, facets = builder(file)
+      doc.save()
+      prism.save()
+      for facet in facets
+        facet.save()
+      end
     end
-
+  end
+  
+  desc "Delete all prisms, documents, markings, and facets"
+  task :clear => :environment do
+    Prism.delete_all()
+    Document.delete_all()
+    Marking.delete_all()
+    Facet.delete_all()
   end
 
   def builder(file)
@@ -22,14 +53,27 @@ namespace :import do
     description = doc.xpath("//div[@id='bib']/div[@class='description']").text
     pub_date = doc.xpath("//div[@id='bib']/div[@class='pub_date']").text
     format = doc.xpath("//div[@id='bib']/div[@class='format']").text
+    facet_tags = doc.css("div#facets div.facet")
+    prompt = doc.css("div#prompt").text
     body_p = doc.xpath("//body/p")
+    counter = 0
+    for ptag in body_p
+      counter = numberize(ptag, counter)
+    end
     content = body_p.to_s
 
     html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, content: content)
+    prism = Prism.create(prompt: prompt, document: html)
+    facets = []
 
+    for facet_data in facet_tags
+      color = facet_data.css("div.color").text
+      category = facet_data.css("div.category").text
+      facet = Facet.create(color: color, category: category, prism: prism)
+      facets.push(facet)
+    end
     f.close
-
-    return html
+    return [html, prism, facets]
 
   end
 end

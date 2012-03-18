@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-documents = Document.create([{title: 'Paul Revere\'s Ride'}, {title: 'A Midwife\'s Tail'}])
+# documents = Document.create([{title: 'Paul Revere\'s Ride'}, {title: 'A Midwife\'s Tail'}])
