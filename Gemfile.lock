@@ -114,6 +114,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
+    minitest (2.11.3)
     multi_json (1.0.4)
     nokogiri (1.5.2)
     nokogiri (1.5.2-x86-mingw32)
@@ -241,6 +242,7 @@ DEPENDENCIES
   forgery (= 0.3.12)
   heroku (~> 2.9.0)
   jquery-rails
+  minitest
   nokogiri (~> 1.5.0)
   nyan-cat-formatter (~> 0.0.3)
   pg
