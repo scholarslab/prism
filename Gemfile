@@ -58,6 +58,7 @@ group :test do
   gem "spork", "~> 1.0rc"
   gem 'rake'
   gem 'database_cleaner'
+  gem 'minitest'
 end
 
 group :production do
