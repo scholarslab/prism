@@ -1,0 +1,145 @@
+<style>
+.word {
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    line-height:200%;
+}
+.red {
+    background:#FCC;
+}
+
+.green {
+    border-top: 5px solid #CFC;
+}
+
+.blue {
+    border-bottom: 5px solid #CCF;
+}
+
+/*.class1.class2 {
+    background:#FCC;
+    border-top: 3px solid #CFC;
+}
+
+.class1.class3 {
+    background:#FCC;
+    border-top: 3px solid #CCF;
+}
+
+.class2.class3 {
+    background:#FCC;
+    border-top: 3px solid #CCF;
+}
+
+.class1.class2.class3 {
+    background:#FCC;
+    border-top: 3px solid #CCF;
+}*/
+
+
+</style>
+
+<script>
+function clear_selection() {
+    if (window.getSelection) {
+      if (window.getSelection().empty) {  // Chrome
+        window.getSelection().empty();
+      } else if (window.getSelection().removeAllRanges) {  // Firefox
+        window.getSelection().removeAllRanges();
+      }
+    } else if (document.selection) {  // IE?
+      document.selection.empty();
+    }
+}
+
+$(function(){
+    var first_clicked = null;
+    var category = "<%=@prism.facets[0].color%>";
+    var all_categories = $("li.category_option").map(function(){
+        var val = $("input", this).val()
+        if (val != 'delete')
+            return val;
+    })
+    var re = new RegExp("word_\\d+");
+    var storage = {}
+    $.each(all_categories, function(i,x) {
+        storage[x] = {}
+    })
+
+    function get_word_index(elt) {
+        var match = re.exec($(elt).attr("class"))[0]
+        return parseInt(match.substring(5))
+    }
+    
+    function mark(elt, category) {
+        var index = get_word_index(elt);
+        if (category == "delete") {
+            $.each(all_categories, function(index, category) {
+                $(elt).removeClass(category)
+            })
+            for (var key in storage) {
+                delete storage[key][index];
+            }
+        } else {
+            $(elt).addClass(category)
+            storage[category][index] = true
+        }
+        for (var key in storage) {
+            var s = JSON.stringify($.map(storage[key], function(i,x){return parseInt(x)}))
+            $("#"+key+"_indices").val(s);
+        }
+    }
+    
+    $("span.word")
+        .mousedown(function(event) {
+            event.preventDefault();
+            first_clicked = this;
+            mark(this, category)
+        })
+        .mouseover(function() {
+            if (first_clicked != null)
+                mark(this, category)
+        })
+        
+    $("html").mouseup(function() {
+        first_clicked = null;
+    })
+    
+    $("li.category_option").click(function() {
+        category = $("input", this).val()
+    })
+    
+    
+})
+</script>
+
+
+<div class="page-margin">
+  <div id="Prismabob">
+    <h1><%= @document.title %></h1>
+    <h2><%= @document.author %></h2>
+
+    <div id='document'>
+      <%= @document.content.html_safe %>
+    </div>
+    </div>
+  </div>
+  <form action="./highlight" method="POST">
+    <% for facet in @prism.facets %>
+      <input type="hidden" value="" name="<%=facet.color%>_indices" id="<%=facet.color%>_indices"/>
+      <% end %>
+      <input type="submit" value="Submit" />
+  </form>
+  <div id="tools">
+      <ul id="highlighters">
+        <% for facet in @prism.facets %>
+          <li class="category_option"><input type="hidden" value="<%=facet.color%>"/><%=facet.category%></li>
+        <% end %>
+        <li class="category_option"><input type="hidden" value="delete"/>Eraser</li>
+      </ul>
+      <p id="highlighter-help">Twee umami carles whatever wes anderson, pitchfork williamsburg +1 brunch DIY letterpress sustainable mixtape sriracha master cleanse. Ethnic whatever messenger bag, cliche portland irony thundercats butcher vegan brunch master cleanse bushwick. Kale chips lo-fi semiotics pour-over viral, squid tofu brooklyn before they sold out twee letterpress ethical. Brunch before they sold out PBR tattooed terry richardson, echo park keffiyeh VHS sustainable authentic brooklyn mcsweeney's readymade. Put a bird on it odd future beard, pinterest narwhal messenger bag marfa. Fingerstache hoodie gentrify salvia synth. Flexitarian retro before they sold out squid post-ironic etsy VHS tattooed, cray pinterest single-origin coffee tumblr.
+      </p>
+  </div>
+</div>
+
+

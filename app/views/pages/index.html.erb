@@ -8,19 +8,19 @@
 <p id=index-text> <%=t 'index.about_text'%></p>
 
 <ul id="texts">
-  <% @documents.each do | document | %>
+  <% @prisms.each do | prism | %>
     <li>
     <div class="doc-tools">
-      <%= link_to(highlight_path(document), :class => 'highlight') do %>
+      <%= link_to(highlight_path(prism), :class => 'highlight') do %>
         <%= t 'index.highlight' %><span></span>
       <% end %>
-      <%= link_to(visualize_path(document), :class => 'visualize') do %>
+      <%= link_to(visualize_path(prism), :class => 'visualize') do %>
         <span></span><%= t 'index.visualize' %>
       <% end %>
      </div>
     <div class="doc-display">
-      <%= link_to document.title, document %>
-      <%= document.author %>
+      <%= link_to prism.document.title, prism.document %>
+      <%= prism.document.author %>
     </div>
     </li>
   <% end %>

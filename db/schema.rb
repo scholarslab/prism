@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214172446) do
+ActiveRecord::Schema.define(:version => 20120317205507) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -31,19 +31,23 @@ ActiveRecord::Schema.define(:version => 20120214172446) do
     t.string   "category"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "prism_id"
   end
 
   create_table "markings", :force => true do |t|
-    t.integer  "start_pos"
-    t.integer  "end_pos"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.text     "word_array"
+    t.integer  "facet_id"
+    t.integer  "prism_id"
   end
 
   create_table "prisms", :force => true do |t|
     t.text     "prompt"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "document_id"
   end
 
   create_table "users", :force => true do |t|
