@@ -1,4 +1,4 @@
-
+<div class="page-margin">
 <h1><%=t 'index.welcome'%></h1>
 
 <div class="warn">
@@ -11,16 +11,20 @@
   <% @prisms.each do | prism | %>
     <li>
     <div class="doc-tools">
-      <%= link_to t(:highlight), highlight_path(prism), :class => 'highlight' %>
-      <%= link_to t(:visualize), visualize_path(prism), :class => 'visualize'  %>
+      <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+        <%= t 'index.highlight' %><span></span>
+      <% end %>
+      <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+        <span></span><%= t 'index.visualize' %>
+      <% end %>
      </div>
     <div class="doc-display">
-      <%= link_to prism.document.title, prism.document %>
+      <%= link_to prism.document.title, highlight_path(prism) %>
       <%= prism.document.author %>
     </div>
     </li>
   <% end %>
 </ul>
 
-
+</div>
 
