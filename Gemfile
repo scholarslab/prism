@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '~>3.2.0'
 gem "devise", "~> 2.0.0"
+gem "cucumber-rails"
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -32,10 +33,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 #gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+   #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+   gem 'annotate',"2.4.1.beta1"
    gem "ffaker", "~> 1.8.1"
    gem "rails-footnotes", "~> 3.7.5"
-   gem "rails_best_practices", "~> 1.7"
+   gem "rails_best_practices"
    gem "heroku", "~> 2.9.0"
    gem "nokogiri", "~> 1.5.0"
    # gem 'rails-dev-tweaks', '~> 0.5.1'
@@ -55,6 +57,8 @@ group :test do
   gem "capybara", "~> 1.1.1"
   gem "spork", "~> 1.0rc"
   gem 'rake'
+  gem 'database_cleaner'
+  gem 'minitest'
 end
 
 group :production do

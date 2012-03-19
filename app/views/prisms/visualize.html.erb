@@ -1,0 +1,23 @@
+<div class="page-margin">
+  <p> Congratulations! You have arrived at the most magical of places--the Visualization page!
+  </p>
+  <div id="Prismabob">
+    <h1><%= @document.title %></h1>
+    <h2><%= @document.author %></h2>
+
+    <div class="text">
+     <%= @document.content.html_safe %>
+    </div>
+  </div>
+
+  <div id="visualizations">
+    <p id="visualization-help">Select one of the options below to display a visualization of collected data for this text.
+    </p>
+    <ul id="visualization-types">
+        <li><%= image_tag('cats-in-sink.jpg') %></li>
+        <li><%= image_tag('cat-sheen-1.jpg') %></li>
+        <li><%= image_tag('cat-sheen-7.jpg') %></li>
+        <li><%= image_tag('cat-sheen-9.jpg') %></li>
+    </ul>
+  </div>
+</div>
