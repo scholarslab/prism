@@ -1,6 +1,8 @@
 <header>
+<div class="header-margin">
 <h1><a href="/"><%= image_tag('prism-logo.png') %></a></h1>
 <p class="description"><%= t 'header.description_html' %></p>
+
 
 <div id="user-meta">
 <% if user_signed_in? %>
@@ -20,5 +22,6 @@
 <%= link_to t('header.register'), new_user_registration_path %>
 </p>
 <% end %>
+</div>
 </div>
 </header>

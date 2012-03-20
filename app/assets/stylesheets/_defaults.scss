@@ -3,6 +3,7 @@
 @import "base";
 @import "normalize";
 @import "fonts";
+@import url(http://fonts.googleapis.com/css?family=Lustria|Mako|Carme|Noticia+Text|Andada|PT+Serif|PT+Sans);
 
 #container {
   @include container;
@@ -14,7 +15,11 @@
   font-size: 20px;
   }
   
-a:link {text-decoration:none;
+.page-margin {
+    margin-left: 9%;
+    margin-right: 9%;}
+
+a:link {text-decoration:none;      /*styles all the links on the site*/
   font-weight:bold;
         color: Teal;}
 a:visited {text-decoration:none;
@@ -25,63 +30,76 @@ a:active {text-decoration:none;
           color: Dimgray;}
 
 header {
-   background-color: black;
-   font-family: corbel, sans-serif;
+margin-top: 3%;
+margin-bottom: 5%;
+background-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 100%), -webkit-linear-gradient(top, rgba(51,51,51,0.1) 0%,rgba(0,0,0,0.1) 3%,rgba(165,165,165,0.1) 4%,rgba(0,0,0,0.1) 6%,rgba(51,51,51,0.1) 8%,rgba(0,0,0,0.1) 9%,rgba(51,51,51,0.1) 10%,rgba(165,165,165,0.1) 12%,rgba(165,165,165,0.1) 13%,rgba(0,0,0,0.1) 14%,rgba(165,165,165,0.1) 16%,rgba(0,0,0,0.1) 17%,rgba(51,51,51,0.1) 19%,rgba(0,0,0,0.1) 20%,rgba(165,165,165,0.1) 21%,rgba(0,0,0,0.1) 23%,rgba(165,165,165,0.1) 25%,rgba(51,51,51,0.1) 26%,rgba(51,51,51,0.1) 28%,rgba(165,165,165,0.1) 29%,rgba(165,165,165,0.1) 30%,rgba(0,0,0,0.1) 31%,rgba(165,165,165,0.1) 32%,rgba(51,51,51,0.1) 33%,rgba(51,51,51,0.1) 34%,rgba(165,165,165,0.1) 35%,rgba(0,0,0,0.1) 36%,rgba(165,165,165,0.1) 38%,rgba(0,0,0,0.1) 40%,rgba(51,51,51,0.1) 41%,rgba(165,165,165,0.1) 43%,rgba(165,165,165,0.1) 44%,rgba(51,51,51,0.1) 45%,rgba(0,0,0,0.1) 47%,rgba(51,51,51,0.1) 48%,rgba(165,165,165,0.1) 49%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1) 51%,rgba(51,51,51,0.1) 53%,rgba(0,0,0,0.1) 55%,rgba(0,0,0,0.1) 56%,rgba(165,165,165,0.1) 57%,rgba(0,0,0,0.1) 58%,rgba(51,51,51,0.1) 60%,rgba(165,165,165,0.1) 61%,rgba(0,0,0,0.1) 63%,rgba(0,0,0,0.1) 64%,rgba(165,165,165,0.1) 65%,rgba(0,0,0,0.1) 66%,rgba(0,0,0,0.1) 67%,rgba(0,0,0,0.1) 69%,rgba(165,165,165,0.1) 71%,rgba(51,51,51,0.1) 72%,rgba(0,0,0,0.1) 73%,rgba(165,165,165,0.1) 75%,rgba(51,51,51,0.1) 77%,rgba(0,0,0,0.1) 78%,rgba(165,165,165,0.1) 79%,rgba(0,0,0,0.1) 80%,rgba(0,0,0,0.1) 82%,rgba(165,165,165,0.1) 83%,rgba(51,51,51,0.1) 84%,rgba(0,0,0,0.1) 86%,rgba(165,165,165,0.1) 88%,rgba(0,0,0,0.1) 89%,rgba(165,165,165,0.1) 91%,rgba(0,0,0,0.1) 92%,rgba(0,0,0,0.1) 94%,rgba(0,0,0,0.1) 95%,rgba(51,51,51,0.1) 96%,rgba(165,165,165,0.1) 98%,rgba(0,0,0,0.1) 99%,rgba(0,0,0,0.1) 100%);
+/*two gradients-- first one is transparent and displays on top, creating the horizontal lines; second one is slight fade from black to gray, left to right */
+font-family: carme, sans-serif;
    color: white;
-   overflow: hidden;
+   overflow: hidden;            /* clears header floats so body doesn't follow them*/
 }
 
 #user-meta {
-  float: right;
+background-image: -webkit-linear-gradient(top, rgba(51,51,51,0.1) 0%,rgba(0,0,0,0.1) 3%,rgba(165,165,165,0.1) 4%,rgba(0,0,0,0.1) 6%,rgba(51,51,51,0.1) 8%,rgba(0,0,0,0.1) 9%,rgba(51,51,51,0.1) 10%,rgba(165,165,165,0.1) 12%,rgba(165,165,165,0.1) 13%,rgba(0,0,0,0.1) 14%,rgba(165,165,165,0.1) 16%,rgba(0,0,0,0.1) 17%,rgba(51,51,51,0.1) 19%,rgba(0,0,0,0.1) 20%,rgba(165,165,165,0.1) 21%,rgba(0,0,0,0.1) 23%,rgba(165,165,165,0.1) 25%,rgba(51,51,51,0.1) 26%,rgba(51,51,51,0.1) 28%,rgba(165,165,165,0.1) 29%,rgba(165,165,165,0.1) 30%,rgba(0,0,0,0.1) 31%,rgba(165,165,165,0.1) 32%,rgba(51,51,51,0.1) 33%,rgba(51,51,51,0.1) 34%,rgba(165,165,165,0.1) 35%,rgba(0,0,0,0.1) 36%,rgba(165,165,165,0.1) 38%,rgba(0,0,0,0.1) 40%,rgba(51,51,51,0.1) 41%,rgba(165,165,165,0.1) 43%,rgba(165,165,165,0.1) 44%,rgba(51,51,51,0.1) 45%,rgba(0,0,0,0.1) 47%,rgba(51,51,51,0.1) 48%,rgba(165,165,165,0.1) 49%,rgba(0,0,0,0.1) 50%,rgba(0,0,0,0.1) 51%,rgba(51,51,51,0.1) 53%,rgba(0,0,0,0.1) 55%,rgba(0,0,0,0.1) 56%,rgba(165,165,165,0.1) 57%,rgba(0,0,0,0.1) 58%,rgba(51,51,51,0.1) 60%,rgba(165,165,165,0.1) 61%,rgba(0,0,0,0.1) 63%,rgba(0,0,0,0.1) 64%,rgba(165,165,165,0.1) 65%,rgba(0,0,0,0.1) 66%,rgba(0,0,0,0.1) 67%,rgba(0,0,0,0.1) 69%,rgba(165,165,165,0.1) 71%,rgba(51,51,51,0.1) 72%,rgba(0,0,0,0.1) 73%,rgba(165,165,165,0.1) 75%,rgba(51,51,51,0.1) 77%,rgba(0,0,0,0.1) 78%,rgba(165,165,165,0.1) 79%,rgba(0,0,0,0.1) 80%,rgba(0,0,0,0.1) 82%,rgba(165,165,165,0.1) 83%,rgba(51,51,51,0.1) 84%,rgba(0,0,0,0.1) 86%,rgba(165,165,165,0.1) 88%,rgba(0,0,0,0.1) 89%,rgba(165,165,165,0.1) 91%,rgba(0,0,0,0.1) 92%,rgba(0,0,0,0.1) 94%,rgba(0,0,0,0.1) 95%,rgba(51,51,51,0.1) 96%,rgba(165,165,165,0.1) 98%,rgba(0,0,0,0.1) 99%,rgba(0,0,0,0.1) 100%), -webkit-linear-gradient(top, rgba(0,51,102,0.25) 0%, rgba(51,153,102,0.75) 50%, rgba(204,102,0,0.25) 100%);
+  /*two gradients; top is same as to one on rest of header, bottom one is close to transparent at top and bottom to create a "fuzzier" edge*/ 
+float: right;
   width: 26%;
-  padding-top: 1%;
+  padding-right: 5%;
+  padding-left: 2%;
+  padding-top: 1%;     /*styles for entirety of log-in form*/
 }
 
 #user-meta input[type="text"], 
 #user-meta input[type="password"] {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 5px;  /*displays user ID and password form boxes on separate lines and puts small space b/t them */
 }
 #user-meta input[type="submit"] {
   float:right;
-  margin-right: 7%;
-  font-family: corbel, sans-serif;
-  font-size: 16px;
+  margin-right: 23%;
+  font-family: carme, sans-serif;
+  font-size: 16px;   /*gives submit button same font as rest, moves button in line with right edge of form*/
 }
+ #user-meta a {
+   text-decoration: none;
+   font-weight: normal;
+   }
 
 #user-meta p a:not(:last-child):after {
   content:" | ";
   margin: 0 10px;
-  color: #999;
+  color: #999;   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
 }
 
 header h1 {
   float: left;
-  margin-left: 1%;
-  margin-right: 2%; 
+  margin-left: 9%;
+  margin-right: 2%; /*styles anything with the H1 html tag in the header file. In this case, that's just the Prism logo */
 }
 
 p.description {
   float: left;
-  width: 40%;
+  width: 32%;
   margin-left: 2%;
- }
+  margin-top: 2%;
+ }  /*styles short description in header*/
 
 
 body {
   font-color: #003333;
-  font-family: Corbel, sans-serif;
-  }
+  font-family: carme, sans-serif;
+  }  /*font and color of all body text, unless otherwise specified in stylesheet*/
  
 body h1 {
    size: 30px;
    margin-bottom: 5px;
+   text-shadow: 0px 2px 3px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
  }
  
 iframe {
   float:left;
   box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
-  margin-right: 3%; 
+  margin-right: 3%;   /*styles for video on homepage, including 50% transparent black box shadow all around */
 }
 
 #texts {
@@ -97,30 +115,58 @@ iframe {
   padding: 2%;
   margin: 2%;
 }
-a.visualize, a.highlight {
-    font-size: 16px;
-    font-family: constantia, times, serif;
-    border: 1px gray;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
-    padding: 2px 10px;
-    margin-bottom: 3%;
-    }
-a.highlight {margin-right: 18%}
 
-div.doc-display {
+.doc-tools a {
+    float: left;
+    font-family: lustria, times, serif;
+    font-size: 16px;
+    background-color: #C0C0C0;
+    margin-bottom: 3%;
+    border: none;
+    }
+
+a.highlight { 
+  margin-right: 5%;
+  padding-left: 3%;
+ }
+
+a.visualize { 
+  float: right;
+  padding-right: 3%;
+ }
+
+.highlight span {
+  float: right;
+  width: 0;
+  height: 0;
+  border-top: 12px solid white;
+  border-bottom: 12px solid white;
+  border-left: 24px solid #C0C0C0;
+  }
+
+.visualize span {
+  float: left;
+  width: 0;
+  height: 0;
+  border-top: 12px solid #C0C0C0;
+  border-bottom: 12px solid #C0C0C0;
+  border-left: 24px solid white;
+ } 
+
+
+.doc-display {
+  clear: all;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
   height: 250px;
   padding: 2%;
-  margin-top: 5%;
+  margin-top: 35px;
   font-size: 20px;
-  font-family: constantia, times, serif;
+  font-family: lustria, times, serif;
   text-align: center;
   a {display: block}
 }
 
-  a.doc-display {display: block}
-
-footer {
+ footer {
   display: table;
   clear: both;
   float: right;
@@ -136,25 +182,49 @@ footer {
         }
   }
 
-#page-content p {
-  font-family: constantia, times, serif;
-}
 p.blockquote {
-  float: left;
-padding-left: 7%;}
+ padding-left: 8%;}
 
-#Prismabob {
+#Praxis {
+  float: right;
+  width: 30%;
+  padding: 1%;
+  margin-top: 18%;
+   }
+
+   #Praxis h2 {
+     font-size: 26px;
+     text-shadow: 0px 2px 3px rgba(0,0,0,0.5);
+}
+
+#page-content {
+  float: left;
   width: 60%;
   padding: 1%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+
+#Prismabob {
+  float: left;
+  width: 60%;
+  padding: .5% 3% .5% 3%;
+  margin-top: 1%;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+  margin-right: 1%;
 }
 
 #Prismabob h1 {
+  line-height: 1em;
+  font-family: "PT Sans", sans-serif ;
   font-size: 30px;
   text-align: center;
 }
 
 #Prismabob h2 {
+  line-height: 1em;
+  font-family: "PT Sans", sans-serif ;
   font-size: 24px;
   text-align: center;
 }
@@ -162,4 +232,83 @@ padding-left: 7%;}
 #Prismabob h3 {
   font-size: 18px;
   text-align: center;
+}
+
+.text {
+  font-family: "PT Serif", Times, serif;
+  padding: 2%;
+}
+
+#highlight_instructions {
+  font-size: 16px;
+  text-align: center;
+  margin-left: 9%;
+  margin-right: 9%;
+}
+
+#tools {
+  float: right;
+  width: 25%;
+  padding: 2%;
+  margin-top: 1%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+}
+
+#highlighters {
+  list-style: none;
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  margin-left: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+#highlighters li{
+  margin-bottom: 1em;
+  clear: left;
+  overflow: hidden;
+  line-height: 40px;
+}
+
+#highlighters li span{
+  display: block;
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin-right: 1em;
+}
+
+#highlighters li.selected span{
+}
+
+#tools p {
+  font-size: 14px;
+  font-family: "PT Sans", sans serif;
+}
+
+#visualizations {
+  float: right;
+  width: 30%;
+  padding: 1.5%;
+  margin-top: 1%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+  font-size: 14px;
+  font-family: "PT Sans", sans serif;
+}
+
+#visualization-help {
+  padding-left: 13%;
+}
+
+
+#visualization-types {
+   list-style: none;
+  }
+
+#visualization-types li {
+  width: 100%;
+}
+
+#visualization-types img {
+  max-width: 100%;
 }
