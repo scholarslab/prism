@@ -23,7 +23,7 @@ fr:
     forgot: "Mot de passe oublié?"
     register: "Inscrivez-vous"
 
-about:
+  about:
     prism_title: "Sur Prism"
     description_p1_html: >
       Prism est un outil pour la « externalisation ouverte de l'interprétation ». Le concept est apparu lors d'une conversation d'une décennie sur les catégories d'interprétation des textes qui a eu lieu à l'Université de Virginie et ailleurs, mais plus précisément des jeux avec marqueurs et diapositives <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">créés par Bethany Nowviskie</ a> pour ses élèves et ses collègues du Media Studies dans le cadre du <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> :
