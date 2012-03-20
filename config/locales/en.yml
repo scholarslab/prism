@@ -28,10 +28,7 @@ en:
   about:
     prism_title: About Prism
     description_p1_html: >
-      Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation
-      which took place at the University of Virginia and elsewhere, and specifically from transparency mark-up games <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">implemented by
-      Bethany Nowviskie</a> for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">
-      SpecLab</a> :
+      Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia and elsewhere, and specifically from transparency mark-up games <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">implemented by Bethany Nowviskie</a> for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> :
     description_p2: >
       the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
       somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion.
