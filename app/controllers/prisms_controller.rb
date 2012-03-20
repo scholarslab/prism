@@ -17,5 +17,6 @@ class PrismsController < ApplicationController
     def visualize
         @title = "Visualize"
         @prism = Prism.find(params[:id])
+        @document = @prism.document
     end
 end
