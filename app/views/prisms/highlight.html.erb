@@ -1,116 +1,76 @@
-<style>
-.word {
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
-    line-height:200%;
-}
-.red {
-    background:#FCC;
-}
-
-.green {
-    border-top: 5px solid #CFC;
-}
-
-.blue {
-    border-bottom: 5px solid #CCF;
-}
-
-/*.class1.class2 {
-    background:#FCC;
-    border-top: 3px solid #CFC;
-}
-
-.class1.class3 {
-    background:#FCC;
-    border-top: 3px solid #CCF;
-}
-
-.class2.class3 {
-    background:#FCC;
-    border-top: 3px solid #CCF;
-}
-
-.class1.class2.class3 {
-    background:#FCC;
-    border-top: 3px solid #CCF;
-}*/
-
-
-</style>
-
 <script>
-function clear_selection() {
-    if (window.getSelection) {
-      if (window.getSelection().empty) {  // Chrome
-        window.getSelection().empty();
-      } else if (window.getSelection().removeAllRanges) {  // Firefox
-        window.getSelection().removeAllRanges();
-      }
-    } else if (document.selection) {  // IE?
-      document.selection.empty();
-    }
-}
-
-$(function(){
-    var first_clicked = null;
-    var category = "<%=@prism.facets[0].color%>";
-    var all_categories = $("li.category_option").map(function(){
-        var val = $("input", this).val()
-        if (val != 'delete')
-            return val;
-    })
-    var re = new RegExp("word_\\d+");
-    var storage = {}
-    $.each(all_categories, function(i,x) {
-        storage[x] = {}
-    })
-
-    function get_word_index(elt) {
-        var match = re.exec($(elt).attr("class"))[0]
-        return parseInt(match.substring(5))
-    }
-    
-    function mark(elt, category) {
-        var index = get_word_index(elt);
-        if (category == "delete") {
-            $.each(all_categories, function(index, category) {
-                $(elt).removeClass(category)
-            })
-            for (var key in storage) {
-                delete storage[key][index];
-            }
-        } else {
-            $(elt).addClass(category)
-            storage[category][index] = true
-        }
-        for (var key in storage) {
-            var s = JSON.stringify($.map(storage[key], function(i,x){return parseInt(x)}))
-            $("#"+key+"_indices").val(s);
-        }
-    }
-    
-    $("span.word")
-        .mousedown(function(event) {
-            event.preventDefault();
-            first_clicked = this;
-            mark(this, category)
-        })
-        .mouseover(function() {
-            if (first_clicked != null)
-                mark(this, category)
-        })
-        
-    $("html").mouseup(function() {
-        first_clicked = null;
-    })
-    
-    $("li.category_option").click(function() {
-        category = $("input", this).val()
-    })
-    
-    
-})
+// $(function(){
+//     //Extracts the color data from every facet from html file
+//     var all_colors = []
+//     for (var facet in $("li.facet")){
+//       var val = $("input", facet).val()
+//       //Ignore eraser function
+//       if (val != 'delete')
+//         all_colors.push(val)
+//     }
+//     //Creates a hash for each facet (keys are colors, values are word numbers) that stores word numbers to show which numbers are marked for which color
+//     var storage = {}
+//     for (var color in all_colors)
+//       storage[color] = {}    
+//     //Regular expression to find a word number (searches element's class attribute for string "word") and strips first 5 characters ("word_")
+//     function get_word_number(elt) {
+//         var re = new RegExp("word_\\d+");
+//         var match = re.exec($(elt).attr("class"))[0]
+//         return parseInt(match.substring(5))
+//     }
+//     //Marks an element with a color
+//     function mark(elt, color) {
+//         var number = get_word_number(elt);
+//         //defines eraser functionality (delete class color and remove word number from storage)
+//         if (color == "delete") {
+//             for (var color in all_colors)
+//               $(elt).removeClass(color)
+//             for (var key in storage) {
+//                 delete storage[key][number];
+//             }
+//           // defines normal marking functionality
+//         } else {
+//             $(elt).addClass(color)
+//             storage[color][number] = true
+//         }
+//         //take data in storage (hash of word numbers for each color), turn it into a string, and adding it to form (so data will be submitted when "submit" is clicked) 
+//         for (var color in storage) {
+//             var numbers = []
+//             for (var number in storage[color])
+//               numbers.push(parseInt(number))
+//             var s = JSON.stringify(numbers)
+//             //finds hidden input for a given color and sets its value to a string 
+//             $("#"+color+"_indices").val(s);
+//         }
+//     }
+// 
+//     //This code tracks the marking.  Initially not in marking mode.
+//     var currently_marking = false;
+//     //starts with the first color
+//     var current_color = "<%=@prism.facets[0].color%>";
+//     //CSS selector for spans class=word. When mouse is clicked, start marking mode in the current color
+//     $("span.word")
+//         .mousedown(function(event) {
+//             event.preventDefault();
+//             currently_marking = true;
+//             mark(this, current_color)
+//         })
+//       //Only marks text when the mouse is down
+//         .mouseover(function() {
+//             if (currently_marking)
+//                 mark(this, current_color)
+//         })
+//       //Stop marking when mouse is released  
+//     $("html").mouseup(function() {
+//         currently_marking = false;
+//     })
+//     //Clicking on a facet sets the color
+//     $("li.facet").click(function() {
+//         current_color = $("input", this).val()
+//     })
+//     
+//     
+// })
 </script>
 
 
@@ -133,9 +93,9 @@ $(function(){
   <div id="tools">
       <ul id="highlighters">
         <% for facet in @prism.facets %>
-          <li class="category_option"><input type="hidden" value="<%=facet.color%>"/><%=facet.category%></li>
+          <li class="facet"><input type="hidden" value="<%=facet.color%>"/><%=facet.category%></li>
         <% end %>
-        <li class="category_option"><input type="hidden" value="delete"/>Eraser</li>
+        <li class="facet"><input type="hidden" value="delete"/>Eraser</li>
       </ul>
       <p id="highlighter-help">Twee umami carles whatever wes anderson, pitchfork williamsburg +1 brunch DIY letterpress sustainable mixtape sriracha master cleanse. Ethnic whatever messenger bag, cliche portland irony thundercats butcher vegan brunch master cleanse bushwick. Kale chips lo-fi semiotics pour-over viral, squid tofu brooklyn before they sold out twee letterpress ethical. Brunch before they sold out PBR tattooed terry richardson, echo park keffiyeh VHS sustainable authentic brooklyn mcsweeney's readymade. Put a bird on it odd future beard, pinterest narwhal messenger bag marfa. Fingerstache hoodie gentrify salvia synth. Flexitarian retro before they sold out squid post-ironic etsy VHS tattooed, cray pinterest single-origin coffee tumblr.
       </p>

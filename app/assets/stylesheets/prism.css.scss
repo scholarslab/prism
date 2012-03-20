@@ -1,3 +1,20 @@
 // Place all the styles related to the prism controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.word {
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    line-height:200%;
+}
+.red {
+    background:#FCC;
+}
+
+.green {
+    border-top: 5px solid #CFC;
+}
+
+.blue {
+    border-bottom: 5px solid #CCF;
+}
