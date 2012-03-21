@@ -15,15 +15,20 @@ en:
     link_instructions: "Instructions"
     link_documents: "Documents"
     link_about: "About"
-    signed_in: "Signed in as"
+    signed_in: "Signed in as "
     form_email: "Email:"
     form_username: "Username:"
     form_password: "Password:"
     remember_me: "Remember me"
-    sign_in: "Sign in"
+    sign_in: "Log-in"
     sign_out: "Sign out"
     forgot: "Forgot your password?"
     register: "Sign up"
+ 
+  footer:
+    home: "Home"
+    about: "About"
+    log-in: "Log-in"
 
   about:
     prism_title: About Prism

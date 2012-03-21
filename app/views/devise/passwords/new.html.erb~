@@ -8,8 +8,8 @@
   <%= f.label :email %>
   <%= f.email_field :email %>
 
-  <%= f.submit "Send me reset password instructions" %>
-  <% end %>
+  <div id="reset-password"><%= f.submit "Send me reset password instructions" %>
+  <% end %></div>
 
 <p><%= render "links" %></p>
 

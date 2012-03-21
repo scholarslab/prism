@@ -3,11 +3,10 @@
     <h1><%= @document.title %></h1>
     <h2><%= @document.author %></h2>
 
-    <div id='document'>
+    <div class="text">
       <%= @document.content.html_safe %>
     </div>
     </div>
-  </div>
   <form action="./highlight" method="POST">
     <% for facet in @prism.facets %>
       <input type="hidden" value="" name="<%=facet.color%>_indices" id="<%=facet.color%>_indices"/>
