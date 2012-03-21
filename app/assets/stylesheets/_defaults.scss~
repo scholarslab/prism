@@ -419,5 +419,5 @@ p.blockquote {
 #forgot-password input[type="submit"] {
 	font-family: "carme", sans-serif;
 	font-size: 16px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
