@@ -62,7 +62,7 @@ namespace :import do
     end
     content = body_p.to_s
 
-    html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, content: content)
+    html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, content: content, num_words:counter)
     prism = Prism.create(prompt: prompt, document: html)
     facets = []
 

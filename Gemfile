@@ -36,7 +36,7 @@ group :development do
    #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
    gem 'annotate',"2.4.1.beta1"
    gem "ffaker", "~> 1.8.1"
-   gem "rails-footnotes", "~> 3.7.5"
+   # gem "rails-footnotes", "~> 3.7.5"
    gem "rails_best_practices"
    gem "heroku", "~> 2.9.0"
    gem "nokogiri", "~> 1.5.0"
@@ -59,6 +59,7 @@ group :test do
   gem 'rake'
   gem 'database_cleaner'
   gem 'minitest'
+  gem 'ruby-prof'
 end
 
 group :production do
