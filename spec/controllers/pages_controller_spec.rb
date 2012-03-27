@@ -4,7 +4,7 @@ require 'factory_girl'
 describe PagesController do
   include Devise::TestHelpers # to give your spec access to helpers
   render_views
-  
+
   before(:each) do
     10.times do |populate|
       Factory.create(:document)
@@ -20,7 +20,7 @@ describe PagesController do
     describe "when user is not signed in" do
       it "should have a sign in link" do
         visit 'index'
-        page.should have_selector("form", :action => '/users/sign_in')
+        page.should have_selector("a", :href => '/users/sign_in')
       end
       it "should have a sign up link" do
         visit 'index'
@@ -36,7 +36,7 @@ describe PagesController do
         else
           @user = @users[0]
         end
-        visit 'index'
+        visit '/users/sign_in'
         fill_in 'user_email', :with => "fred.foonly@example.com"#@user.email
         fill_in 'user_password', :with => "my_password"#@user.password
         click_button 'Sign in'
