@@ -16,11 +16,11 @@ en:
     link_documents: "Documents"
     link_about: "About"
     signed_in: "Signed in as "
-    form_email: "Email:"
+    form_email: "E-mail:"
     form_username: "Username:"
     form_password: "Password:"
     remember_me: "Remember me"
-    sign_in: "Log-in"
+    sign_in: "Sign in"
     sign_out: "Sign out"
     forgot: "Forgot your password?"
     register: "Sign up"
@@ -68,3 +68,6 @@ en:
       graduate student fellowship</a> in the digital humanities.
     contributors_title: Contributors
     contributors_description: ""
+
+  highlight:
+    instructions: Select a highlighter from the menu on the right to highlight the text below. You can change your highlighting with the eraser. When you are done, click "submit" to see Prism's results.

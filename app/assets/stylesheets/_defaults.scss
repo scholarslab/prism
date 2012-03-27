@@ -62,7 +62,7 @@ font-family: carme, sans-serif;
   color: #999;   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
 }
 
-#sign-out {margin-left: 2%}
+#sign-out {display: block}  /*puts sign out link on its own line for consistency, no matter how long or short the username*/
 
 header h1 {
   float: left;
@@ -89,17 +89,22 @@ body h1 {
    text-shadow: 0px 2px 3px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
  }
  
-iframe {
-  float:left;
+#homepic {
+  float: left;
+  width: 25%;
   box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
-  margin-right: 3%;   /*styles for video on homepage, including 50% transparent black box shadow all around */
+  margin-right: 3%;  /*styles for picture on homepage, including 50% transparent black box shadow all around */
 }
+#index-text {
+   margin-bottom: 12%;
+   margin-top: 8%;
+   }
 
 #texts {
   list-style:none; 
   display:block;
   clear:all;
-  margin-top: 120px;
+  margin-top: 15%;
 }
 
 #texts li {
@@ -113,6 +118,7 @@ iframe {
     float: left;
     font-family: lustria, times, serif;
     font-size: 16px;
+    line-height: 150%;  /*gives the appearance of padding since actual padding won't work with the empty spans*/
     background-color: #C0C0C0;
     margin-bottom: 3%;
     border: none;
@@ -256,10 +262,11 @@ p.blockquote {
 }
 
 #highlight_instructions {
+  float: left;
   font-size: 16px;
+  width: 60%;
   text-align: center;
-  margin-left: 9%;
-  margin-right: 9%;
+  padding-left: 3%;
 }
 
 #tools {
