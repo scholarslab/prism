@@ -1,7 +1,7 @@
 Testing::Application.routes.draw do
   devise_for :users
 
-  resources :documents do
+ resources :documents do
     resources :markings
   end
   
