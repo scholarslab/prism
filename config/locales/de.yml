@@ -24,3 +24,23 @@ laufendes Projekt der Praxis Program an der Scholars' Lab, University of Virgini
     forgot: "Passwort vergessen?"
     register: "Registrieren"
 
+  about:
+    prism_title: Über Prism
+    description_p1_html: >-
+      Prism ist ein Tool für "Crowdsourcing-Interpretation." Das Konzept entstand aus einer jahrzehntelangen Gespräch über Kategorien der Textinterpretation, die Stelle an der Universität von Virginia nahm und anderswo, und zwar von Transparenz mark-up-Spiele <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/"> von Bethanien Nowviskie</a> für ihr Media Studies Studenten und ihre Kollegen im <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> umgesetzt:
+    description_p2: >-
+     das Original-Spiel beteiligt geteilt, kopierte Seite Bilder, transparente Überlagerungen, trocken abwischbaren Stiften, eine gemeinsame interpretative Eingabeaufforderung, und einen Moment, in dem jemand schrie "Halt!" und die Folien wurden zur Diskussion gestapelt.
+    description_p3_html: >-
+     Am SpecLab, entwickelt Jerome McGann, das Konzept weiter, das so genannte <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">"Patacritical Demon"</a> wurde.
+    description_p4_html: >-
+      Der Scholars'Lab geboten diese Ideen als Inspiration für das erste Projekt an, das vom Doktoranden Stipendiaten der <a href="http://praxis.scholarslab.org/">Praxis Program</a> in seinem ersten Jahr vorgenommen werden. Unsere erste Aufgabe war es, festzustellen, wie Mann die körperliche Bewegung zur Markierung eines Textes in ein digitales übersetzen würde. Wir beschlossen, dass wir auch weiterhin eine eingeschränkte interpretative Vokabular beschäftigen und begrenzen die Länge des Textes, um treu zu bleiben, die Transparenz-Spiel, bei dem Texte up würde ziemlich schnell markiert werden&mdash;idealerweise in einer Sitzung. Auch, wie die Transparenz Übung, ist das Endziel von Prism zum "ästhetischen Provokationen", oder, Visualisierungen, die weitere Diskussion provozieren zu produzieren. Aber weil es ein digitales Projekt ist, kann Prism integrieren viele individuelle Interpretationen und schaffen eine breite Palette an Visualisierungen unter Beibehaltung der Datenintegrität.    
+    description_p5: >-
+     Prism baut auf aktuellen Vorstellungen von Crowdsourcing für sinnvoller Interaktion mit erlauben "die Menge." Benutzer interagieren subjektiv mit einem Text und tragen zu einer kollektiven Energie, die interpretative unendliche Möglichkeiten jenseits der Hervorhebung Übung selbst hat &ndash; in der Forschung, im Klassenzimmer oder bei der Motivierung und das Experimentieren mit größeren Daten in den Geisteswissenschaften (Computerlinguistik und Text Mining, z.B.).
+    praxis_title: Der Praxis Program
+    praxis_description_html: >
+      <a href='http://praxis.scholarslab.org/'>Die Praxis Program</a> ist ein Pilotprojekt von 2011-12 der Wissenschaftler Lab an der <a href='http://www2.lib.virginia.edu/scholarslab/'>University of Virginia Library,</a> in der sechs geistes-Doktoranden ein Jahr lang in einer gemeinschaftlichen, hands-on, Digital Humanities Lehrzeit. Der Praxis Programm hat das Ziel, bessere Ausstattung für Wissensarbeiter Emerging Professuren und <a href=http://mediacommons.futureofthebook.org/alt-ac/'>alternative akademische Karriere</a> in einem Moment, in dem neue Fragen gestellt werden können und neue Systeme gebaut. Besuchen Sie die Website zu Praxis-Programm mehr über das Programm zu entwickelnden Lehrpläne, einschließlich Bibliographien für jedes Thema zu lernen, und um sich direkt von Praxis Fellows und Scholars' Lab Dozenten und Mitarbeiter, wie sie <a href='http://www.scholarslab.org/blog/'>über ihre Erfahrungen bloggen.</a>
+    scholarslab_title: Der Scholars' Lab
+    scholarslab_description_html: >-
+      <a href='http://www2.lib.virginia.edu/scholarslab/'>Der Scholars' Lab</a> wurde im Jahr 2006 bei der <a href='http://www.lib.virginia.edu/index.html'>University of Virginia Library</a> als Ort für Innovationen in der Geistes-und Sozialwissenschaften gegründet. Der Wissenschaftler Lab ist ein Ort, an dem Professoren und fortgeschrittenen Studierenden digitale Ressourcen zu erkunden, finden kompetente Hilfe und Zusammenarbeit an innovativen Forschungsprojekten. Der Slab beherbergt auch Veranstaltungen wie Workshops, Vorträgen und Roundtables und sponsert den Praxis-Programm und  <a href='http://www2.lib.virginia.edu/scholarslab/about/fellowship.html'>einen prestigeträchtigen Doktorand Gemeinschaft</a> in den digitalen Geisteswissenschaften.
+    contributors_title: Mitwirkende
+    contributors_description: ""

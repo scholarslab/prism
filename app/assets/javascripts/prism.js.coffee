@@ -69,3 +69,17 @@ $ ->
   # Clicking on a facet sets the color
   $("li.facet").click ->
     current_color = $("input", this).val()
+
+
+$ ->
+    all_colors = []
+    frequencies = {}
+    facets = $("li.vis_facet")
+    for facet in facets
+        color = $("input.color", facet).val()
+        all_colors.push(color)
+        frequencies[color] = JSON.parse($("input.freq", facet).val())
+    # Clicking on a facet sets the color
+    $("li.vis_facet").click ->
+        current_color = $("input", this).val()
+        d3.selectAll("span.word").data(frequencies[current_color]).transition().style("font-size", (d) -> (16+12*d) + "px" ).style("color", current_color)
