@@ -5,8 +5,8 @@
 
 <%= image_tag('bigprism.png', :id => "bigprism") %>
 <div id="user-meta">
-<% if user_signed_in? %>
-  <%=t 'header.signed_in'%><%= current_user.email %>.
+  <span><% if user_signed_in? %>
+  <%=t 'header.signed_in'%><%= current_user.email %>. </span>
   <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
 <% end %>
 <p><%= link_to t('header.register'), new_user_registration_path %>
