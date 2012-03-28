@@ -100,7 +100,7 @@ body {
 body h1 {
    size: 30px;
    margin-bottom: 5px;
-   text-shadow: 0px 2px 3px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
  }
  
 #homepic {
@@ -166,7 +166,6 @@ a.visualize {
   border-left: 24px solid white;
  } 
 
-
 .doc-display {
   clear: all;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
@@ -177,7 +176,9 @@ a.visualize {
   font-family: lustria, times, serif;
   text-align: center;
   a {display: block}
-}
+  }
+
+
 
  footer {
    margin-top: 5%; 
@@ -230,7 +231,7 @@ p.blockquote {
 
    #Praxis h2 {
      font-size: 26px;
-     text-shadow: 0px 2px 3px rgba(0,0,0,0.5);
+     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
 #page-content {
@@ -288,8 +289,6 @@ p.blockquote {
   width: 30%;
 }
 
-
-
 #highlighters {
   list-style: none;
   font-size: 18px;
@@ -299,18 +298,20 @@ p.blockquote {
   line-height: 1;
 }
 
-#highlighters li{
+#highlighters li {
   margin-bottom: 40px;
+  line-height: 150%;
   clear: left;
   overflow: hidden;
   }
 
-#highlighters li span{
+.facet span {
   display: block;
   float: left;
-  width: 35px;
-  height: 35px;
-  margin-right: 1%;
+  background-color: lightblue;
+  width: 30px;
+  height: 30px;
+  margin-right: 2%;
  
 }
 
