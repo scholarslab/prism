@@ -7,23 +7,25 @@
     <div class="text">
       <%= @document.content.html_safe %>
     </div>
-    </div>
-  <div id="tools">
-      <ul id="highlighters">
-        <% for facet in @prism.facets %>
-          <li class="facet"><span></span><input type="hidden" value="<%=facet.color%>"/><%=facet.category%></li>
-        <% end %>
-        <li class="facet"><span></span><input type="hidden" value="delete"/>Eraser</li>
-      </ul>
-      <p id="highlighter-help">Twee umami carles whatever wes anderson, pitchfork williamsburg +1 brunch DIY letterpress sustainable mixtape sriracha master cleanse. Ethnic whatever messenger bag, cliche portland irony thundercats butcher vegan brunch master cleanse bushwick. Kale chips lo-fi semiotics pour-over viral, squid tofu brooklyn before they sold out twee letterpress ethical. Brunch before they sold out PBR tattooed terry richardson, echo park keffiyeh VHS sustainable authentic brooklyn mcsweeney's readymade. Put a bird on it odd future beard, pinterest narwhal messenger bag marfa. Fingerstache hoodie gentrify salvia synth. Flexitarian retro before they sold out squid post-ironic etsy VHS tattooed, cray pinterest single-origin coffee tumblr.
-      </p>
-      <form action="./highlight" method="POST">
-        <% for facet in @prism.facets %>
-        <input type="hidden" value="" name="<%=facet.color%>_indices" id="<%=facet.color%>_indices"/>
-        <% end %>
-        <input type="submit" value="Submit" />
-      </form>
   </div>
+  <div id="sidebar">
+    <div id="tools">
+        <ul id="highlighters">
+          <% for facet in @prism.facets %>
+            <li class="facet"><input type="hidden" value="<%=facet.color%>"/><%=facet.category%></li>
+          <% end %>
+          <li class="facet"><input type="hidden" value="delete"/>Eraser</li>
+        </ul>
+        <p id="highlighter-help">Twee umami carles whatever wes anderson, pitchfork williamsburg +1 brunch DIY letterpress sustainable mixtape sriracha master cleanse. Ethnic whatever messenger bag, cliche portland irony thundercats butcher vegan brunch master cleanse bushwick. Kale chips lo-fi semiotics pour-over viral, squid tofu brooklyn before they sold out twee letterpress ethical. Brunch before they sold out PBR tattooed terry richardson, echo park keffiyeh VHS sustainable authentic brooklyn mcsweeney's readymade. Put a bird on it odd future beard, pinterest narwhal messenger bag marfa. Fingerstache hoodie gentrify salvia synth. Flexitarian retro before they sold out squid post-ironic etsy VHS tattooed, cray pinterest single-origin coffee tumblr.
+        </p>
+        <form action="./highlight" method="POST">
+          <% for facet in @prism.facets %>
+          <input type="hidden" value="" name="<%=facet.color%>_indices" id="<%=facet.color%>_indices"/>
+          <% end %>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
 </div>
 
 
