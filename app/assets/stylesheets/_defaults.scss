@@ -16,9 +16,9 @@
   }
   
 .page-margin {
-    width: 1100px;
     margin-left: 9%;
-    margin-right: 9%;}
+    margin-right: 9%;
+  }
 
 a:link {text-decoration:none;      /*styles all the links on the site*/
   font-weight:bold;
@@ -279,13 +279,12 @@ p.blockquote {
   padding-left: 3%;
 }
 
-#tools {
+#sidebar {
   float: right;
-  width: 25%;
-  padding: 2%;
-  margin-top: 1%;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+  width: 30%;
 }
+
+
 
 #highlighters {
   list-style: none;
@@ -315,16 +314,6 @@ p.blockquote {
 }
 
 #tools p {
-  font-size: 14px;
-  font-family: "PT Sans", sans serif;
-}
-
-#visualizations {
-  float: right;
-  width: 30%;
-  padding: 1.5%;
-  margin-top: 1%;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
   font-size: 14px;
   font-family: "PT Sans", sans serif;
 }
@@ -453,4 +442,10 @@ p.blockquote {
 	font-family: "carme", sans-serif;
 	font-size: 16px;
 	margin-bottom: 15px;
+}
+
+.fixed {
+  position:fixed;
+  top:0;
+  margin-right: 9%;
 }
