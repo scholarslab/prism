@@ -1,4 +1,4 @@
-class PrismsController < ApplicationController
+class PrismsController < ApplicationController 
     def highlight
         @title = "Highlight"
         @prism = Prism.find(params[:id])
@@ -11,7 +11,7 @@ class PrismsController < ApplicationController
             indices = params[(facet.color + "_indices").to_sym]
             Marking.new(word_array:indices, prism:prism, facet:facet, user:current_user).save()
         end
-        redirect_to(visualize_path(prism))
+            redirect_to(visualize_path(prism))      
     end
 
     def visualize
