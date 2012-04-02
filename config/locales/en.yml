@@ -7,7 +7,7 @@ en:
     visualize: Visualize
     welcome: Welcome!
     in_development: "Prism is being developed at warp speed. Keep checking back."
-    about_text: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox."
+    about_text_html: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox <a href='/prisms/6/highlight'>Try it!<span></span></a>"
  
   header:
     description_html: "Prism is a tool for <a href='/pages/about'>collective interpretation</a> of texts. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
