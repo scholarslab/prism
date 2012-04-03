@@ -55,6 +55,7 @@ namespace :import do
     format = doc.xpath("//div[@id='bib']/div[@class='format']").text
     facet_tags = doc.css("div#facets div.facet")
     prompt = doc.css("div#prompt").text
+    sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']")
     body_p = doc.xpath("//body/p")
     counter = 0
     for ptag in body_p
