@@ -17,12 +17,12 @@
           <li class="facet"><input type="hidden" value="delete"/><span></span><%= t "highlight.eraser" %></li>
         </ul>
         <p id="highlighter-help"><%= t "highlight.help" %></p>
-        <form action="./highlight" method="POST">
+        <%= form_tag do %>
           <% for facet in @prism.facets %>
           <input type="hidden" value="" name="<%=facet.color%>_indices" id="<%=facet.color%>_indices"/>
           <% end %>
           <input type="submit" value="Submit" />
-        </form>
+        <% end %>
       </div>
     </div>
 </div>
