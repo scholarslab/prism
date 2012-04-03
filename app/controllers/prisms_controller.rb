@@ -1,4 +1,5 @@
 class PrismsController < ApplicationController 
+    before_filter :authenticate_user!
     def highlight
         @title = "Highlight"
         @prism = Prism.find(params[:id])
