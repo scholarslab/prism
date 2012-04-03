@@ -6,18 +6,24 @@
     <h2><%= @document.author %></h2>
 
     <div class="text">
-     <%= @document.content.html_safe %>
+      <%= @document.content.html_safe %>
     </div>
   </div>
-
-  <div id="visualizations">
-    <p id="visualization-help">Select one of the options below to display a visualization of collected data for this text.
-    </p>
-    <ul id="visualization-types">
+  <div id="sidebar">
+    <div id="visualizations">
+      <p id="visualization-help">Select one of the options below to display a visualization of collected data for this text.
+      </p>
+      <ul id="highlighters">
+        <% for facet in @prism.facets %>
+          <li class="vis_facet"><input type="hidden" class="color" value="<%=facet.color%>"/><input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/><%=facet.category%></li>
+        <% end %>
+      </ul>
+      <ul id="visualization-types">
         <li><%= image_tag('cats-in-sink.jpg') %></li>
         <li><%= image_tag('cat-sheen-1.jpg') %></li>
         <li><%= image_tag('cat-sheen-7.jpg') %></li>
         <li><%= image_tag('cat-sheen-9.jpg') %></li>
-    </ul>
+      </ul>
+    </div>
   </div>
 </div>

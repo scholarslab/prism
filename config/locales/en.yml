@@ -7,7 +7,7 @@ en:
     visualize: Visualize
     welcome: Welcome!
     in_development: "Prism is being developed at warp speed. Keep checking back."
-    about_text: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox."
+    about_text_html: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox <a href='/prisms/6/highlight'>Try it!<span></span></a>"
  
   header:
     description_html: "Prism is a tool for <a href='/pages/about'>collective interpretation</a> of texts. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
@@ -16,11 +16,11 @@ en:
     link_documents: "Documents"
     link_about: "About"
     signed_in: "Signed in as "
-    form_email: "Email:"
+    form_email: "E-mail:"
     form_username: "Username:"
     form_password: "Password:"
     remember_me: "Remember me"
-    sign_in: "Log-in"
+    sign_in: "Sign in"
     sign_out: "Sign out"
     forgot: "Forgot your password?"
     register: "Sign up"
@@ -35,7 +35,7 @@ en:
     description_p1_html: >
       Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia and elsewhere, and specifically from transparency mark-up games <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">implemented by Bethany Nowviskie</a> for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a>:
     description_p2: >
-      the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
+     the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
       somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion.
     description_p3_html: >
       At SpecLab, Jerome McGann <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">further 
@@ -68,3 +68,15 @@ en:
       graduate student fellowship</a> in the digital humanities.
     contributors_title: Contributors
     contributors_description: ""
+
+  highlight:
+    instructions: Select a highlighter from the menu on the right to highlight the text below. You can change your highlighting with the eraser. When you are done, click "submit" to see Prism's results.
+    help: Twee umami carles whatever wes anderson, pitchfork williamsburg +1 brunch DIY letterpress sustainable mixtape sriracha master cleanse. Ethnic whatever messenger bag, cliche portland irony thundercats butcher vegan brunch master cleanse bushwick. Kale chips lo-fi semiotics pour-over viral, squid tofu brooklyn before they sold out twee letterpress ethical. Brunch before they sold out PBR tattooed terry richardson, echo park keffiyeh VHS sustainable authentic brooklyn mcsweeney's readymade. Put a bird on it odd future beard, pinterest narwhal messenger bag marfa. Fingerstache hoodie gentrify salvia synth.
+    eraser: Eraser
+
+  log-in:
+    forgot: Forgot your password?
+    in: Sign in
+    up: Sign up
+        
+    
