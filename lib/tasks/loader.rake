@@ -1,3 +1,11 @@
+class String
+  def to_bool
+    return true if self == true || self =~ (/(true|t|yes|y|1)$/i)
+    return false if self == false || self.blank? || self =~ (/(false|f|no|n|0)$/i)
+    raise ArgumentError.new("invalid value for Boolean: \"#{self}\"")
+  end
+end
+
 def count_words(text)
   text.split.length
 end
@@ -55,7 +63,7 @@ namespace :import do
     format = doc.xpath("//div[@id='bib']/div[@class='format']").text
     facet_tags = doc.css("div#facets div.facet")
     prompt = doc.css("div#prompt").text
-    sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']")
+    sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']").text.to_bool
     body_p = doc.xpath("//body/p")
     counter = 0
     for ptag in body_p
@@ -63,7 +71,7 @@ namespace :import do
     end
     content = body_p.to_s
 
-    html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, content: content, num_words:counter)
+    html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, sandbox: sandbox, content: content, num_words:counter)
     prism = Prism.create(prompt: prompt, document: html)
     facets = []
 
