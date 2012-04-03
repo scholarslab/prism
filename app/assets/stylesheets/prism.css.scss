@@ -8,13 +8,21 @@
     line-height:200%;
 }
 .red {
-    background:#FCC;
+    background-color: rgba(179,0,0,0.5);
+    border-top: none;
+    border-bottom: none;
 }
 
 .green {
-    border-top: 5px solid #CFC;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 10px;
+    background-color: rgba(0,179,0,0.5);
 }
 
 .blue {
-    border-bottom: 5px solid #CCF;
-}
+    margin-bottom: 10px;
+    background-color: rgba(0,0,179,0.5);
+    border-top:  none;
+    border-bottom: none;
+  }

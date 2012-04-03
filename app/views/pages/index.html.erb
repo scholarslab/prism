@@ -4,8 +4,8 @@
 <div class="warn">
   <p><%= t 'index.in_development'%></p>
 </div>
-<iframe width="280" height="172" src="http://www.youtube.com/embed/UGz8jcbJjRw?rel=0" frameborder="0" allowfullscreen></iframe>
-<p id=index-text> <%=t 'index.about_text'%></p>
+<%= image_tag ('catpopsicle.jpg'), :id => 'homepic' %>
+<p id=index-text> <%=t 'index.about_text_html'%></p>
 
 <ul id="texts">
   <% @prisms.each do | prism | %>
@@ -21,7 +21,7 @@
     <div class="doc-display">
       <%= link_to prism.document.title, highlight_path(prism) %>
       <%= prism.document.author %>
-    </div>
+     </div>
     </li>
   <% end %>
 </ul>
