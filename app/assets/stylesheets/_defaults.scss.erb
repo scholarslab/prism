@@ -23,11 +23,11 @@
 
 a:link {text-decoration:none;      /*styles all the links on the site*/
   font-weight:bold;
-        color: Teal;}
+        color: rgba(0,153,153,1.0);}
 a:visited {text-decoration:none;
-           color: Teal;}
+           color: rgba(0,153,153,1.0);}
 a:hover {text-decoration:none;
-         color: lightseagreen;}
+         color: rgba(0,153,77,1.0);}
 a:active {text-decoration:none;
           color: Dimgray;}
 
@@ -97,40 +97,39 @@ body {
   font-color: #003333;
   font-family: "PT Sans", sans-serif;
     /*font and color of all body text, unless otherwise specified in stylesheet*/
+  h1 {
+   size: 30px;
+   margin-bottom: 10px;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
+  }
  }
 
-body h1 {
-   size: 30px;
-   margin-bottom: 5px;
-   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
- }
- 
 #homepic {
   float: left;
   width: 30%;
   box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
   margin-right: 3%;  /*styles for picture on homepage, including 50% transparent black box shadow all around */
 }
+
 #index-text {
   line-height: 150%;
-  margin-bottom: 12%;
+  margin-bottom: 10%;
   margin-top: 8%;
-   }
-
-   #index-text a {
+  font-size: 18px;
+  a {
      background-color: #C0C0C0;
      float: right;
-     margin-right: 25%;
+     margin-right: 15%;
      padding-left: 1%;
       }
-
-   #index-text span {
+  span {
       float: right;
       width: 0;
       height: 0;
-      border-top: 12px solid white;
-      border-bottom: 12px solid white;
-      border-left: 24px solid #C0C0C0;
+      border-top: 14px solid white;
+      border-bottom: 14px solid white;
+      border-left: 28px solid #C0C0C0;
+    }
 }
 
 #texts {
@@ -138,20 +137,19 @@ body h1 {
   display:block;
   clear:all;
   margin: 10px 0px 0px;
-}
 
-#texts li {
-  float: left;
-  width: 25%;
-  padding: 2%;
-  margin-left: 1%;
-  margin-right: 1%;
+  li {
+   float: left;
+   width: 24%;
+   padding: 2%;
+   margin-left: 3%;
+   }
 }
 
 .doc-tools a {
     float: left;
     font-family: "PT Serif", times, serif;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 150%;  /*gives the appearance of padding since actual padding won't work with the empty spans*/
     background-color: #C0C0C0;
     margin-top: 2px;
@@ -160,7 +158,6 @@ body h1 {
     }
 
 a.highlight { 
-  margin-right: 5%;
   padding-left: 3%;
  }
 
@@ -173,9 +170,9 @@ a.visualize {
   float: right;
   width: 0;
   height: 0;
-  border-top: 12px solid white;
-  border-bottom: 12px solid white;
-  border-left: 24px solid #C0C0C0;
+  border-top: 14px solid white;
+  border-bottom: 14px solid white;
+  border-left: 28px solid #C0C0C0;
   }
 
 .visualize span {
@@ -183,15 +180,14 @@ a.visualize {
   margin-right: 5px;
   width: 0;
   height: 0;
-  border-top: 12px solid #C0C0C0;
-  border-bottom: 12px solid #C0C0C0;
-  border-left: 24px solid white;
+  border-top: 14px solid #C0C0C0;
+  border-bottom: 14px solid #C0C0C0;
+  border-left: 28px solid white;
  } 
 
 .doc-display {
-  clear: all;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
-  height: 250px;
+  height: 275px;
   padding: 2%;
   margin-top: 35px;
   font-size: 20px;
@@ -202,12 +198,14 @@ a.visualize {
 
   .doctitle {
     display: block;
-    clear: both;
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin: 90px 0px 0px;
 }
 .author {
-  font-size: 18px;
+  display: block;
+  font-size: 20px;
+  position: relative;
+  top: 70px;  /*trying to figure out how to make the Poe look better next to the other two by positioning author in relation to bottom of div. more tinkering needed. */
 }
 
  footer {
