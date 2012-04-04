@@ -56,19 +56,19 @@ header {*zoom:1;}
   padding-right: 1%;
   padding-left: 2%;
   padding-top: 1%;     /*styles for entirety of rainbow log-in/sign-up area of header*/
-}
 
-#user-meta a, #user-meta span {
-  text-decoration: none;
-  color: white;
-  z-index:10000;
-  position: relative;
+  a, span {
+    text-decoration: none;
+    color: white;
+    z-index:10000;
+    position: relative;
+   }
+
+  p a:not(:last-child):after {
+    content:" | ";
+    margin: 0 8px;
+    color: rgba(255,255,255,1.0);   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
  }
-
-#user-meta p a:not(:last-child):after {
-  content:" | ";
-  margin: 0 8px;
-  color: rgba(255,255,255,1.0);   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
 }
 
 #sign-out {display: block}  /*puts sign out link on its own line for consistency, no matter how long or short the username*/
@@ -77,7 +77,7 @@ header {*zoom:1;}
   position:absolute;
   top: -160px;
   z-index:9000;
-}
+  }
 
 header h1 {
   float: left;
@@ -91,7 +91,6 @@ p.description {
   margin-left: 2%;
   margin-top: 2%;
  }  /*styles short description in header*/
-
 
 body {
   font-color: #003333;
@@ -117,19 +116,19 @@ body {
   margin-top: 8%;
   font-size: 18px;
   a {
-     background-color: #C0C0C0;
-     float: right;
-     margin-right: 15%;
-     padding-left: 1%;
+    background-color: #C0C0C0;
+    float: right;
+    margin-right: 15%;
+    padding-left: 1%;
       }
   span {
-      float: right;
-      width: 0;
-      height: 0;
-      border-top: 14px solid white;
-      border-bottom: 14px solid white;
-      border-left: 28px solid #C0C0C0;
-    }
+    float: right;
+    width: 0;
+    height: 0;
+    border-top: 14px solid white;
+    border-bottom: 14px solid white;
+    border-left: 28px solid #C0C0C0;
+     }
 }
 
 #texts {
@@ -139,11 +138,11 @@ body {
   margin: 10px 0px 0px;
 
   li {
-   float: left;
-   width: 24%;
-   padding: 2%;
-   margin-left: 3%;
-   }
+    float: left;
+    width: 24%;
+    padding: 2%;
+    margin-left: 3%;
+    }
 }
 
 .doc-tools a {
@@ -193,59 +192,62 @@ a.visualize {
   font-size: 20px;
   font-family: "PT Serif", times, serif;
   text-align: center;
+  position: relative;
   a {display: block}
   }
 
-  .doctitle {
-    display: block;
-    font-size: 24px;
-    margin: 90px 0px 0px;
+.doctitle {
+  display: block;
+  font-size: 24px;
+  margin: 90px 0px 0px;
 }
+
 .author {
   display: block;
+  width: 95%;
+  text-align: center;
   font-size: 20px;
-  position: relative;
-  top: 70px;  /*trying to figure out how to make the Poe look better next to the other two by positioning author in relation to bottom of div. more tinkering needed. */
+  position: absolute;
+  bottom: 20px;  /*trying to figure out how to make the Poe look better next to the other two by positioning author in relation to bottom of div. more tinkering needed. */
 }
 
- footer {
-   margin-top: 5%; 
-   width: 100%;
-   overflow: auto;
+footer {
+  margin-top: 5%; 
+  width: 100%;
+  overflow: auto;
    }
 
- #footer-links {
-    display: table;
-    float: right;
-      } 
+#footer-links {
+  display: table;
+  float: right;
+} 
 
-  #license, #slab-logo, #uva-lib-logo, #praxis-logo {
-     font-family: "PT Serif", times, serif;
-     display: table-cell;
-     vertical-align: middle;
-     padding-left: 20px;
-     padding-right: 20px;
-                }
+#license, #slab-logo, #uva-lib-logo, #praxis-logo {
+  font-family: "PT Serif", times, serif;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 #footer-nav {
   margin-top: 3%;
   display: table;
   clear: all;
   padding: 1%;
-  }
 
- #footer-nav a {
-   display: table-cell;
-   font-family: "PT Sans", sans-serif;
-   font-size: 14px;
-         }
-
-  #footer-nav a:not(:last-child):after {
-    content:" | ";
-    color: #999; 
-    margin-right: 5px;
+  a {
+    display: table-cell;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+   
+    &:not(:last-child):after {
+      content:" | ";
+      color: #999; 
+      margin-right: 5px;
       } 
-
+   }
+}
 
 p.blockquote {
  padding-left: 8%;}
@@ -255,11 +257,11 @@ p.blockquote {
   width: 30%;
   padding: 1%;
   margin-top: 18%;
-   }
 
-   #Praxis h2 {
-     font-size: 26px;
-     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  h2 {
+    font-size: 26px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  }
 }
 
 #page-content {
@@ -270,7 +272,6 @@ p.blockquote {
   margin-top: 2%;
 }
 
-
 #Prismabob {
   float: left;
   width: 60%;
@@ -278,26 +279,25 @@ p.blockquote {
   margin-top: 1%;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
   margin-right: 1%;
-}
 
-#Prismabob h1 {
-  line-height: 1em;
-  font-family: "PT Serif", serif ;
-  font-size: 30px;
-  text-align: center;
-  padding-top: 7%;
-}
+  h1 {
+    line-height: 1em;
+    font-family: "PT Serif", serif ;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 7%;
+  }
 
-#Prismabob h2 {
-  line-height: 1em;
-  font-family: "PT Serif", serif ;
-  font-size: 24px;
-  text-align: center;
-}
-
-#Prismabob h3 {
-  font-size: 18px;
-  text-align: center;
+  h2 {
+    line-height: 1em;
+    font-family: "PT Serif", serif ;
+    font-size: 24px;
+    text-align: center;
+  }
+  h3 {
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
 .text {
@@ -325,14 +325,26 @@ p.blockquote {
   margin-left: 0;
   padding: 0;
   line-height: 1;
-}
 
-#highlighters li {
-  margin-bottom: 40px;
-  line-height: 150%;
-  clear: left;
-  overflow: hidden;
-  }
+  li {
+    margin-bottom: 40px;
+    line-height: 150%;
+    clear: left;
+    overflow: hidden;
+   }
+  span.red {
+    background-color: rgba(179,179,0,1);
+    border: none;
+   }
+  span.green {
+    background-color: rgba(0,179,89,1);
+    border: none;
+   }
+  span.blue {
+    background-color: rgba(0,179,179,1);
+    border: none;
+   }
+ }
 
 .facet span {
   display: block;
@@ -340,25 +352,11 @@ p.blockquote {
   width: 30px;
   height: 30px;
   margin-right: 2%;
-  border: 1px solid gray;
-}
+  }
 
-#highlighters span.red {
-  background-color: rgba(179,179,0,1);
-  border: none;
-}
-#highlighters span.green {
-  background-color: rgba(0,179,89,1);
-  border: none;
-}
-#highlighters span.blue {
-  background-color: rgba(0,179,179,1);
-  border: none;
-}
-
-/*trying to find a way to make the selected highlighter or eraser look different. not sure how to call it.
-li.facet.selected  {
-  font-weight: bold; */
+.eraser {
+    font-style: italic;
+  }
 
 #tools p {
   font-size: 14px;
@@ -369,123 +367,54 @@ li.facet.selected  {
   padding-left: 13%;
 }
 
-
 #visualization-types {
    list-style: none;
+  
+   li {
+   width: 100%;
+   }
+
+   img {
+   max-width: 100%;
+   }
+ }
+
+#userform {
+  width: 35%;
+  padding: 2%;
+  margin-top: 3%;
+  margin-left: 29%;
+  margin-bottom: 3%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+  font-size: 16px;
+
+  input[type="submit"] {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    display: block;
+    margin-top: 12px;
+ }
+
+  input[type="email"] {
+    margin-bottom: 10px;
+    display: block;
   }
 
-#visualization-types li {
-  width: 100%;
-}
-
-#visualization-types img {
-  max-width: 100%;
-}
-
-#sign-in {
-  width: 35%;
-  padding: 2%;
-  margin-top: 3%;
-  margin-left: 29%;
-  margin-bottom: 3%;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
-  font-size: 16px;
-}
-
-#sign-in input[type="submit"] {
-	float: right;
-	margin-right: 30%;
-	font-family: "PT Sans", sans-serif;
-	font-size: 16px;
-}
-
-#sign-in input[type="email"] {
-	margin-bottom: 5px;
-}
-
-#sign-in input[type="password"] {
-	margin-bottom: 15px;
-}
-
-#sign-in p a:not(:last-child):after {
-  content:" | ";
-  margin: 0 10px;
-  margin-top: 15px;
-  color: #999;   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
-}
-
-#sign-in input[type="email"], 
-#sign-in input[type="password"] {
-  display: block;
-}
-
-#sign-up {
-  width: 35%;
-  padding: 2%;
-  margin-top: 3%;
-  margin-left: 29%;
-  margin-bottom: 3%;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
-  font-size: 16px;
- 
-  input[type="submit"] {
-	float: right;
-	margin-right: 30%;
-	font-family: "PT Sans", sans-serif;
-	font-size: 16px;
-}
-
-  input[type="email"], 
   input[type="password"] {
-	margin-bottom: 5px;
+    margin-bottom: 15px;
+    display: block;
+   }
+
+   p a:not(:last-child):after {
+    content:" | ";
+    margin: 0 10px;
+    margin-top: 15px;
+    color: #999;   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
+   }
 }
 
-  #user_password_confirmation {
-	margin-bottom: 15px;
-}
-
-  p a:not(:last-child):after {
-  content:" | ";
-  margin: 0 10px;
-  color: #999;   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
-}
-
-  input[type="email"], 
-  input[type="password"] {
-  display: block;
-}
-}
-
-#forgot-password {
-  width: 35%;
-  padding: 2%;
-  margin-top: 3%;
-  margin-left: 29%;
-  margin-bottom: 3%;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
-  font-size: 16px;
-}
-
-#forgot-password input[type="email"] {
-	margin-bottom: 10px;
-}
-
-#forgot-password p a:not(:last-child):after {
-  content:" | ";
-  margin: 0 10px;
-  margin-top: 15px;
-  color: #999;   /*puts vertical line between "sign in" and "sign up" links -- this is crazy CSS voodoo!*/
-}
-
-#forgot-password input[type="email"], 
-#forgot-password input[type="submit"] {
-  display: block;
-}
-
-#forgot-password input[type="submit"] {
-	font-family: "PT Sans", sans-serif;
-	font-size: 16px;
-	margin-bottom: 15px;
+#user_password_confirmation {
+  margin-bottom: 15px;
 }
 
 .fixed {
