@@ -3,24 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .word {
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
-    line-height:200%;
-}
-.red {
-    background-color: rgba(179,0,0,0.5);
+      line-height:200%;
+   }
+.red { /*this is actually a yellow*/
+    background-image: -webkit-linear-gradient(top, rgba(179,179,0,0) 33%,rgba(179,179,0,0.7) 34%,rgba(179,179,0,0.7) 66%,rgba(179,179,0,0) 67%);
     border-top: none;
     border-bottom: none;
 }
 
 .green {
+    background-image: -webkit-linear-gradient(top, rgba(0,179,89,0) 66.7%,rgba(0,179,89,0.7) 66.8%,rgba(0,179,89,0.7) 100%);
     border-top: none;
     border-bottom: none;
-    background-color: rgba(0,179,0,0.5);
-}
+    }
 
 .blue {
-    background-color: rgba(0,0,179,0.5);
+    background-image: -webkit-linear-gradient(top, rgba(0,179,179,0.7) 0%,rgba(0,179,179,0.7) 33.3%,rgba(0,179,179,0) 33.4%);
     border-top:  none;
     border-bottom: none;
   }
