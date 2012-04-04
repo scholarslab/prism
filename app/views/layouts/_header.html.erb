@@ -5,13 +5,15 @@
 
 <%= image_tag('bigprism.png', :id => "bigprism") %>
 <div id="user-meta">
-  <span><% if user_signed_in? %>
-  <%=t 'header.signed_in'%><%= current_user.email %>. </span>
-  <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
-<% end %>
-<p><%= link_to t('header.register'), new_user_registration_path %>
-<a href="/users/sign_in"><%= t'header.sign_in' %></a>
-</p>
+  <p>
+  <% if user_signed_in? %>
+    <span><%=t 'header.signed_in'%><%= current_user.email %>. </span>
+    <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
+  <% else %>
+    <%= link_to t('header.register'), new_user_registration_path %>
+    <a href="/users/sign_in"><%= t'header.sign_in' %></a>
+  <% end %>
+  </p>
 </div>
 </div>
 </header>
