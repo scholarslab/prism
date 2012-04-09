@@ -1,6 +1,9 @@
 Testing::Application.routes.draw do
   devise_for :users
-
+  scope ':locale' do
+    resources :buckets, :only => [ :index ]
+    resources :items, :only => [ :index, :show, :edit, :update ]
+  end
  resources :documents do
     resources :markings
   end
