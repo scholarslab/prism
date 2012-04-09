@@ -1,24 +1,19 @@
 <header>
-<h1><a href="/"><%= image_tag('prism-logo.png') %></a></h1>
-<p class="description"><%= t 'header.description_html' %></p>
+<div class="header-margin">
+  <h1><%= link_to image_tag('prism-logo.png'), :controller => 'pages', :action => 'index' %></h1>
+<p class="description"><%= t 'header.description_html', :about_url => url_for(:controller => 'pages', :action => 'about') %></p>
 
+<%= image_tag('bigprism.png', :id => "bigprism") %>
 <div id="user-meta">
-<% if user_signed_in? %>
-  <%=t 'header.signed_in'%><%= current_user.email %>.
-<%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete %>
-<% else %>
-<%= form_for("user", :url => user_session_path) do |f| %>
-<%= f.label t('header.form_email') %>
-<%= f.text_field :email %>
-<%= f.label t('header.form_password') %>
-<%= f.password_field :password %>
-<%= f.check_box :remember_me %>
-<%= f.label t('header.remember_me') %>
-<%= f.submit t('header.sign_in') %>
-<% end %>
-<p><%= link_to t('header.forgot'), new_password_path('user') %>
-<%= link_to t('header.register'), new_user_registration_path %>
-</p>
-<% end %>
+  <p>
+  <% if user_signed_in? %>
+    <span><%=t 'header.signed_in'%><%= current_user.email %>. </span>
+    <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
+  <% else %>
+    <%= link_to t('header.register'), new_user_registration_path %>
+    <a href="/users/sign_in"><%= t'header.sign_in' %></a>
+  <% end %>
+  </p>
+</div>
 </div>
 </header>

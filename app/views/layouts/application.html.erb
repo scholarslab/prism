@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= stylesheet_link_tag    "application" %>
   <%= csrf_meta_tags %>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+  <%= javascript_include_tag "application" %>
 </head>
 <body>
   <div id="container">
@@ -20,8 +21,6 @@
 
     <%= render 'layouts/footer' %>
   </div>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-  <%= javascript_include_tag "application" %>
 <!--[if lt IE 7 ]>
   <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
   <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>

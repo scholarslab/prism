@@ -1,26 +1,29 @@
+<div class="page-margin">
+<h1><%= t 'index.welcome'%></h1>
 
-<h1><%=t 'index.welcome'%></h1>
-
-<div class="warn">
-  <p><%= t 'index.in_development'%></p>
-</div>
-<iframe width="280" height="172" src="http://www.youtube.com/embed/UGz8jcbJjRw?rel=0" frameborder="0" allowfullscreen></iframe>
-<p id=index-text> <%=t 'index.about_text'%></p>
+<%= image_tag ('guineapighat.jpg'), :id => 'homepic' %>
+<p id=index-text> <%=t 'index.about_text_html'%></p>
 
 <ul id="texts">
-  <% @documents.each do | document | %>
+  <% @prisms.each do | prism | %>
     <li>
-    <div class="doc-tools">
-      <%= link_to t(:highlight), highlight_path(document), :class => 'highlight' %>
-      <%= link_to t(:visualize), visualize_path(document), :class => 'visualize'  %>
-     </div>
     <div class="doc-display">
-      <%= link_to document.title, document %>
-      <%= document.author %>
-    </div>
+       <div class="doc-tools">
+      <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+        <%= t 'index.highlight' %><span></span>
+      <% end %>
+      <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+        <span></span><%= t 'index.visualize' %>
+      <% end %>
+     </div>
+     <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
+       <%= prism.document.title %>
+       <% end %>
+       <span class='author'><%= prism.document.author %></span>
+          </div>
     </li>
   <% end %>
 </ul>
 
-
+</div>
 
