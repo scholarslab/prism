@@ -69,8 +69,8 @@ $ ->
   # Clicking on a facet sets the color
   $("li.facet").click ->
     current_color = $("input", this).val()
-
-
+    $("span.facet.border").removeClass("border")
+    $(this).find("span.facet").addClass("border")
 $ ->
     all_colors = []
     frequencies = {}
