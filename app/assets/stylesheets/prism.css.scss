@@ -20,7 +20,9 @@ $green :  color-stops(
             rgba(0,179,89,0.7)66.8%,
             rgba(0,179,89,0.7) 100%
             );
-
+#highlighters span.facet.border, #visualize span.facet.border {
+    border: 2px solid black;
+}            
 .red {
   @include background-image(linear-gradient($red));
 }
