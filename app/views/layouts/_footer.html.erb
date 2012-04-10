@@ -22,7 +22,12 @@
     <a href="/"><%= t 'footer.home'%></a>
     <a href="/pages/about"><%= t 'footer.about' %></a>
     <a href="/users/sign_in"><%= t 'footer.log-in' %></a>
-</div>
+    <br/>
+    <%= link_to('English', url_for(:locale => 'en')) %>
+    <%= link_to('Español', url_for(:locale => 'es')) %>
+    <%= link_to('Français', url_for(:locale => 'fr')) %>
+    <%= link_to('Deutsch', url_for(:locale => 'de')) %>
+  </div>
 
 </div>
 </footer>

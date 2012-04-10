@@ -10,7 +10,7 @@ en:
     about_text_html: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox <a href='/prisms/sandbox/highlight'>Try it!<span></span></a>"
  
   header:
-    description_html: "Prism is a tool for <a href='/pages/about'>collective interpretation</a> of texts. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
+    description_html: "Prism is a tool for <a href='%{about_url}'>collective interpretation</a> of texts. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
     link_home: "Home"
     link_instructions: "Instructions"
     link_documents: "Documents"
@@ -32,22 +32,22 @@ en:
 
   about:
     prism_title: About Prism
-    description_p1_html: >
+    description_p1_html: >-
       Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia and elsewhere, and specifically from transparency mark-up games <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">implemented by Bethany Nowviskie</a> for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a>:
     description_p2: >
      the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
       somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion.
-    description_p3_html: >
+    description_p3_html: >-
       At SpecLab, Jerome McGann <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">further 
       developed the concept</a>, which became known as the "Patacritical Demon".
-    description_p4_html: >
+    description_p4_html: >-
       The Scholars' Lab offered these ideas as inspiration for the first project to be undertaken by graduate student fellows of 
       <a href="http://praxis.scholarslab.org/">the Praxis Program</a> in its inaugural year. Our first task was to determine how to translate the physical exercise 
       of marking a text into a digital one. We decided that we would continue to employ a constrained interpretive vocabulary and limit the length of the text in
       order to stay true to the transparency game, during which texts would be marked up fairly quickly&mdash;ideally in one session. Also, like the transparency 
       exercise, the end goal of Prism is to produce "aesthetic provocations," that is, visualizations which provoke further discussion. But because it is a 
       digital project, Prism can integrate many individual interpretations and create a wide range of visualizations while maintaining data integrity.
-    description_p5: >
+    description_p5: >-
       Prism expands upon current notions of crowdsourcing to allow for more meaningful interaction with "the crowd." Users interact subjectively with a text
       and contribute to a collective interpretive energy that has infinite possibilities beyond the highlighting exercise itself &ndash; in research, in the classroom, 
       or in engaging and experimenting with larger data in the humanities (computational linguistics and text mining, for example).
