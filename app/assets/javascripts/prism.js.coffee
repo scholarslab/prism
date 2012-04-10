@@ -70,7 +70,6 @@ $ ->
   $("li.facet").click ->
     current_color = $("input", this).val()
 
-
 $ ->
     all_colors = []
     frequencies = {}
