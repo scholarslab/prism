@@ -15,7 +15,7 @@
       </p>
       <ul id="highlighters">
         <% for facet in @prism.facets %>
-          <li class="vis_facet"><input type="hidden" class="color" value="<%=facet.color%>"/><input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/><%=facet.category%></li>
+          <li class="vis_facet"><input type="hidden" class="color" value="<%=facet.color%>"/><span class="facet <%=facet.color%>"></span><input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/><%=facet.category%></li>
         <% end %>
       </ul>
       <ul id="visualization-types">
