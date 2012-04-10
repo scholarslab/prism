@@ -62,7 +62,7 @@ namespace :import do
     pub_date = doc.xpath("//div[@id='bib']/div[@class='pub_date']").text
     format = doc.xpath("//div[@id='bib']/div[@class='format']").text
     facet_tags = doc.css("div#facets div.facet")
-    prompt = doc.css("div#prompt").text
+    prompt = doc.xpath("//div[@id='bib']/div[@class='prompt']").text
     sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']").text.to_bool
     body_p = doc.xpath("//body/p")
     counter = 0
