@@ -14,7 +14,7 @@
           <% for facet in @prism.facets %>
             <li class="facet"><input type="hidden" value="<%=facet.color%>"/><span class="facet <%=facet.color%>"></span><%=facet.category%></li>
           <% end %>
-          <li class="facet eraser"><input type="hidden" value="delete"/><%= t "highlight.eraser" %></li>
+          <li class="facet eraser"><input type="hidden" value="delete"/><%= image_tag ('eraser2.png'), :id => 'eraser' %><%= t "highlight.eraser" %></li>
         </ul>
         <p id="highlighter-help"><%= t "highlight.help" %></p>
 -        <%= form_tag do %>
