@@ -2,17 +2,25 @@ class PrismsController < ApplicationController
     before_filter :authenticate_user!
     def highlight
         @title = "Highlight"
-        @prism = Prism.find(params[:id])
+        if params[:id] == "sandbox"
+            @prism = Document.where(:sandbox => true)[0].prisms[0]
+                
+        else
+            @prism = Prism.find(params[:id])
+        end
         @document = @prism.document
     end
-
     def highlight_post
-        prism = Prism.find(params[:id])
+        if params[:id] == "sandbox"
+            prism = Document.where(:sandbox => true)[0].prisms[0]
+        else
+            prism = Prism.find(params[:id])
+        end
         for facet in prism.facets
             indices = params[(facet.color + "_indices").to_sym]
             Marking.new(word_array:indices, prism:prism, facet:facet, user:current_user).save()
         end
-            redirect_to(visualize_path(prism))      
+            redirect_to(visualize_path(prism))    
     end
 
     def visualize

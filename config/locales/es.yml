@@ -6,11 +6,11 @@ es:
     visualize: "Visualizar"
     welcome: "Bienvenidos!"
     in_development: "Estamos trabajando a la velocidad de la luz."
-
+    about_text: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox."
   header:
     link_home: "Portada"
-    description_html: > 
-      Prism es un conjunto de herramientas que sirven para <a href='/pages/about'>colectivizar la interpretación</a> de textos. El proyecto forma parte del <a href='http://praxis.scholarslab.org'>Praxis Program,</a> una iniciativa del <a href='http://scholarslab.org'>Scholars' Lab</a> de la Universidad de Virginia.
+    description_html: >-
+      Prism es un conjunto de herramientas que sirven para <a href='%{about_url}'>colectivizar la interpretación</a> de textos. El proyecto forma parte del <a href='http://praxis.scholarslab.org'>Praxis Program,</a> una iniciativa del <a href='http://scholarslab.org'>Scholars' Lab</a> de la Universidad de Virginia.
     link_instructions: "Instrucciones"
     link_documents: "Documentos"
     link_about: "Información"

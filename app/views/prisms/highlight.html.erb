@@ -12,12 +12,12 @@
     <div id="tools">
         <ul id="highlighters">
           <% for facet in @prism.facets %>
-            <li class="facet"><input type="hidden" value="<%=facet.color%>"/><span style=background-color:></span><%=facet.category%></li>
+            <li class="facet"><input type="hidden" value="<%=facet.color%>"/><span class="facet <%=facet.color%>"></span><%=facet.category%></li>
           <% end %>
-          <li class="facet"><input type="hidden" value="delete"/><span></span><%= t "highlight.eraser" %></li>
+          <li class="facet eraser"><input type="hidden" value="delete"/><%= t "highlight.eraser" %></li>
         </ul>
         <p id="highlighter-help"><%= t "highlight.help" %></p>
-        <%= form_tag do %>
+-        <%= form_tag do %>
           <% for facet in @prism.facets %>
           <input type="hidden" value="" name="<%=facet.color%>_indices" id="<%=facet.color%>_indices"/>
           <% end %>

@@ -2,19 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.word {
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
-    line-height:200%;
-}
+$blue :   color-stops(
+            rgba(0,179,179,0.7) 0%,
+            rgba(0,179,179,0.7)33.3%,
+            rgba(0,179,179,0) 33.4%
+            );
+
+$red :    color-stops(
+            rgba(179,179,0,0) 33%,
+            rgba(179,179,0,0.7)34%,
+            rgba(179,179,0,0.7) 66%,
+            rgba(179,179,0,0) 67%
+            );
+
+$green :  color-stops(
+            rgba(0,179,89,0) 66.7%,
+            rgba(0,179,89,0.7)66.8%,
+            rgba(0,179,89,0.7) 100%
+            );
+
 .red {
-    background:#FCC;
+  @include background-image(linear-gradient($red));
 }
 
 .green {
-    border-top: 5px solid #CFC;
+  @include background-image(linear-gradient($green));
 }
 
 .blue {
-    border-bottom: 5px solid #CCF;
+  @include background-image(linear-gradient($blue));
+}
+
+.blue.green {
+  @include background-image(linear-gradient($blue), linear-gradient($green));
+}
+
+.red.green {
+  @include background-image(linear-gradient($red), linear-gradient($green));
+}
+
+.red.blue {
+  @include background-image(linear-gradient($red), linear-gradient($blue));
+}
+
+.red.green.blue {
+  @include background-image(linear-gradient($red), linear-gradient($green),linear-gradient($blue));
+}
+
+.word {
+      line-height:150%;
 }

@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '~>3.2.0'
 gem "devise", "~> 2.0.0"
-gem "cucumber-rails"
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -60,10 +59,12 @@ group :test do
   gem 'database_cleaner'
   gem 'minitest'
   gem 'ruby-prof'
+  gem "cucumber-rails"
 end
 
 group :production do
   gem "heroku", "~>2.9.0"
   gem "pg"
   gem "devise", "~> 2.0.0"
+  gem "nokogiri", "~> 1.5.0"
 end
