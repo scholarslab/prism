@@ -189,6 +189,7 @@ a.visualize {
   height: 275px;
   padding: 2%;
   margin-top: 35px;
+  margin-bottom: 35px;
   font-size: 20px;
   font-family: "PT Serif", times, serif;
   text-align: center;
@@ -212,7 +213,7 @@ a.visualize {
 }
 
 footer {
-  margin-top: 5%; 
+  margin-top: 40px; 
   width: 100%;
   overflow: auto;
    }
@@ -220,6 +221,7 @@ footer {
 #footer-links {
   display: table;
   float: right;
+  margin-right: 3%;
 } 
 
 #license, #slab-logo, #uva-lib-logo, #praxis-logo {
@@ -231,7 +233,7 @@ footer {
 }
 
 #footer-nav {
-  margin-top: 3%;
+  margin-left: 30px;
   display: table;
   clear: all;
   padding: 1%;
@@ -239,12 +241,12 @@ footer {
   a {
     display: table-cell;
     font-family: "PT Sans", sans-serif;
-    font-size: 14px;
+    font-size: 13px;
    
     &:not(:last-child):after {
       content:" | ";
       color: #999; 
-      margin-right: 5px;
+      margin-right: 4px;
       } 
    }
 }
@@ -315,6 +317,7 @@ p.blockquote {
 
 #sidebar {
   float: right;
+  padding-top: 50px;
   width: 30%;
 }
 
@@ -327,24 +330,12 @@ p.blockquote {
   line-height: 1;
 
   li {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     line-height: 150%;
     clear: left;
     overflow: hidden;
    }
-  span.red {
-    background-color: rgba(179,179,0,1);
-    border: none;
    }
-  span.green {
-    background-color: rgba(0,179,89,1);
-    border: none;
-   }
-  span.blue {
-    background-color: rgba(0,179,179,1);
-    border: none;
-   }
- }
 
 .facet span {
   display: block;
@@ -352,7 +343,20 @@ p.blockquote {
   width: 30px;
   height: 30px;
   margin-right: 2%;
-  }
+
+  .red {
+    background-color: rgba(179,179,0,1);
+    border: none;
+   }
+  .green {
+    background-color: rgba(0,179,89,1);
+    border: none;
+   }
+  .blue {
+    background-color: rgba(0,179,179,1);
+    border: none;
+   }
+}
 
 .eraser {
     font-style: italic;
@@ -362,11 +366,7 @@ p.blockquote {
   font-size: 14px;
   font-family: "PT Sans", sans-serif;
 }
-
-#visualization-help {
-  padding-left: 13%;
-}
-
+i
 #visualization-types {
    list-style: none;
   
@@ -378,6 +378,8 @@ p.blockquote {
    max-width: 100%;
    }
  }
+
+ #visualization-help {padding-left:0}
 
 #userform {
   width: 35%;
