@@ -82,7 +82,10 @@ $ ->
     # Clicking on a facet sets the color
     $("li.vis_facet").click ->
         current_color = $("input", this).val()
-        d3.selectAll("span.word").data(frequencies[current_color]).transition().style("font-size", (d) -> (20+12*d) + "px" ).style("color", (d) -> if (d > 0) 
-        	current_color
-        else 
-        	"black")
+        words = d3.selectAll("span.word")
+        for color in all_colors
+            words.classed(color+"-vis", false)
+        words.data(frequencies[current_color])
+             .classed(current_color+"-vis", (d) -> (d > 0))
+             .transition()
+             .style("font-size", (d) -> (15+20*d) + "px" )
