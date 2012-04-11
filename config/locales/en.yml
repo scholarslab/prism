@@ -7,7 +7,7 @@ en:
     visualize: Visualize
     welcome: Welcome!
     in_development: "Prism is being developed at warp speed. Keep checking back."
-    about_text_html: "Here is some very exciting text about Prism. When I get back from the dumpling truck, I'll consider adding some hipster ipsem or maybe even some real information to this space. At the end of this paragraph, there will be a link to the Sandbox <a href='/prisms/sandbox/highlight'>Try it!<span></span></a>"
+    about_text_html: Prism is a web-based tool for collective interpretation. Below you will find links to three texts. Click on a title or on the "Highlight" link of a text to be taken to its highlighting page, which is where the interpretation begins! Highlight the text according to the interpretive categories assigned, then click "Submit" to go to the visualizations page for that text, where you can see your interpretation added to other users'readings. But don't just take our word for it. <a href='/prisms/sandbox/highlight'>Try it out in the Sandbox!</a>
  
   header:
     description_html: "Prism is a tool for <a href='%{about_url}'>collective interpretation</a> of texts. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
