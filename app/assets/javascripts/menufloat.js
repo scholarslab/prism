@@ -5,11 +5,13 @@ function positionMenu() {
     $('#tools').each(function() {
         var tools           = $(this);
         var windowScrollTop = $(window).scrollTop();
+        var prismabobTop    = $('#Prismabob').offset().top;
         var menuTop         = tools.offset().top;
         var windowHeight    = $(window).height();
         var menuHeight      = tools.height();
         var footerHeight    = $('footer').height();
-        var visibleHeight   = menuHeight + footerHeight + 50;
+        var visibleHeight   = menuHeight + footerHeight + 30;
+        var sidebar         = tools;
 
         // console.log('Visible Height:'+ visibleHeight, 'Window:'+ windowHeight,
         //             '1st cond: ' + (windowScrollTop > menuTop),
@@ -18,11 +20,28 @@ function positionMenu() {
         // If the scroll top of the window is greater than the top of the
         // menu, add class fixed.
 
-        if (windowScrollTop > menuTop && windowHeight > visibleHeight)  {
-            $('#sidebar').addClass('fixed');
+        if (windowScrollTop >= menuTop &&
+            menuTop > prismabobTop &&
+            windowHeight > visibleHeight)  {
+
+            sidebar.addClass('fixed');
         } else {
-            $('#sidebar').removeClass('fixed');
+            sidebar.removeClass('fixed');
         }
+
+        /*
+         * console.log('wst', windowScrollTop,
+         *             'mt', menuTop, 
+         *             'pt', prismabobTop,
+         *             'wh', windowHeight,
+         *             'mh', menuHeight,
+         *             'fh', footerHeight,
+         *             'vh', visibleHeight, 
+         *             'wst-mt', windowScrollTop - menuTop,
+         *             'wh-vh', windowHeight - visibleHeight,
+         *             '.fixed?', sidebar.hasClass('fixed')
+         *            );
+         */
     });
 
 }
