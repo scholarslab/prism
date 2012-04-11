@@ -22,18 +22,18 @@ $green :  color-stops(
             );
 #highlighters span.facet.border {
     border: 2px solid black;
-}            
+}
 
 .red-vis{
-    color: rgb(179,179,0);
+    font-color: rgba(179,179,0,1.0);
 }
 
 .blue-vis {
-    color: rgb(0,179,179)
+    color: rgba(0,179,179,1.0)
 }
 
 .green-vis {
-    color:rgb(0,179,89);    
+    color:rgba(0,179,89,1.0);    
 }
 
 .red {
