@@ -19,7 +19,7 @@
      <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
        <%= prism.document.title %>
        <% end %>
-       <span class='author'><%= prism.document.author %></span>
+       <%= prism.document.author %>
           </div>
     </li>
   <% end %>
