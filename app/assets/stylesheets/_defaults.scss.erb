@@ -5,6 +5,8 @@
 @import "fonts";
 @import url(http://fonts.googleapis.com/css?family=Lustria|PT+Serif|PT+Sans|Noticia+Text|Andada|PT+Serif|PT+Sans);
 
+$page-margin: 10%;
+
 #container {
   @include container;
   @include susy-grid-background;
@@ -16,9 +18,8 @@
   }
   
 .page-margin {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1100px;
+    margin-left: $page-margin;
+    margin-right: $page-margin;
   }
 
 a:link {text-decoration:none;      /*styles all the links on the site*/
@@ -53,8 +54,7 @@ header {*zoom:1;}
   width: 25%;
   height: 90px;
   text-align: right;
-  padding-right: 1%;
-  padding-left: 2%;
+  padding-right: $page-margin;
   padding-top: 1%;     /*styles for entirety of rainbow log-in/sign-up area of header*/
 
   a, span {
@@ -81,7 +81,7 @@ header {*zoom:1;}
 
 header h1 {
   float: left;
-  margin-left: 9%;
+  margin-left: $page-margin;
   margin-right: 2%; /*styles anything with the H1 html tag in the header file. In this case, that's just the Prism logo */
 }
 
@@ -205,9 +205,11 @@ a.visualize {
 }
 
 footer {
+  clear: both;
   margin-top: 40px; 
-  width: 100%;
   overflow: auto;
+  margin-left: $page-margin;
+  margin-right: $page-margin;
    }
 
 #footer-links {
