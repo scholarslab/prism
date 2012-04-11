@@ -10,26 +10,22 @@
   @include susy-grid-background;
   }
 
-.warn {
-  color: red;
-  font-size: 20px;
-  }
-  
 .page-margin {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1100px;
-  }
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 1000px;
+    }
 
-a:link {text-decoration:none;      /*styles all the links on the site*/
-  font-weight:bold;
-        color: rgba(0,153,153,1.0);}
-a:visited {text-decoration:none;
-           color: rgba(0,153,153,1.0);}
-a:hover {text-decoration:none;
-         color: rgba(0,153,77,1.0);}
-a:active {text-decoration:none;
-          color: Dimgray;}
+a:link, a:active, a:visited {
+        text-decoration:none;
+        color: rgba(0,153,153,1.0);
+        font-weight: bold;
+        }
+a:hover {
+        text-decoration:none;
+        color: rgba(0,153,77,1.0);
+        font-weight:bold;
+        }
 
 header {
 margin-top: 3%;
@@ -37,16 +33,23 @@ margin-bottom: 5%;
 background-image:  -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 100%);
 /*two gradients-- first one is transparent and displays on top, creating the horizontal lines; second one is slight fade from black to gray, left to right */
 font-family: "PT Sans", sans-serif;
-   color: white;
-   position:relative;
-}
+color: rgba(255,255,255,1.0);
+position:relative;
+
+a:link, a:visited, a:active {text-decoration:none;
+        font-weight:bold;
+        color: rgba(255,255,255,1.0);}
+a:hover {text-decoration:none;
+        font-weight: bold;
+        color: rgba(0,153,153,1.0);}
+  }
 
 header:before, header:after {display:table; content: "";}
 header:after {clear:both;}
 header {*zoom:1;}
 
 #user-meta {
-  background-image: -webkit-linear-gradient(top, rgba(0,179,179,0.6) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.6) 100%);
+  background-image: -webkit-linear-gradient(top, rgba(0,153,153,1.0) 0%, rgba(0,153,77,1.0) 25%, rgba(153,153,0,1.0) 50%, rgba(153,77,0,1.0) 75%, rgba(153,0,0,1.0) 100%);
   /*two gradients; top is same as the one on rest of header, bottom one is close to transparent at top and bottom to create a "fuzzier" edge*/ 
   float: right;
   font-size: 14px; 
@@ -81,7 +84,7 @@ header {*zoom:1;}
 
 header h1 {
   float: left;
-  margin-left: 9%;
+  margin-left: 10%;
   margin-right: 2%; /*styles anything with the H1 html tag in the header file. In this case, that's just the Prism logo */
 }
 
@@ -95,7 +98,7 @@ p.description {
 body {
   font-color: #003333;
   font-family: "PT Sans", sans-serif;
-    /*font and color of all body text, unless otherwise specified in stylesheet*/
+  min-width: 1000px;
   h1 {
    size: 30px;
    margin-bottom: 10px;
@@ -116,7 +119,8 @@ body {
   margin-top: 8%;
   font-size: 18px;
   a {
-    background-color: #C0C0C0;
+    color: rgba(230,230,230,1.0);
+    background-color: #2B2B2B;
     float: right;
     margin-right: 15%;
     padding-left: 1%;
@@ -127,7 +131,7 @@ body {
     height: 0;
     border-top: 14px solid white;
     border-bottom: 14px solid white;
-    border-left: 28px solid #C0C0C0;
+    border-left: 28px solid #2B2B2B;
      }
 }
 
@@ -141,22 +145,33 @@ body {
     float: left;
     width: 24%;
     padding: 2%;
-    margin-left: 3%;
+    margin-right: 2%;
     }
 }
 
-.doc-tools a {
+.doc-tools {
+    a {
     float: left;
     font-family: "PT Serif", times, serif;
     font-size: 18px;
     line-height: 150%;  /*gives the appearance of padding since actual padding won't work with the empty spans*/
-    background-color: #C0C0C0;
+    background-color: #2B2B2B;
     margin-top: 2px;
     margin-bottom: 20px;
     border: none;
-    }
+  }
+    a:link {
+     text-decoration:none;
+     font-weight:bold;
+     color: rgba(230,230,230,1.0);
+     }
+    a:visited {
+     text-decoration:none;
+     color: rgba(230,230,230,1.0);
+     }
+ }
 
-a.highlight { 
+a.highlight {
   padding-left: 3%;
  }
 
@@ -171,7 +186,7 @@ a.visualize {
   height: 0;
   border-top: 14px solid white;
   border-bottom: 14px solid white;
-  border-left: 28px solid #C0C0C0;
+  border-left: 28px solid #2B2B2B;
   }
 
 .visualize span {
@@ -179,8 +194,8 @@ a.visualize {
   margin-right: 5px;
   width: 0;
   height: 0;
-  border-top: 14px solid #C0C0C0;
-  border-bottom: 14px solid #C0C0C0;
+  border-top: 14px solid #2B2B2B;
+  border-bottom: 14px solid #2B2B2B;
   border-left: 28px solid white;
  } 
 
@@ -194,7 +209,9 @@ a.visualize {
   font-family: "PT Serif", times, serif;
   text-align: center;
   position: relative;
-  a {display: block}
+    a {
+      display: block;
+       }
   }
 
 .doctitle {
@@ -260,7 +277,7 @@ p.blockquote {
   width: 30%;
   padding: 1%;
   margin-top: 20%;
-
+      
   h2 {
     font-size: 30px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
@@ -273,7 +290,7 @@ p.blockquote {
   padding: 1%;
   margin-right: 2%;
   margin-top: 2%;
-
+         
   h3 {
 line-height: 8px;
   }
