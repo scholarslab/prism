@@ -136,12 +136,12 @@ body {
   display:block;
   clear:all;
   margin: 10px 0px 0px;
+  padding: 0px;
 
   li {
     float: left;
-    width: 24%;
-    padding: 2%;
-    margin-left: 3%;
+    width: 30%;
+    margin-right: 3%;
     }
 }
 
