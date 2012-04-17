@@ -23,6 +23,19 @@ $green :  color-stops(
 #highlighters span.facet.border {
     border: 2px solid black;
 }            
+
+.red-vis{
+    color: rgb(179,179,0);
+}
+
+.blue-vis {
+    color: rgb(0,179,179)
+}
+
+.green-vis {
+    color:rgb(0,179,89);    
+}
+
 .red {
   @include background-image(linear-gradient($red));
 }

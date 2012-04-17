@@ -15,6 +15,9 @@ Testing::Application.routes.draw do
   # To rewrite URLs, match the desired route to a current route:
   #match "about" => "pages#about"
 
+  match '/prisms/sandbox/highlight(.:format)' => 'prisms#sandbox_highlight', :as => :sandbox_highlight, :via => :get
+  match '/prisms/sandbox/highlight(.:format)' => 'prisms#sandbox_post', :as => :sandbox_post, :via => :post
+  match '/prisms/sandbox/visualize(.:format)' => 'prisms#sandbox_visualize', :as => :sandbox_visualize
   match '/prisms/:id/visualize(.:format)' => 'prisms#visualize', :as => :visualize
   match '/prisms/:id/highlight(.:format)' => 'prisms#highlight', :as => :highlight, :via => :get
   match '/prisms/:id/highlight(.:format)' => 'prisms#highlight_post', :as => :highlight_post, :via => :post
