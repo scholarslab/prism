@@ -91,7 +91,7 @@ p.description {
   float: left;
   width: 32%;
   margin-left: 2%;
-  margin-top: 2%;
+  margin-top: 20px;
  }  /*styles short description in header*/
 
  body {
@@ -126,15 +126,10 @@ p.description {
    padding: 1em 0 1em;
    font-size: 40px;
     }
-
-  a {
-   background-color: #C0C0C0;
-   }
- }
+  }
 
 #texts {
   list-style:none; 
-  display:block;
   clear:both;
   margin: 10px 0px 0px;
   padding: 0%;
@@ -143,71 +138,60 @@ p.description {
     float: left;
     width: 25%;
     margin-right: 8.33333%;
-    margin-top: 6%;
-    }
+    margin-top: 20px;
+   }
 }
 
-.doc-tools a {
-    float: left;
-    font-family: "PT Serif", times, serif;
-    font-size: 18px;
-    line-height: 150%;  /*gives the appearance of padding since actual padding won't work with the empty spans*/
-    background-color: #C0C0C0;
-    margin-top: 2px;
-    margin-bottom: 20px;
-    border: none;
-    }
-
-a.highlight { 
-  padding-left: 3%;
- }
-
-a.visualize { 
-  float: right;
-  padding-right: 3%;
- }
-
-.highlight span {
-  float: right;
-  width: 0;
-  height: 0;
-  border-top: 14px solid white;
-  border-bottom: 14px solid white;
-  border-left: 28px solid #C0C0C0;
-  }
-
-.visualize span {
-  float: left;
-  margin-right: 5px;
-  width: 0;
-  height: 0;
-  border-top: 14px solid #C0C0C0;
-  border-bottom: 14px solid #C0C0C0;
-  border-left: 28px solid white;
- } 
-
 .doc-display {
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
-  height: 320px;
   padding: 2%;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   font-size: 18px;
   font-family: "PT Serif", times, serif;
   text-align: center;
-  a {display: block}
-  }
-
-.doctitle {
-  display: block;
-  font-size: 22px;
-  margin-top: 100px;
-  margin-bottom: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
+  height: 200px;
+  position: relative;
   
+ .doctitle {
+   display: block;
+   font-size: 22px;
+   margin-bottom: 10px;
+   padding-left: 2px;
+   padding-right: 2px;
 }
 
+  span {
+   display: block;
+   position: absolute;
+   width: 100%;
+   bottom: 90px;
+    }
+}
+
+.doc-tools {
+   display: in-line;
+   text-align: center;
+   position: absolute;
+   bottom: 40px;
+   width: 100%;
+
+ a {
+    font-family: "PT Serif", times, serif;
+    font-size: 18px;
+    line-height: 150%;  /*gives the appearance of padding since actual padding won't work with the empty spans*/
+    margin-top: 20px;
+  
+  &.highlight {
+   padding-right: 10px;
+   margin-right: 10px;
+   border-right: 1px solid gray; 
+    }
+  &.visualize {
+    padding-left: 10px;
+  }
+ }
+}
+  
 footer {
   clear: both;
   margin-top: 40px; 
@@ -393,7 +377,6 @@ span.facet {
   margin-top: 3%;
   margin-left: 29%;
   margin-bottom: 3%;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
   font-size: 16px;
 
   input[type="submit"] {

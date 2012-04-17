@@ -10,19 +10,20 @@
   <% @prisms.each do | prism | %>
     <li>
     <div class="doc-display">
-       <div class="doc-tools">
-      <%= link_to(highlight_path(prism), :class => 'highlight') do %>
-        <%= t 'index.highlight' %><span></span>
-      <% end %>
-      <%= link_to(visualize_path(prism), :class => 'visualize') do %>
-        <span></span><%= t 'index.visualize' %>
-      <% end %>
-     </div>
-     <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
+       <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
        <%= prism.document.title %>
        <% end %>
-       <%= prism.document.author %>
-          </div>
+       <span><%= prism.document.author %></span>
+     <div class="doc-tools">
+      <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+        <%= t 'index.highlight' %>
+      <% end %>
+      <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+        <%= t 'index.visualize' %>
+      <% end %>
+      </div>
+     </div>
+
     </li>
   <% end %>
 </ul>
