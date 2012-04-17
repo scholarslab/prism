@@ -56,7 +56,7 @@ namespace :import do
     f = File.open(file)
     doc = Nokogiri::HTML(f)
 
-    title = doc.xpath("//head/title").text
+    title = doc.xpath("//head/title").inner_html
     author = doc.xpath("//div[@id='bib']/div[@class='author']").text
     description = doc.xpath("//div[@id='bib']/div[@class='description']").text
     pub_date = doc.xpath("//div[@id='bib']/div[@class='pub_date']").text

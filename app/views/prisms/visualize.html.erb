@@ -2,7 +2,7 @@
   <p> Congratulations! You have arrived at the most magical of places--the Visualization page!
   </p>
   <div id="Prismabob">
-    <h1><%= @document.title %></h1>
+    <h1><%= @document.title.html_safe %></h1>
     <h2><%= @document.author %></h2>
 
     <div class="text">
