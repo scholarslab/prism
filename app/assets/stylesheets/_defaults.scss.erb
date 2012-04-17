@@ -114,20 +114,22 @@ p.description {
 }
 
 #index-text {
-  p{
-  line-height: 150%;
-  font-size: 18px;
-  }
+  margin-left: 360px;
 
-  h1{
-  padding: 1em 0 1em;
-  font-size: 40px;
-  }
+  p {
+   line-height: 150%;
+   font-size: 18px;
+    }
 
-  > * {
-  margin-left: 380px;
-  }
-}
+  h1 {
+   padding: 1em 0 1em;
+   font-size: 40px;
+    }
+
+  a {
+   background-color: #C0C0C0;
+   }
+ }
 
 #texts {
   list-style:none; 
@@ -210,13 +212,12 @@ footer {
   margin-top: 40px; 
   overflow: auto;
   margin-left: $page-margin;
-  margin-right: $page-margin;
-   }
+     }
 
 #footer-links {
   display: table;
   float: right;
-  margin-right: 3%;
+  margin-right: $page-margin;
 } 
 
 #license, #slab-logo, #uva-lib-logo, #praxis-logo {
@@ -228,7 +229,6 @@ footer {
 }
 
 #footer-nav, #footer-langs {
-  margin-left: 30px;
   display: table;
   clear: all;
   padding: 1%;
@@ -246,9 +246,9 @@ footer {
    }
 }
 
-
 p.blockquote {
- padding-left: 8%;}
+  padding-left: 8%;
+  }
 
 #Praxis {
   float: right;
@@ -344,18 +344,17 @@ span.facet {
   height: 30px;
   margin-right: 2%;
 
-  .red {
-    background-color: rgba(179,179,0,1);
-    border: none;
-   }
-  .green {
-    background-color: rgba(0,179,89,1);
-    border: none;
-   }
-  .blue {
-    background-color: rgba(0,179,179,1);
-    border: none;
-   }
+  &.red {
+    background-color: rgb(179,179,0);
+    }
+
+  &.green {
+    background-color: rgb(0,179,89);
+    }
+
+  &.blue {
+    background-color: rgb(0,179,179);
+    }
 }
 
 .eraser {
@@ -372,7 +371,7 @@ span.facet {
   font-size: 14px;
   font-family: "PT Sans", sans-serif;
 }
-i
+
 #visualization-types {
    list-style: none;
   
