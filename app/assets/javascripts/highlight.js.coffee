@@ -3,8 +3,7 @@
 # You can use CoffeeScript in this file: http:#jashkenas.github.com/coffee-script/
 
 $ ->
-
-  $("span.facet").first().addClass('border')
+  $("#highlighters span.facet").first().addClass('border')
   # Extracts the color data from every facet from html file
   all_colors = []
   for facet in $("li.facet")
@@ -75,7 +74,6 @@ $ ->
     $("span.facet.border").removeClass("border")
     $(this).find("span.facet").addClass("border")
 $ ->
-    $("span.facet").first().removeClass('border')
     all_colors = []
     frequencies = {}
     facets = $("li.vis_facet")

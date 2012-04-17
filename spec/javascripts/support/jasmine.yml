@@ -19,7 +19,7 @@ src_files:
   - public/javascripts/**/*.js
   - spec/javascripts/helpers/lib/jquery.js
   - spec/javascripts/helpers/lib/jasmine-jquery.js
-  - spec/javascripts/unit/highlight.js
+  - spec/javascripts/unit/highlight_test.js
 
 # stylesheets
 #
