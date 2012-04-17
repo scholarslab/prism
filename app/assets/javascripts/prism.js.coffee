@@ -82,6 +82,8 @@ $ ->
     # Clicking on a facet sets the color
     $("li.vis_facet").click ->
         current_color = $("input", this).val()
+        $("span.vis_facet.border").removeClass("border")
+        $(this).find("span.vis_facet").addClass("border")
         words = d3.selectAll("span.word")
         for color in all_colors
             words.classed(color+"-vis", false)
