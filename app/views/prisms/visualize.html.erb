@@ -1,8 +1,11 @@
 <div class="page-margin">
   <p> Congratulations! You have arrived at the most magical of places--the Visualization page!
+    <% if @usercounter != nil %>
+      <%=@usercounter%> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
+    <% end %>
   </p>
   <div id="Prismabob">
-    <h1><%= @document.title %></h1>
+    <h1><%= @document.title.html_safe %></h1>
     <h2><%= @document.author %></h2>
 
     <div class="text">

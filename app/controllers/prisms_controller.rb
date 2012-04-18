@@ -56,7 +56,17 @@ class PrismsController < ApplicationController
         @title = "Visualize"
         @prism = Prism.find(params[:id])
         @document = @prism.document
-
+        @markings = @prism.markings 
+        @usercounter = 0
+        
+        users = []
+        for marking in @markings
+            if ! users.include?(marking.user)
+                users.push(marking.user)
+                @usercounter += 1
+            end
+        end
+        
         @frequencies = {}
         for facet in @prism.facets
             # Step 1: Create a list of N 0s, where N is the total number of words

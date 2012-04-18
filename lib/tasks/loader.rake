@@ -15,7 +15,9 @@ def numberize(node, counter=0)
     if child.text?
       words_list = child.to_s.split
       span_list = words_list.map do |word|
-        span = node.document.create_element("span", word+' ', :class => "word word_"+counter.to_s)
+        span = node.document.create_element("span", :class => "word word_"+counter.to_s)
+        span << word
+        span << ' '
         counter += 1
         span
       end
@@ -56,7 +58,7 @@ namespace :import do
     f = File.open(file)
     doc = Nokogiri::HTML(f)
 
-    title = doc.xpath("//head/title").text
+    title = doc.xpath("//head/title").inner_html
     author = doc.xpath("//div[@id='bib']/div[@class='author']").text
     description = doc.xpath("//div[@id='bib']/div[@class='description']").text
     pub_date = doc.xpath("//div[@id='bib']/div[@class='pub_date']").text

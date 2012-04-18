@@ -11,7 +11,7 @@
     <li>
     <div class="doc-display">
        <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
-       <%= prism.document.title %>
+       <%= prism.document.title.html_safe %>
        <% end %>
        <span><%= prism.document.author %></span>
      <div class="doc-tools">
@@ -23,7 +23,6 @@
       <% end %>
       </div>
      </div>
-
     </li>
   <% end %>
 </ul>
