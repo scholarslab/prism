@@ -60,7 +60,6 @@ group :test do
   gem 'minitest'
   gem 'ruby-prof'
   gem "cucumber-rails"
-  gem "jasmine"
   gem 'jasmine-jquery-rails'
 end
 

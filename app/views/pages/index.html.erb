@@ -6,14 +6,14 @@
   <p> <%=t 'index.about_text_html'%></p>
  </div>
 
-<ul id="texts">
+ <ul id="texts" class="mention">
   <% @prisms.each do | prism | %>
     <li>
     <div class="doc-display">
        <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
        <%= prism.document.title.html_safe %>
        <% end %>
-       <span><%= prism.document.author %></span>
+       <span class='author'><%= prism.document.author %></span>
      <div class="doc-tools">
       <%= link_to(highlight_path(prism), :class => 'highlight') do %>
         <%= t 'index.highlight' %>
