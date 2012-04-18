@@ -5,12 +5,11 @@ en:
   index:
     highlight: Highlight
     visualize: Visualize
-    welcome: Welcome!
+    welcome: Welcome
     in_development: "Prism is being developed at warp speed. Keep checking back."
-    about_text_html: Prism is a web-based tool for collective interpretation. Below you will find links to three texts. Click on a title or on the "Highlight" link of a text to be taken to its highlighting page, which is where the interpretation begins! Highlight the text according to the interpretive categories assigned, then click "Submit" to go to the visualizations page for that text, where you can see your interpretation added to other users' readings. But don't just take our word for it. <a href='/prisms/sandbox/highlight'>Try it out in the Sandbox!</a>
- 
+    about_text_html: "to <a href='/pages/about'>our experiment</a> in crowd-sourcing and visualizing many readings of a common set of texts. Prism is the digital humanities practicum project of the 2011-12 Scholars' Lab <a href='http://praxis.scholarslab.org'>Praxis Fellows</a>. Play in our <a href='/prisms/sandbox/highlight'>SANDBOX</a>, or create <a href='/users/sign_up'>an account</a> to share your readings of Jefferson, Joyce, and Poe. Prism is <a href='https://github.com/scholarslab/prism'>open source</a>. Please make suggestions and <a href='https://github.com/scholarslab/prism/issues'>report bugs</a>!" 
   header:
-    description_html: "Prism is a tool for <a href='%{about_url}'>collective interpretation</a> of texts. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
+    description_html: "Prism is a tool for <a href='%{about_url}'>collective interpretation</a>. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
     link_home: "Home"
     link_instructions: "Instructions"
     link_documents: "Documents"
