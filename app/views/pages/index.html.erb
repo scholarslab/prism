@@ -1,26 +1,28 @@
 <div class="page-margin">
-<h1><%= t 'index.welcome'%></h1>
 
-<%= image_tag ('guineapighat.jpg'), :id => 'homepic' %>
-<p id=index-text> <%=t 'index.about_text_html'%></p>
+<%= image_tag ('fakeviz4.png'), :id => 'homepic' %>
+<div id="index-text">
+	<h1><%= t 'index.welcome'%></h1>
+  <p> <%=t 'index.about_text_html'%></p>
+ </div>
 
-<ul id="texts">
+ <ul id="texts" class="mention">
   <% @prisms.each do | prism | %>
     <li>
     <div class="doc-display">
-       <div class="doc-tools">
-      <%= link_to(highlight_path(prism), :class => 'highlight') do %>
-        <%= t 'index.highlight' %><span></span>
-      <% end %>
-      <%= link_to(visualize_path(prism), :class => 'visualize') do %>
-        <span></span><%= t 'index.visualize' %>
-      <% end %>
-     </div>
-     <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
-       <%= prism.document.title %>
+       <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
+       <%= prism.document.title.html_safe %>
        <% end %>
        <span class='author'><%= prism.document.author %></span>
-          </div>
+     <div class="doc-tools">
+      <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+        <%= t 'index.highlight' %>
+      <% end %>
+      <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+        <%= t 'index.visualize' %>
+      <% end %>
+      </div>
+     </div>
     </li>
   <% end %>
 </ul>

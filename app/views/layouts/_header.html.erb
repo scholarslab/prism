@@ -1,19 +1,24 @@
 <header>
 <div class="header-margin">
-  <h1><%= link_to image_tag('prism-logo.png'), :controller => 'pages', :action => 'index' %></h1>
-<p class="description"><%= t 'header.description_html', :about_url => url_for(:controller => 'pages', :action => 'about') %></p>
+  <h1><%= link_to image_tag('prism-logo.png'), home_path %></h1>
+  <p class="description"><%= t 'header.description_html', :about_url => url_for(about_path) %></p>
 
-<%= image_tag('bigprism.png', :id => "bigprism") %>
-<div id="user-meta">
-  <p>
-  <% if user_signed_in? %>
-    <span><%=t 'header.signed_in'%><%= current_user.email %>. </span>
-    <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
-  <% else %>
-    <%= link_to t('header.register'), new_user_registration_path %>
-    <a href="/users/sign_in"><%= t'header.sign_in' %></a>
-  <% end %>
-  </p>
-</div>
+  <%= image_tag('bigprism.png', :id => "bigprism") %>
+  <div id="user-meta">
+    <p>
+    <% if user_signed_in? %>
+      <span><%=t 'header.signed_in'%><%= current_user.email %>. </span>
+      <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
+    <% else %>
+      <%= link_to t('header.register'), new_user_registration_path %>
+      <%= link_to t('header.sign_in'), new_user_session_path %>
+    <% end %>
+    </p>
+  </div>
 </div>
 </header>
+
+<!--[if lt IE 9]>
+<p id="browser-upgrade">Prism is built to support at least Internet Explorer 9. <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+<![endif]-->
+

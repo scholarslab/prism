@@ -1,8 +1,11 @@
 <div class="page-margin">
   <p> Congratulations! You have arrived at the most magical of places--the Visualization page!
+    <% if @usercounter != nil %>
+      <%=@usercounter%> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
+    <% end %>
   </p>
   <div id="Prismabob">
-    <h1><%= @document.title %></h1>
+    <h1><%= @document.title.html_safe %></h1>
     <h2><%= @document.author %></h2>
 
     <div class="text">
@@ -15,14 +18,8 @@
       </p>
       <ul id="highlighters">
         <% for facet in @prism.facets %>
-          <li class="vis_facet"><input type="hidden" class="color" value="<%=facet.color%>"/><input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/><%=facet.category%></li>
+          <li class="vis_facet"><input type="hidden" class="color" value="<%=facet.color%>"/><input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/><span class="facet <%=facet.color%>"></span><%=facet.category%></li>
         <% end %>
-      </ul>
-      <ul id="visualization-types">
-        <li><%= image_tag('cats-in-sink.jpg') %></li>
-        <li><%= image_tag('cat-sheen-1.jpg') %></li>
-        <li><%= image_tag('cat-sheen-7.jpg') %></li>
-        <li><%= image_tag('cat-sheen-9.jpg') %></li>
       </ul>
     </div>
   </div>

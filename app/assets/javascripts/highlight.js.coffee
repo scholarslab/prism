@@ -3,10 +3,12 @@
 # You can use CoffeeScript in this file: http:#jashkenas.github.com/coffee-script/
 
 $ ->
+  $("#highlighters span.facet").first().addClass('border')
   # Extracts the color data from every facet from html file
   all_colors = []
   for facet in $("li.facet")
     val = $("input", facet).val()
+
     # Ignore eraser function
     all_colors.push val unless val is "delete"
 
@@ -82,7 +84,12 @@ $ ->
     # Clicking on a facet sets the color
     $("li.vis_facet").click ->
         current_color = $("input", this).val()
-        d3.selectAll("span.word").data(frequencies[current_color]).transition().style("font-size", (d) -> (20+12*d) + "px" ).style("color", (d) -> if (d > 0) 
-        	current_color
-        else 
-        	"black")
+        $("span.facet.border").removeClass("border")
+        $(this).find("span.facet").addClass("border")
+        words = d3.selectAll("span.word")
+        for color in all_colors
+            words.classed(color+"-vis", false)
+        words.data(frequencies[current_color])
+             .classed(current_color+"-vis", (d) -> (d > 0))
+             .transition()
+             .style("font-size", (d) -> (15+20*d) + "px" )
