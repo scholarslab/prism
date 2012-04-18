@@ -10,7 +10,7 @@
   <% @prisms.each do | prism | %>
     <li>
     <div class="doc-display">
-       <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
+      <%= link_to(highlight_path(prism), :class => 'doctitle') do %>
        <%= prism.document.title.html_safe %>
        <% end %>
        <span class='author'><%= prism.document.author %></span>
