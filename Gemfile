@@ -67,7 +67,7 @@ end
 group :production do
   gem "heroku", "~>2.9.0"
   gem "pg"
-  gem "devise", "~> 2.0.0"
+ # gem "devise", "~> 2.0.0"
   gem "nokogiri", "~> 1.5.0"
   gem 'jasmine-jquery-rails'
 end
