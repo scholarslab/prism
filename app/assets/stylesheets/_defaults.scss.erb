@@ -97,9 +97,26 @@ header h1 {
   z-index: 1000000;
 }
 
+#languages {
+  display: table;
+  padding: 5px 2px 0px;
+
+  a {
+    display: table-cell;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+
+    &:not(:last-child):after {
+      content:" | ";
+      color: #999;
+    } 
+  }
+ }
+
+
 p.description {
   float: left;
-  width: 32%;
+  width: 28%;
   margin-left: 2%;
   margin-top: 20px;
  }  /*styles short description in header*/
@@ -229,7 +246,7 @@ footer {
   padding-right: 20px;
 }
 
-#footer-nav, #footer-langs {
+#footer-nav, #languages {
   display: table;
   clear: all;
   padding: 1%;
