@@ -8,12 +8,7 @@
 <% end %>
 
 <div class="page-margin">
-  <p id="viz-intro">
-    <% if @usercounter != nil %>
-      <%=@usercounter%> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
-    <% end %>
-  </p>
-  <div id="Prismabob">
+    <div id="Prismabob">
     <h1><%= @document.title.html_safe %></h1>
     <h2><%= @document.author %></h2>
 
@@ -32,6 +27,12 @@
             <span class="facet <%=facet.color%>"></span><%=facet.category%></li>
         <% end %>
       </ul>
+      <p id="viz-count">
+      <span><% if @usercounter != nil %>
+          <%=@usercounter%></span> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
+    <% end %>
+  </p>
+
     </div>
   </div>
 </div>
