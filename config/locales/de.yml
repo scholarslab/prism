@@ -69,6 +69,8 @@ laufendes Projekt der Praxis Program an der Scholars' Lab, University of Virgini
     instructions: >- 
       Wählen Sie einen Textmarker aus dem Menü auf der rechten Seite, um den Text zu markieren. Sie können Ihre Highlighting mit dem Radiergummi zu ändern. Wenn Sie fertig sind, klicken Sie auf "Eintragen", um die Prism-Ergebnisse zu sehen.    
     eraser: Löschen Sie Ihre Highlights
+  visualize:
+    instructions: Select one of the options below to display a visualization of collected data for this text.
 
   log-in:
     forgot: Passwort vergessen?
