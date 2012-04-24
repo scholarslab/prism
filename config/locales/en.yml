@@ -64,24 +64,20 @@ en:
       The SLab also hosts events, such as workshops, talks, and roundtables, and sponsors the <a href="http://praxis.scholarslab.org">Praxis Program</a> and a prestigious <a href='http://www2.lib.virginia.edu/scholarslab/about/fellowship.html'>
       graduate fellowship</a> in the digital humanities.
     contributors_title: Contributors
-    contributors_description_html: >-
-      <h3>Jeremy Boggs</h3> <p>Humanities Design Architect, UVa Library Scholars' Lab</p> 
-      <h3>Alex Gil</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Wayne Graham</h3> <p>Head of Research &amp; Development, UVa Library Scholars' Lab</p>
-      <h3>Eric Johnson</h3> <p>Head of Outreach &amp; Consulting, UVa Library Scholars' Lab</p> 
-      <h3>Brooke Lestock</h3> <p>Praxis Fellow and UVa English Department graduate student</p>
-      <h3>David McClure</h3> <p>Web Applications Specialist, UVa Library Scholars' Lab</p>
-      <h3>Lindsay O'Connor</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p>
-      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+    contributors_fellows_html: >-
+      <h3>Alex Gil</h3> <p>Alex Gil is a Praxis Fellow and UVa English Department doctoral candidate. Alex did early development on Prism's Rails setup, built an i18n framework for multi-lingual support and translated the site into French, Spanish and German. Towards the end he worked on migrating Prism to production.</p>  
+      <h3>Brooke Lestock</h3> <p>Brooke Lestock is a Praxis Fellow and UVa English Department Master's student. Brooke is Project Co-Manager, along with the fabulous Sarah Storti. Brooke is also a member of the design team, which has entailed everything from conceptualizing and wireframing the Prism site to styling odds and ends, as well as contributing prose as needed.</p>
+      <h3>Lindsay O'Connor</h3> <p>Lindsay O'Connor is a Praxis Fellow and UVa English Department doctoral candidate. Lindsay is the devoted web designer among the Praxis Fellows. With plenty of help from Brooke, Sarah, and Scholars' Lab R&D, she has been translating the team's wireframes and Ed's static page designs into their current web format and managing the design workflow.</p> 
       <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p>
+      <h3>Joanna Swafford</h3> <p>Joanna Swafford is a Praxis Fellow and UVa English Department doctoral candidate. Joanna is the lead developer, responsible for building the data model and necessary Rails framework, along with the javascript that enables highlighting and visualizing the texts. She also acted as an all-purpose trouble-shooter for Prism in the final weeks.</p>
       <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
-      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p> 
-      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
-      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+    contributors_advisors_html:
+      <h3>Jeremy Boggs</h3>
+      <h3>Wayne Graham</h3>
+      <h3>Eric Johnson</h3>
+      <h3>David McClure</h3>
+      <h3>Dr. Bethany Nowviskie</h3>
+      <h3>Dr. Eric Rochester</h3>
   highlight:
     instructions: Select a highlighter from the menu on the right to highlight the text below. You can change your highlighting with the eraser. When you are done, click "submit" to see Prism's results.
     eraser: Erase your highlights
