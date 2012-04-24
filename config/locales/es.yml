@@ -65,6 +65,8 @@ es:
   highlight:
     instructions: Elige un marcador en el menu a la derecha y marca el texto a tu medida. Puedes cambiar de marcador y borrar. Cuando termines, presiona "submit" para ver los resultados del Prisma.
     eraser: Borrador
+ visualize:
+    instructions: Select one of the options below to display a visualization of collected data for this text.
 
   log-in:
     forgot: ¿Olvidaste tu contraseña?
