@@ -1,3 +1,12 @@
+<% content_for :extra_head do %>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      setup_visualize()
+      select_facet($("li.vis_facet").eq(0))
+    })
+  </script>
+<% end %>
+
 <div class="page-margin">
   <p id="viz-intro"> Congratulations! You have arrived at the most magical of places--the Visualization page!
     <% if @usercounter != nil %>
