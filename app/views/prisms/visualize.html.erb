@@ -23,8 +23,7 @@
   </div>
   <div id="sidebar">
     <div id="visualizations">
-      <p id="visualization-help">Select one of the options below to display a visualization of collected data for this text.
-      </p>
+      <p id="visualization-help"><%= t "visualization-help" %> </p>
       <ul id="highlighters">
         <% for facet in @prism.facets %>
           <li class="vis_facet">
