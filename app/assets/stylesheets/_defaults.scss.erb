@@ -44,7 +44,10 @@ header {
   margin-bottom: 5%;
   min-width: 1200px;
   @include pie;
-  @include background(linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 100%));
+  @include background(
+    linear-gradient(left, rgb(0,0,0) 0%, rgb(100,100,100) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%),  
+    linear-gradient(top, rgba(0,179,179,0.6) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.6) 100%)
+    );
   font-family: "PT Sans", sans-serif;
   color: white;
   position:relative;
@@ -55,8 +58,6 @@ header:after {clear:both;}
 header {*zoom:1;}
 
 #user-meta {
-  @include pie;
-  @include background(linear-gradient(top, rgba(0,179,179,0.6) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.6) 100%));
   float: right;
   font-size: 14px; 
   width: 22%;
@@ -84,7 +85,8 @@ header {*zoom:1;}
 #bigprism {
   position: absolute;
   top: -160px;
-  left: 725px;
+  left: 75%;
+  margin-left: -201px;
   z-index:9000;
 }
 
