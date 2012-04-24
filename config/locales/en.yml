@@ -86,7 +86,8 @@ en:
   highlight:
     instructions: Select a highlighter from the menu on the right to highlight the text below. You can change your highlighting with the eraser. When you are done, click "submit" to see Prism's results.
     eraser: Erase your highlights
-
+  visualize:
+    instructions: Select one of the options below to display a visualization of collected data for this text.
   log-in:
     forgot: Forgot your password?
     in: Sign in
