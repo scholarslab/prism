@@ -2,6 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+ENV['USE_JASMINE_RAKE']='true'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line

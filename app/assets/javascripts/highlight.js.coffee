@@ -33,8 +33,7 @@
     if color is "delete"
       for color in all_colors
         $(elt).removeClass color
-      for key in storage
-        delete storage[key][number]
+        delete storage[color][number]
     else
       # defines normal marking functionality
       $(elt).addClass color
