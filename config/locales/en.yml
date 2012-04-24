@@ -82,8 +82,7 @@ en:
       <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
       <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
       <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p> 
-      
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
   highlight:
     instructions: Select a highlighter from the menu on the right to highlight the text below. You can change your highlighting with the eraser. When you are done, click "submit" to see Prism's results.
     eraser: Erase your highlights

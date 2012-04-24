@@ -7,7 +7,8 @@ fr:
     in_development: "Nous travaillons à la vitesse de la lumière."
     highlight: Surbrillance
     visualize: Visualizer
-
+    about_text_html: >-
+      à <a href='/pages/about'>notre expérience</a> dans la visualisation de nombreuses lectures d'un ensemble commun de textes. Prism est le projet digital de stage des boursiers 2011-12 <a href='http://praxis.scholarslab.org'>du Praxis Program</a>. Joue avec notre  <a href='/prisms/sandbox/highlight'>bac à sable</a>, ou  <a href='/users/sign_up'>crée un compte</a> pour partager vos lectures de Jefferson, Joyce, et Poe. Prism est <a href='https://github.com/scholarslab/prism'>open source</a>. S'il te plaît, envoie-nous tes suggestions ou rapporte <a href='https://github.com/scholarslab/prism/issues'>des bugs</a>!
   header:
     description_html: "Prism est un ensemble d'outils pour <a href='%{about_url}'>collectiviser l'interprétation.</a> Il s'agit d'un projet en cours du <a href='http://praxis.scholarslab.org'>Programme Praxis</a> au <a href='http://scholarslab.org'>Scholars' Lab</a> de l'Université de Virginie."
     link_home: "Accueil"
@@ -32,14 +33,40 @@ fr:
     description_p3_html: >
       Au SpecLab, Jérôme McGann en outre a développé le concept qui deviendra connu comme le <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">« Démon Patacritique »</a>.
     description_p4_html: >
-      Le Scholars' Lab a offert ces idées comme source d'inspiration pour le premier projet à être entrepris par les boursiers des cycles supérieurs dans l'année inaugurale du <a href="http://praxis.scholarslab.org/">programme Praxis</a>. Notre première tâche était de déterminer comment traduire l'exercice physique de marquage du texte au cadre numérique. Nous avons décidé continuer à employer un vocabulaire d'interprétation contraint et de limiter la longueur du texte afin de rester fidèle au jeu original, au cours duquel les textes étaient marqués assez rapidement -idéalement dans une session. En outre, comme l'exercice original, l'objectif final de Prism est de produire des « provocations esthétiques », c'est-à-dire, visualisations qui suscitent à une réflexion plus approfondie. Alors, parce que c'est un projet de numérisation, Prism permet d'intégrer des nombreuses interprétations individuelles et de créer un large éventail de visualisations, tout en maintenant l'intégrité des données.
+      Le Scholars' Lab a offert ces idées comme source d'inspiration pour le premier projet à être entrepris par nous, les boursiers dans l'année inaugurale du <a href="http://praxis.scholarslab.org/">programme Praxis</a>. Notre première tâche était de déterminer comment traduire l'exercice physique de marquage du texte au cadre numérique. Nous avons décidé continuer à employer un vocabulaire d'interprétation contraint et de limiter la longueur du texte afin de rester fidèle au jeu original, au cours duquel les textes étaient marqués assez rapidement -idéalement dans une session. En outre, comme l'exercice original, l'objectif final de Prism est de produire des « provocations esthétiques », c'est-à-dire, visualisations qui suscitent à une réflexion plus approfondie. Alors, parce que c'est un projet de numérisation, Prism permet d'intégrer des nombreuses interprétations individuelles et de créer un large éventail de visualisations, tout en maintenant l'intégrité des données.
     description_p5: >
       Prism étend sur des notions actuelles de crowdsourcing pour permettre une interaction plus significative avec « la foule ». Les utilisateurs interagissent avec un texte d'une manière subjective, et ainsi, contribuent à une énergie collective d'interprétation avec des potentialités au-delà de l'exercice même -dans la recherche, dans la salle de classe, ou à expérimenter avec un plus grand nombre de données en sciences humaines (linguistique computationnelle et de l'exploration de texte, par exemple).
     praxis_title: Le programme Praxis
     praxis_description_html: >
-      Le <a href='http://praxis.scholarslab.org/'>programme Praxis</a> est un projet pilote de l'2011-12 <a href="http://www2.lib.virginia.edu/scholarslab/">Scholars' Lab</a> à la <a href='http://www.lib.virginia.edu/index.html'>Bibliothèque de l'Université de Virginie</a> dans lequelle six étudiants des cycles supérieurs en sciences humaines passeront une année d'apprentissage et collaboration pratique autour d'un projet dans le champ numérique. Le but du programme Praxis est de mieux outiller les travailleurs du savoir pour les postes de professeurs émergents et des <a href=http://mediacommons.futureofthebook.org/alt-ac/'>carrières académiques alternatives</a> au moment où de nouvelles questions peuvent être posées et de nouveaux systèmes construits. Visitez <a href='http://praxis.scholarslab.org/'>le site du Programme Praxis</a>  pour en apprendre plus sur l'évolution du curriculum du programme, y compris des bibliographies pour chaque sujet. Pour entendre directement les étudiants, les Professeurs et le personnel du Scholars' Lab parler de leur expérience, visite <a href='http://www.scholarslab.org/blog/'>notre blog</a>.
+      Le <a href='http://praxis.scholarslab.org/'>programme Praxis</a> est un projet pilote de l'2011-12 <a href="http://www2.lib.virginia.edu/scholarslab/">Scholars' Lab</a> à la <a href='http://www.lib.virginia.edu/index.html'>Bibliothèque de l'Université de Virginie</a> dans lequelle six étudiants des cycles supérieurs en sciences humaines passeront une année d'apprentissage et collaboration pratique autour d'un projet dans le champ numérique. Le but du programme Praxis est de mieux outiller les travailleurs du savoir pour les postes de professeurs émergents et des <a href=http://mediacommons.futureofthebook.org/alt-ac/'>carrières académiques alternatives</a> au moment où de nouvelles questions peuvent être posées et de nouveaux systèmes construits. Visitez <a href='http://praxis.scholarslab.org/'>le site du Programme Praxis</a>  pour en apprendre plus sur l'évolution du curriculum du programme, y compris des bibliographies pour chaque sujet. Pour entendre directement les étudiants, les Professeurs et le personnel du Scholars' Lab parler de leur expérience, visite <a href='http://www.scholarslab.org/blog/'>notre blog</a>. Le programme Praxis est soutenu par une généreuse subvention de la Fondation Mellon au <a href="http://uvasci.org">Scholarly Communication Institute</a> de la Bibliothèque d'UVA.
     scholarslab_title: Scholars' Lab
     scholarslab_description_html: >
       <a href="www.scholarslab.org">Le Scholars' Lab</a> a été établie en 2006 à la <a href='http://www.lib.virginia.edu/index.html'> Bibliothèque d'UVa </a> en tant que site pour l'innovation dans les sciences humaines et sociales. Le Scholars' Lab est un lieu où les élèves avancés et les professeurs peuvent acceder aux ressources numériques, trouver de l'aide d'experts, et de collaborer sur des projets de recherche novateurs. Le « Slab » accueille également des événements telles que des ateliers, des conférences et tables rondes, le programme Praxis et un prestigieux <a href='http://www2.lib.virginia.edu/scholarslab/about/fellowship.html'>bourse pour des candidats au doctorat</a> travaillant dans le champ des sciences humaines numériques.
     contributors_title: Collaborateurs
-    contributors_description: ""
+    contributors_description_html: >-
+      <h3>Jeremy Boggs</h3> <p>Humanities Design Architect, UVa Library Scholars' Lab</p> 
+      <h3>Alex Gil</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Wayne Graham</h3> <p>Head of Research &amp; Development, UVa Library Scholars' Lab</p>
+      <h3>Eric Johnson</h3> <p>Head of Outreach &amp; Consulting, UVa Library Scholars' Lab</p> 
+      <h3>Brooke Lestock</h3> <p>Praxis Fellow and UVa English Department graduate student</p>
+      <h3>David McClure</h3> <p>Web Applications Specialist, UVa Library Scholars' Lab</p>
+      <h3>Lindsay O'Connor</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p>
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p>
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p> 
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+  highlight:
+    instructions: Sélectionne un surligneur dans le menu sur la droite pour marquer le texte ci-dessous. Tu peux modifier tes colorations avec la gomme. Lorsque tu as terminé, clique sur "submit" pour voir les résultats de Prism.
+    eraser: La gomme
+
+  log-in:
+    forgot: Oublié ton mot de passe.
+    in: Accès
+    up: Départ
+
