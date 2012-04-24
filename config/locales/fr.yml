@@ -3,12 +3,11 @@
 
 fr:
   index:
-    welcome: "Bienvenu!"
     in_development: "Nous travaillons à la vitesse de la lumière."
     highlight: Surbrillance
     visualize: Visualizer
     about_text_html: >-
-      à <a href='/pages/about'>notre expérience</a> dans la visualisation de nombreuses lectures d'un ensemble commun de textes. Prism est le projet digital de stage des boursiers 2011-12 <a href='http://praxis.scholarslab.org'>du Praxis Program</a>. Joue avec notre  <a href='/prisms/sandbox/highlight'>bac à sable</a>, ou  <a href='/users/sign_up'>crée un compte</a> pour partager vos lectures de Jefferson, Joyce, et Poe. Prism est <a href='https://github.com/scholarslab/prism'>open source</a>. S'il te plaît, envoie-nous tes suggestions ou rapporte <a href='https://github.com/scholarslab/prism/issues'>des bugs</a>!
+      Bienvenu à <a href='/pages/about'>notre expérience</a> dans la visualisation de nombreuses lectures d'un ensemble commun de textes. Prism est le projet digital de stage des boursiers 2011-12 <a href='http://praxis.scholarslab.org'>du Praxis Program</a>. Joue avec notre  <a href='/prisms/sandbox/highlight'>bac à sable</a>, ou  <a href='/users/sign_up'>crée un compte</a> pour partager vos lectures de Jefferson, Joyce, et Poe. Prism est <a href='https://github.com/scholarslab/prism'>open source</a>. S'il te plaît, envoie-nous tes suggestions ou rapporte <a href='https://github.com/scholarslab/prism/issues'>des bugs</a>!
   header:
     description_html: "Prism est un ensemble d'outils pour <a href='%{about_url}'>collectiviser l'interprétation.</a> Il s'agit d'un projet en cours du <a href='http://praxis.scholarslab.org'>Programme Praxis</a> au <a href='http://scholarslab.org'>Scholars' Lab</a> de l'Université de Virginie."
     link_home: "Accueil"

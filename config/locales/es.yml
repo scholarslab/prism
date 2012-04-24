@@ -4,10 +4,9 @@ es:
   index:
     highlight: "Marcar"
     visualize: "Visualizar"
-    welcome: "Bienvenidos!"
     in_development: "Estamos trabajando a la velocidad de la luz."
     about_text_html: >-
-      a nuestro  <a href='/pages/about'>experimento</a> de visualización de multiples lecturas de un texto en común. Prism, o Prisma, es el practicum digital del <a href='http://praxis.scholarslab.org'>Programa Praxis</a>, año escolar 2011-2012. Juega en nuestro <a href='/prisms/sandbox/highlight'>modelo de prueba</a>, o crea <a href='/users/sign_up'>una cuenta</a> y comparte tus lecturas de Jefferson, Joyce y Poe. Prism es  <a href='https://github.com/scholarslab/prism'>open-source</a>. Sugerencias y reportes de errores son <a href='https://github.com/scholarslab/prism/issues'>bienvenidos</a>."
+      Bienvenidos a nuestro  <a href='/pages/about'>experimento</a> de visualización de multiples lecturas de un texto en común. Prism, o Prisma, es el practicum digital del <a href='http://praxis.scholarslab.org'>Programa Praxis</a>, año escolar 2011-2012. Juega en nuestro <a href='/prisms/sandbox/highlight'>modelo de prueba</a>, o crea <a href='/users/sign_up'>una cuenta</a> y comparte tus lecturas de Jefferson, Joyce y Poe. Prism es  <a href='https://github.com/scholarslab/prism'>open-source</a>. Sugerencias y reportes de errores son <a href='https://github.com/scholarslab/prism/issues'>bienvenidos</a>."
   header:
     link_home: "Portada"
     description_html: >-

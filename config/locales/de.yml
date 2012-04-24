@@ -5,11 +5,10 @@ de:
   index:
     highlight: Highlight
     visualize: Visualize
-    welcome: "Wilkommen"
     in_development: "Prism wird mit Warp-Geschwindigkeit entwickelt.
                    Behalten Sie die Kontrolle zurück."
     about_text_html: >-
-      zu unserem <a href='/pages/about'>Experiment</a> in Crowdsourcing und Visualisierung von vielen Lesungen von einem gemeinsamen Satz von Texten. Prism ist der Digital Humanities Praktikum Projekt der 2011-12 Scholars' Lab  <a href='http://praxis.scholarslab.org'>Praxis Fellows</a>. Spielen Sie in unserer  <a href='/prisms/sandbox/highlight'>Sandbox</a> oder ein <a href='/users/sign_up'>Konto</a> erstellen, um Ihre Messwerte von Jefferson, Joyce, Poe und zu teilen. Prism ist <a href='https://github.com/scholarslab/prism'>Open Source</a>. Bitte machen Vorschläge und Fehler <a href='https://github.com/scholarslab/prism/issues'>zu melden</a>!
+      Wilkommen zu unserem <a href='/pages/about'>Experiment</a> in Crowdsourcing und Visualisierung von vielen Lesungen von einem gemeinsamen Satz von Texten. Prism ist der Digital Humanities Praktikum Projekt der 2011-12 Scholars' Lab  <a href='http://praxis.scholarslab.org'>Praxis Fellows</a>. Spielen Sie in unserer  <a href='/prisms/sandbox/highlight'>Sandbox</a> oder ein <a href='/users/sign_up'>Konto</a> erstellen, um Ihre Messwerte von Jefferson, Joyce, Poe und zu teilen. Prism ist <a href='https://github.com/scholarslab/prism'>Open Source</a>. Bitte machen Vorschläge und Fehler <a href='https://github.com/scholarslab/prism/issues'>zu melden</a>!
 
   header:
     description_html: "Prism ist ein Satz von digitalen Werkzeugen für <a href='%{about_url}'>Crowdsourcing Interpretation</a>. Es ist ein 
