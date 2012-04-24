@@ -39,8 +39,7 @@ group :development do
    gem "rails_best_practices"
    gem "heroku", "~> 2.9.0"
    gem "nokogiri", "~> 1.5.0"
-   gem "eventmachine", "~> 0.12.10"
-   # gem 'rails-dev-tweaks', '~> 0.5.1'
+   gem "eventmachine", "~> 1.0.0.beta.4.1", :platform => [:mswin, :mingw]   # gem 'rails-dev-tweaks', '~> 0.5.1'
 end
 
 group :development, :test do
