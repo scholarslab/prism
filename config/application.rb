@@ -2,6 +2,7 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+ENV['USE_JASMINE_RAKE']='true'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -48,5 +49,6 @@ module Testing
     config.assets.version = '1.0'
 
     config.assets.initialize_on_precompile = false
+    config.active_record.whitelist_attributes = true
   end
 end

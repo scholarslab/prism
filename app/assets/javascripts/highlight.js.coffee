@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http:#jashkenas.github.com/coffee-script/
 
-$ ->
+(exports ? this).setup_highlight = ->
   $("#highlighters span.facet").first().addClass('border')
   # Extracts the color data from every facet from html file
   all_colors = []
@@ -33,8 +33,7 @@ $ ->
     if color is "delete"
       for color in all_colors
         $(elt).removeClass color
-      for key in storage
-        delete storage[key][number]
+        delete storage[color][number]
     else
       # defines normal marking functionality
       $(elt).addClass color
@@ -73,23 +72,3 @@ $ ->
     current_color = $("input", this).val()
     $("span.facet.border").removeClass("border")
     $(this).find("span.facet").addClass("border")
-$ ->
-    all_colors = []
-    frequencies = {}
-    facets = $("li.vis_facet")
-    for facet in facets
-        color = $("input.color", facet).val()
-        all_colors.push(color)
-        frequencies[color] = JSON.parse($("input.freq", facet).val())
-    # Clicking on a facet sets the color
-    $("li.vis_facet").click ->
-        current_color = $("input", this).val()
-        $("span.facet.border").removeClass("border")
-        $(this).find("span.facet").addClass("border")
-        words = d3.selectAll("span.word")
-        for color in all_colors
-            words.classed(color+"-vis", false)
-        words.data(frequencies[current_color])
-             .classed(current_color+"-vis", (d) -> (d > 0))
-             .transition()
-             .style("font-size", (d) -> (15+20*d) + "px" )
