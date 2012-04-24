@@ -16,10 +16,10 @@ src_files:
   - public/javascripts/controls.js
   - public/javascripts/dragdrop.js
   - public/javascripts/application.js
-  - public/javascripts/**/*.js
   - spec/javascripts/helpers/lib/jquery.js
   - spec/javascripts/helpers/lib/jasmine-jquery.js
-  - spec/javascripts/unit/highlight_test.js
+  - spec/javascripts/compiled/*.js
+  - public/javascripts/**/*.js
 
 # stylesheets
 #
