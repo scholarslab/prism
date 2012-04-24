@@ -64,7 +64,7 @@ fr:
   highlight:
     instructions: Sélectionne un surligneur dans le menu sur la droite pour marquer le texte ci-dessous. Tu peux modifier tes colorations avec la gomme. Lorsque tu as terminé, clique sur "submit" pour voir les résultats de Prism.
     eraser: La gomme
- visualize:
+  visualize:
     instructions: Select one of the options below to display a visualization of collected data for this text.
 
   log-in:
