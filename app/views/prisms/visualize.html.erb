@@ -8,7 +8,7 @@
 <% end %>
 
 <div class="page-margin">
-  <p id="viz-intro"> Congratulations! You have arrived at the most magical of places--the Visualization page!
+  <p id="viz-intro">
     <% if @usercounter != nil %>
       <%=@usercounter%> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
     <% end %>
@@ -23,7 +23,7 @@
   </div>
   <div id="sidebar">
     <div id="visualizations">
-      <p id="visualization-help"><%= t "visualization-help" %> </p>
+      <p id="visualization-help"><%= t "visualize.instructions" %> </p>
       <ul id="highlighters">
         <% for facet in @prism.facets %>
           <li class="vis_facet">

@@ -83,7 +83,7 @@ header {*zoom:1;}
 #sign-out {display: block}  /*puts sign out link on its own line for consistency, no matter how long or short the username*/
 
 #bigprism {
-  position:absolute;
+  position: absolute;
   top: -160px;
   left: 725px;
   z-index:9000;
@@ -120,7 +120,6 @@ header h1 {
 }
 }
 
-
 p.description {
   float: left;
   width: 28%;
@@ -130,6 +129,7 @@ p.description {
 
  body {
    min-width: 1000px;
+   background-color: #fafafa;
    font-color: #003333;
    font-family: "PT Sans", sans-serif;
    /*font and color of all body text, unless otherwise specified in stylesheet*/
@@ -142,10 +142,10 @@ p.description {
 
  #homepic {
    float: left;
-   width: 35%;
    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
    margin-right: 3%;  /*styles for picture on homepage, including 50% transparent black box shadow all around */
-   margin-top: 3%;
+   margin-top: 70px;
+   
 }
 
 #index-text {
@@ -154,19 +154,19 @@ p.description {
 
   p {
     line-height: 150%;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   h1 {
-    padding: 1em 0 1em;
-    font-size: 40px;
+   padding: 0.5em 0 0;
+   font-size: 40px;
   }
 }
 
 #texts {
   list-style:none;
   font-family: "PT Serif", times, serif; 
-  margin-left: 385px;
+  margin-left: 350px;
   
   li {
      margin-top: 20px;
@@ -241,9 +241,9 @@ footer {
     font-size: 16px;
 
     &:not(:last-child):after {
-      content:" | ";
+      content:"|";
       color: #999; 
-      margin-right: 2px;
+      margin: 10px;
     } 
  }
 }
@@ -280,6 +280,7 @@ p.blockquote {
 }
 
 #Prismabob {
+  background-color: #ffffff;
   float: left;
   width: 60%;
   padding: .5% 3% .5% 3%;
