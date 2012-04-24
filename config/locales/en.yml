@@ -5,9 +5,8 @@ en:
   index:
     highlight: Highlight
     visualize: Visualize
-    welcome: Welcome
     in_development: "Prism is being developed at warp speed. Keep checking back."
-    about_text_html: "to <a href='/pages/about'>our experiment</a> in crowd-sourcing and visualizing many readings of a common set of texts. Prism is the digital humanities practicum project of the 2011-12 Scholars' Lab <a href='http://praxis.scholarslab.org'>Praxis Fellows</a>. Play in our <a href='/prisms/sandbox/highlight'>sandbox</a>, or create <a href='/users/sign_up'>an account</a> to share your readings of Jefferson, Joyce, and Poe. Prism is <a href='https://github.com/scholarslab/prism'>open source</a>. Please make suggestions and <a href='https://github.com/scholarslab/prism/issues'>report bugs</a>!" 
+    about_text_html: "Welcome to <a href='/pages/about'>our experiment</a> in crowd-sourcing and visualizing many readings of a common set of texts. Prism is the digital humanities practicum project of the 2011-12 Scholars' Lab <a href='http://praxis.scholarslab.org'>Praxis Fellows</a>. Play in our <a href='/prisms/sandbox/highlight'>sandbox</a>, or create <a href='/users/sign_up'>an account</a> to share your readings of Jefferson, Joyce, and Poe. Prism is <a href='https://github.com/scholarslab/prism'>open source</a>. Please make suggestions and <a href='https://github.com/scholarslab/prism/issues'>report bugs</a>!" 
   header:
     description_html: "Prism is a tool for <a href='%{about_url}'>collective interpretation</a>. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
     link_home: "Home"
@@ -43,7 +42,7 @@ en:
       The Scholars' Lab offered these ideas as inspiration for the first project to be undertaken by graduate student fellows of 
       <a href="http://praxis.scholarslab.org/">the Praxis Program</a> in its inaugural year. Our first task was to determine how to translate the physical exercise 
       of marking a text into a digital one. We decided that we would continue to employ a constrained interpretive vocabulary and limit the length of the text in
-      order to stay true to the transparency game, during which texts would be marked up fairly quickly&mdash;ideally in one session. Also, like the transparency 
+      order to stay true to the transparency game, during which texts would be marked up fairly quickly &mdash; ideally in one session. Also, like the transparency 
       exercise, the end goal of Prism is to produce <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10">aesthetic provocations</a>, that is, visualizations which provoke further discussion. But because it is a 
       digital project, Prism can integrate many individual interpretations and create a wide range of visualizations while maintaining data integrity.
     description_p5: >-

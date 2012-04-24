@@ -1,5 +1,6 @@
 // Imports -------------------------------------------------------------------
 @import "compass";
+@import "compass/css3/pie";
 @import "susy";
 
 // Settings ------------------------------------------------------------------
@@ -18,4 +19,4 @@ $col-width                      : 10%; /* each column is 10% of container wide *
 $gutter-width                   : 0; /* 0% gutters between columns */
 $side-gutter-width              : 0; /* 0em padding at the edges of the page as well */
 
-
+$pie-behavior                   : url("/PIE.htc");

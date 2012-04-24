@@ -42,9 +42,12 @@ input[type="submit"] {
 header {
   margin-top: 3%;
   margin-bottom: 5%;
-  @include background-image (linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 100%));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#949494', GradientType=1);
-  /*gradient from left to right, all black, opaque to 50%. "filter" is a rough appoximation for IE*/
+  min-width: 1200px;
+  @include pie;
+  @include background(
+    linear-gradient(left, rgb(0,0,0) 0%, rgb(100,100,100) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%),  
+    linear-gradient(top, rgba(0,179,179,0.6) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.6) 100%)
+    );
   font-family: "PT Sans", sans-serif;
   color: white;
   position:relative;
@@ -55,13 +58,10 @@ header:after {clear:both;}
 header {*zoom:1;}
 
 #user-meta {
-  @include background-image (linear-gradient(top, rgba(0,179,179,0.6) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.6) 100%));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00B3B3', endColorstr='#B30000');
-  /*"rainbow" vertical linear gradient, using Compass mix-in for browser compatibility + filter for IE approximation*/ 
   float: right;
   font-size: 14px; 
   width: 25%;
-  height: 90px;
+  height: 120px;
   text-align: right;
   padding-right: $page-margin;
   padding-top: 1%;     /*styles for entirety of rainbow log-in/sign-up area of header*/
@@ -85,7 +85,8 @@ header {*zoom:1;}
 #bigprism {
   position: absolute;
   top: -160px;
-  left: 725px;
+  left: 75%;
+  margin-left: -201px;
   z-index:9000;
 }
 
@@ -98,10 +99,10 @@ header h1 {
 #browser-upgrade {
   position: absolute;
   width: 100%; 
-  background: #fff09e;
+  background: #ccc000;
   line-height: 2em;
   text-align: center;
-  top: 0;
+  top: 160px;
   z-index: 1000000;
 }
 
@@ -145,23 +146,27 @@ p.description {
    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
    margin-right: 3%;  /*styles for picture on homepage, including 50% transparent black box shadow all around */
    margin-top: 70px;
-   
 }
 
 #index-text {
   font-family: "PT Serif", times, serif; 
   margin-left: 385px;
+  padding: 2.5em 0 0.8em;
 
   p {
-    line-height: 150%;
+    line-height: 140%;
     font-size: 17px;
+  
+    &:first-letter {
+   font-size: 80px;
+   text-shadow: 1px 1px 1px #969696;
+   display: block;
+   float: left;
+   line-height: 0.75;
+   padding-right: 5px;
   }
-
-  h1 {
-   padding: 0.5em 0 0;
-   font-size: 40px;
   }
-}
+}    
 
 #texts {
   list-style:none;
@@ -275,9 +280,6 @@ p.blockquote {
     line-height: 8px;
   }
 }
-#viz-intro {
-  width: 67%;
-}
 
 #Prismabob {
   background-color: #ffffff;
@@ -390,7 +392,15 @@ h3 {
  }
  }
 
- #visualization-help {padding-left:0}
+ 
+ #viz-count {
+   font-size: 18px;
+
+   span {
+     color: #B30000;
+     font-weight: bold;
+   }
+}
 
  #userform {
    width: 35%;
