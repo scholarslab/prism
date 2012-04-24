@@ -3,16 +3,5 @@ class Facet < ActiveRecord::Base
   has_many :markings
   validates :color,  :presence => true
   validates :category, :presence => true 
-
+  attr_accessible :color, :category, :prism_id, :prism
 end
-# == Schema Information
-#
-# Table name: facets
-#
-#  id         :integer         not null, primary key
-#  color      :string(255)
-#  category   :string(255)
-#  created_at :datetime        not null
-#  updated_at :datetime        not null
-#
-

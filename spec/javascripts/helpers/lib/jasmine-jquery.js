@@ -29,7 +29,7 @@ jasmine.getFixtures = function() {
 jasmine.Fixtures = function() {
   this.containerId = 'jasmine-fixtures';
   this.fixturesCache_ = {};
-  this.fixturesPath = 'spec/fixtures/html';
+  this.fixturesPath = 'spec/javascripts/fixtures';
 };
 
 jasmine.Fixtures.prototype.set = function(html) {

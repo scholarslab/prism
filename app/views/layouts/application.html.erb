@@ -3,13 +3,17 @@
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
   <title><%= title %></title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon.png">
   <%= stylesheet_link_tag    "application" %>
   <%= csrf_meta_tags %>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
   <%= javascript_include_tag "application" %>
+  <%= yield :extra_head %>
 </head>
 <body>
   <div id="container">
