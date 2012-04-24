@@ -43,9 +43,8 @@ header {
   margin-top: 3%;
   margin-bottom: 5%;
   min-width: 1200px;
-  @include background-image (linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 100%));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#949494', GradientType=1);
-  /*gradient from left to right, all black, opaque to 50%. "filter" is a rough appoximation for IE*/
+   @include pie;
+  @include background(linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 100%));
   font-family: "PT Sans", sans-serif;
   color: white;
   position:relative;
@@ -56,9 +55,8 @@ header:after {clear:both;}
 header {*zoom:1;}
 
 #user-meta {
-  @include background-image (linear-gradient(top, rgba(0,179,179,0.6) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.6) 100%));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00B3B3', endColorstr='#B30000');
-  /*"rainbow" vertical linear gradient, using Compass mix-in for browser compatibility + filter for IE approximation*/ 
+  @include pie;
+  @include background(linear-gradient(top, rgba(0,179,179,0.6) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.6) 100%));
   float: right;
   font-size: 14px; 
   width: 22%;
