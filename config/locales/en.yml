@@ -6,7 +6,7 @@ en:
     highlight: Highlight
     visualize: Visualize
     in_development: "Prism is being developed at warp speed. Keep checking back."
-    about_text_html: "Welcome to <a href='/pages/about'>our experiment</a> in crowd-sourcing and visualizing many readings of a common set of texts. Prism is the digital humanities practicum project of the 2011-12 Scholars' Lab <a href='http://praxis.scholarslab.org'>Praxis Fellows</a>. Play in our <a href='/prisms/sandbox/highlight'>sandbox</a>, or create <a href='/users/sign_up'>an account</a> to share your readings of Jefferson, Joyce, and Poe. Prism is <a href='https://github.com/scholarslab/prism'>open source</a>. Please make suggestions and <a href='https://github.com/scholarslab/prism/issues'>report bugs</a>!" 
+    about_text_html: "Welcome to <a href='/pages/about'>our experiment</a> in crowd-sourcing and visualizing many readings of a common set of texts. Prism is the digital humanities practicum project of the 2011-12 Scholars' Lab <a href='http://praxis.scholarslab.org'>Praxis Fellows</a>. Play in our <a href='/prisms/sandbox/highlight'>sandbox</a>, or create <a href='/users/sign_up'>an account</a> to share your readings of Jefferson, Joyce, and Poe. Prism is <a href='https://github.com/scholarslab/prism'>open source</a>. Please <a href='https://scholarslab.org'>make suggestions</a> and <a href='https://github.com/scholarslab/prism/issues'>report bugs</a>!" 
   header:
     description_html: "Prism is a tool for <a href='%{about_url}'>collective interpretation</a>. It is an ongoing project of the <a href='http://praxis.scholarslab.org'>Praxis Program</a> at the University of Virginia <a href='http://scholarslab.org'>Scholars' Lab</a>."
     link_home: "Home"
