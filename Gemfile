@@ -30,6 +30,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 #gem 'ruby-debug19', :require => 'ruby-debug'
+#
+
+group :production, :development do
+  gem 'dalli', '~>1.0.5' # for memcached
+end
 
 group :development do
    #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
