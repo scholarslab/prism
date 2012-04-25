@@ -77,6 +77,7 @@ end
 group :production do
   gem "heroku", "~>2.9.0"
   gem "pg"
+  gem "thin" # use thin as the production server
  # gem "devise", "~> 2.0.0"
   gem "nokogiri", "~> 1.5.0"
   gem 'jasmine-jquery-rails'
