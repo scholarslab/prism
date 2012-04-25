@@ -7,6 +7,14 @@
 
 $page-margin: 10%;
 
+@mixin nav-pipes {
+  a:not(:last-child):after {
+   content:" | ";
+   margin: 0 10px;
+   color: #999;
+ }
+ }
+
 #container {
   @include container;
   @include susy-grid-background;
@@ -75,7 +83,7 @@ header {*zoom:1;}
  p a:not(:last-child):after {
    content:" | ";
    margin: 0 8px;
-   color: rgba(255,255,255,1.0);   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
+   color: rgb(255,255,255);   /*didn't use mixin for this one because I can't figure out how to override the gray color*/
  }
 }
 
@@ -109,15 +117,8 @@ header h1 {
    position: absolute;
    top: 0;
    left: 10%;
-    a {
-      font-size: 14px;
-      
-      &:not(:last-child):after {
-      content:"|";
-      color: #999;
-      padding: 0px 10px;
-    } 
-}
+   @include nav-pipes;
+ 
 }
 
 p.description {
@@ -175,18 +176,12 @@ p.description {
   li {
     margin-top: 20px;
     font-size: 22px;
+    @include nav-pipes;
 
      a {
     font-size: 18px;
     margin-top: 20px;
-    padding: 0px 15px 0px 0px;
-    
-   &:not(:last-child):after {
-   content:" | ";
-   color: #999;   
-   margin-left: 10px;
-  }
-}
+       }
 }
 }
 
@@ -234,21 +229,13 @@ footer {
 }
 
 #footer-nav {
-  display: table;
   clear: all;
-  padding: 1%;
+  @include nav-pipes;
 
   a {
-    display: table-cell;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
-
-    &:not(:last-child):after {
-      content:"|";
-      color: #999; 
-      margin: 10px;
-    } 
- }
+   }
 }
 
 p.blockquote {
@@ -422,13 +409,10 @@ input[type="password"] {
   display: block;
  }
 
- p a:not(:last-child):after {
-   content:" | ";
-   margin: 0 10px;
-   margin-top: 15px;
-   color: #999;   /*puts vertical line between "forgot your password" and "sign up" links -- this is crazy CSS voodoo!*/
- }
-}
+ p {
+   @include nav-pipes;
+    }
+  }
 
 #user_password_confirmation {
   margin-bottom: 15px;
