@@ -83,6 +83,7 @@ en:
     eraser: Erase your highlights
   visualize:
     instructions: Select one of the options below to display a visualization of collected data for this text.
+    sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
   log-in:
     forgot: Forgot your password?
     in: Sign in
