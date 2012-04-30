@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '~>3.2.0'
 gem "devise", "~> 2.0.0"
 
+gem 'compass-rails', '~> 1.0.1'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -11,7 +13,7 @@ gem "devise", "~> 2.0.0"
 group :assets do
   #gem 'compass', git: 'https://github.com/chriseppstein/compass.git' # beta until release
   gem 'compass', '~> 0.12.1'
-  gem 'compass-rails', '~> 1.0.1'
+  #gem 'compass-rails', '~> 1.0.1'
   gem 'compass-susy-plugin', '~> 0.9'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
