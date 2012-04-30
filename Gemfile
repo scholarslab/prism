@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', '~>3.2.0'
 gem "devise", "~> 2.0.0"
 
+gem 'compass-rails', '~> 1.0.1'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
@@ -10,7 +12,8 @@ gem "devise", "~> 2.0.0"
 # in production environments by default.
 group :assets do
   #gem 'compass', git: 'https://github.com/chriseppstein/compass.git' # beta until release
-  gem 'compass-rails', '~> 1.0.0.rc.2'
+  gem 'compass', '~> 0.12.1'
+  #gem 'compass-rails', '~> 1.0.1'
   gem 'compass-susy-plugin', '~> 0.9'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
@@ -30,6 +33,11 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 #gem 'ruby-debug19', :require => 'ruby-debug'
+#
+
+group :production, :development do
+  gem 'dalli', '~>1.0.5' # for memcached
+end
 
 group :development do
    #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
@@ -39,8 +47,7 @@ group :development do
    gem "rails_best_practices"
    gem "heroku", "~> 2.9.0"
    gem "nokogiri", "~> 1.5.0"
-   # gem "eventmachine", "~> 1.0.0.beta.4.1", :platform => [:mswin, :mingw]   # gem 'rails-dev-tweaks', '~> 0.5.1'
-   # gem "eventmachine", "~> 0.12.10"
+   # gem 'rails-dev-tweaks', '~> 0.5.1'
    # gem 'rails-dev-tweaks', '~> 0.5.1'
 end
 
@@ -51,7 +58,6 @@ group :development, :test do
   gem "factory_girl_rails", "~> 1.3.0"
   gem "nyan-cat-formatter", "~> 0.0.3"
   gem "guard"
-  # gem 'guard-livereload'
   gem "guard-coffeescript"
   gem 'forgery', '0.3.12'
 end
@@ -72,6 +78,7 @@ end
 group :production do
   gem "heroku", "~>2.9.0"
   gem "pg"
+  gem "thin" # use thin as the production server
  # gem "devise", "~> 2.0.0"
   gem "nokogiri", "~> 1.5.0"
   gem 'jasmine-jquery-rails'
