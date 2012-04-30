@@ -47,6 +47,13 @@ a {
   }
 }
 
+blockquote {
+  color: #666;
+  padding: 0 1em;
+  margin-left:1em;
+  border-left: 10px solid #eee;
+}
+
 input[type="submit"] {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
