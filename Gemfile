@@ -10,6 +10,7 @@ gem "devise", "~> 2.0.0"
 # in production environments by default.
 group :assets do
   #gem 'compass', git: 'https://github.com/chriseppstein/compass.git' # beta until release
+  gem 'compass', '~> 0.12.1'
   gem 'compass-rails', '~> 1.0.1'
   gem 'compass-susy-plugin', '~> 0.9'
   gem 'sass-rails',   '~> 3.2.3'
