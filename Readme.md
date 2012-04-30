@@ -1,6 +1,5 @@
 # Readme
-
-This is the landing page for the prism project.
+PRISM
 
 # Build Status
 [![Build Status](https://secure.travis-ci.org/scholarslab/prism.png)](http://travis-ci.org/scholarslab/prism?branch=master,production)
@@ -8,22 +7,24 @@ This is the landing page for the prism project.
 
 # Getting Started
 
-* Clone the repository
+Prism is a tool for collective interpretation, an experiment in crowd-sourcing and visualizing many readings of  a set of common texts.  As part of our project to make crowd-sourcing more meaningful and less mechanical, users interact subjectively with a text, highlighting it in accordance with certain interpretive categories, such as sound, sense, and modernism, to produce an aggregate visualization of all other users' markings that shows points of analytical agreement or disagreement.  
 
-    git clone git@github.com:scholarslab/prism.git
+The basic workflow is simple:
+1. Play in the sandbox on our introductory text to practice using the highlighting functionality.
+2. After creating an account, choose a text to highlight.
+3. The highlighting page automatically starts with the first category selected.  Simply click and drag over the desired text to change its color. To switch categories, simple click on the desired category.  Click on the eraser tool and then click and drag over text to undo any unwanted highlights.
+4. When done, click the submit button to see a visualization.
+5. To switch to the visualization for a different category, simply click on a different category.
 
-* Check out the develop branch
+Prism is an ideal tool for research and pedagogy alike; students can highlight a text and discuss their markings in class, and scholars can see how the world at large views these three texts.
 
-    git checkout develop
+Although right now Prism lacks the functionality necessary to enable users to upload texts, developers can add new texts very easily.  All texts belong in the app/spec/fixtures/html folder, and they should include the following div classes contained within a div id=bib:
+author: Author's name (first and last)
+pub_date: Publication date for the version of the text included in the database
+format: Text or image
+description: Bibliographic information (publisher, context, etc.)
+sandbox: false (unless you are replacing the sandbox text)
 
-* Run bundler to resolve gem dependencies
+Each category and color are joined within div id=facets tag and are given class category and color accordingly.
 
-    bundle
-
-* Migrate the database
-
-    bundle exec rake db:migrate
-
-* Run the server
-
-    bundle exec rails server
+If these documents are changed in any way, developers should type the following to clear and then rebuild the database:  rake import:clear import:docs
