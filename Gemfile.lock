@@ -129,6 +129,7 @@ GEM
     mime-types (1.18)
     minitest (2.12.0)
     multi_json (1.0.4)
+    newrelic_rpm (3.3.4.1)
     nokogiri (1.5.2)
     nokogiri (1.5.2-x86-mingw32)
     nyan-cat-formatter (0.0.6)
@@ -259,6 +260,7 @@ DEPENDENCIES
   jasmine-jquery-rails
   jquery-rails
   minitest
+  newrelic_rpm
   nokogiri (~> 1.5.0)
   nyan-cat-formatter (~> 0.0.3)
   pg
