@@ -6,10 +6,10 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <p id="privacy"> <%= t'log-in.privacy' %></p>
+   <%= f.label :email %>
+   <%= f.email_field :email %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+    <p id="privacy"> <%= t'log-in.privacy' %></p>
 
   <%= f.label :password %>
   <%= f.password_field :password %>
