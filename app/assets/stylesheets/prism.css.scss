@@ -74,14 +74,12 @@ $green :  color-stops(
 
 #flash_notice, #flash_alert {
   font-weight: bold;
-  width: 100%;
-  position: absolute;
-  top: 150px;
+  margin-top:0;
   }
 
 #flash_notice {
   background-color: #00B359;
-  padding: 0.3em 5%; 
+  padding: 0.3em 10%;
  }
 
 #flash_alert {
