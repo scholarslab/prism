@@ -67,12 +67,29 @@ laufendes Projekt der Praxis Program an der Scholars' Lab, University of Virgini
   highlight:
     instructions: >- 
       Wählen Sie einen Textmarker aus dem Menü auf der rechten Seite, um den Text zu markieren. Sie können Ihre Highlighting mit dem Radiergummi zu ändern. Wenn Sie fertig sind, klicken Sie auf "Eintragen", um die Prism-Ergebnisse zu sehen.    
-    eraser: Löschen Sie Ihre Highlights
+    eraser: Radierer
   visualize:
     instructions: Select one of the options below to display a visualization of collected data for this text.
+    sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
+
 
   log-in:
     forgot: Passwort vergessen?
     in: Anmelden
     up: Austragen
+    locked: Your account has been locked due to an excessive amount of unsuccessful sign in attempts.
+    click: "Click the link below to unlock your account:"
+    confirm: "You can confirm your account email through the link below:"
+    welcome: Welcome
+    hello: Hello
+    requested: "Someone has requested a link to change your password, and you can do this through the link below."
+    ignore: "If you didn't request this, please ignore this email."
+    wont: "Your password won't change until you access the link above and create a new one."
+    privacy: "We won't share your e-mail address, we promise."  
+    edit: Edit 
+    cancel: Cancel my account
+    unhappy: "Unhappy?"
+    resend: Resend confirmation instructions 
+    change: Change your password
+
 
