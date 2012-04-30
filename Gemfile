@@ -16,6 +16,7 @@ group :assets do
   #gem 'compass-rails', '~> 1.0.1'
   gem 'compass-susy-plugin', '~> 0.9'
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-script-source', '1.2.0'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 end
