@@ -9,11 +9,11 @@ $page-margin: 10%;
 
 @mixin nav-pipes {
   a:not(:last-child):after {
-   content:" | ";
-   margin: 0 10px;
-   color: #999;
- }
- }
+    content:" | ";
+    margin: 0 10px;
+    color: #999;
+  }
+}
 
 #container {
   @include container;
@@ -32,20 +32,20 @@ $page-margin: 10%;
 
 a:link {text-decoration:none;      /*styles all the links on the site*/
   font-weight:bold;
-  color: rgba(0,153,153,1.0);}
+color: rgba(0,153,153,1.0);}
 a:visited {text-decoration:none;
-  color: rgba(0,153,153,1.0);}
+color: rgba(0,153,153,1.0);}
 a:hover {text-decoration:none;
-  color: rgba(0,153,77,1.0);}
+color: rgba(0,153,77,1.0);}
 a:active {text-decoration:none;
-  color: Dimgray;}
+color: Dimgray;}
 
 input[type="submit"] {
-     font-family: "PT Sans", sans-serif;
-     font-size: 18px;
-     display: block;
-     padding: 5px 10px;
- }
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  display: block;
+  padding: 5px 10px;
+}
 
 header {
   margin-top: 3%;
@@ -53,9 +53,9 @@ header {
   min-height: 100px;
   @include pie;
   @include background(
-    linear-gradient(left, rgb(0,0,0) 0%, rgb(100,100,100) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%),  
-    linear-gradient(top, rgba(0,179,179,0.8) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.8) 100%)
-    );
+  linear-gradient(left, rgb(0,0,0) 0%, rgb(100,100,100) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%),
+  linear-gradient(top, rgba(0,179,179,0.8) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.8) 100%)
+  );
   font-family: "PT Sans", sans-serif;
   color: white;
   position:relative;
@@ -67,7 +67,7 @@ header {*zoom:1;}
 
 #user-meta {
   float: right;
-  font-size: 14px; 
+  font-size: 14px;
   width: 18%;
   padding-right: $page-margin;
   padding-top: 1%;
@@ -77,13 +77,13 @@ header {*zoom:1;}
     color: white;
     z-index:10000;
     position: relative;
- }
+  }
 
- p a:not(:last-child):after {
-   content:" | ";
-   margin: 0 8px;
-   color: rgb(255,255,255);   /*didn't use mixin for this one because I can't figure out how to override the gray color*/
- }
+  p a:not(:last-child):after {
+    content:" | ";
+    margin: 0 8px;
+    color: rgb(255,255,255);   /*didn't use mixin for this one because I can't figure out how to override the gray color*/
+  }
 }
 
 #sign-out {display: block}  /*puts sign out link on its own line for consistency, no matter how long or short the username*/
@@ -104,7 +104,7 @@ header h1 {
 
 #browser-upgrade {
   position: absolute;
-  width: 100%; 
+  width: 100%;
   background: #ccc000;
   line-height: 2em;
   text-align: center;
@@ -113,11 +113,11 @@ header h1 {
 }
 
 #languages  {
-   position: absolute;
-   top: 0;
-   left: 10%;
-   @include nav-pipes;
- 
+  position: absolute;
+  top: 0;
+  left: 10%;
+  @include nav-pipes;
+
 }
 
 p.description {
@@ -125,20 +125,20 @@ p.description {
   width: 32%;
   margin-left: 2%;
   margin-top: 20px;
- }  /*styles short description in header*/
+}  /*styles short description in header*/
 
- body {
-   min-width: 1000px;
-   background-color: #fafafa;
-   font-color: #003333;
-   font-family: "PT Sans", sans-serif;
-   /*font and color of all body text, unless otherwise specified in stylesheet*/
-   h1 {
-     size: 30px;
-     margin-bottom: 10px;
-     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
+body {
+  min-width: 1000px;
+  background-color: #fafafa;
+  font-color: #003333;
+  font-family: "PT Sans", sans-serif;
+  /*font and color of all body text, unless otherwise specified in stylesheet*/
+  h1 {
+    size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
+  }
 }
- }
 
 #flash_notice, #flash_alert {
   font-weight: bold;
@@ -158,46 +158,46 @@ p.description {
 #main {
   padding-top: 4em;
 }
- #homepic {
-   float: left;
-   box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-   margin-right: 3%;
+#homepic {
+  float: left;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  margin-right: 3%;
 }
 
 #index-text {
-  font-family: "PT Serif", times, serif; 
+  font-family: "PT Serif", times, serif;
   margin-left: 385px;
   margin-top: 6em;
   p {
     line-height: 140%;
     font-size: 17px;
-  
+
     &:first-letter {
-   font-size: 80px;
-   text-shadow: 1px 1px 1px #969696;
-   display: block;
-   float: left;
-   line-height: 0.75;
-   padding-right: 5px;
+      font-size: 80px;
+      text-shadow: 1px 1px 1px #969696;
+      display: block;
+      float: left;
+      line-height: 0.75;
+      padding-right: 5px;
+    }
   }
-  }
-}    
+}
 
 #texts {
   list-style:none;
-  font-family: "PT Serif", times, serif; 
+  font-family: "PT Serif", times, serif;
   margin-left: 350px;
-  
+
   li {
     margin-top: 20px;
     font-size: 22px;
     @include nav-pipes;
 
-     a {
-    font-size: 18px;
-    margin-top: 20px;
-       }
-}
+    a {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
 }
 
 .mention {
@@ -212,28 +212,28 @@ p.description {
   }
 }
 
-  .doctitle {
-    display: block;
-  }
+.doctitle {
+  display: block;
+}
 
-  .author {
-    display: block;
-    font-size: 18px;
-       }
-  
+.author {
+  display: block;
+  font-size: 18px;
+}
+
 
 footer {
   clear: both;
   overflow: auto;
   border-top: 1px solid rgb(200,200,200);
   margin: 0 5%;
-     }
+}
 
-   #footer-links {
-     display: table;
-     float: right;
-     margin: 10px 5% 10px 0;
-        } 
+#footer-links {
+  display: table;
+  float: right;
+  margin: 10px 5% 10px 0;
+}
 
 #license, #slab-logo, #uva-lib-logo, #praxis-logo {
   font-family: "PT Serif", times, serif;
@@ -251,7 +251,7 @@ footer {
   a {
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
-   }
+  }
 }
 
 p.blockquote {
@@ -267,7 +267,7 @@ p.blockquote {
   h2 {
     font-size: 30px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-}
+  }
 }
 
 #page-content {
@@ -275,7 +275,7 @@ p.blockquote {
   width: 60%;
   padding: 1%;
   margin-right: 2%;
- 
+
   h3 {
     line-height: 8px;
   }
@@ -296,18 +296,18 @@ p.blockquote {
     font-size: 30px;
     text-align: center;
     padding-top: 7%;
-}
+  }
 
-h2 {
-  line-height: 1em;
-  font-family: "PT Serif", serif ;
-  font-size: 24px;
-  text-align: center;
-}
-h3 {
-  font-size: 18px;
-  text-align: center;
-}
+  h2 {
+    line-height: 1em;
+    font-family: "PT Serif", serif ;
+    font-size: 24px;
+    text-align: center;
+  }
+  h3 {
+    font-size: 18px;
+    text-align: center;
+  }
 }
 
 .text {
@@ -342,21 +342,21 @@ h3 {
     line-height: 150%;
     clear: left;
     overflow: hidden;
- }
- }
+  }
+}
 
- span.facet {
-   display: block;
-   float: left;
-   width: 30px;
-   height: 30px;
-   margin-right: 2%;
-   border-radius: 17px;
-   -moz-border-radius: 17px;
-   -webkit-border-radius: 17px;
+span.facet {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 2%;
+  border-radius: 17px;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
 
-   &.red {
-     background-color: rgb(179,179,0);
+  &.red {
+    background-color: rgb(179,179,0);
   }
 
   &.green {
@@ -392,13 +392,13 @@ h3 {
 }
 
 #viz-count span {
-     color: #B30000;
-     font-weight: bold;
-   }
+  color: #B30000;
+  font-weight: bold;
+}
 
-#sketchtext { 
-     border-top: 1px solid rgb(200,200,200);
-     padding-top: 0.5em;
+#sketchtext {
+  border-top: 1px solid rgb(200,200,200);
+  padding-top: 0.5em;
 }
 
 #viz-sketches {
@@ -407,35 +407,35 @@ h3 {
     width: 75%;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
     margin: 0.5em 0;
-   }
- }
-
- #userform {
-   width: 35%;
-   padding: 2%;
-   margin-top: 3%;
-   margin-left: 29%;
-   margin-bottom: 3%;
-   font-size: 16px;
-
-   input[type="submit"]{
-     margin-top: 10px;
-   }
-
- input[type="email"] {
-   margin-bottom: 10px;
-   display: block;
+  }
 }
 
-input[type="password"] {
-  margin-bottom: 15px;
-  display: block;
- }
+#userform {
+  width: 35%;
+  padding: 2%;
+  margin-top: 3%;
+  margin-left: 29%;
+  margin-bottom: 3%;
+  font-size: 16px;
 
- p {
-   @include nav-pipes;
-    }
+  input[type="submit"]{
+    margin-top: 10px;
   }
+
+  input[type="email"] {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  input[type="password"] {
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  p {
+    @include nav-pipes;
+  }
+}
 
 #user_password_confirmation {
   margin-bottom: 15px;
@@ -449,8 +449,8 @@ input[type="password"] {
 
 #contributors-fellows {
   float:left;
- }
+}
 
- #contributors-advisors {
+#contributors-advisors {
   margin-top: 82%;
- }
+}

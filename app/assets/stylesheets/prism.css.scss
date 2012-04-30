@@ -2,42 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$blue :   color-stops(
-            rgba(0,179,179,0.7) 0%,
-            rgba(0,179,179,0.7)33.3%,
-            rgba(0,179,179,0) 33.4%
-            );
+$blue : color-stops(
+rgba(0,179,179,0.7) 0%,
+rgba(0,179,179,0.7)33.3%,
+rgba(0,179,179,0) 33.4%
+);
 
-$red :    color-stops(
-            rgba(179,179,0,0) 33%,
-            rgba(179,179,0,0.7)34%,
-            rgba(179,179,0,0.7) 66%,
-            rgba(179,179,0,0) 67%
-            );
+$red : color-stops(
+rgba(179,179,0,0) 33%,
+rgba(179,179,0,0.7)34%,
+rgba(179,179,0,0.7) 66%,
+rgba(179,179,0,0) 67%
+);
 
-$green :  color-stops(
-            rgba(0,179,89,0) 66.7%,
-            rgba(0,179,89,0.7)66.8%,
-            rgba(0,179,89,0.7) 100%
-            );
+$green : color-stops(
+rgba(0,179,89,0) 66.7%,
+rgba(0,179,89,0.7)66.8%,
+rgba(0,179,89,0.7) 100%
+);
+
 #highlighters span.facet.border {
-    border: 2px solid black;
+  border: 2px solid black;
 }
 
 #visualizations span.facet.border {
-    border: 2px solid black;
+  border: 2px solid black;
 }
 
 .red-vis{
-    color: rgb(179,179,0);
+  color: rgb(179,179,0);
 }
 
 .blue-vis {
-    color: rgb(0,179,179)
+  color: rgb(0,179,179)
 }
 
 .green-vis {
-    color:rgb(0,179,89);    
+  color:rgb(0,179,89);
 }
 
 .red {
@@ -69,5 +70,5 @@ $green :  color-stops(
 }
 
 .word {
-      line-height:150%;
+  line-height:150%;
 }
