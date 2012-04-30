@@ -42,33 +42,34 @@ rgba(0,179,89,0.7) 100%
 }
 
 .red {
-  @include background-image(linear-gradient($red));
+  @include background(linear-gradient($red));
 }
 
 .green {
-  @include background-image(linear-gradient($green));
+  @include background(linear-gradient($green));
 }
 
 .blue {
-  @include background-image(linear-gradient($blue));
+  @include background(linear-gradient($blue));
 }
 
 .blue.green {
-  @include background-image(linear-gradient($blue), linear-gradient($green));
+  @include background(linear-gradient($blue), linear-gradient($green));
 }
 
 .red.green {
-  @include background-image(linear-gradient($red), linear-gradient($green));
+  @include background(linear-gradient($red), linear-gradient($green));
 }
 
 .red.blue {
-  @include background-image(linear-gradient($red), linear-gradient($blue));
+  @include background(linear-gradient($red), linear-gradient($blue));
 }
 
 .red.green.blue {
-  @include background-image(linear-gradient($red), linear-gradient($green),linear-gradient($blue));
+  @include background(linear-gradient($red), linear-gradient($green),linear-gradient($blue));
 }
 
 .word {
+  @include pie;
   line-height:150%;
 }
