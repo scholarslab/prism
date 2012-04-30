@@ -365,6 +365,7 @@ p.blockquote {
     line-height: 150%;
     clear: left;
     overflow: hidden;
+    cursor:pointer;
   }
 }
 
@@ -393,6 +394,7 @@ span.facet {
 
 .eraser {
   font-style: italic;
+  cursor:pointer;
   span {
     border-radius: 5px;
     -moz-border-radius: 5px;
