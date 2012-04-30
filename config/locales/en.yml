@@ -62,7 +62,7 @@ en:
       order to stay true to the transparency game, during which texts would be marked up fairly quickly &mdash; ideally in one session. Also, like the transparency 
       exercise, the end goal of Prism is to produce <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10">aesthetic provocations</a>, that is, visualizations which provoke further discussion. But because it is a 
       digital project, Prism can integrate many individual interpretations and create a wide range of visualizations while maintaining data integrity.
-    description_p5: >-
+    description_p5_html: >-
       Prism expands upon current notions of crowdsourcing to allow for more meaningful interaction with "the crowd." Users interact subjectively with a text
       and contribute to a collective interpretive energy that has infinite possibilities beyond the highlighting exercise itself &mdash; in research, in the classroom, or in engaging and experimenting with larger data in the humanities (computational linguistics and text mining, for example).
     praxis_title: The Praxis Program
