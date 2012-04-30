@@ -29,6 +29,22 @@ en:
     log-in: "Log-in"
     privacy: Privacy
 
+  log-in:
+    resend: Resend confirmation instructions 
+    change: Change your password
+    forgot: Forgot your password?
+    in: Sign in
+    up: Sign up
+    locked: Your account has been locked due to an excessive amount of unsuccessful sign in attempts.
+    click: "Click the link below to unlock your account:"
+    confirm: "You can confirm your account email through the link below:"
+    welcome: Welcome
+    hello: Hello
+    requested: "Someone has requested a link to change your password, and you can do this through the link below."
+    ignore: "If you didn't request this, please ignore this email."
+    wont: "Your password won't change until you access the link above and create a new one."
+    privacy: "We won't share your e-mail address, we promise."   
+
   about:
     prism_title: About Prism
     description_p1_html: >-
@@ -85,9 +101,5 @@ en:
   visualize:
     instructions: Select one of the options below to display a visualization of collected data for this text.
     sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
-  log-in:
-    forgot: Forgot your password?
-    in: Sign in
-    up: Sign up
-        
+         
     
