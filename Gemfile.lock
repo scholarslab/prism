@@ -190,7 +190,7 @@ GEM
       rspec (~> 2.8.0)
     ruby-prof (0.10.8)
     rubyzip (0.9.7)
-    sass (3.1.15)
+    sass (3.1.16)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -252,7 +252,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   capybara (~> 1.1.1)
   coffee-rails (~> 3.2.1)
-  compass-rails (~> 1.0.0.rc.2)
+  compass-rails (~> 1.0.1)
   compass-susy-plugin (~> 0.9)
   cucumber-rails
   dalli (~> 1.0.5)
