@@ -71,18 +71,3 @@ $green :  color-stops(
 .word {
       line-height:150%;
 }
-
-#flash_notice, #flash_alert {
-  font-weight: bold;
-  margin-top:0;
-  }
-
-#flash_notice {
-  background-color: #00B359;
-  padding: 0.3em 10%;
- }
-
-#flash_alert {
-  background-color: #ccc000;
-  padding: 0.3em 34.5%; 
- }
