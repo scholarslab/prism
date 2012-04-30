@@ -65,6 +65,7 @@ header {
   margin-top: 3%;
   min-width: 1200px;
   min-height: 100px;
+  background-color: #333;
   @include clearfix;
   @include pie;
   @include background(
