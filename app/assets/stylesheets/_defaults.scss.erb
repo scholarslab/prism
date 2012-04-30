@@ -29,15 +29,23 @@ $page-margin: 10%;
   margin-right: $page-margin;
 }
 
-a:link {text-decoration:none;      /*styles all the links on the site*/
+a {
+  text-decoration:none;
   font-weight:bold;
-color: rgba(0,153,153,1.0);}
-a:visited {text-decoration:none;
-color: rgba(0,153,153,1.0);}
-a:hover {text-decoration:none;
-color: rgba(0,153,77,1.0);}
-a:active {text-decoration:none;
-color: Dimgray;}
+
+  &:link {
+    color: rgba(0,153,153,1.0);
+  }
+  &:visited {
+    color: rgba(0,153,153,1.0);
+  }
+  &:hover {
+    color: rgba(0,153,77,1.0);
+  }
+  &:active {
+    color: Dimgray;
+  }
+}
 
 input[type="submit"] {
   font-family: "PT Sans", sans-serif;
@@ -50,6 +58,7 @@ header {
   margin-top: 3%;
   min-width: 1200px;
   min-height: 100px;
+  @include clearfix;
   @include pie;
   @include background(
   linear-gradient(left, rgb(0,0,0) 0%, rgb(100,100,100) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%),
@@ -58,11 +67,22 @@ header {
   font-family: "PT Sans", sans-serif;
   color: white;
   position:relative;
-}
+  overflow:visible;
 
-header:before, header:after {display:table; content: "";}
-header:after {clear:both;}
-header {*zoom:1;}
+  h1 {
+    float: left;
+    margin-left: $page-margin;
+    margin-right: 2%;
+  }
+
+  /*styles short description in header*/
+  p.description {
+    float: left;
+    width: 32%;
+    margin-left: 2%;
+    margin-top: 20px;
+  }
+}
 
 #user-meta {
   float: right;
@@ -95,12 +115,6 @@ header {*zoom:1;}
   z-index:9000;
 }
 
-header h1 {
-  float: left;
-  margin-left: $page-margin;
-  margin-right: 2%;
-}
-
 #browser-upgrade {
   position: absolute;
   width: 100%;
@@ -116,15 +130,7 @@ header h1 {
   top: 0;
   left: 10%;
   @include nav-pipes;
-
 }
-
-p.description {
-  float: left;
-  width: 32%;
-  margin-left: 2%;
-  margin-top: 20px;
-}  /*styles short description in header*/
 
 body {
   min-width: 1000px;
