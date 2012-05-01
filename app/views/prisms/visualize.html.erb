@@ -32,21 +32,27 @@
           <%=@usercounter%></span> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
     <% end %>
     </p>
-    <p id="sketchtext"><%= t 'visualize.sketches' %></p> 
+    <p id="sketchtext"><%= t 'visualize.sketches' %></p>
     <ul id="viz-sketches">
-      <li><a target="_blank" href="/assets/viz001.jpg">
-        <img src="/assets/viz001.jpg" title="Visualization 1" alt="Visualization 1"/></a></li>
-      <li><a target="_blank" href="assets/viz002.jpg">
-        <img src="/assets/viz002.jpg" title="Visualization 2" alt="Visualization 2"/></a></li>
-      <li><a target="_blank" href="assets/viz003.jpg">
-        <img src="/assets/viz003.jpg" title="Visualization 3" alt="Visualization 3"/></a></li>
-      <li><a target="_blank" href="assets/viz004.jpg">
-        <img src="/assets/viz004.jpg" title="Visualization 4" alt="Visualization 4"/></a></li>
-      <li><a target="_blank" href="assets/viz005.jpg">
-        <img src="/assets/viz005.jpg" title="Visualization 5" alt="Visualization 5"/></a></li>
-      <li><a target="_blank" href="assets/viz006.jpg">
-        <img src="/assets/viz006.jpg" title="Visualization 6" alt="Visualization 6"/></a></li>
-   </ul>
+      <li>
+      <%= link_to image_tag('viz001.jpg'), image_path('viz001.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz002.jpg'), image_path('viz002.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz003.jpg'), image_path('viz003.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz004.jpg'), image_path('viz004.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz005.jpg'), image_path('viz005.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz006.jpg'), image_path('viz006.jpg') %>
+      </li>
+    </ul>
 
     </div>
   </div>

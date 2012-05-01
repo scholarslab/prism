@@ -33,7 +33,7 @@ fr:
       Au SpecLab, Jérôme McGann en outre a développé le concept qui deviendra connu comme le <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">« Démon Patacritique »</a>.
     description_p4_html: >
       Le Scholars' Lab a offert ces idées comme source d'inspiration pour le premier projet à être entrepris par nous, les boursiers dans l'année inaugurale du <a href="http://praxis.scholarslab.org/">programme Praxis</a>. Notre première tâche était de déterminer comment traduire l'exercice physique de marquage du texte au cadre numérique. Nous avons décidé continuer à employer un vocabulaire d'interprétation contraint et de limiter la longueur du texte afin de rester fidèle au jeu original, au cours duquel les textes étaient marqués assez rapidement -idéalement dans une session. En outre, comme l'exercice original, l'objectif final de Prism est de produire des « provocations esthétiques », c'est-à-dire, visualisations qui suscitent à une réflexion plus approfondie. Alors, parce que c'est un projet de numérisation, Prism permet d'intégrer des nombreuses interprétations individuelles et de créer un large éventail de visualisations, tout en maintenant l'intégrité des données.
-    description_p5: >
+    description_p5_html: >
       Prism étend sur des notions actuelles de crowdsourcing pour permettre une interaction plus significative avec « la foule ». Les utilisateurs interagissent avec un texte d'une manière subjective, et ainsi, contribuent à une énergie collective d'interprétation avec des potentialités au-delà de l'exercice même -dans la recherche, dans la salle de classe, ou à expérimenter avec un plus grand nombre de données en sciences humaines (linguistique computationnelle et de l'exploration de texte, par exemple).
     praxis_title: Le programme Praxis
     praxis_description_html: >
@@ -65,9 +65,229 @@ fr:
     eraser: La gomme
   visualize:
     instructions: Select one of the options below to display a visualization of collected data for this text.
+    sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
 
   log-in:
-    forgot: Oublié ton mot de passe.
+    resend: Resend confirmation instructions 
+    change: Change ton mot de passe
+    forgot: Oublié ton mot de passe?
     in: Accès
     up: Départ
-
+    locked: Your account has been locked due to an excessive amount of unsuccessful sign in attempts.
+    click: "Click the link below to unlock your account:"
+    confirm: "You can confirm your account email through the link below:"
+    welcome: Bienvenue
+    hello: Bonjour
+    requested: "Someone has requested a link to change your password, and you can do this through the link below."
+    ignore: "If you didn't request this, please ignore this email."
+    wont: "Your password won't change until you access the link above and create a new one."
+    privacy: "We won't share your e-mail address, we promise."  
+    edit: Edit 
+    cancel: Cancel my account
+    unhappy: "Unhappy?"
+  date:
+    abbr_day_names:
+    - dim
+    - lun
+    - mar
+    - mer
+    - jeu
+    - ven
+    - sam
+    abbr_month_names:
+    - 
+    - jan.
+    - fév.
+    - mar.
+    - avr.
+    - mai
+    - juin
+    - juil.
+    - août
+    - sept.
+    - oct.
+    - nov.
+    - déc.
+    day_names:
+    - dimanche
+    - lundi
+    - mardi
+    - mercredi
+    - jeudi
+    - vendredi
+    - samedi
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%e %B %Y'
+      short: ! '%e %b'
+    month_names:
+    - 
+    - janvier
+    - février
+    - mars
+    - avril
+    - mai
+    - juin
+    - juillet
+    - août
+    - septembre
+    - octobre
+    - novembre
+    - décembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: environ %{count} heure
+        other: environ %{count} heures
+      about_x_months:
+        one: environ %{count} mois
+        other: environ %{count} mois
+      about_x_years:
+        one: environ %{count} an
+        other: environ %{count} ans
+      almost_x_years:
+        one: presque %{count} an
+        other: presque %{count} ans
+      half_a_minute: une demi-minute
+      less_than_x_minutes:
+        one: moins de %{count} minute
+        other: moins de %{count} minutes
+        zero: moins d'une minute
+      less_than_x_seconds:
+        one: moins de %{count} seconde
+        other: moins de %{count} secondes
+        zero: moins d'une seconde
+      over_x_years:
+        one: plus de %{count} an
+        other: plus de %{count} ans
+      x_days:
+        one: ! '%{count} jour'
+        other: ! '%{count} jours'
+      x_minutes:
+        one: ! '%{count} minute'
+        other: ! '%{count} minutes'
+      x_months:
+        one: ! '%{count} mois'
+        other: ! '%{count} mois'
+      x_seconds:
+        one: ! '%{count} seconde'
+        other: ! '%{count} secondes'
+    prompts:
+      day: Jour
+      hour: Heure
+      minute: Minute
+      month: Mois
+      second: Seconde
+      year: Année
+  errors: &errors
+    format: Le %{attribute} %{message}
+    messages:
+      accepted: doit être accepté(e)
+      blank: doit être rempli(e)
+      confirmation: ne concorde pas avec la confirmation
+      empty: doit être rempli(e)
+      equal_to: doit être égal à %{count}
+      even: doit être pair
+      exclusion: n'est pas disponible
+      greater_than: doit être supérieur à %{count}
+      greater_than_or_equal_to: doit être supérieur ou égal à %{count}
+      inclusion: n'est pas inclus(e) dans la liste
+      invalid: n'est pas valide
+      less_than: doit être inférieur à %{count}
+      less_than_or_equal_to: doit être inférieur ou égal à %{count}
+      not_a_number: n'est pas un nombre
+      not_an_integer: doit être un nombre entier
+      odd: doit être impair
+      record_invalid: ! 'La validation a échoué : %{errors}'
+      taken: n'est pas disponible
+      too_long:
+        one: est trop long (pas plus de %{count} caractère)
+        other: est trop long (pas plus de %{count} caractères)
+      too_short:
+        one: est trop court (au moins %{count} caractère)
+        other: est trop court (au moins %{count} caractères)
+      wrong_length:
+        one: ne fait pas la bonne longueur (doit comporter %{count} caractère)
+        other: ne fait pas la bonne longueur (doit comporter %{count} caractères)
+    template:
+      body: ! 'Veuillez vérifier les champs suivants : '
+      header:
+        one: ! 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreur'
+        other: ! 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
+  helpers:
+    select:
+      prompt: Veuillez sélectionner
+    submit:
+      create: Créer un(e) %{model}
+      submit: Enregistrer ce(tte) %{model}
+      update: Modifier ce(tte) %{model}
+  number:
+    currency:
+      format:
+        delimiter: ! ' '
+        format: ! '%n %u'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: €
+    format:
+      delimiter: ! ' '
+      precision: 3
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: milliard
+          million: million
+          quadrillion: million de milliards
+          thousand: millier
+          trillion: billion
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 2
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: octet
+            other: octets
+          gb: Go
+          kb: ko
+          mb: Mo
+          tb: To
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' et '
+      two_words_connector: ! ' et '
+      words_connector: ! ', '
+  time:
+    am: am
+    formats:
+      default: ! '%d %B %Y %H:%M:%S'
+      long: ! '%A %d %B %Y %H:%M'
+      short: ! '%d %b %H:%M'
+    pm: pm
+  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  activemodel:
+    errors:
+      <<: *errors
+  activerecord:
+    errors:
+      <<: *errors
