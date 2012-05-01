@@ -10,7 +10,7 @@ es:
   header:
     link_home: "Portada"
     description_html: >-
-      Prism es una herramienta que sirven para <a href='%{about_url}'>colectivizar la interpretación</a> de textos. El proyecto forma parte del <a href='http://praxis.scholarslab.org'>Praxis Program,</a> una iniciativa del <a href='http://scholarslab.org'>Scholars' Lab</a> de la Universidad de Virginia.
+      Prism es una herramienta creada con el fin de <a href='%{about_url}'>colectivizar la interpretación</a> de textos. El proyecto forma parte del <a href='http://praxis.scholarslab.org'>Praxis Program,</a> una iniciativa del <a href='http://scholarslab.org'>Scholars' Lab</a> de la Universidad de Virginia.
     link_instructions: "Instrucciones"
     link_documents: "Documentos"
     link_about: "Información"
@@ -65,9 +65,9 @@ es:
     instructions: Elige un marcador en el menu a la derecha y marca el texto a tu medida. Puedes cambiar de marcador y borrar. Cuando termines, presiona "submit" para ver los resultados del Prisma.
     eraser: Borrador
   visualize:
-    instructions: Select one of the options below to display a visualization of collected data for this text.
-
+    instructions: Elije una de las opciones siguientes para visualizar el agregado de interpretationes.
+    sketches: Hasta ahora, Prism solo ofrece una visualización. Esperamos que los bosquejos siguientes sirvan de inspiración y prococación para el futuro.
   log-in:
     forgot: ¿Olvidaste tu contraseña?
-    in: Iniciar la sesión
+    in: Inicia la sesión
     up: Registrate
