@@ -3,12 +3,10 @@
 
 de:
   index:
-    highlight: Hervorheben
+    highlight: Markieren
     visualize: Visualisieren
-    in_development: "Prism wird mit Warp-Geschwindigkeit entwickelt.
-                   Behalten Sie die Kontrolle zurück."
     about_text_html: >-
-      "Willkommen zu unserem <a href='/pages/about'>Crowd-Sourcing- und Visualisierungs-Experiment</a> zur Darstellung multipler Lesarten eines Textes. <i>Prism</i> ist das <i>Digital Humanities</i>-Praktikumsprojekt der  <i>Scholars' Lab</i> <a href='http://praxis.scholarslab.org'><i>Praxis Fellows</i></a> im Jahrgang 2011–2012. Experimentieren Sie mit unserer <a href='/prisms/sandbox/highlight'><i>Sandbox</i></a> oder erstellen Sie ein <a href='/users/sign_up'>Benutzerkonto</a>, um Ihre Interpretationen von Jefferson, Joyce oder Poe auszutauschen. <i>Prism</i> ist <a href='https://github.com/scholarslab/prism'>Open Source</a>. Bitte machen Sie Vorschläge, oder <a href='https://github.com/scholarslab/prism/issues'>melden Sie uns Probleme und Fehler</a>!"
+      Willkommen zu unserem <a href='/pages/about'>Crowd-Sourcing- und Visualisierungs-Experiment</a> zur Darstellung multipler Lesarten eines Textes. <i>Prism</i> ist das <i>Digital Humanities</i>-Praktikumsprojekt der  <i>Scholars' Lab</i> <a href='http://praxis.scholarslab.org'><i>Praxis Fellows</i></a> im Jahrgang 2011–2012. Experimentieren Sie mit unserer <a href='/prisms/sandbox/highlight'><i>Sandbox</i></a> oder erstellen Sie ein <a href='/users/sign_up'>Benutzerkonto</a>, um Ihre Interpretationen von Jefferson, Joyce oder Poe auszutauschen. <i>Prism</i> ist <a href='https://github.com/scholarslab/prism'>Open Source</a>. Bitte machen Sie Vorschläge, oder <a href='https://github.com/scholarslab/prism/issues'>melden Sie uns Probleme und Fehler</a>!
 
   header:
     description_html: >- 
