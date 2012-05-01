@@ -3,16 +3,16 @@
 
 de:
   index:
-    highlight: Hervorheben
+    highlight: Markieren
     visualize: Visualisieren
-    in_development: "Prism wird mit Warp-Geschwindigkeit entwickelt.
-                   Behalten Sie die Kontrolle zurück."
+#    in_development: "Prism wird mit Warp-Geschwindigkeit entwickelt.
+#                   Behalten Sie die Kontrolle zurück."
     about_text_html: >-
-      "Willkommen zu unserem <a href='/pages/about'>Crowd-Sourcing- und Visualisierungs-Experiment</a> zur Darstellung multipler Lesarten eines Textes. <i>Prism</i> ist das <i>Digital Humanities</i>-Praktikumsprojekt der  <i>Scholars' Lab</i> <a href='http://praxis.scholarslab.org'><i>Praxis Fellows</i></a> im Jahrgang 2011–2012. Experimentieren Sie mit unserer <a href='/prisms/sandbox/highlight'><i>Sandbox</i></a> oder erstellen Sie ein <a href='/users/sign_up'>Benutzerkonto</a>, um Ihre Interpretationen von Jefferson, Joyce oder Poe auszutauschen. <i>Prism</i> ist <a href='https://github.com/scholarslab/prism'>Open Source</a>. Bitte machen Sie Vorschläge, oder <a href='https://github.com/scholarslab/prism/issues'>melden Sie uns Probleme und Fehler</a>!"
+      Willkommen zu unserem <a href='/pages/about'>Crowd-Sourcing- und Visualisierungs-Experiment</a> zur Darstellung multipler Lesarten eines Textes. <i>Prism</i> ist das <i>Digital Humanities</i>-Praktikumsprojekt der  <i>Scholars' Lab</i> <a href='http://praxis.scholarslab.org'><i>Praxis Fellows</i></a> im Jahrgang 2011–2012. Experimentieren Sie mit unserer <a href='/prisms/sandbox/highlight'><i>Sandbox</i></a> oder erstellen Sie ein <a href='/users/sign_up'>Benutzerkonto</a>, um Ihre Interpretationen von Jefferson, Joyce oder Poe auszutauschen. <i>Prism</i> ist <a href='https://github.com/scholarslab/prism'>Open Source</a>. Bitte machen Sie Vorschläge, oder <a href='https://github.com/scholarslab/prism/issues'>melden Sie uns Probleme und Fehler</a>!
 
   header:
     description_html: >- 
-      "<i>Prism</i> ist eine Sammlung digitaler Werkzeuge zur <a href='%{about_url}'>kollaborativen Textinterpretation</a> und ein  laufendes Projekt des <a href='http://praxis.scholarslab.org'>Praxis-Programms</a> am <a href='http://scholarslab.org'>Scholars' Lab</a> der University of Virginia."
+      <i>Prism</i> ist eine Sammlung digitaler Werkzeuge zur <a href='%{about_url}'>kollaborativen Textinterpretation</a> und ein  laufendes Projekt des <a href='http://praxis.scholarslab.org'>Praxis-Programms</a> am <a href='http://scholarslab.org'>Scholars' Lab</a> der University of Virginia.
     link_home: "Startseite"
     link_instructions: "Anleitung"
     link_documents: "Dokumente"
@@ -20,25 +20,25 @@ de:
     signed_in: "Angemeldet als "
     form_email: "Email:"
     form_password: "Kennwort:"
-    remember_me: "Bleiben in Verbindung."
+    remember_me: "Benutzernamen und Passwort merken"
     sign_in: "Anmelden"
-    sign_out: "Austragen"
+    sign_out: "Abmelden"
     forgot: "Passwort vergessen?"
     register: "Registrieren"
 
   about:
-    prism_title: Über Prism
+    prism_title: Mehr über Prism
     description_p1_html: >-
-      Prism ist ein Tool für "Crowdsourcing-Interpretation." Das Konzept entstand aus einer jahrzehntelangen Gespräch über Kategorien der Textinterpretation, die Stelle an der Universität von Virginia nahm und anderswo, und zwar von Transparenz mark-up-Spiele <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/"> von Bethanien Nowviskie</a> für ihr Media Studies Studenten und ihre Kollegen im <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> umgesetzt:
+      <i>Prism</i> ist ein Werkzeug für die Schwarmauslagerung von Textinterpretation. Das grundlegende Konzept für <i>Prism</i> erwuchs aus jahrzehntelangen Gesprächen über Aspekte der Textinterpretation an der <i>University of Virginia</i>, insbesondere aus Bethany Nowviskies <i>Transparency Mark-Up Games</i> (d.i. „transparente Textauszeichnungsspiele“), erarbeitet für ihre Medienwissenschaften-StudentInnen und <a href=\"http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC\">SpecLab</a>-MitarbeiterInnen.
     description_p2: >-
-     das Original-Spiel beteiligt geteilt, kopierte Seite Bilder, transparente Überlagerungen, trocken abwischbaren Stiften, eine gemeinsame interpretative Eingabeaufforderung, und einen Moment, in dem jemand schrie "Halt!" und die Folien wurden zur Diskussion gestapelt.
+     Nowviskies ursprüngliches Spiel beinhaltete eine Menge von Faksimiles, transparente Überlagerungsfolien, Korrekturstifte, eine gemeinsame Interpretationsaufgabe und einen Augenblick, in dem jemand „Stopp!“ ausrief, um sodann die überlagerten Folien in ihrer Gesamtheit zur Diskussion zu stellen.
     description_p3_html: >-
-     Am SpecLab, entwickelt Jerome McGann, das Konzept weiter, das so genannte <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">"Patacritical Demon"</a> wurde.
+     Jerome McGann entwickelte dieses Konzept am SpecLab zum so genannten <a href=\"http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1\">Patacritical Demon</a> weiter, seines Zeichens das vorzüglichste Stück Vaporware aus dem Hause UVa um die letzte Jahrhundertwende.
     description_p4_html: >-
-      Der Scholars'Lab geboten diese Ideen als Inspiration für das erste Projekt an, das vom Doktoranden Stipendiaten der <a href="http://praxis.scholarslab.org/">Praxis Program</a> in seinem ersten Jahr vorgenommen werden. Unsere erste Aufgabe war es, festzustellen, wie Mann die körperliche Bewegung zur Markierung eines Textes in ein digitales übersetzen würde. Wir beschlossen, dass wir auch weiterhin eine eingeschränkte interpretative Vokabular beschäftigen und begrenzen die Länge des Textes, um treu zu bleiben, die Transparenz-Spiel, bei dem Texte up würde ziemlich schnell markiert werden&mdash;idealerweise in einer Sitzung. Auch, wie die Transparenz Übung, ist das Endziel von Prism zum "ästhetischen Provokationen", oder, Visualisierungen, die weitere Diskussion provozieren zu produzieren. Aber weil es ein digitales Projekt ist, kann Prism integrieren viele individuelle Interpretationen und schaffen eine breite Palette an Visualisierungen unter Beibehaltung der Datenintegrität.    
+     Das Scholars' Lab gab diese Ideen als Anstoß an DokotrandInnen des <a href=\"http://praxis.scholarslab.org/\">Praxis-Programms</a> für ihr erstes Projekt im ersten Jahr des Studiengangs weiter. Unsere primäre Aufgabe war es, die haptische Übung der Textauszeichnung in eine digitale Entsprechung zu übersetzen. Wir beschlossen, weiterhin ein begrenztes Interpretationsvokabular zu verwenden sowie die Länge der Texte zu beschränken, um der ursprünglichen Intention des <i>Transparency Games</i> gerecht zu bleiben: Texte sollten schnell ausgezeichnet und interpretiert werden, möglichst während einer einzelnen Sitzung. Das Endziel der ursprünglichen Übung mit Folie und Stift wie auch von <i>Prism</i> war und ist die Erzeugung von <a href=\"http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10\">ästhetischen Provokationen</a>, d.h., von Visualisierungen, die den Boden für weiterführende Debatten schaffen. Dank seines digitalen Fundaments ist <i>Prism</i> in der Lage, zahlreiche individuelle Interpretationen zu integrieren und eine Vielzahl von Visualisierungen zu generieren, ohne Kompromisse hinsichtlich der Integrität der Datenbasis eingehen zu müssen.
     description_p5_html: >-
-     Prism baut auf aktuellen Vorstellungen von Crowdsourcing für sinnvoller Interaktion mit erlauben "die Menge." Benutzer interagieren subjektiv mit einem Text und tragen zu einer kollektiven Energie, die interpretative unendliche Möglichkeiten jenseits der Hervorhebung Übung selbst hat &mdash; in der Forschung, im Klassenzimmer oder bei der Motivierung und das Experimentieren mit größeren Daten in den Geisteswissenschaften (Computerlinguistik und Text Mining, z.B.).
-    praxis_title: Die Praxis Program
+    <i>Prism</i> macht sich gegenwärtige Theorien und Praktiken der Schwarmauslagerung zu Nutze, mit dem Ziel eines sinngerechten Austausches innerhalb dieses „Schwarms“. BenutzerInnen interagieren direkt und subjektiv mit dem Text, tragen aber gleichzeitig zum kollaborativ-interpretativen Potenzial und den zahllosen Möglichkeiten jenseits der Auszeichnungs-Übung an sich bei – sei es hinsichtlich Forschung, Lehre, oder der Arbeit mit größeren geisteswissenschaftlichen Datenbeständen, mit denen es beispielsweise die Computerlinguistik oder das <i>Text Mining</i> zu tun haben.
+    praxis_title: Das Praxis Program
     praxis_description_html: >
       <a href='http://praxis.scholarslab.org/'>Die Praxis Program</a> ist ein Pilotprojekt von 2011-12 der Wissenschaftler Lab an der <a href='http://www2.lib.virginia.edu/scholarslab/'>University of Virginia Library,</a> in der sechs geistes-Doktoranden ein Jahr lang in einer gemeinschaftlichen, hands-on, Digital Humanities Lehrzeit. Der Praxis Programm hat das Ziel, bessere Ausstattung für Wissensarbeiter Emerging Professuren und <a href=http://mediacommons.futureofthebook.org/alt-ac/'>alternative akademische Karriere</a> in einem Moment, in dem neue Fragen gestellt werden können und neue Systeme gebaut. Besuchen Sie die Website zu Praxis-Programm mehr über das Programm zu entwickelnden Lehrpläne, einschließlich Bibliographien für jedes Thema zu lernen, und um sich direkt von Praxis Fellows und Scholars' Lab Dozenten und Mitarbeiter, wie sie <a href='http://www.scholarslab.org/blog/'>über ihre Erfahrungen bloggen.</a> Die Praxis-Programm wird von einem großzügigen Zuschuss von der Mellon Foundation zu der <a href="http://uvasci.org">Scholarly Communication Institute</a> des UVa Bibliothek unterstützt.
     scholarslab_title: Der Scholars' Lab
@@ -46,30 +46,13 @@ de:
       <a href='http://www2.lib.virginia.edu/scholarslab/'>Der Scholars' Lab</a> wurde im Jahr 2006 bei der <a href='http://www.lib.virginia.edu/index.html'>University of Virginia Library</a> als Ort für Innovationen in der Geistes-und Sozialwissenschaften gegründet. Der Wissenschaftler Lab ist ein Ort, an dem Professoren und fortgeschrittenen Studierenden digitale Ressourcen zu erkunden, finden kompetente Hilfe und Zusammenarbeit an innovativen Forschungsprojekten. Der Slab beherbergt auch Veranstaltungen wie Workshops, Vorträgen und Roundtables und sponsert den Praxis-Programm und  <a href='http://www2.lib.virginia.edu/scholarslab/about/fellowship.html'>einen prestigeträchtigen Doktorand Gemeinschaft</a> in den digitalen Geisteswissenschaften.
     contributors_title: Mitwirkende
     contributors_description_html: >-
-      <h3>Jeremy Boggs</h3> <p>Humanities Design Architect, UVa Library Scholars' Lab</p> 
-      <h3>Alex Gil</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Wayne Graham</h3> <p>Head of Research &amp; Development, UVa Library Scholars' Lab</p>
-      <h3>Eric Johnson</h3> <p>Head of Outreach &amp; Consulting, UVa Library Scholars' Lab</p> 
-      <h3>Brooke Lestock</h3> <p>Praxis Fellow and UVa English Department graduate student</p>
-      <h3>David McClure</h3> <p>Web Applications Specialist, UVa Library Scholars' Lab</p>
-      <h3>Lindsay O'Connor</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p>
-      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
-      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p>
-      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
-      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p> 
-      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
-      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
-      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
-
+      <h3>Jeremy Boggs</h3> <p><i>Humanities Design Architect</i>, <i>UVa Library Scholars' Lab</i></p>  <h3>Alex Gil</h3> <p><i>Praxis Fellow</i> und Doktorand am <i>UVa English Department</i></p>  <h3>Wayne Graham</h3> <p><i>Head of Research & Development</i>, <i>UVa Library Scholars' Lab</i></p> <h3>Eric Johnson</h3> <p><i>Head of Outreach & Consulting</i>, <i>UVa Library Scholars' Lab</i></p>  <h3>Brooke Lestock</h3> <p><i>Praxis Fellow</i> und Doktorandin am <i>UVa English Department</i></p> <h3>David McClure</h3> <p><i>Web Applications Specialist</i>, <i>UVa Library Scholars' Lab</i></p> <h3>Lindsay O'Connor</h3> <p><i>Praxis Fellow</i> und Doktorandin am <i>UVa English Department</i></p>  <h3>Dr. Bethany Nowviskie</h3> <p><i>Director, Digital Research & Scholarship</i>, <i>UVa Library</i></p> <h3>Dr. Eric Rochester</h3> <p><i>Senior Developer</i>, <i>UVa Library Scholars' Lab</i></p>  <h3>Sarah Storti</h3> <p><i>Praxis Fellow</i> und Doktorandin am <i>UVa English Department</i></p>  <h3>Annie Swafford</h3> <p><i>Praxis Fellow</i> und Doktorandin am <i>UVa English Department</i></p> <h3>Ed Triplett</h3> <p><i>Praxis Fellow</i> und Doktorand am <i>UVa McIntire Department of Art</i></p>
   highlight:
     instructions: >- 
       Wählen Sie einen Textmarker aus dem Menü auf der rechten Seite, um den Text zu markieren. Sie können Ihre Highlighting mit dem Radiergummi zu ändern. Wenn Sie fertig sind, klicken Sie auf "Eintragen", um die Prism-Ergebnisse zu sehen.    
-    eraser: Radierer
+    eraser: "Löschen Sie Ihre Markierungen"
   visualize:
-    instructions: Select one of the options below to display a visualization of collected data for this text.
+    instructions: Wählen Sie aus den folgenden Möglichkeiten, um eine Visualisierung des Datenbestandes für diesen Text abzurufen.
     sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
 
 
