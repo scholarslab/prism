@@ -10,24 +10,24 @@ de:
 
   header:
     description_html: >- 
-      "<i>Prism</i> ist eine Sammlung digitaler Werkzeuge zur <a href='%{about_url}'>kollaborativen Textinterpretation</a> und ein  laufendes Projekt des <a href='http://praxis.scholarslab.org'>Praxis-Programms</a> am <a href='http://scholarslab.org'>Scholars' Lab</a> der University of Virginia."
+      <i>Prism</i> ist ein digitales Werkzeug zur <a href='%{about_url}'>kollaborativen Textinterpretation</a> und ein  laufendes Projekt des <a href='http://praxis.scholarslab.org'>Praxis-Programms</a> am <a href='http://scholarslab.org'>Scholars' Lab</a> der University of Virginia.
     link_home: "Startseite"
     link_instructions: "Anleitung"
     link_documents: "Dokumente"
-    link_about: "Über"
+    link_about: "Mehr über Prism"
     signed_in: "Angemeldet als "
     form_email: "Email:"
     form_password: "Kennwort:"
     remember_me: "Bleiben in Verbindung."
     sign_in: "Anmelden"
-    sign_out: "Austragen"
+    sign_out: "Abmelden"
     forgot: "Passwort vergessen?"
     register: "Registrieren"
 
   about:
     prism_title: Über Prism
     description_p1_html: >-
-      Prism ist ein Tool für "Crowdsourcing-Interpretation." Das Konzept entstand aus einer jahrzehntelangen Gespräch über Kategorien der Textinterpretation, die Stelle an der Universität von Virginia nahm und anderswo, und zwar von Transparenz mark-up-Spiele <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/"> von Bethanien Nowviskie</a> für ihr Media Studies Studenten und ihre Kollegen im <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> umgesetzt:
+      <i>Prism</i> ist ein Werkzeug für die Schwarmauslagerung von Textinterpretation. Das grundlegende Konzept für <i>Prism</i> erwuchs aus jahrzehntelangen Gesprächen über Aspekte der Textinterpretation an der <i>University of Virginia</i>, insbesondere aus Bethany Nowviskies <i>Transparency Mark-Up Games</i> (d.i. „transparente Textauszeichnungsspiele“), erarbeitet für ihre Medienwissenschaften-StudentInnen und <a href=\"http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC\">SpecLab</a>-MitarbeiterInnen:
     description_p2: >-
      das Original-Spiel beteiligt geteilt, kopierte Seite Bilder, transparente Überlagerungen, trocken abwischbaren Stiften, eine gemeinsame interpretative Eingabeaufforderung, und einen Moment, in dem jemand schrie "Halt!" und die Folien wurden zur Diskussion gestapelt.
     description_p3_html: >-
