@@ -3,8 +3,8 @@
 
 de:
   index:
-    highlight: Highlight
-    visualize: Visualize
+    highlight: Hervorheben
+    visualize: Visualisieren
     in_development: "Prism wird mit Warp-Geschwindigkeit entwickelt.
                    Behalten Sie die Kontrolle zurück."
     about_text_html: >-
