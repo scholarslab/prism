@@ -46,13 +46,30 @@ de:
       <a href='http://www2.lib.virginia.edu/scholarslab/'>Der Scholars' Lab</a> wurde im Jahr 2006 bei der <a href='http://www.lib.virginia.edu/index.html'>University of Virginia Library</a> als Ort für Innovationen in der Geistes-und Sozialwissenschaften gegründet. Der Wissenschaftler Lab ist ein Ort, an dem Professoren und fortgeschrittenen Studierenden digitale Ressourcen zu erkunden, finden kompetente Hilfe und Zusammenarbeit an innovativen Forschungsprojekten. Der Slab beherbergt auch Veranstaltungen wie Workshops, Vorträgen und Roundtables und sponsert den Praxis-Programm und  <a href='http://www2.lib.virginia.edu/scholarslab/about/fellowship.html'>einen prestigeträchtigen Doktorand Gemeinschaft</a> in den digitalen Geisteswissenschaften.
     contributors_title: Mitwirkende
     contributors_description_html: >-
-      <h3>Jeremy Boggs</h3> <p><i>Humanities Design Architect</i>, <i>UVa Library Scholars' Lab</i></p>  <h3>Alex Gil</h3> <p><i>Praxis Fellow</i> und Doktorand am <i>UVa English Department</i></p>  <h3>Wayne Graham</h3> <p><i>Head of Research & Development</i>, <i>UVa Library Scholars' Lab</i></p> <h3>Eric Johnson</h3> <p><i>Head of Outreach & Consulting</i>, <i>UVa Library Scholars' Lab</i></p>  <h3>Brooke Lestock</h3> <p><i>Praxis Fellow</i> und Doktorandin am <i>UVa English Department</i></p> <h3>David McClure</h3> <p><i>Web Applications Specialist</i>, <i>UVa Library Scholars' Lab</i></p> <h3>Lindsay O'Connor</h3> <p><i>Praxis Fellow</i> und Doktorandin am <i>UVa English Department</i></p>  <h3>Dr. Bethany Nowviskie</h3> <p><i>Director, Digital Research & Scholarship</i>, <i>UVa Library</i></p> <h3>Dr. Eric Rochester</h3> <p><i>Senior Developer</i>, <i>UVa Library Scholars' Lab</i></p>  <h3>Sarah Storti</h3> <p><i>Praxis Fellow</i> und Doktorandin am <i>UVa English Department</i></p>  <h3>Annie Swafford</h3> <p><i>Praxis Fellow</i> und Doktorandin am <i>UVa English Department</i></p> <h3>Ed Triplett</h3> <p><i>Praxis Fellow</i> und Doktorand am <i>UVa McIntire Department of Art</i></p>
+      <h3>Jeremy Boggs</h3> <p>Humanities Design Architect, UVa Library Scholars' Lab</p> 
+      <h3>Alex Gil</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Wayne Graham</h3> <p>Head of Research &amp; Development, UVa Library Scholars' Lab</p>
+      <h3>Eric Johnson</h3> <p>Head of Outreach &amp; Consulting, UVa Library Scholars' Lab</p> 
+      <h3>Brooke Lestock</h3> <p>Praxis Fellow and UVa English Department graduate student</p>
+      <h3>David McClure</h3> <p>Web Applications Specialist, UVa Library Scholars' Lab</p>
+      <h3>Lindsay O'Connor</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p>
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p>
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p> 
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+
   highlight:
     instructions: >- 
       Wählen Sie einen Textmarker aus dem Menü auf der rechten Seite, um den Text zu markieren. Sie können Ihre Highlighting mit dem Radiergummi zu ändern. Wenn Sie fertig sind, klicken Sie auf "Eintragen", um die Prism-Ergebnisse zu sehen.    
     eraser: "Löschen Sie Ihre Markierungen"
   visualize:
-    instructions: Wählen Sie aus den folgenden Möglichkeiten, um eine Visualisierung des Datenbestandes für diesen Text abzurufen.
+    instructions: Select one of the options below to display a visualization of collected data for this text.
     sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
 
 
