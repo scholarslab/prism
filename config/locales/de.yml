@@ -3,24 +3,292 @@
 
 de:
   index:
-    highlight: Highlight
-    visualize: Visualize
-    welcome: "Wilkommen!"
-    in_development: "Prism wird mit Warp-Geschwindigkeit entwickelt.
-                   Behalten Sie die Kontrolle zurück."
+    highlight: Markieren
+    visualize: Visualisieren
+    about_text_html: >-
+      Willkommen zu unserem <a href='/pages/about'>Crowd-Sourcing- und Visualisierungs-Experiment</a> zur Darstellung multipler Lesarten eines Textes. <i>Prism</i> ist das <i>Digital Humanities</i>-Praktikumsprojekt der  <i>Scholars' Lab</i> <a href='http://praxis.scholarslab.org'><i>Praxis Fellows</i></a> im Jahrgang 2011–2012. Experimentieren Sie mit unserer <a href='/prisms/sandbox/highlight'><i>Sandbox</i></a> oder erstellen Sie ein <a href='/users/sign_up'>Benutzerkonto</a>, um Ihre Interpretationen von Jefferson, Joyce oder Poe auszutauschen. <i>Prism</i> ist <a href='https://github.com/scholarslab/prism'>Open Source</a>. Bitte machen Sie Vorschläge, oder <a href='https://github.com/scholarslab/prism/issues'>melden Sie uns Probleme und Fehler</a>!
+
   header:
-    description: "Prism ist ein Satz von digitalen Werkzeugen für Crowdsourcing Interpretation. Es ist ein 
-laufendes Projekt der Praxis Program an der Scholars' Lab, University of Virginia."
+    description_html: >- 
+      <i>Prism</i> ist ein digitales Werkzeug zur <a href='%{about_url}'>kollaborativen Textinterpretation</a> und ein  laufendes Projekt des <a href='http://praxis.scholarslab.org'>Praxis-Programms</a> am <a href='http://scholarslab.org'>Scholars' Lab</a> der University of Virginia.
     link_home: "Startseite"
     link_instructions: "Anleitung"
     link_documents: "Dokumente"
-    link_about: "Über"
+    link_about: "Mehr über Prism"
     signed_in: "Angemeldet als "
     form_email: "Email:"
     form_password: "Kennwort:"
     remember_me: "Bleiben in Verbindung."
-    sign_in: "Sign in"
-    sign_out: "Sign out"
+    sign_in: "Anmelden"
+    sign_out: "Abmelden"
     forgot: "Passwort vergessen?"
     register: "Registrieren"
 
+  about:
+    prism_title: Über Prism
+    description_p1_html: >-
+      <i>Prism</i> ist ein Werkzeug für die Schwarmauslagerung von Textinterpretation. Das grundlegende Konzept für <i>Prism</i> erwuchs aus jahrzehntelangen Gesprächen über Aspekte der Textinterpretation an der <i>University of Virginia</i>, insbesondere aus Bethany Nowviskies <i>Transparency Mark-Up Games</i> (d.i. „transparente Textauszeichnungsspiele“), erarbeitet für ihre Medienwissenschaften-StudentInnen und <a href=\"http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC\">SpecLab</a>-MitarbeiterInnen:
+    description_p2: >-
+     Nowviskies ursprüngliches Spiel beinhaltete eine Menge von Faksimiles, transparente Überlagerungsfolien, Korrekturstifte, eine gemeinsame Interpretationsaufgabe und einen Augenblick, in dem jemand „Stopp!“ ausrief, um sodann die überlagerten Folien in ihrer Gesamtheit zur Diskussion zu stellen.
+    description_p3_html: >-
+     Jerome McGann entwickelte dieses Konzept am SpecLab zum so genannten <a href=\"http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1\">Patacritical Demon</a> weiter, seines Zeichens das vorzüglichste Stück Vaporware aus dem Hause UVa um die letzte Jahrhundertwende.
+    description_p4_html: >-
+      Das Scholars' Lab gab diese Ideen als Anstoß an DokotrandInnen des <a href=\"http://praxis.scholarslab.org/\">Praxis-Programms</a> für ihr erstes Projekt im ersten Jahr des Studiengangs weiter. Unsere primäre Aufgabe war es, die haptische Übung der Textauszeichnung in eine digitale Entsprechung zu übersetzen. Wir beschlossen, weiterhin ein begrenztes Interpretationsvokabular zu verwenden sowie die Länge der Texte zu beschränken, um der ursprünglichen Intention des <i>Transparency Games</i> gerecht zu bleiben: Texte sollten schnell ausgezeichnet und interpretiert werden, möglichst während einer einzelnen Sitzung. Das Endziel der ursprünglichen Übung mit Folie und Stift wie auch von <i>Prism</i> war und ist die Erzeugung von <a href=\"http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10\">ästhetischen Provokationen</a>, d.h., von Visualisierungen, die den Boden für weiterführende Debatten schaffen. Dank seines digitalen Fundaments ist <i>Prism</i> in der Lage, zahlreiche individuelle Interpretationen zu integrieren und eine Vielzahl von Visualisierungen zu generieren, ohne Kompromisse hinsichtlich der Integrität der Datenbasis eingehen zu müssen.
+    description_p5_html: >-
+     <i>Prism</i> macht sich gegenwärtige Theorien und Praktiken der Schwarmauslagerung zu Nutze, mit dem Ziel eines sinngerechten Austausches innerhalb dieses „Schwarms“. BenutzerInnen interagieren direkt und subjektiv mit dem Text, tragen aber gleichzeitig zum kollaborativ-interpretativen Potenzial und den zahllosen Möglichkeiten jenseits der Auszeichnungs-Übung an sich bei – sei es hinsichtlich Forschung, Lehre, oder der Arbeit mit größeren geisteswissenschaftlichen Datenbeständen, mit denen es beispielsweise die Computerlinguistik oder das <i>Text Mining</i> zu tun haben.
+    praxis_title: Das Praxis Program
+    praxis_description_html: >
+      Das <a href='http://praxis.scholarslab.org/'>Praxis-Programm</a> ist ein Pilotprojekt (2011–2013) des <a href='http://www2.lib.virginia.edu/scholarslab/'>Scholars' Lab</a> an der <a href='http://www.lib.virginia.edu/index.html'>University of Virginia Library</a>, in dessen Rahmen sich sechs DoktoratsstudentInnen der Geisteswissenschaften während eines einjährigen, kollaborativen und praxisorientierten Lehrganges in die <i>Digital Humanities</i> einarbeiten. Das Ziel des <i>Praxis-Programms</i> ist es, Wissensarbeiter besser auf neu entstehende akademische Stellenprofile sowie <a href='http://mediacommons.futureofthebook.org/alt-ac/'>alternative akademische Karrieremöglichkeiten</a> vorzubereiten, zumal gegenwärtig neue Möglichkeiten der geisteswissenschaftlichen Fragestellungen und Systementwicklung entstehen. Besuchen Sie die Seiten des Praxis-Programms, um mehr über das in Entwicklung befindliche Kurrikulum zu erfahren oder um Erfahrungsberichte von Praxis-Fellows, dem Scholars' Lab-Lehrkoerper oder von Institutsangestellten auf ihren <a href='http://www.scholarslab.org/blog/'>Weblogs</a> zu lesen. Das Praxis-Programm wird freundlich unterstützt von der <i>Mellon Foundation</i> in Form einer Beihilfe für das <a href="http://uvasci.org">Scholarly Communication Institute</a> der <i>University of Virginia Library</i>.
+    scholarslab_title: Das Scholars' Lab
+    scholarslab_description_html: >-
+      Das <a href='http://www2.lib.virginia.edu/scholarslab/'>Scholars' Lab</a> wurde im Jahr 2006 von der <a href='http://www.lib.virginia.edu/index.html'>University of Virginia Library</a> als geistes- und sozialwissenschaftliche Innovationsstätte aus der Taufe gehoben.  Das Scholars' Lab ist ein Ort, wo Lehrkörper und fortgeschrittene Studenten gemeinsam unter technisch kompetenter Hilfestellung digitale Ressourcen erkunden und an innovativen Forschungsprojekten arbeiten können. Das Scholars' Lab veranstaltet Workshops, Vorträge und Symposien. Es ist Sponsor des <a href="http://praxis.scholarslab.org">Praxis-Programms</a> und verleiht renommierte <a href='http://www2.lib.virginia.edu/scholarslab/about/fellowship.html'>graduate fellowships</a> im Bereich der <i>Digital Humanities</i>.
+    contributors_title: Mitwirkende
+    contributors_description_html: >-
+      <h3>Jeremy Boggs</h3> <p>Humanities Design Architect, UVa Library Scholars' Lab</p> 
+      <h3>Alex Gil</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Wayne Graham</h3> <p>Head of Research &amp; Development, UVa Library Scholars' Lab</p>
+      <h3>Eric Johnson</h3> <p>Head of Outreach &amp; Consulting, UVa Library Scholars' Lab</p> 
+      <h3>Brooke Lestock</h3> <p>Praxis Fellow and UVa English Department graduate student</p>
+      <h3>David McClure</h3> <p>Web Applications Specialist, UVa Library Scholars' Lab</p>
+      <h3>Lindsay O'Connor</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p>
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p>
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p> 
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+
+  highlight:
+    instructions: >- 
+      Wählen Sie einen Textmarker aus dem Menü auf der rechten Seite, um den Text zu markieren. Sie können Ihre Highlighting mit dem Radiergummi zu ändern. Wenn Sie fertig sind, klicken Sie auf "Eintragen", um die Prism-Ergebnisse zu sehen.    
+    eraser: Löschen Sie Ihre Markierungen
+
+  visualize:
+    instructions: Select one of the options below to display a visualization of collected data for this text.
+    sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
+
+
+  log-in:
+    forgot: Passwort vergessen?
+    in: Anmelden
+    up: Austragen
+    locked: Your account has been locked due to an excessive amount of unsuccessful sign in attempts.
+    click: "Click the link below to unlock your account:"
+    confirm: "You can confirm your account email through the link below:"
+    welcome: Welcome
+    hello: Hello
+    requested: "Someone has requested a link to change your password, and you can do this through the link below."
+    ignore: "If you didn't request this, please ignore this email."
+    wont: "Your password won't change until you access the link above and create a new one."
+    privacy: "We won't share your e-mail address, we promise."  
+    edit: Edit 
+    cancel: Cancel my account
+    unhappy: "Unhappy?"
+    resend: Resend confirmation instructions 
+    change: Change your password
+  date:
+    abbr_day_names:
+    - So
+    - Mo
+    - Di
+    - Mi
+    - Do
+    - Fr
+    - Sa
+    abbr_month_names:
+    - 
+    - Jan
+    - Feb
+    - Mär
+    - Apr
+    - Mai
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Okt
+    - Nov
+    - Dez
+    day_names:
+    - Sonntag
+    - Montag
+    - Dienstag
+    - Mittwoch
+    - Donnerstag
+    - Freitag
+    - Samstag
+    formats:
+      default: ! '%d.%m.%Y'
+      long: ! '%e. %B %Y'
+      short: ! '%e. %b'
+    month_names:
+    - 
+    - Januar
+    - Februar
+    - März
+    - April
+    - Mai
+    - Juni
+    - Juli
+    - August
+    - September
+    - Oktober
+    - November
+    - Dezember
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: etwa eine Stunde
+        other: etwa %{count} Stunden
+      about_x_months:
+        one: etwa ein Monat
+        other: etwa %{count} Monate
+      about_x_years:
+        one: etwa ein Jahr
+        other: etwa %{count} Jahre
+      almost_x_years:
+        one: fast ein Jahr
+        other: fast %{count} Jahre
+      half_a_minute: eine halbe Minute
+      less_than_x_minutes:
+        one: weniger als eine Minute
+        other: weniger als %{count} Minuten
+      less_than_x_seconds:
+        one: weniger als eine Sekunde
+        other: weniger als %{count} Sekunden
+      over_x_years:
+        one: mehr als ein Jahr
+        other: mehr als %{count} Jahre
+      x_days:
+        one: ein Tag
+        other: ! '%{count} Tage'
+      x_minutes:
+        one: eine Minute
+        other: ! '%{count} Minuten'
+      x_months:
+        one: ein Monat
+        other: ! '%{count} Monate'
+      x_seconds:
+        one: eine Sekunde
+        other: ! '%{count} Sekunden'
+    prompts:
+      day: Tag
+      hour: Stunden
+      minute: Minuten
+      month: Monat
+      second: Sekunden
+      year: Jahr
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: muss akzeptiert werden
+      blank: muss ausgefüllt werden
+      confirmation: stimmt nicht mit der Bestätigung überein
+      empty: muss ausgefüllt werden
+      equal_to: muss genau %{count} sein
+      even: muss gerade sein
+      exclusion: ist nicht verfügbar
+      greater_than: muss größer als %{count} sein
+      greater_than_or_equal_to: muss größer oder gleich %{count} sein
+      inclusion: ist kein gültiger Wert
+      invalid: ist nicht gültig
+      less_than: muss kleiner als %{count} sein
+      less_than_or_equal_to: muss kleiner oder gleich %{count} sein
+      not_a_number: ist keine Zahl
+      not_an_integer: muss ganzzahlig sein
+      odd: muss ungerade sein
+      record_invalid: ! 'Gültigkeitsprüfung ist fehlgeschlagen: %{errors}'
+      taken: ist bereits vergeben
+      too_long: ist zu lang (nicht mehr als %{count} Zeichen)
+      too_short: ist zu kurz (nicht weniger als %{count} Zeichen)
+      wrong_length: hat die falsche Länge (muss genau %{count} Zeichen haben)
+    template:
+      body: ! 'Bitte überprüfen Sie die folgenden Felder:'
+      header:
+        one: ! 'Konnte %{model} nicht speichern: ein Fehler.'
+        other: ! 'Konnte %{model} nicht speichern: %{count} Fehler.'
+  helpers:
+    select:
+      prompt: Bitte wählen
+    submit:
+      create: ! '%{model} erstellen'
+      submit: ! '%{model} speichern'
+      update: ! '%{model} aktualisieren'
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%n %u'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: €
+    format:
+      delimiter: .
+      precision: 2
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion:
+            one: Milliarde
+            other: Milliarden
+          million: Millionen
+          quadrillion:
+            one: Billiarde
+            other: Billiarden
+          thousand: Tausend
+          trillion: Billionen
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' und '
+      two_words_connector: ! ' und '
+      words_connector: ! ', '
+  time:
+    am: vormittags
+    formats:
+      default: ! '%A, %d. %B %Y, %H:%M Uhr'
+      long: ! '%A, %d. %B %Y, %H:%M Uhr'
+      short: ! '%d. %B, %H:%M Uhr'
+    pm: nachmittags
+  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  activemodel:
+    errors:
+      <<: *errors
+  activerecord:
+    errors:
+      <<: *errors

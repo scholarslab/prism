@@ -4,13 +4,13 @@ es:
   index:
     highlight: "Marcar"
     visualize: "Visualizar"
-    welcome: "Bienvenidos!"
     in_development: "Estamos trabajando a la velocidad de la luz."
-
+    about_text_html: >-
+      Bienvenidos a nuestro  <a href='/pages/about'>experimento</a> de visualización de multiples lecturas de un texto en común. Prism, o Prisma, es el practicum digital del <a href='http://praxis.scholarslab.org'>Programa Praxis</a>, año escolar 2011-2012. Juega en nuestro <a href='/prisms/sandbox/highlight'>modelo de prueba</a>, o crea <a href='/users/sign_up'>una cuenta</a> y comparte tus lecturas de Jefferson, Joyce y Poe. Prism es  <a href='https://github.com/scholarslab/prism'>open-source</a>. Sugerencias y reportes de errores son <a href='https://github.com/scholarslab/prism/issues'>bienvenidos</a>."
   header:
     link_home: "Portada"
-    description_html: > 
-      Prism es un conjunto de herramientas que sirven para <a href='/pages/about'>colectivizar la interpretación</a> de textos. El proyecto forma parte del <a href='http://praxis.scholarslab.org'>Praxis Program,</a> una iniciativa del <a href='http://scholarslab.org'>Scholars' Lab</a> de la Universidad de Virginia.
+    description_html: >-
+      Prism es una herramienta creada con el fin de <a href='%{about_url}'>colectivizar la interpretación</a> de textos. El proyecto forma parte del <a href='http://praxis.scholarslab.org'>Praxis Program,</a> una iniciativa del <a href='http://scholarslab.org'>Scholars' Lab</a> de la Universidad de Virginia.
     link_instructions: "Instrucciones"
     link_documents: "Documentos"
     link_about: "Información"
@@ -25,21 +25,263 @@ es:
 
   about:
     prism_title: "Sobre Prism"
-    description_p1_html: >
-      Prism es una herramienta para la "colectivización de la interpretación." El concepto nace de una decada de conversaciones acerca de las categorías posibles de la interpretación y de juegos con marcadores y transparencias 	diseñados por <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">Bethany Nowviskie</a> y sus colegas del <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> :
-    description_p2: >
-      el juego original consistía de fotocopias, transparencias, marcadores y una pregunta en común. En un momento dado, alguien llamaba '¡Paren!' y las transparencias se comparaban unas con las otras.
-    description_p3_html: >
-      En SpecLab, Jerome McGann desarrolló el concepto que llegó a ser conocido como el "Demonio Patacrítico".
-    description_p4_html: >
-      El Scholars' Lab ofreció estas ideas como inspiración para el primer proyecto a realizar por los becarios de posgrado del <a href="http://praxis.scholarslab.org/">Programa Praxis </a> en su año inaugural. Nuestra primera tarea consistió en determinar la manera más eficaz de traducir el ejercicio físico de marcar un texto al ambito digital. Decidimos que íbamos a seguir empleando un vocabulario interpretativo limitado y limitaríamos la longitud del texto con el fin de permanecer fiel al juego original, en el cual los textos se marcaban en poco tiempo, idealmente en una sola sesión. Al igual que el ejercicio con las transparencias, el objetivo final de Prism es la producción de "provocaciones estéticas", es decir, de visualizaciones que provoquen más debate. En razón de ser digital, Prism puede integrar muchas de las interpretaciones individuales y crear una amplia gama de visualizaciones, sin reducción en la integridad de datos.
-    description_p5: >
-      Prisma amplía las nociones actuales de la colectivización para permitir una interacción más significativa con "la multitud". Al interactuar con un texto como individuos, los usuarios contribuyen al dinamismo de una interpretación coléctiva, con infinitas posibilidades más allá del ejercicio en sí - en la investigación, en el aula, o en la participación y la experimentación con grandes cantidades de datos en las ciencias humanas (lingüística computacional y la minería de textos, por ejemplo).
+    description_p1_html: >-
+      Prism es una herramienta para la "colectivización de la interpretación." El concepto nace de una decada de conversaciones alrededor de los diferentes tipos de interpretación posibles, y de juegos con marcadores y transparencias diseñados por <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">Bethany Nowviskie</a> y sus colegas del <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> :
+    description_p2: >-
+      "el juego original consistía de fotocopias, transparencias, marcadores y una pregunta en común. En un momento dado, alguien llamaba '¡Paren!' y las transparencias se comparaban unas con las otras."
+    description_p3_html: >-
+      En el SpecLab, Jerome McGann continuo desarrollando el concepto, que llegará a ser conocido como el "Demonio Patacrítico".
+    description_p4_html: >-
+      El Scholars' Lab ofreció estas ideas como inspiración para el primer proyecto a realizar por los becarios de posgrado del <a href="http://praxis.scholarslab.org/">Programa Praxis </a> en su año inaugural. Nuestra primera tarea fue la de determinar la manera más eficaz de traducir el ejercicio físico de marcar un texto al ambito digital. Decidimos que continuaríamos empleando un vocabulario de interpretación limitado y limitaríamos la talla de los textos con el fin de permanecer fiel al juego original, en el cual los textos se marcaban en poco tiempo, idealmente en una sola sesión. Al igual que el ejercicio con las transparencias, el objetivo final de Prism es la producción de "provocaciones estéticas", es decir, de visualizaciones que provoquen más debate. En razón de ser digital, Prism puede integrar muchas de las interpretaciones individuales y crear una amplia gama de visualizaciones, sin reducción en la integridad de los datos almacenados.
+    description_p5_html: >-
+      Prism agrega al concepto actual de la colectivización una interacción más significativa con "la multitud". Al interactuar con un texto como individuos, los usuarios contribuyen al dinamismo de una interpretación colectiva, con infinitas posibilidades más allá del ejercicio en sí - en la investigación, en el aula, o en la participación y la experimentación con grandes cantidades de datos en las ciencias humanas (lingüística computacional y la minería de textos, por ejemplo).
     praxis_title: "El Programa Praxis"
-    praxis_description_html: >
-      <a href='http://praxis.scholarslab.org/'>El Programa Praxis</a> es un proyecto piloto, en el año escolar 2011-12, del <a href="http://www2.lib.virginia.edu/scholarslab/">Scholars' Lab</a> de la <a href='http://www.lib.virginia.edu/index.html'>Biblioteca de la Universidad de Virginia</a> en el que seis estudiantes de posgrado de artes y ciencias humanas pasan un año en un entorno colaborativo y práctico de instrucción en las humanidades digitales. El objetivo del Programa Praxis es equipar mejor a los trabajadores del conocimiento para los nuevos cargos docentes y académicos, <a href=http://mediacommons.futureofthebook.org/alt-ac/'>o carreras alternativas,</a> en un momento en el que se presentan nuevas preguntas y se construyen nuevos sistemas en nuestros entornos académicos. Visita la página web del Programa Praxis para aprender más sobre nuestro plan de estudios, nuestra bibliografía, la evolución del programa y para escuchar directamente a los becarios Praxis y el personal del laboratorio hablar directamente de sus experiencias en nuestro <a href='http://www.scholarslab.org/blog/'>blog</a> 
+    praxis_description_html: >-
+      <a href='http://praxis.scholarslab.org/'>El Programa Praxis</a> es un proyecto piloto del <a href="http://www2.lib.virginia.edu/scholarslab/">Scholars' Lab</a> de la <a href='http://www.lib.virginia.edu/index.html'>Biblioteca de la Universidad de Virginia</a>, iniciado durante el año escolar 2011-2012, en el que seis estudiantes de posgrado de artes, ciencias humanas y ciencias sociales trabajaron un año en un entorno práctico de colaboración e instrucción en las humanidades digitales. El objetivo del Programa Praxis es equipar mejor a los trabajadores del conocimiento para los nuevos cargos docentes y de investigación, <a href=http://mediacommons.futureofthebook.org/alt-ac/'>o carreras alternativas,</a> en un momento en el que se presentan nuevas preguntas y se construyen nuevos sistemas en nuestro entorno académico. Visita la página web del Programa Praxis para aprender más sobre nuestro plan de estudios, nuestra bibliografía, la evolución del programa y para escuchar directamente a los becarios Praxis y el personal del laboratorio hablar directamente de sus experiencias en nuestro <a href='http://www.scholarslab.org/blog/'>blog</a>. El Programa Praxis es patrocinado por una generosa donación del Mellon Foundation al <a href="http://uvasci.org">Scholarly Communication Institute</a> de la Biblioteca de la Universidad de Virginia.
     scholarslab_title: "Scholars' Lab"
     scholarslab_description_html: >
-      El <a href="http://www2.lib.virginia.edu/scholarslab/">Scholars' Lab</a> (Laboratorio de estudiosos) se estableció en 2006 en <a href="http://www.lib.virginia.edu/index.html">la Biblioteca de la Universidad de Virginia</a> como centro para la innovación en las humanidades y las ciencias sociales. El Scholars' Lab es un lugar donde profesores y alumnos de posgrado tienen acceso a recursos digitales avanzados, a la ayuda de expertos, y donde pueden colaborar en proyectos de investigación innovadores. El laboratorio también organiza eventos, talleres, charlas y mesas redondas, y patrocina el Programa Praxis y una <a href="http://www2.lib.virginia.edu/scholarslab/about/fellowship.html">prestigiosa serie de becas para estudiantes de posgrado</a> en las humanidades digitales.
+      El <a href="http://www2.lib.virginia.edu/scholarslab/">Scholars' Lab</a> se estableció en 2006 en <a href="http://www.lib.virginia.edu/index.html">la Biblioteca de la Universidad de Virginia</a> como centro para la innovación en las humanidades y las ciencias sociales. El Scholars' Lab es un lugar donde profesores y alumnos de posgrado tienen acceso a recursos digitales avanzados y a la ayuda de expertos en proyectos de investigación innovadores. El laboratorio también organiza eventos, talleres, charlas y mesas redondas, patrocina el Programa Praxis, al igual que una <a href="http://www2.lib.virginia.edu/scholarslab/about/fellowship.html">prestigiosa serie de becas para estudiantes de posgrado</a> en las humanidades digitales.
     contributors_title: "Colaboradores"
-    contributors_description: ""
+    contributors_description_html: >-
+      <h3>Jeremy Boggs</h3> <p>Humanities Design Architect, UVa Library Scholars' Lab</p> 
+      <h3>Alex Gil</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Wayne Graham</h3> <p>Head of Research &amp; Development, UVa Library Scholars' Lab</p>
+      <h3>Eric Johnson</h3> <p>Head of Outreach &amp; Consulting, UVa Library Scholars' Lab</p> 
+      <h3>Brooke Lestock</h3> <p>Praxis Fellow and UVa English Department graduate student</p>
+      <h3>David McClure</h3> <p>Web Applications Specialist, UVa Library Scholars' Lab</p>
+      <h3>Lindsay O'Connor</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p>
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p>
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+      <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research &amp; Scholarship, UVa Library</p> 
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab</p> 
+      <h3>Sarah Storti</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Annie Swafford</h3> <p>Praxis Fellow and UVa English Department doctoral candidate</p> 
+      <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
+
+  highlight:
+    instructions: Elige un marcador en el menu a la derecha y marca el texto a tu medida. Puedes cambiar de marcador y borrar. Cuando termines, presiona "submit" para ver los resultados del Prisma.
+    eraser: Borrador
+  visualize:
+
+    instructions: Elije una de las opciones siguientes para visualizar el agregado de interpretationes.
+    sketches: Hasta ahora, Prism solo ofrece una visualización. Esperamos que los bosquejos siguientes sirvan de inspiración y prococación para el futuro.
+
+  log-in:
+    resend: Resend confirmation instructions 
+    change: Change your password
+    forgot: ¿Olvidaste tu contraseña?
+    in: Inicia la sesión
+    up: Registrate
+    locked: Your account has been locked due to an excessive amount of unsuccessful sign in attempts.
+    click: "Click the link below to unlock your account:"
+    confirm: "You can confirm your account email through the link below:"
+    welcome: Welcome
+    hello: Hello
+    requested: "Someone has requested a link to change your password, and you can do this through the link below."
+    ignore: "If you didn't request this, please ignore this email."
+    wont: "Your password won't change until you access the link above and create a new one."
+    privacy: "We won't share your e-mail address, we promise."  
+    edit: Edit 
+    cancel: Cancel my account
+    unhappy: "Unhappy?"
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    - 
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%d de %B de %Y'
+      short: ! '%d de %b'
+    month_names:
+    - 
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: ! '%{count} días'
+      x_minutes:
+        one: 1 minuto
+        other: ! '%{count} minutos'
+      x_months:
+        one: 1 mes
+        other: ! '%{count} meses'
+      x_seconds:
+        one: 1 segundo
+        other: ! '%{count} segundos'
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minutos
+      month: Mes
+      second: Segundos
+      year: Año
+  errors: &errors
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      confirmation: no coincide con la confirmación
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser par
+      exclusion: está reservado
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor que o igual a %{count}
+      inclusion: no está incluido en la lista
+      invalid: no es válido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor que o igual a %{count}
+      not_a_number: no es un número
+      not_an_integer: debe ser un entero
+      odd: debe ser impar
+      record_invalid: ! 'La validación falló: %{errors}'
+      taken: ya está en uso
+      too_long: es demasiado largo (%{count} caracteres máximo)
+      too_short: es demasiado corto (%{count} caracteres mínimo)
+      wrong_length: no tiene la longitud correcta (%{count} caracteres exactos)
+    template:
+      body: ! 'Se encontraron problemas con los siguientes campos:'
+      header:
+        one: No se pudo guardar este/a %{model} porque se encontró 1 error
+        other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
+  helpers:
+    select:
+      prompt: Por favor seleccione
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: .
+        format: ! '%n %u'
+        precision: 2
+        separator: ! ','
+        significant: false
+        strip_insignificant_zeros: false
+        unit: €
+    format:
+      delimiter: .
+      precision: 3
+      separator: ! ','
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: mil millones
+          million: millón
+          quadrillion: mil billones
+          thousand: mil
+          trillion: billón
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ', y '
+      two_words_connector: ! ' y '
+      words_connector: ! ', '
+  time:
+    am: am
+    formats:
+      default: ! '%A, %d de %B de %Y %H:%M:%S %z'
+      long: ! '%d de %B de %Y %H:%M'
+      short: ! '%d de %b %H:%M'
+    pm: pm
+  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
+  activemodel:
+    errors:
+      <<: *errors
+  activerecord:
+    errors:
+      <<: *errors

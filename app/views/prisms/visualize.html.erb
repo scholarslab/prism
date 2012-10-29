@@ -1,23 +1,59 @@
+<% content_for :extra_head do %>
+  <script type="text/javascript" charset="utf-8">
+    $(function() {
+      setup_visualize()
+      select_facet($("li.vis_facet").eq(0))
+    })
+  </script>
+<% end %>
+
 <div class="page-margin">
-  <p> Congratulations! You have arrived at the most magical of places--the Visualization page!
-  </p>
-  <div id="Prismabob">
-    <h1><%= @document.title %></h1>
+    <div id="Prismabob">
+    <h1><%= @document.title.html_safe %></h1>
     <h2><%= @document.author %></h2>
 
     <div class="text">
-     <%= @document.content.html_safe %>
+      <%= @document.content.html_safe %>
     </div>
   </div>
-
-  <div id="visualizations">
-    <p id="visualization-help">Select one of the options below to display a visualization of collected data for this text.
+  <div id="sidebar">
+    <div id="visualizations">
+      <p id="visualization-help"><%= t "visualize.instructions" %> </p>
+      <ul id="highlighters">
+        <% for facet in @prism.facets %>
+          <li class="vis_facet">
+            <input type="hidden" class="color" value="<%=facet.color%>"/>
+            <input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/>
+            <span class="facet <%=facet.color%>"></span><%=facet.category%></li>
+        <% end %>
+      </ul>
+      <p id="viz-count">
+      <span><% if @usercounter != nil %>
+          <%=@usercounter%></span> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
+    <% end %>
     </p>
-    <ul id="visualization-types">
-        <li><%= image_tag('cats-in-sink.jpg') %></li>
-        <li><%= image_tag('cat-sheen-1.jpg') %></li>
-        <li><%= image_tag('cat-sheen-7.jpg') %></li>
-        <li><%= image_tag('cat-sheen-9.jpg') %></li>
+    <p id="sketchtext"><%= t 'visualize.sketches' %></p>
+    <ul id="viz-sketches">
+      <li>
+      <%= link_to image_tag('viz001.jpg'), image_path('viz001.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz002.jpg'), image_path('viz002.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz003.jpg'), image_path('viz003.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz004.jpg'), image_path('viz004.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz005.jpg'), image_path('viz005.jpg') %>
+      </li>
+      <li>
+      <%= link_to image_tag('viz006.jpg'), image_path('viz006.jpg') %>
+      </li>
     </ul>
+
+    </div>
   </div>
 </div>
