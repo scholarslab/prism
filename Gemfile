@@ -26,6 +26,9 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+# Error notifications
+gem 'airbrake', '~> 3.1.6'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -46,7 +49,7 @@ group :development do
    gem "ffaker", "~> 1.8.1"
    # gem "rails-footnotes", "~> 3.7.5"
    gem "rails_best_practices"
-   gem "heroku", "~> 2.9.0"
+   #gem "heroku", "~> 2.9.0"
    gem "nokogiri", "~> 1.5.0"
    # gem 'rails-dev-tweaks', '~> 0.5.1'
    # gem 'rails-dev-tweaks', '~> 0.5.1'
