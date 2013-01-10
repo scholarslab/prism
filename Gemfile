@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~>3.2.0'
+gem 'rails', '~>3.2.11'
+# gem 'rails', github: 'rails/rails', branch: '3-2-stable'
 gem "devise", "~> 2.0.0"
 
 gem 'compass-rails', '~> 1.0.1'
@@ -15,7 +16,7 @@ group :assets do
   gem 'compass', '~> 0.12.1'
   #gem 'compass-rails', '~> 1.0.1'
   gem 'compass-susy-plugin', '~> 0.9'
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'execjs', '1.3.0'
   gem 'uglifier', '>= 1.0.3'
@@ -53,6 +54,10 @@ group :development do
    gem "nokogiri", "~> 1.5.0"
    # gem 'rails-dev-tweaks', '~> 0.5.1'
    # gem 'rails-dev-tweaks', '~> 0.5.1'
+end
+
+group :pgdev do
+  gem 'pg'
 end
 
 group :development, :test do
