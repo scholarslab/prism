@@ -56,9 +56,6 @@ group :development do
    # gem 'rails-dev-tweaks', '~> 0.5.1'
 end
 
-group :pgdev do
-  gem 'pg'
-end
 
 group :development, :test do
   gem 'sqlite3', "~> 1.3.4"
