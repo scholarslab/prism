@@ -4,6 +4,12 @@ gem 'rails', '~>3.2.11'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
 gem "devise", "~> 2.0.0"
 
+gem "omniauth"
+gem "omniauth-twitter"
+gem "omniauth-google"
+gem "omniauth-facebook"
+
+
 gem 'compass-rails', '~> 1.0.1'
 
 # Bundle edge Rails instead:
