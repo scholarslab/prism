@@ -210,6 +210,10 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
+require "omniauth-facebook"
+require "omniauth-twitter"
+require "omniauth-google"
+
   config.omniauth :facebook, "APP_ID", "APP_SECRET",
       :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}
   config.omniauth :twitter, 'muekOMJXBKXRWEUnVGG0pA', 'PtUsO6guIPDPn9x4OUQQGvU6yGqD8fswEiAoECBOq4'
