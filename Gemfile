@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '~>3.2.11'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
-gem "devise", "~> 2.0.0"
+gem "devise", "~> 2.2.0"
 
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -91,7 +91,7 @@ group :test do
 end
 
 group :production do
-  gem "heroku", "~>2.9.0"
+  #gem "heroku", "~>2.9.0"
   gem "pg"
   gem "thin" # use thin as the production server
  # gem "devise", "~> 2.0.0"
