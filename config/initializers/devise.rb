@@ -214,10 +214,11 @@ require "omniauth-facebook"
 require "omniauth-twitter"
 require "omniauth-google"
 
-  config.omniauth :facebook, "433312300089516", "6e5d8dc6f680a4d9b9b40004166f659a",
-      :client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}
+  config.omniauth :facebook, "433312300089516", "6e5d8dc6f680a4d9b9b40004166f659a"
   config.omniauth :twitter, 'muekOMJXBKXRWEUnVGG0pA', 'PtUsO6guIPDPn9x4OUQQGvU6yGqD8fswEiAoECBOq4'
-  config.omniauth :google, "CONSUMER_KEY", "CONSUMER_SECRET"
+  config.omniauth :google, "759053607189.apps.googleusercontent.com", "1Z8PJatEWV-q0oJ3jgm3IvSr",
+     :client_options => {:ssl => {:ca_path => '/Users/Brandon/.rvm/usr/ssl'}}
+
 
 
   # ==> Warden configuration

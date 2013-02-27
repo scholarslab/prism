@@ -21,11 +21,6 @@ def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
 			password:Devise.friendly_token[0,20],
       nickname:auth.info.nickname 
 			) 
-    puts "*****"
-    puts user.provider
-    puts user.uid
-    puts user.email
-    puts auth.info.nickname
 	end 
 	user 
 end
@@ -43,6 +38,19 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
                          )
   end
   user
+end
+
+def self.find_for_google_oauth(access_token, signed_in_resource=nil)
+    data = access_token.info
+    user = User.where(:email => data["email"]).first
+
+    unless user
+        user = User.create(name: data["name"],
+             email: data["email"],
+             password: Devise.friendly_token[0,20]
+            )
+    end
+    user
 end
 
 def self.new_with_session(params, session)
