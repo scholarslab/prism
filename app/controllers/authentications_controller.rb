@@ -59,6 +59,8 @@ class AuthenticationsController < ApplicationController
       else
         session[:omniauth] = omniauth.except('extra')
         redirect_to new_user_registration_url
+      end
+    end
   end
 
   # PUT /authentications/1
