@@ -10,6 +10,7 @@ gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 
+gem 'figaro'
 
 gem 'compass-rails', '~> 1.0.1'
 
