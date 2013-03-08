@@ -37,7 +37,7 @@ describe PagesController do
           @user = @users[0]
         end
         visit '/users/sign_in'
-        fill_in 'user_email', :with => "fred.foonly@example.com"#@user.email
+        fill_in 'user_nickname', :with => "fred"#@user.email
         fill_in 'user_password', :with => "my_password"#@user.password
         click_button 'Sign in'
       end

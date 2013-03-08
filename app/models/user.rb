@@ -8,23 +8,22 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :nickname
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :nickname, :name
 
 
 def self.find_for_twitter_oauth(auth, signed_in_resource=nil) 
+
 	user = User.where(:provider => auth.provider, :uid => auth.uid).first 
 	unless user 
-		user = User.create(name:auth.extra.raw_info.name, 
-			provider:auth.provider, 
-			uid:auth.uid, 
-			email:"none@nomail.com", 
-			password:Devise.friendly_token[0,20],
-      nickname:auth.info.nickname 
-			) 
+    user = User.create(name:auth.extra.raw_info.name,
+                			provider:auth.provider, 
+                			uid:auth.uid,  
+                			password:Devise.friendly_token[0,20],
+                      nickname:auth.info.nickname 
+                			) 
 	end 
 	user 
 end
-
 
 
 def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
@@ -34,7 +33,8 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
                          provider:auth.provider,
                          uid:auth.uid,
                          email:auth.info.email,
-                         password:Devise.friendly_token[0,20]
+                         password:Devise.friendly_token[0,20],
+                         nickname:auth.info.email
                          )
   end
   user
@@ -43,11 +43,13 @@ end
 def self.find_for_google_oauth(access_token, signed_in_resource=nil)
     data = access_token.info
     user = User.where(:email => data["email"]).first
-
     unless user
         user = User.create(name: data["name"],
+            provider:"google",
+            uid:data["uid"],
             email: data["email"],
-            password: Devise.friendly_token[0,20]
+            password: Devise.friendly_token[0,20],
+            nickname:data["email"]
             )
     end
     user
@@ -60,6 +62,8 @@ def self.new_with_session(params, session)
       end
     end
   end
+
+
 
 end
 # == Schema Information

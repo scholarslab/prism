@@ -13,11 +13,8 @@
   <%= image_tag('bigprism.png', :id => "bigprism") %>
   <div id="user-meta">
     <p>
-    <% if user_signed_in? && current_user.email != "none@nomail.com" %>
-      <span><%=t 'header.signed_in'%><%= current_user.email %>. </span>
-      <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
-    <% elsif user_signed_in? && current_user.nickname %>
-      <span><%=t 'header.signed_in'%><%= "@" + current_user.nickname %>. </span>
+    <% if user_signed_in? %>
+      <span><%=t 'header.signed_in'%><%= current_user.nickname %>. </span>
       <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
     <% else %>
       <%= link_to t('header.register'), new_user_registration_path %>
