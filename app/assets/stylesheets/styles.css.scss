@@ -1,34 +1,59 @@
-@import "defaults";
-@import "prism";
+@import "base";
 
-// 480px ---------------------------------------------------------------------
-@media only screen and (min-width: 480px) {
-  @import "media/screen_480";
+body {font-family: 'Quicksand', sans-serif;}
+html {
+	
+	background: whitesmoke;
+}
+body {
+	
+	max-width: 800px; 
+	background: white; 
+	margin: 20px auto; 
+	padding: 80px; 
+	@include border-radius(20px);
 }
 
-// 768px  --------------------------------------------------------------------
-@media only screen and (min-width: 768px) {
-  @import "media/screen_768";
+header {
+	
+	text-align: center;
 }
 
-// 992px ---------------------------------------------------------------------
-@media only screen and (min-width: 992px) {
-  @import "media/screen_992";
+h1, h2 {text-align: center;
+
 }
 
-// 1382px --------------------------------------------------------------------
-@media only screen and (min-width: 1382px) {
-  @import "media/screen_1382";
+#buttons img{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    @include border-radius(20px);
 }
 
-// 2x ------------------------------------------------------------------------
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and
-(min-device-pixel-ratio: 2) {
-  @import "media/screen_2x";
-}
+#buttons {text-align: center;}
 
-// print ---------------------------------------------------------------------
-@media print {
-  @import "media/print";
-}
+nav {
+	text-align: center;
 
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	li {
+		display:inline-block;
+
+	}
+
+	a {
+		padding: 10px 60px; 
+		text-decoration: none;
+		color: black;
+	}
+}
+ 
+
+a {text-decoration: none; color: red;}
+
+nav,h2 {text-transform: uppercase;}

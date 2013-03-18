@@ -1,16 +1,35 @@
+<nav>
+  <ul>
+    <li>
+      <%= link_to t('About'), about_path %>
+    </li>
 
-<div id="languages">
-    <%= link_to('English', url_for(:locale => 'en')) %>
-    <%= link_to('Español', url_for(:locale => 'es')) %>
-    <%= link_to('Français', url_for(:locale => 'fr')) %>
-    <%= link_to('Deutsch', url_for(:locale => 'de')) %>
-  </div>
+
+    <li>
+      <a href="http://www.virginia.edu/history/user/359">myPrism</a>
+    </li>
+
+
+    <li>
+      <a href="Contact.html" target="_self">Browse</a>
+    </li>
+
+    <li>
+      <%= link_to t('Home'), home_path %>
+    </li>
+
+</ul>
+</nav>
+
+
   <header>
 <div class="header-margin">
-  <h1><%= link_to image_tag('prism-logo.png'), home_path %></h1>
-  <p class="description"><%= t 'header.description_html', :about_url => url_for(about_path) %></p>
-  
-  <%= image_tag('bigprism.png', :id => "bigprism") %>
+
+<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+  <h1><%= link_to image_tag('LOGO.gif'), home_path %></h1>
+  <h2> A Tool for Collaborative Interpretation of Texts </h2>
+
   <div id="user-meta">
     <p>
     <% if user_signed_in? %>
@@ -24,6 +43,8 @@
   </div>
 </div>
 </header>
+
+
 
 <!--[if lt IE 9]>
 <p id="browser-upgrade">Prism is built to support at least Internet Explorer 9. <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
