@@ -7,5 +7,10 @@ FactoryGirl.define do
     password "my_password"
     nickname "Fred"
   end
+
+  factory :emailless, class: User do
+  	password "my_password"
+  	nickname "Fred w/o e-mail"
+  end
 end
 

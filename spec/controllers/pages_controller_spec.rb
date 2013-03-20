@@ -37,7 +37,7 @@ describe PagesController do
           @user = @users[0]
         end
         visit '/users/sign_in'
-        fill_in 'user_nickname', :with => "fred"#@user.email
+        fill_in 'user_login', :with => "fred"#@user.email
         fill_in 'user_password', :with => "my_password"#@user.password
         click_button 'Sign in'
       end
@@ -46,5 +46,45 @@ describe PagesController do
         page.should have_selector('a', :text => 'Sign out')
       end 
     end
-  end
+
+    describe "when user is signed in" do
+      before :each do
+        @users = User.where(:nickname => "Fred w/o e-mail")
+        if @users.length == 0
+          @user =Factory(:emailless)
+        else
+          @user = @users[0]
+        end
+         visit '/users/sign_in'
+          fill_in 'user_login', :with => "Fred w/o e-mail"#@user.email
+          fill_in 'user_password', :with => "my_password"#@user.password
+          click_button 'Sign in'
+      end 
+        it "should display the current user's e-mail if there is one stored." do
+            visit '/'
+              page.should have_content (@user.email)
+        end
+    end
+
+     describe "when user is signed in" do
+      before :each do
+        @users = User.where(:email => "fred.foonly@example.com")
+        if @users.length == 0
+          @user =Factory(:user)
+        else
+          @user = @users[0]
+        end
+         visit '/users/sign_in'
+          fill_in 'user_login', :with => "fred"#@user.email
+          fill_in 'user_password', :with => "my_password"#@user.password
+          click_button 'Sign in'
+      end 
+        it "should display the current user's nickname if there is one stored." do
+            if @user.nickname != nil
+              visit '/'
+              page.should have_content (@user.nickname)
+            end
+        end
+     end
+end
 end

@@ -5,11 +5,16 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable, :omniauthable
+         :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable, :omniauthable, :authentication_keys => [:login]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :nickname, :name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :nickname, :name, :login
 
+  attr_accessor :login
+
+def email_required?
+    false
+end
 
 def self.find_for_twitter_oauth(auth, signed_in_resource=nil) 
 
@@ -17,6 +22,7 @@ def self.find_for_twitter_oauth(auth, signed_in_resource=nil)
 	unless user 
     user = User.create(name:auth.extra.raw_info.name,
                 			provider:auth.provider, 
+                      #email: auth.info.nickname + "@nomail.com",
                 			uid:auth.uid,  
                 			password:Devise.friendly_token[0,20],
                       nickname:auth.info.nickname 
@@ -62,6 +68,16 @@ def self.new_with_session(params, session)
       end
     end
   end
+
+  def self.find_first_by_auth_conditions(warden_conditions)
+      conditions = warden_conditions.dup
+      if login = conditions.delete(:login)
+        where(conditions).where(["lower(nickname) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+      else
+        where(conditions).first
+      end
+  end
+
 
 
 
