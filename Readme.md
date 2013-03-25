@@ -1,9 +1,9 @@
 # Readme
 PRISM
 
-# Build Status
+# Badges
 [![Build Status](https://secure.travis-ci.org/scholarslab/prism.png)](http://travis-ci.org/scholarslab/prism?branch=master,production)
-
+[![Code Climate](https://codeclimate.com/github/scholarslab/prism.png)](https://codeclimate.com/github/scholarslab/prism)
 
 # Getting Started
 
