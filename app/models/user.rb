@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :nickname, :name, :login
 
+  validates :login, :presence => {:message => 'Email or nickname is required.'}
+
   attr_accessor :login
 
 def email_required?
@@ -69,17 +71,22 @@ def self.new_with_session(params, session)
     end
   end
 
-  def self.find_first_by_auth_conditions(warden_conditions)
-      conditions = warden_conditions.dup
-      if login = conditions.delete(:login)
-        where(conditions).where(["lower(nickname) = :value OR lower(email) = :value", { :value => login.downcase }]).first
-      else
-        where(conditions).first
-      end
+def self.find_first_by_auth_conditions(warden_conditions)
+  conditions = warden_conditions.dup
+  if login = conditions.delete(:login)
+    where(conditions).where(["lower(nickname) = :value OR lower(email) = :value", { :value => login.downcase }]).first
+  else
+    where(conditions).first
   end
+end
 
+# def login
+#   @nickname || @email
+# end
 
-
+def display_name
+    nickname || email
+end
 
 end
 # == Schema Information

@@ -5,7 +5,7 @@ class MakeEmailOptional < ActiveRecord::Migration
   end
 
   def down
-  change_column(:users, :email, :string, :null => false, :default => "")
+  	change_column(:users, :email, :string, :null => false, :default => "")
   end
 
 end
