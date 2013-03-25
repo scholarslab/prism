@@ -80,12 +80,12 @@ def self.find_first_by_auth_conditions(warden_conditions)
   end
 end
 
-# def login
-#   @nickname || @email
-# end
-
-def display_name
-    nickname || email
+def login
+  if !nickname || nickname.empty?
+    email
+  else
+    nickname
+  end
 end
 
 end
