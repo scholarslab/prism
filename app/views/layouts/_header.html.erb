@@ -15,11 +15,9 @@
     </li>
 
     <li>
-        <% if user_signed_in? %>
-      <span><%=t 'header.signed_in'%><%= current_user.email %>. </span>
+      <% if user_signed_in? %>
       <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
     <% else %>
-      <%= link_to t('header.register'), new_user_registration_path %>
       <%= link_to t('header.sign_in'), new_user_session_path %>
     <% end %>
     </li>
@@ -33,8 +31,8 @@
 
 <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
-  <h1><%= link_to image_tag('LOGO.gif'), home_path %></h1>
-  <h2> A Tool for Collaborative Interpretation of Texts </h2>
+  <h1><%= link_to image_tag('LOGO.png'), home_path %></h1>
+  <motto> A Tool for Collaborative Interpretation of Texts </motto>
 
   <div id="user-meta">
   

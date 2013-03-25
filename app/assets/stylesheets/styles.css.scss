@@ -33,7 +33,7 @@ h1, h2 {text-align: center;
 #buttons {text-align: center;}
 
 nav {
-	text-align: center;
+	text-align: justify;
 
 	ul {
 		list-style: none;
@@ -46,8 +46,12 @@ nav {
 
 	}
 
+	li2 {
+		padding-right: 50px;
+
+	}
 	a {
-		padding: 10px 60px; 
+		padding: 10px 10px; 
 		text-decoration: none;
 		color: black;
 	}

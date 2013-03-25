@@ -17,18 +17,20 @@ header {
 	text-align: center;
 }
 
-h1, h2 {text-align: center;
+motto {text-align: center;
+	font-size: 16px;
 
 }
 
 #buttons img{
-    width: 150px;
-    height: 150px;
-    margin: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 25px;
     @include border-radius(20px);
 }
 
-#buttons {text-align: center;}
+#buttons {text-align: center;
+	margin-top:25px;}
 
 nav {
 	text-align: center;
@@ -41,17 +43,16 @@ nav {
 
 	li {
 		display:inline-block;
-
+		padding: 45px 45px;
+		float: center;
 	}
 
-	a {
-		padding: 10px 60px; 
+	a { 
 		text-decoration: none;
 		color: black;
 	}
 }
  
-
 a {text-decoration: none; color: red;}
 
-nav,h2 {text-transform: uppercase;}
+nav,motto {text-transform: uppercase;}
