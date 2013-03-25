@@ -5,33 +5,10 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable, :omniauthable, :authentication_keys => [:login]
+         :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable, :omniauthable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :nickname, :name, :login
-
-  validates :login, :presence => {:message => 'Email or nickname is required.'}
-
-  attr_accessor :login
-
-def email_required?
-    false
-end
-
-def self.find_for_twitter_oauth(auth, signed_in_resource=nil) 
-
-	user = User.where(:provider => auth.provider, :uid => auth.uid).first 
-	unless user 
-    user = User.create(name:auth.extra.raw_info.name,
-                			provider:auth.provider, 
-                      #email: auth.info.nickname + "@nomail.com",
-                			uid:auth.uid,  
-                			password:Devise.friendly_token[0,20],
-                      nickname:auth.info.nickname 
-                			) 
-	end 
-	user 
-end
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :name
 
 
 def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
@@ -42,7 +19,6 @@ def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
                          uid:auth.uid,
                          email:auth.info.email,
                          password:Devise.friendly_token[0,20],
-                         nickname:auth.info.email
                          )
   end
   user
@@ -57,7 +33,6 @@ def self.find_for_google_oauth(access_token, signed_in_resource=nil)
             uid:data["uid"],
             email: data["email"],
             password: Devise.friendly_token[0,20],
-            nickname:data["email"]
             )
     end
     user
@@ -70,23 +45,6 @@ def self.new_with_session(params, session)
       end
     end
   end
-
-def self.find_first_by_auth_conditions(warden_conditions)
-  conditions = warden_conditions.dup
-  if login = conditions.delete(:login)
-    where(conditions).where(["lower(nickname) = :value OR lower(email) = :value", { :value => login.downcase }]).first
-  else
-    where(conditions).first
-  end
-end
-
-def login
-  if !nickname || nickname.empty?
-    email
-  else
-    nickname
-  end
-end
 
 end
 # == Schema Information
