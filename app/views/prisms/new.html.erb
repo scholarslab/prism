@@ -1,0 +1,29 @@
+<div class="page-margin">
+<h1>New Prism</h1>
+
+<%= form_for(@prism) do |f| %>
+  <% if @prism.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prism.errors.count, "error") %> prohibited this prism from being saved:</h2>
+
+      <ul>
+      <% @prism.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prompt %><br />
+    <%= f.text_area :prompt %>
+  </div>
+  <div class="field">
+    <%= f.label :document_id %><br />
+    <%= f.number_field :document_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
