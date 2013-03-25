@@ -7,6 +7,7 @@ Testing::Application.routes.draw do
  resources :documents do
     resources :markings
   end
+ resources :prisms
   
   # Add routes to your pages, using get "pages/pagename"
   get "pages/index", :as => :home

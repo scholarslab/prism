@@ -82,4 +82,44 @@ class PrismsController < ApplicationController
             end
         end
     end
+    
+
+
+    def new
+      @prism = Prism.new
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @prism }  
+      end
+    end
+  
+    def create
+      @prism = Prism.new(params[:prism])
+      
+      respond_to do |format|
+        if @prism.save
+          format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully created.' }
+          format.json { render json: @prism, status: :created, location: @prism }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @prism.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+  
+
+    def update
+      @prism = Prism.find(params[:id])
+  
+      respond_to do |format|
+        if @prism.update_attributes(params[:prism])
+          format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @prism.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+ 
 end
