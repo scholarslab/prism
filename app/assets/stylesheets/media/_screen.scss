@@ -17,7 +17,7 @@ header {
 	text-align: center;
 }
 
-motto {text-align: center;
+.motto {text-align: center;
 	font-size: 16px;
 
 }
@@ -55,4 +55,5 @@ nav {
  
 a {text-decoration: none; color: red;}
 
-nav,motto {text-transform: uppercase;}
+nav,
+.motto {text-transform: uppercase;}
