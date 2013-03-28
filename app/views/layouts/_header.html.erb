@@ -4,7 +4,6 @@
       <%= link_to t('About'), about_path %>
     </li>
 
-
     <li>
       <a href="http://www.virginia.edu/history/user/359">myPrism</a>
     </li>
@@ -21,18 +20,16 @@
       <%= link_to t('header.sign_in'), new_user_session_path %>
     <% end %>
     </li>
-
 </ul>
 </nav>
 
 
-  <header>
-<div class="header-margin">
+<header>
+<div class="header">
 
 <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
-  <h1><%= link_to image_tag('LOGO.png'), home_path %></h1>
-  <p class="motto">A Tool for Collaborative Interpretation of Texts</p>
+  <h><%= link_to image_tag('LOGO.png'), home_path %></h>
 
   <div id="user-meta">
   

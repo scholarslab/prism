@@ -1,24 +1,28 @@
 body {font-family: 'Quicksand', sans-serif;}
+
 html {
 	
 	background: white;
 }
+
 body {
 	
 	max-width: 800px; 
 	background: white; 
-	margin: 20px auto; 
-	padding: 80px; 
+	margin: 20px auto;
+	padding-top: 0 px;
 	@include border-radius(20px);
 }
 
 header {
 	
 	text-align: center;
+	padding-top: 0px;
 }
 
 .motto {text-align: center;
 	font-size: 16px;
+
 
 }
 
@@ -33,17 +37,21 @@ header {
 	margin-top:25px;}
 
 nav {
+
+	font-family: 'Quicksand', sans-serif;
 	text-align: center;
 
 	ul {
 		list-style: none;
-		margin-left: 0;
-		padding-left: 0;
+		margin-left: 0px;
+		padding-top: 25px;
+		padding-bottom: 0px;
 	}
 
 	li {
 		display:inline-block;
 		padding: 45px 45px;
+		padding-bottom: 0px;
 		float: center;
 	}
 
@@ -53,12 +61,25 @@ nav {
 	}
 }
  
-a {text-decoration: none; color: red;}
+a {text-decoration: none; color: $blue;}
 
-nav,
-.motto {text-transform: uppercase;}
+h {padding: 0;
+}
 
+nav, h1, h2, h3,
+.motto {text-transform: uppercase;
+		font-weight: normal;
+		font-size: 16px;
+}
+
+p {font-family: verdana, sans-serif;;
+	font-size:13px;}
+
+p.motto {font-family: 'Quicksand', sans-serif;}
+
+//sign-in elements---------------------------
 
 label, 
 input[type=email], 
 input[type=password] {display: block;}
+
