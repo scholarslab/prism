@@ -63,11 +63,15 @@ a {text-decoration: none; color: $blue;}
 h {padding: 0;
 }
 
-nav, h1, h2, h3,
+nav, h1, h2,
 .motto {text-transform: uppercase;
 		font-weight: normal;
-		font-size: 16px;
+		font-size: 18px;
 }
+
+h3 {font-family: $parafont;
+	font-weight: normal;
+	font-size: 15px;}
 
 p {font-family: $parafont;
 	font-size:15px;}
