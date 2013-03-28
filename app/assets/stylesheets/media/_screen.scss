@@ -69,14 +69,23 @@ nav, h1, h2,
 		font-size: 18px;
 }
 
-h3 {font-family: $parafont;
+h2 {
+	padding-top: 20px;	
+}
+
+h3 {
 	font-weight: normal;
-	font-size: 15px;}
+	font-size: 18px;
+}
 
-p {font-family: $parafont;
-	font-size:15px;}
+p {
+	font-family: $parafont;
+	font-size:15px;
+}
 
-p.motto {font-family: $headerfont}
+p.motto {
+	font-family: $headerfont;
+}
 
 //sign-in elements---------------------------
 
