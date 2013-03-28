@@ -1,17 +1,15 @@
-body {font-family: 'Quicksand', sans-serif;}
-
-html {
-	
+html {	
 	background: white;
 }
 
 body {
-	
 	max-width: 800px; 
 	background: white; 
 	margin: 20px auto;
 	padding-top: 0 px;
 	@include border-radius(20px);
+	
+	font-family: $headerfont;
 }
 
 header {
@@ -22,8 +20,6 @@ header {
 
 .motto {text-align: center;
 	font-size: 16px;
-
-
 }
 
 #buttons img{
@@ -38,7 +34,7 @@ header {
 
 nav {
 
-	font-family: 'Quicksand', sans-serif;
+	font-family: $headerfont;
 	text-align: center;
 
 	ul {
@@ -72,10 +68,10 @@ nav, h1, h2, h3,
 		font-size: 16px;
 }
 
-p {font-family: verdana, sans-serif;;
-	font-size:13px;}
+p {font-family: $parafont;
+	font-size:14px;}
 
-p.motto {font-family: 'Quicksand', sans-serif;}
+p.motto {font-family: $headerfont}
 
 //sign-in elements---------------------------
 
