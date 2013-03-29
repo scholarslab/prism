@@ -88,8 +88,16 @@ p.motto {
 }
 
 //sign-in elements---------------------------
-
 label, 
 input[type=email], 
 input[type=password] {display: block;}
+
+#socialmedia img{
+    width: 30px;
+    height: 30px;
+    border: 5px solid #ccc;
+
+    background: grey;
+    }
+
 
