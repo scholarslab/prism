@@ -125,16 +125,21 @@ class PrismsController < ApplicationController
     end
     
     def process_text(text)
-      span_text = ""
       doc = Nokogiri::XML("")
+      doc << doc.create_element("content")
       counter = 0
-      text.split(" ").each do |word|
-        span = doc.create_element("span", :class => "word word_"+counter.to_s)
-        span << word
-        span << ' '
-        span_text << span.to_s()
-        counter += 1
+      for line in text.split("\n")
+        paragraph = doc.create_element("p")
+        doc.root().add_child(paragraph)
+        span_list = line.split(" ").map do |word|
+          span = doc.create_element("span", :class => "word word_"+counter.to_s)
+          span << word + ' '
+          counter += 1
+          span
+        end
+        span_nodeset = Nokogiri::XML::NodeSet.new(doc, span_list)
+        paragraph << span_nodeset
       end
-      span_text
+      doc.root().to_s()
     end
 end
