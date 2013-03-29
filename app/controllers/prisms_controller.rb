@@ -95,7 +95,8 @@ class PrismsController < ApplicationController
   
     def create
       @prism = Prism.new(params[:prism])
-      
+      @prism.content = process_text(@prism.content)
+       
       respond_to do |format|
         if @prism.save
           format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully created.' }
@@ -110,7 +111,8 @@ class PrismsController < ApplicationController
 
     def update
       @prism = Prism.find(params[:id])
-  
+      @prism.content = process_text(@prism.content)
+      
       respond_to do |format|
         if @prism.update_attributes(params[:prism])
           format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully updated.' }
@@ -121,5 +123,18 @@ class PrismsController < ApplicationController
         end
       end
     end
- 
+    
+    def process_text(text)
+      span_text = ""
+      doc = Nokogiri::XML("")
+      counter = 0
+      text.split(" ").each do |word|
+        span = doc.create_element("span", :class => "word word_"+counter.to_s)
+        span << word
+        span << ' '
+        span_text << span.to_s()
+        counter += 1
+      end
+      span_text
+    end
 end
