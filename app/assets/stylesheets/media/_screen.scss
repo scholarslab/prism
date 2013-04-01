@@ -90,14 +90,44 @@ p.motto {
 //sign-in elements---------------------------
 label, 
 input[type=email], 
-input[type=password] {display: block;}
+input[type=password] 
+{display: block;
+border-radius:20px;
+height: 30px;
+width: 300px;
+}
 
-#socialmedia img{
-    width: 30px;
-    height: 30px;
-    border: 5px solid #ccc;
+#socialmedia {
+	text-align:center; 
+	border-bottom: 1px solid #ccc;
+	padding: 20px 0;
 
-    background: grey;
+	img{
+    	width: 50px;
+    	height: 50px;
+    	padding: 10px;
+    	display: inline-block;
+
     }
+    }
+
+#signinpage {
+	width: 650px;
+	margin: 0 auto;
+
+}
+
+#signinform {
+	width: 47%;
+	float:left;
+}
+
+#userform {
+	width: 47%;
+	float:right;
+}
+
+
+
 
 
