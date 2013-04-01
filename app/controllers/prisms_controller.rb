@@ -129,6 +129,12 @@ class PrismsController < ApplicationController
       doc << doc.create_element("content")
       counter = 0
       for line in text.split("\n")
+        leading_spaces = line[/\A +/]
+        if leading_spaces
+          line = "&nbsp;"*leading_spaces.size() + line[leading_spaces.size()..-1]
+        end
+        line.gsub!("\t","&nbsp;&nbsp;&nbsp;")
+      
         paragraph = doc.create_element("p")
         doc.root().add_child(paragraph)
         span_list = line.split(" ").map do |word|
