@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120501022605) do
+ActiveRecord::Schema.define(:version => 20130329185236) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -67,6 +67,9 @@ ActiveRecord::Schema.define(:version => 20120501022605) do
     t.datetime "updated_at",                             :null => false
     t.string   "authentication_token"
     t.string   "password_confirmation"
+    t.string   "provider"
+    t.string   "uid"
+    t.integer  "facet_num"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
