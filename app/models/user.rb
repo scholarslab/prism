@@ -37,6 +37,20 @@ class User < ActiveRecord::Base
     user
   end
 
+  def self.find_for_browserid_oauth(access_token, signed_in_resource=nil)
+    data = access_token.info
+    user = User.where(:email => data['email']).first
+    unless user
+      user = User.create(
+        name: data['name'],
+        provider: 'browserid',
+        uid: data['uid'],
+        email: data['email'],
+        password: Devise.friendly_token[0,20],
+      )
+    end
+  end
+
   def self.new_with_session(params, session)
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
