@@ -10,6 +10,7 @@ gem 'omniauth'
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+gem 'omniauth-browserid'
 
 gem 'figaro'
 
