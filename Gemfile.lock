@@ -171,8 +171,6 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
-    omniauth-twitter (0.0.9)
-      omniauth-oauth (~> 1.0)
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
@@ -308,7 +306,6 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-google
   omniauth-google-oauth2
-  omniauth-twitter
   pg
   rails (~> 3.2.11)
   rails_best_practices
