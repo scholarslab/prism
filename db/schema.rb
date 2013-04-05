@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130325181908) do
+ActiveRecord::Schema.define(:version => 20130405210340) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130325181908) do
     t.text     "word_array"
     t.integer  "facet_id"
     t.integer  "prism_id"
+    t.integer  "facet_num"
   end
 
   create_table "prisms", :force => true do |t|
@@ -80,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20130325181908) do
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
+    t.integer  "facet_num"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
