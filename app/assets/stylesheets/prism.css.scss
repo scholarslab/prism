@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $blue : color-stops(
+<<<<<<< HEAD
 rgba(0,0,255,1) 0%,
 rgba(0,0,255,0) 100%
 );
@@ -16,6 +17,29 @@ rgba(255,0,0,0) 100%
 $green : color-stops(
 rgba(0,255,0,0) 0%,
 rgba(0,255,0,1) 100%
+=======
+rgba(0,0,255,0.7) 0%,
+rgba(0,0,255,0) 50%,
+rgba(0,0,255,0.7) 100%
+);
+
+$red : color-stops(
+rgba(255,0,0,0.7) 0%,
+rgba(255,0,0,0) 50%,
+rgba(255,0,0,0.7) 100%
+);
+
+$yellow : color-stops(
+rgba(255,255,0,0.7) 0%,
+rgba(255,255,0,0)50%,
+rgba(255,255,0,0.7) 100%
+);
+
+$green : color-stops(
+rgba(0,255,0,0.7) 0%,
+rgba(0,255,0,0) 50%,
+rgba(0,255,0,0.7) 100%
+>>>>>>> 8ea5baaadff056df0354cbc6ea1c397deb63806e
 );
 
 #highlighters span.facet.border {
@@ -48,6 +72,10 @@ rgba(0,255,0,1) 100%
 
 .blue {
   @include background(linear-gradient($blue));
+}
+
+.yellow {
+  @include background(linear-gradient($yellow));
 }
 
 .blue.green {

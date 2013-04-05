@@ -1,0 +1,488 @@
+// Imports --------------------------------------------------------------------
+
+@import "base";
+@import "normalize";
+@import "fonts";
+
+$page-margin: 10%;
+
+@mixin nav-pipes {
+  a:not(:last-child):after {
+    content:" | ";
+    margin: 0 10px;
+    color: #999;
+  }
+}
+
+#container {
+  @include container;
+  @include susy-grid-background;
+}
+
+.warn {
+  color: red;
+  font-size: 20px;
+}
+
+.page-margin {
+  margin-left: $page-margin;
+  margin-right: $page-margin;
+}
+
+a {
+  text-decoration:none;
+  font-weight:bold;
+
+  &:link {
+    color: rgba(0,153,153,1.0);
+  }
+  &:visited {
+    color: rgba(0,153,153,1.0);
+  }
+  &:hover {
+    color: rgba(0,153,77,1.0);
+  }
+  &:active {
+    color: Dimgray;
+  }
+}
+
+blockquote {
+  color: #666;
+  padding: 0 1em;
+  margin-left:1em;
+  border-left: 10px solid #eee;
+}
+
+input[type="submit"] {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  display: block;
+  padding: 5px 10px;
+}
+
+header {
+  float: left;
+  margin-top: 3%;
+  min-width: 1200px;
+  min-height: 100px;
+  background-color: #333;
+  margin-bottom: 5em;
+  @include clearfix;
+  @include pie;
+  @include background(
+  linear-gradient(left, rgb(0,0,0) 0%, rgb(100,100,100) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%),
+  linear-gradient(top, rgba(0,179,179,0.8) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.8) 100%)
+  );
+  font-family: "PT Sans", sans-serif;
+  color: white;
+  position:relative;
+  overflow:visible;
+
+  h1 {
+    float: left;
+    margin-left: $page-margin;
+    margin-right: 4%;
+  }
+
+  /*styles short description in header*/
+  p.description {
+    float: left;
+    width: 32%;
+    margin-top: 20px;
+     }
+}
+
+#user-meta {
+  float: right;
+  font-size: 14px;
+  width: 18%;
+  padding-right: $page-margin;
+  padding-top: 1%;
+
+  a, span {
+    text-decoration: none;
+    color: white;
+    z-index:10000;
+    position: relative;
+  }
+
+  p a:not(:last-child):after {
+    content:" | ";
+    margin: 0 8px;
+    color: rgb(255,255,255);   /*didn't use mixin for this one because I can't figure out how to override the gray color*/
+  }
+}
+
+#sign-out {display: block}  /*puts sign out link on its own line for consistency, no matter how long or short the username*/
+
+#bigprism {
+  position: absolute;
+  top: -160px;
+  left: 75%;
+  margin-left: -201px;
+  z-index:9000;
+}
+
+#browser-upgrade {
+  position: absolute;
+  width: 100%;
+  background: #ccc000;
+  line-height: 2em;
+  text-align: center;
+  top: 160px;
+  z-index: 1000000;
+}
+
+#languages  {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  @include nav-pipes;
+}
+
+body {
+  min-width: 1000px;
+  background-color: #fafafa;
+  font-color: #003333;
+  font-family: "PT Sans", sans-serif;
+  /*font and color of all body text, unless otherwise specified in stylesheet*/
+  h1 {
+    size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);  /*shadow on all body h1s -- black, 50% transparent*/
+  }
+}
+
+#flash_notice, #flash_alert {
+  font-weight: bold;
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  padding: 5px 450px 5px 50px;
+}
+
+#flash_notice {
+  background-color: #00B359;
+}
+
+#flash_alert {
+  background-color: #ccc000;
+  }
+
+#error_explanation {
+    h2 {
+    font-size: 16px;
+      }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1em;
+       }
+}
+
+#main {
+  padding-top: 4em;
+}
+#homepic {
+  float: left;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  margin: 13px 3% 0 0;
+}
+
+#index-text {
+  font-family: "PT Serif", times, serif;
+  margin-left: 385px;
+  margin-top: 15em;
+  p {
+    line-height: 140%;
+    font-size: 17px;
+
+    &:first-letter {
+      font-size: 80px;
+      text-shadow: 1px 1px 1px #969696;
+      display: block;
+      float: left;
+      line-height: 0.75;
+      padding-right: 5px;
+    }
+  }
+}
+
+#texts {
+  list-style:none;
+  font-family: "PT Serif", times, serif;
+  margin-left: 350px;
+
+  li {
+    margin-top: 20px;
+    font-size: 22px;
+    @include nav-pipes;
+
+    a {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+}
+
+.mention {
+  .book {
+    font-style: italic;
+  }
+  .poem:before {
+    content:"\201C";
+  }
+  .poem:after {
+    content: "\201D";
+  }
+}
+
+.doctitle {
+  display: block;
+}
+
+.author {
+  display: block;
+  font-size: 18px;
+}
+
+
+footer {
+  clear: both;
+  overflow: auto;
+  border-top: 1px solid rgb(200,200,200);
+  margin: 0 5%;
+}
+
+#footer-links {
+  display: table;
+  float: right;
+  margin: 10px 5% 10px 0;
+}
+
+#license, #slab-logo, #uva-lib-logo, #praxis-logo {
+  font-family: "PT Serif", times, serif;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footer-nav {
+  clear: all;
+  margin: 30px 0 0 5%;
+  @include nav-pipes;
+
+  a {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+  }
+}
+
+p.blockquote {
+  padding-left: 8%;
+}
+
+#Praxis {
+  float: right;
+  width: 30%;
+  padding: 1%;
+  margin-top: 20%;
+
+  h2 {
+    font-size: 30px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  }
+}
+
+#page-content {
+  float: left;
+  width: 60%;
+  padding: 1%;
+  margin-right: 2%;
+
+  h3 {
+    line-height: 8px;
+  }
+}
+
+#Prismabob {
+  background-color: #ffffff;
+  float: left;
+  width: 60%;
+  padding: .5% 3% .5% 3%;
+  margin: 0 0 40px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+  margin-right: 1%;
+
+  h1 {
+    line-height: 1em;
+    font-family: "PT Serif", serif ;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 7%;
+  }
+
+  h2 {
+    line-height: 1em;
+    font-family: "PT Serif", serif ;
+    font-size: 24px;
+    text-align: center;
+  }
+  h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.text {
+  font-family: "PT Serif", Times, serif;
+  padding: 2%;
+}
+
+#highlight_instructions {
+  float: left;
+  font-size: 16px;
+  width: 60%;
+  text-align: center;
+  padding-left: 3%;
+}
+
+#sidebar {
+  float: right;
+  padding-top: 50px;
+  width: 30%;
+}
+
+#highlighters {
+  list-style: none;
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  margin-left: 0;
+  padding: 0;
+  line-height: 1;
+
+  li {
+    margin-bottom: 20px;
+    line-height: 150%;
+    clear: left;
+    overflow: hidden;
+    cursor:pointer;
+  }
+}
+
+span.facet {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 2%;
+  border-radius: 17px;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
+
+  &.red {
+    background-color: rgb(155,25,25);
+  }
+
+  &.green {
+    background-color: rgb(25,155,25);
+  }
+
+  &.blue {
+    background-color: rgb(25,25,155);
+  }
+  
+  &.yellow {
+    background-color: rgb(155,155,25);
+  }
+}
+
+.eraser {
+  font-style: italic;
+  cursor:pointer;
+  span {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  }
+}
+
+#eraser {
+  width: 95%;
+  margin-left: 2%;
+}
+
+#tools p {
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
+}
+
+#visualizations {
+  margin-top: 3em;
+}
+
+#viz-count span {
+  color: #B30000;
+  font-weight: bold;
+}
+
+#sketchtext {
+  border-top: 1px solid rgb(200,200,200);
+  padding-top: 0.5em;
+}
+
+#viz-sketches {
+  list-style: none;
+  img {
+    width: 75%;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    margin: 0.5em 0;
+  }
+}
+
+#userform {
+  width: 35%;
+  padding: 2%;
+  margin-top: 3%;
+  margin-left: 29%;
+  margin-bottom: 3%;
+  font-size: 16px;
+
+  input[type="submit"]{
+    margin-top: 10px;
+  }
+
+  input[type="email"] {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  input[type="password"] {
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  p {
+    @include nav-pipes;
+  }
+}
+
+#user_password_confirmation {
+  margin-bottom: 15px;
+}
+
+.fixed {
+  position:fixed;
+  top:0;
+  margin-right: 9%;
+}
+
+#contributors-fellows {
+  float:left;
+}
+
+#contributors-advisors {
+  margin-top: 82%;
+}
