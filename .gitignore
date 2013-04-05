@@ -10,3 +10,6 @@ db/*.sqlite3
 *.swp
 *~
 public/assets/
+
+# Ignore application configuration
+/config/application.yml
