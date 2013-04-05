@@ -81,14 +81,8 @@ class PrismsController < ApplicationController
         end
       end
     end
-<<<<<<< HEAD
-
     frequencies
   end
-=======
-    
-
-
     def new
       @prism = Prism.new
       respond_to do |format|
@@ -152,5 +146,4 @@ class PrismsController < ApplicationController
       end
       doc.root().to_s()
     end
->>>>>>> 8ea5baaadff056df0354cbc6ea1c397deb63806e
 end

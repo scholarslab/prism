@@ -15,13 +15,16 @@
     </li>
 
     <li>
-      <% if user_signed_in? %>
-      <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
-
-    <% else %>
-      <%= link_to t('header.sign_in'), new_user_session_path %>
-    <% end %>
+        <!-- The following code shows the user's email if they are signed in. !-->
+        <% if user_signed_in? %>
+          <%=t 'header.signed_in'%><%= current_user.email %>.
+          <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
+        <!-- end. !-->
+        <% else %>
+          <%= link_to t('header.sign_in'), new_user_session_path %>
+        <% end %>
     </li>
+
 </ul>
 </nav>
 
