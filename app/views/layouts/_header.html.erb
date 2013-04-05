@@ -4,10 +4,11 @@
       <%= link_to t('About'), about_path %>
     </li>
 
-    <li>
-      <a href="http://www.virginia.edu/history/user/359">myPrism</a>
-    </li>
-
+    <% if user_signed_in? %>
+      <li>
+        <a href="http://www.virginia.edu/history/user/359">myPrism</a>
+      </li>
+    <% end %>
 
     <li>
       <a href="Contact.html" target="_self">Browse</a>

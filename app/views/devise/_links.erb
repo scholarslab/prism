@@ -10,31 +10,3 @@
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %>
 <% end -%>
-
-<form id='browser_id_form' action='<%= url_for('/users/auth/browser_id/callback') %>'>
-  <input type='hidden' name='assertion' />
-</form>
-
-<script src="//browserid.org/include.js" type="text/javascript"></script>
-<script type="text/javascript">
-  $(function() {
-    $('#userform a').each(function(i, el) {
-      var $el = $(el);
-      if ($el.attr('href').indexOf('browser_id') !== -1) {
-        // Update the label.
-        $el.html('Sign in with Persona');
-
-        $el.click(function () {
-          navigator.id.get(function(assertion) {
-            if (assertion) {
-              $('input[name=assertion]').val(assertion);
-              $('#browser_id_form').submit();
-            }
-          });
-
-          return false;
-        });
-      }
-    });
-  });
-</script>

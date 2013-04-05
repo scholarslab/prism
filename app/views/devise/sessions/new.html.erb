@@ -5,9 +5,8 @@
 <h2>Sign In with Social Media</h2>
 
 <%= link_to image_tag('facebook.png'), omniauth_authorize_path(resource_name, "facebook")%>
-<%= link_to image_tag('persona.png'), url_for("/users/auth/browser_id") %>
+<%= link_to image_tag('persona.png'), url_for("/users/auth/browser_id"), :id => 'browser_id_link' %>
 <%= link_to image_tag('google.png'), omniauth_authorize_path(resource_name, "google") %>
-
 
 </div>
 
@@ -67,3 +66,26 @@
 
 	</div>
 </div>
+
+<form id='browser_id_form' action='<%= url_for('/users/auth/browser_id/callback') %>'>
+  <input type='hidden' name='assertion' />
+</form>
+
+<script src="//browserid.org/include.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+    $('#browser_id_link').each(function(i, el) {
+      var $el = $(el);
+      $el.click(function () {
+        navigator.id.get(function(assertion) {
+          if (assertion) {
+            $('input[name=assertion]').val(assertion);
+            $('#browser_id_form').submit();
+          }
+        });
+
+        return false;
+      });
+    });
+  });
+</script>
