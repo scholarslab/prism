@@ -2,8 +2,16 @@ source 'https://rubygems.org'
 
 gem 'rails', '~>3.2.13'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
-gem "devise", "~> 2.0.0"
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem "devise", "~> 2.2.0"
+
+gem 'omniauth'
+
+gem 'omniauth-google'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+
+gem 'figaro'
 
 # Error notifications
 gem 'airbrake', '~> 3.1.6'
@@ -35,7 +43,6 @@ group :development do
   gem "ffaker", "~> 1.8.1"
   gem "rails_best_practices"
 end
-
 
 group :development, :test do
   gem 'sqlite3', "~> 1.3.4"

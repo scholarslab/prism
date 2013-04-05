@@ -16,13 +16,13 @@
     <li>
       <% if user_signed_in? %>
       <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
+
     <% else %>
       <%= link_to t('header.sign_in'), new_user_session_path %>
     <% end %>
     </li>
 </ul>
 </nav>
-
 
 <header>
 <div class="header">
