@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130405210340) do
+ActiveRecord::Schema.define(:version => 20130408184920) do
 
   create_table "documents", :force => true do |t|
     t.string   "title"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20130405210340) do
 
   create_table "prisms", :force => true do |t|
     t.text     "prompt"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "document_id"
     t.string   "title"
     t.string   "author"
@@ -61,6 +61,9 @@ ActiveRecord::Schema.define(:version => 20130405210340) do
     t.string   "facet3"
     t.string   "facet4"
     t.string   "description"
+    t.integer  "user_id"
+    t.boolean  "unlisted"
+    t.integer  "publication_date"
   end
 
   create_table "users", :force => true do |t|
