@@ -88,7 +88,7 @@ en:
       <h3>Gwen Nally</h3> <p>Gwen Nally was our Prism Designer.  She worked with Cecilia Márquez to create wire frames and to style the website.  She is a PhD candidate in the Philosophy department.</p> 
       <h3>Chris Peck</h3> <p>Chris Peck worked on improvements to the highlighter tool and visualizations. He is a PhD student in the Music Department.</p>
       <h3>Brandon Walsh</h3> <p>Brandon Walsh worked on implementing Omniauth, helped with user uploads, and generally made snarky comments while the rest of the design team was working. He is a PhD student in the English department.</p>
-      <h3><a href='http://www.prism.scholarslab.org/pages/alumni'>Praxis Alumni</a></h3>
+      <h3><a href='/pages/alumni'>Praxis Alumni</a></h3>
     contributors_advisors_html:
       <h3>Jeremy Boggs</h3> <p>Humanities Design Architect (of Dreams), UVa Library Scholars' Lab; Wizard of Web Aesthetics</p>
       <h3>Wayne Graham</h3> <p>Head of R&D, UVa Library Scholars' Lab; The Obi-Wan Kenobi of Programming</p>
