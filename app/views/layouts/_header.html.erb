@@ -1,32 +1,37 @@
+<% if user_signed_in? %>
+<div id="user_meta">
+        <!-- The following code shows the user's email if they are signed in. !-->
+          <%= current_user.email %>.
+          <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
+        <!-- end. !-->
+</div>
+
+<% end %>
+
+
 <nav>
   <ul>
     <li>
       <%= link_to t('About'), about_path %>
     </li>
 
-    <% if user_signed_in? %>
-      <li>
-        <a href="http://www.virginia.edu/history/user/359">myPrism</a>
-      </li>
-    <% end %>
-
     <li>
       <a href="Contact.html" target="_self">Browse</a>
     </li>
 
     <li>
-        <!-- The following code shows the user's email if they are signed in. !-->
-        <% if user_signed_in? %>
-          <%=t 'header.signed_in'%><%= current_user.email %>.
-          <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
-        <!-- end. !-->
-        <% else %>
+    <% if user_signed_in? %>
+        <a href="http://www.virginia.edu/history/user/359">myPrism</a>
+    <% else %>
           <%= link_to t('header.sign_in'), new_user_session_path %>
-        <% end %>
-    </li>
+    <% end %>
 
+    </li>
+    
 </ul>
 </nav>
+
+  
 
 <header>
 <div class="header">
@@ -41,6 +46,8 @@
   
   </div>
 </div>
+
+
 </header>
 
 

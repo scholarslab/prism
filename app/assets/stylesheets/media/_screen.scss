@@ -8,7 +8,6 @@ body {
 	margin: 20px auto;
 	padding-top: 0 px;
 	@include border-radius(20px);
-	
 	font-family: $headerfont;
 }
 
@@ -37,6 +36,9 @@ nav {
 
 	font-family: $headerfont;
 	text-align: center;
+	width: 428px;
+	margin-left: auto;
+	margin-right: auto;
 
 	ul {
 		list-style: none;
@@ -48,7 +50,7 @@ nav {
 
 	li {
 		display:inline-block;
-		padding: 50px 50px;
+		padding: 30px 30px;
 		padding-bottom: 0px;
 	}
 
@@ -115,7 +117,7 @@ width: 300px;
 #signinpage {
 	width: 650px;
 	margin: 0 auto;
-
+	@include clearfix;
 }
 
 #signinform {
@@ -128,10 +130,52 @@ width: 300px;
 	float:right;
 }
 
+#user_meta {
+	float: right;
+	font-size: 12px;
+	color: grey;
+
+}
+
+
+
 //footer elements-----------------------------
 
 #footernav {
-	border-top: 1px solid #ccc;
+	text-align: center;	
+	margin-top: 50px;
 	clear: both;
+
+	a {
+		display:inline-block;
+		text-transform: uppercase;
+		color: grey;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	img {
+    	width: 100px;
+    	height: 15px;
+    	display: inline-block;
+    	}
+}
+
+//flash notice---------------------------------
+
+#flash_notice {
+	text-align: center;
+	background: #00CCFF;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 394px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+
+
 }
 
