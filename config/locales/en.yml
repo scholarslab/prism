@@ -53,21 +53,18 @@ en:
     description_p1_html: >-
       Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia, and specifically from <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">transparency mark-up games</a> designed by Bethany Nowviskie for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a>:
     description_p2: >
-     the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
+      the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
       somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion.
     description_p3_html: >-
       At SpecLab, Jerome McGann <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">further 
       developed the concept</a>, which became known as the "Patacritical Demon" &mdash; the best bit of vaporware to emerge from UVa at the turn of the century.
     description_p4_html: >-
       The Scholars' Lab offered these ideas as inspiration for the first project to be undertaken by graduate student fellows of 
-      <a href="http://praxis.scholarslab.org/">the Praxis Program</a> in its inaugural year. Our first task was to determine how to translate the physical exercise 
-      of marking a text into a digital one. We decided that we would continue to employ a constrained interpretive vocabulary and limit the length of the text in
-      order to stay true to the transparency game, during which texts would be marked up fairly quickly &mdash; ideally in one session. Also, like the transparency 
-      exercise, the end goal of Prism is to produce <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10">aesthetic provocations</a>, that is, visualizations which provoke further discussion. But because it is a 
-      digital project, Prism can integrate many individual interpretations and create a wide range of visualizations while maintaining data integrity.
+      <a href="http://praxis.scholarslab.org/">the Praxis Program</a> in its inaugural year. The task of the 2011-2012 team was to determine how to translate the physical exercise 
+      of marking a text into a digital one. They chose to employ a constrained interpretive vocabulary and to limit the length of the text in
+      order to stay true to the transparency game. Like the transparency exercise, the end goal of Prism is to produce <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10">aesthetic provocations</a>, that is, visualizations which provoke further discussion.  
     description_p5_html: >-
-      Prism expands upon current notions of crowdsourcing to allow for more meaningful interaction with "the crowd." Users interact subjectively with a text
-      and contribute to a collective interpretive energy that has infinite possibilities beyond the highlighting exercise itself &mdash; in research, in the classroom, or in engaging and experimenting with larger data in the humanities (computational linguistics and text mining, for example).
+      The 2012-2013 Praxis Team has retained the vision set by the original team.  Our primary goal was to expand Prism in a format that would allow for actual implementation in the classroom and scholarly conversation.  This led us to define two primary objectives.  The first was the ability for users to upload their own texts and to define their own interpretive categories.   The second was to create a more inviting and user-friendly environment that would encourage participation and exploration.  To that end, we have redesigned the website, paying special attention to work flow, ease of use, and aesthetic concerns.  In addition, both the visualization feature and highlighting function were refined.  Our hope is that Prism can now be more easily adapted by the user for a variety of interpretive projects.  
     praxis_title: The Praxis Program
     praxis_description_html: >
       <a href='http://praxis.scholarslab.org/'>The Praxis Program</a> is a 2011-13 pilot project of the <a href='http://www2.lib.virginia.edu/scholarslab/'>
@@ -85,12 +82,13 @@ en:
       graduate fellowship</a> in the digital humanities.
     contributors_title: Contributors
     contributors_fellows_html: >-
-      <h3>Alex Gil</h3> <p>Alex Gil did early development on the Rails setup. The most continental of the Fellows, Alex also built an i18n framework for multi-lingual support and translated the site into French, Spanish, and German. Towards the end he worked on migrating Prism to production. Alex is a doctoral candidate in the UVa English Department.</p>  
-      <h3>Brooke Lestock</h3> <p>Brooke Lestock served as Project Co-Manager, along with the fabulous Sarah Storti. Brooke was also a member of the design team, which entailed conceptualizing and wireframing the Prism site, styling odds and ends, as well as contributing and editing prose for the site as needed. She is a master's candidate in the UVa English Department.</p>
-      <h3>Lindsay O'Connor</h3> <p>Lindsay O'Connor was the devoted web designer among the Praxis Fellows. With plenty of help from Brooke and Sarah and Scholars' Lab R&D, she translated the team's wireframes and Ed's static page designs into their current web format, and also managed some of the design workflow. Lindsay is a doctoral candidate in the UVa English Department.</p> 
-      <h3>Sarah Storti</h3> <p>Sarah Storti was Project Co-Manager, together with the incomparable Brooke Lestock. Additionally, Sarah participated in design team discussions, helped to solidify the user story and wireframes for the site, and spent a significant amount of time writing, reading, and editing Prism site prose. She is a doctoral candidate in the UVa English Department.</p> 
-      <h3>Joanna Swafford</h3> <p>Joanna Swafford acted as lead developer for the project. She built the data model and the necessary Rails framework, along with the javascript that enables highlighting and visualizing the texts. Annie also stepped up as all-purpose trouble-shooter extraordinaire in the final weeks of development. She is a doctoral candidate in the UVa English Department.</p>
-      <h3>Ed Triplett</h3> <p>Ed Triplett, artistic visionary, designed a static prototype of the Prism webpage. His other duties included creating the Prism logo as well as making Adobe Illustrator versions of the many wireframes that emerged from design meetings. Ed also contributed sketches of possible future visualizations. He is a doctoral candidate in the UVa McIntire Department of Art.</p>
+      <h3>Shane Lin</h3> <p>Shane Lin refactored the database schema and worked on user uploads. He commands the loyalty of forest creatures and once won second place in a baking competition.  He is a student in the History department.</p>  
+      <h3>Claire Maiers</h3> <p>Claire Maiers, herder of cats, served as the Program Manager and worked on copy for the Prism website.  She is a PhD student in the Sociology department.</p>
+      <h3>Cecilia Márquez</h3> <p>Cecilia Márquez worked on the design team building and breaking CSS like it was her full time job. Her crowning achievement in Praxis was he making almost everyone in the office say "Honey Boo Boo" at least once. She is a PHD student in the History department.</p> 
+      <h3>Gwen Nally</h3> <p>Gwen Nally was our Prism Designer.  She worked with Cecilia Márquez to create wire frames and to style the website.  She is a PhD candidate in the Philosophy department.</p> 
+      <h3>Chris Peck</h3> <p>Chris Peck worked on improvements to the highlighter tool and visualizations. He is a PhD student in the Music Department.</p>
+      <h3>Brandon Walsh</h3> <p>Brandon Walsh worked on implementing Omniauth, helped with user uploads, and generally made snarky comments while the rest of the design team was working. He is a PhD student in the English department.</p>
+      <h3><a href='http://www.prism.scholarslab.org/pages/alumni'>Praxis Alumni</a></h3>
     contributors_advisors_html:
       <h3>Jeremy Boggs</h3> <p>Humanities Design Architect (of Dreams), UVa Library Scholars' Lab; Wizard of Web Aesthetics</p>
       <h3>Wayne Graham</h3> <p>Head of R&D, UVa Library Scholars' Lab; The Obi-Wan Kenobi of Programming</p>
@@ -105,4 +103,15 @@ en:
     instructions: Select one of the options below to display a visualization of collected data for this text.
     sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
          
+  alumni:
+    alumni_title: Praxis Alumni
+    year_title: 2011-2012 Contributors
+    contributors_alumni_html:
+      <h3>Alex Gil</h3> <p>Alex Gil did early development on the Rails setup. The most continental of the Fellows, Alex also built an i18n framework for multi-lingual support and translated the site into French, Spanish, and German. Towards the end he worked on migrating Prism to production. Alex is a doctoral candidate in the UVa English Department.</p>  
+      <h3>Brooke Lestock</h3> <p>Brooke Lestock served as Project Co-Manager, along with the fabulous Sarah Storti. Brooke was also a member of the design team, which entailed conceptualizing and wireframing the Prism site, styling odds and ends, as well as contributing and editing prose for the site as needed. She is a master's candidate in the UVa English Department.</p>
+      <h3>Lindsay O'Connor</h3> <p>Lindsay O'Connor was the devoted web designer among the Praxis Fellows. With plenty of help from Brooke and Sarah and Scholars' Lab R&D, she translated the team's wireframes and Ed's static page designs into their current web format, and also managed some of the design workflow. Lindsay is a doctoral candidate in the UVa English Department.</p> 
+      <h3>Sarah Storti</h3> <p>Sarah Storti was Project Co-Manager, together with the incomparable Brooke Lestock. Additionally, Sarah participated in design team discussions, helped to solidify the user story and wireframes for the site, and spent a significant amount of time writing, reading, and editing Prism site prose. She is a doctoral candidate in the UVa English Department.</p> 
+      <h3>Joanna Swafford</h3> <p>Joanna Swafford acted as lead developer for the project. She built the data model and the necessary Rails framework, along with the javascript that enables highlighting and visualizing the texts. Annie also stepped up as all-purpose trouble-shooter extraordinaire in the final weeks of development. She is a doctoral candidate in the UVa English Department.</p>
+      <h3>Ed Triplett</h3> <p>Ed Triplett, artistic visionary, designed a static prototype of the Prism webpage. His other duties included creating the Prism logo as well as making Adobe Illustrator versions of the many wireframes that emerged from design meetings. Ed also contributed sketches of possible future visualizations. He is a doctoral candidate in the UVa McIntire Department of Art.</p>
+
     

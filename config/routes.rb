@@ -13,6 +13,8 @@ Testing::Application.routes.draw do
   # Add routes to your pages, using get "pages/pagename"
   get "pages/index", :as => :home
   get "pages/about", :as => :about
+  get "pages/alumni", :as => :alumni
+  get "pages/terms", :as => :terms
 
   # To rewrite URLs, match the desired route to a current route:
   #match "about" => "pages#about"
