@@ -51,7 +51,7 @@
   # This code tracks the marking.  Initially not in marking mode.
   currently_marking = false
   # starts with the first color
-  current_color = all_colors[0]
+  current_color = all_colors[0]; $("#Prismabob").css('cursor', 'url(/assets/highlighter-' + current_color + '.gif),crosshair');
   # CSS selector for spans class=word. When mouse is clicked, start marking mode in
   # the current color
   $("span.word").mousedown((event) ->
@@ -69,6 +69,6 @@
 
   # Clicking on a facet sets the color
   $("li.facet").click ->
-    current_color = $("input", this).val()
+    current_color = $("input", this).val(); $("#Prismabob").css('cursor', 'url(/assets/highlighter-' + current_color + '.gif),crosshair'); 
     $("span.facet.border").removeClass("border")
     $(this).find("span.facet").addClass("border")
