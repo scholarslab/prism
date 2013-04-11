@@ -11,30 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408184920) do
-
-  create_table "documents", :force => true do |t|
-    t.string   "title"
-    t.string   "author"
-    t.integer  "pub_date"
-    t.text     "description"
-    t.string   "format"
-    t.text     "content"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.integer  "num_words"
-    t.boolean  "sandbox"
-  end
-
-  add_index "documents", ["title"], :name => "index_documents_on_title"
-
-  create_table "facets", :force => true do |t|
-    t.string   "color"
-    t.string   "category"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "prism_id"
-  end
+ActiveRecord::Schema.define(:version => 20130411031032) do
 
   create_table "markings", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -47,14 +24,11 @@ ActiveRecord::Schema.define(:version => 20130408184920) do
   end
 
   create_table "prisms", :force => true do |t|
-    t.text     "prompt"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
-    t.integer  "document_id"
     t.string   "title"
     t.string   "author"
     t.text     "content"
-    t.boolean  "sandbox"
     t.integer  "num_words"
     t.string   "facet1"
     t.string   "facet2"
@@ -63,7 +37,8 @@ ActiveRecord::Schema.define(:version => 20130408184920) do
     t.string   "description"
     t.integer  "user_id"
     t.boolean  "unlisted"
-    t.integer  "publication_date"
+    t.string   "publication_date"
+    t.string   "language"
   end
 
   create_table "users", :force => true do |t|
@@ -81,10 +56,6 @@ ActiveRecord::Schema.define(:version => 20130408184920) do
     t.datetime "updated_at",                             :null => false
     t.string   "authentication_token"
     t.string   "password_confirmation"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.integer  "facet_num"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
@@ -93,13 +64,13 @@ ActiveRecord::Schema.define(:version => 20130408184920) do
 
   create_table "word_markings", :force => true do |t|
     t.integer  "index"
-    t.integer  "facet1_count"
-    t.integer  "facet2_count"
-    t.integer  "facet3_count"
-    t.integer  "facet4_count"
+    t.integer  "facet1_count", :default => 0
+    t.integer  "facet2_count", :default => 0
+    t.integer  "facet3_count", :default => 0
+    t.integer  "facet4_count", :default => 0
     t.integer  "prism_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   add_index "word_markings", ["prism_id"], :name => "index_word_markings_on_prism_id"
