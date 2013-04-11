@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(:version => 20130411151203) do
   create_table "documents", :force => true do |t|
     t.integer "pub_date"
     t.string  "format"
-    t.text    "content"
     t.boolean "sandbox"
   end
 
