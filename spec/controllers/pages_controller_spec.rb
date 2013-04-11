@@ -23,10 +23,6 @@ describe PagesController do
       visit 'index'
       page.should have_selector("a", :href => '/users/sign_in')
     end
-    it "should have a sign up link" do
-      visit 'index'
-      page.should have_selector('a', :text => 'Sign up')
-    end
   end
 
 
