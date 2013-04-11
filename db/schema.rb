@@ -13,31 +13,12 @@
 
 ActiveRecord::Schema.define(:version => 20130411151203) do
 
-  create_table "authentications", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "index"
-    t.string   "create"
-    t.string   "destroy"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "documents", :force => true do |t|
-    t.string   "title"
-    t.string   "author"
-    t.integer  "pub_date"
-    t.text     "description"
-    t.string   "format"
-    t.text     "content"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.integer  "num_words"
-    t.boolean  "sandbox"
+    t.integer "pub_date"
+    t.string  "format"
+    t.text    "content"
+    t.boolean "sandbox"
   end
-
-  add_index "documents", ["title"], :name => "index_documents_on_title"
 
   create_table "facets", :force => true do |t|
     t.string   "color"
@@ -90,7 +71,6 @@ ActiveRecord::Schema.define(:version => 20130411151203) do
     t.string   "password_confirmation"
     t.string   "provider"
     t.string   "uid"
-    t.string   "nickname"
     t.integer  "facet_num"
   end
 
