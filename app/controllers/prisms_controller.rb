@@ -1,6 +1,11 @@
 class PrismsController < ApplicationController
   before_filter :authenticate_user!, :only => [:highlight, :highlight_post, :visualize]
 
+  def index
+    @title = "Prisms"
+    @prisms = Prism.all
+  end
+
   def highlight
     @title = "Highlight"
     @prism = Prism.find(params[:id])
