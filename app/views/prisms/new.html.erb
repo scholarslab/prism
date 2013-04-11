@@ -15,16 +15,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :prompt %><br />
-    <%= f.text_area :prompt %>
-  </div>
-  <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :author %><br />
     <%= f.text_field :author %>
+  </div>
+    <div class="field">
+    <%= f.label :publication_date %><br />
+    <%= f.text_field :publication_date %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
@@ -33,15 +37,7 @@
   <div class="field">
     <%= f.label :content %><br />
     <%= f.text_area :content %>
-  </div>
-  <div class="field">
-    <%= f.label :num_words %><br />
-    <%= f.number_field :num_words %>
-  </div>
-  <div class="field">
-    <%= f.label :sandbox %><br />
-    <%= f.check_box :sandbox %>
-  </div>
+  </div> 
   <div class="field">
     <%= f.label :facet1 %><br />
     <%= f.text_field :facet1 %>
