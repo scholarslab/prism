@@ -18,14 +18,14 @@
 
 	<td><%= prism.title %></td>
 
-     <td> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+     <td class="highlight"> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
         <%= t 'index.highlight' %>
 <!-- <%= image_tag('LOGO.png') %> -->
       <% end %>
      </td>
 
 
-    <td>  <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+    <td class="visualize">  <%= link_to(visualize_path(prism), :class => 'visualize') do %>
         <%= t 'index.visualize' %>
       <% end %>
      </td>

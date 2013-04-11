@@ -192,3 +192,24 @@ width: 300px;
 	background: #00CCFF;
 }
 
+//table styling--------------------------------
+
+h1 {text-align: center;}
+
+th, td {
+	border-bottom: 1px solid #CCCCCC;
+	padding: 10px;
+	}
+
+th {
+	height: 50px;
+	border-bottom-width: 3px;
+}
+
+td {
+	height:50px;
+	vertical-align:bottom;
+	&.visualize,
+	&.highlight {width: 15%;}
+}
+
