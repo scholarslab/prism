@@ -84,7 +84,7 @@ de:
     requested: "Someone has requested a link to change your password, and you can do this through the link below."
     ignore: "If you didn't request this, please ignore this email."
     wont: "Your password won't change until you access the link above and create a new one."
-    privacy: "We won't share your e-mail address, we promise."  
+    privacy_html: "We will never give your email away except to comply with the law. For more information, read our <a href='/pages/terms'>Terms of Service</a>." 
     edit: Edit 
     cancel: Cancel my account
     unhappy: "Unhappy?"
