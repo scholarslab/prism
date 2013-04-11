@@ -173,23 +173,24 @@ width: 300px;
 
 .flashmessage{
 	text-align: center;
-	color: white;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 15px;
-	padding-bottom: 15px;
 	width: 394px;
+	font-weight: bold;
+	padding-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 20px;
+	text-transform: uppercase;
 }
 
 #flash_notice {
-	background: #00CCFF;
+	color: #00CCFF;
+
 }
 
 #flash_alert {
-	background: #00CCFF;
+	color: #FF4747;
+
 }
 
 //table styling--------------------------------
