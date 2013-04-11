@@ -80,6 +80,14 @@ h3 {
 	font-size: 18px;
 }
 
+table {
+	width: 100%;
+
+	th {
+	 text-align:left;
+	}
+}
+
 p {
 	font-family: $parafont;
 	font-size:15px;
@@ -163,9 +171,8 @@ width: 300px;
 
 //flash notice---------------------------------
 
-#flash_notice {
+.flashmessage{
 	text-align: center;
-	background: #00CCFF;
 	color: white;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -175,7 +182,13 @@ width: 300px;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 20px;
+}
 
+#flash_notice {
+	background: #00CCFF;
+}
 
+#flash_alert {
+	background: #00CCFF;
 }
 

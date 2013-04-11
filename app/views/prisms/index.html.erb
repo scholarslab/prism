@@ -1,3 +1,40 @@
+<h1>Browse Prisms</h1>
+
+<table cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Highlight</th>
+			<th>Visualize</th>
+		</tr>
+
+	</thead>
+
+	<tbody>
+
+
 <% @prisms.each do |prism| %>
-<%= prism.title %>
+<tr> 
+
+	<td><%= prism.title %></td>
+
+     <td> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+        <%= t 'index.highlight' %>
+<!-- <%= image_tag('LOGO.png') %> -->
+      <% end %>
+     </td>
+
+
+    <td>  <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+        <%= t 'index.visualize' %>
+      <% end %>
+     </td>
+
+</tr>
 <% end %>
+	
+
+	</tbody>
+
+
+</table>
