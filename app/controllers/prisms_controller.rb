@@ -1,7 +1,7 @@
 require 'set'
 
 class PrismsController < ApplicationController 
-    before_filter :authenticate_user!, :only => [:highlight, :highlight_post, :visualize] 
+    before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
 
     def highlight
         @title = "Highlight"
@@ -238,5 +238,23 @@ class PrismsController < ApplicationController
         end
     end
 
+def destroy
+    @prism = Prism.find(params[:id])
+    for marking in @prism.markings
+        marking.destroy
+    end
+    for word_marking in @prism.word_markings
+        word_marking.destroy
+    end
+     respond_to do |format|
+        if @prism.destroy
+          format.html { redirect_to index, notice: 'Prism was successfully destroyed.' }
+          format.json { head :no_content }
+        else
+          format.html { redirect_to index, notice: 'Prism could not be destroyed.' }
+          format.json { head :no_content }
+        end
+    end
+end
 
 end
