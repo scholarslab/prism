@@ -3,6 +3,11 @@ require 'set'
 class PrismsController < ApplicationController 
     before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
 
+    def before_create()
+        require 'uuidtools'
+        self.id = UUID.timestamp_create().to_s
+    end
+
     def highlight
         @title = "Highlight"
         @prism = Prism.find(params[:id])

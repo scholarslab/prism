@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(:version => 20130411031032) do
     t.integer  "facet_num"
   end
 
-  create_table "prisms", :force => true do |t|
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+  create_table "prisms", :id => false, :force => true do |t|
+    t.string   "uuid",             :limit => 36
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "title"
     t.string   "author"
     t.text     "content"
