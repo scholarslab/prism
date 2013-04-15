@@ -7,11 +7,13 @@
   </script>
 <% end %>
 
+
 <div class="page-margin">
     <div id="Prismabob">
     <h1><%= @prism.title.html_safe %></h1>
     <h2><%= @prism.author %></h2>
-
+    <h2><%= @prism.publication_date %></h2>
+    <h2><%= @prism.description %></h2>
     <div class="text">
       <%= @prism.content.html_safe %>
     </div>
@@ -20,11 +22,29 @@
     <div id="visualizations">
       <p id="visualization-help"><%= t "visualize.instructions" %> </p>
       <ul id="highlighters">
-        <% for facet in @prism.facets %>
+        <% if @prism.facet1? %>
           <li class="vis_facet">
-            <input type="hidden" class="color" value="<%=facet.color%>"/>
-            <input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/>
-            <span class="facet <%=facet.color%>"></span><%=facet.category%></li>
+            <input type="hidden" class="color" value="<%="red"%>"/>
+            <input type="hidden" value="<%=@frequencies["red"]%>" class="freq"/>
+            <span class="facet <%="red"%>"></span><%=@prism.facet1%></li>
+        <% end %>
+        <% if @prism.facet2? %>
+          <li class="vis_facet">
+            <input type="hidden" class="color" value="<%="green"%>"/>
+            <input type="hidden" value="<%=@frequencies["green"]%>" class="freq"/>
+            <span class="facet <%="green"%>"></span><%=@prism.facet2%></li>
+        <% end %>
+        <% if @prism.facet3? %>
+          <li class="vis_facet">
+            <input type="hidden" class="color" value="<%="blue"%>"/>
+            <input type="hidden" value="<%=@frequencies["blue"]%>" class="freq"/>
+            <span class="facet <%="blue"%>"></span><%=@prism.facet3%></li>
+        <% end %>
+        <% if @prism.facet4? %>
+          <li class="vis_facet">
+            <input type="hidden" class="color" value="<%="yellow"%>"/>
+            <input type="hidden" value="<%=@frequencies["yellow"]%>" class="freq"/>
+            <span class="facet <%="yellow"%>"></span><%=@prism.facet4%></li>
         <% end %>
       </ul>
       <p id="viz-count">
