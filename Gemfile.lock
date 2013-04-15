@@ -88,8 +88,13 @@ GEM
       warden (~> 1.2.1)
     diff-lcs (1.1.3)
     erubis (2.7.0)
+<<<<<<< HEAD
+    eventmachine (1.0.1)
+    eventmachine (1.0.1-x86-mingw32)
+=======
     eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
+>>>>>>> develop
     execjs (1.3.0)
       multi_json (~> 1.0)
     factory_girl (2.2.0)
@@ -100,10 +105,16 @@ GEM
     faraday (0.8.7)
       multipart-post (~> 1.1)
     ffaker (1.8.1)
+<<<<<<< HEAD
+    ffi (1.4.0)
+    ffi (1.4.0-x86-mingw32)
+    figaro (0.6.2)
+=======
     ffi (1.6.0)
     ffi (1.6.0-x86-mingw32)
     figaro (0.6.3)
       bundler (~> 1.0)
+>>>>>>> develop
       rails (>= 3, < 5)
     forgery (0.3.12)
       nokogiri (~> 1.4)
@@ -113,8 +124,12 @@ GEM
       json (>= 1.7.6)
     gherkin (2.11.6-x86-mingw32)
       json (>= 1.7.6)
+<<<<<<< HEAD
+    guard (1.6.2)
+=======
     guard (1.7.0)
       formatador (>= 0.2.4)
+>>>>>>> develop
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
@@ -152,9 +167,15 @@ GEM
     minitest (4.7.0)
     multi_json (1.0.4)
     multipart-post (1.2.0)
+<<<<<<< HEAD
+    newrelic_rpm (3.5.8.72)
+    nokogiri (1.5.6)
+    nokogiri (1.5.6-x86-mingw32)
+=======
     newrelic_rpm (3.6.0.78)
     nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
+>>>>>>> develop
     nyan-cat-formatter (0.0.9)
     oauth (0.4.7)
     oauth2 (0.8.1)
@@ -186,8 +207,13 @@ GEM
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     orm_adapter (0.4.0)
+<<<<<<< HEAD
+    pg (0.14.1)
+    pg (0.14.1-x86-mingw32)
+=======
     pg (0.15.1)
     pg (0.15.1-x86-mingw32)
+>>>>>>> develop
     polyglot (0.3.3)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -271,7 +297,12 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.7)
     sqlite3 (1.3.7-x86-mingw32)
+<<<<<<< HEAD
+    terminal-table (1.4.5)
+    thin (1.5.0)
+=======
     thin (1.5.1)
+>>>>>>> develop
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
