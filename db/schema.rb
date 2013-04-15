@@ -11,12 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130415185807) do
+ActiveRecord::Schema.define(:version => 20130411031032) do
 
-  create_table "facets", :force => true do |t|
-    t.string  "description"
-    t.integer "prism_id"
-    t.integer "order"
+  create_table "markings", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.text     "word_array"
+    t.integer  "facet_id"
+    t.integer  "prism_id"
+    t.integer  "facet_num"
   end
 
   create_table "prisms", :id => false, :force => true do |t|
@@ -27,6 +31,10 @@ ActiveRecord::Schema.define(:version => 20130415185807) do
     t.string   "author"
     t.text     "content"
     t.integer  "num_words"
+    t.string   "facet1"
+    t.string   "facet2"
+    t.string   "facet3"
+    t.string   "facet4"
     t.string   "description"
     t.integer  "user_id"
     t.boolean  "unlisted"
@@ -49,9 +57,6 @@ ActiveRecord::Schema.define(:version => 20130415185807) do
     t.datetime "updated_at",                             :null => false
     t.string   "authentication_token"
     t.string   "password_confirmation"
-    t.string   "provider"
-    t.string   "uid"
-    t.integer  "facet_num"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
@@ -60,10 +65,15 @@ ActiveRecord::Schema.define(:version => 20130415185807) do
 
   create_table "word_markings", :force => true do |t|
     t.integer  "index"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "user_id"
-    t.integer  "facet_id"
+    t.integer  "facet1_count", :default => 0
+    t.integer  "facet2_count", :default => 0
+    t.integer  "facet3_count", :default => 0
+    t.integer  "facet4_count", :default => 0
+    t.integer  "prism_id"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
+
+  add_index "word_markings", ["prism_id"], :name => "index_word_markings_on_prism_id"
 
 end
