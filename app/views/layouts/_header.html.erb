@@ -16,12 +16,12 @@
     </li>
 
     <li>
-      <a href="Contact.html" target="_self">Browse</a>
+      <a href="browse" target="_self">Browse</a>
     </li>
 
     <li>
     <% if user_signed_in? %>
-        <a href="http://www.virginia.edu/history/user/359">myPrism</a>
+        <a href="myprism">myPrism</a>
     <% else %>
           <%= link_to t('header.sign_in'), new_user_session_path %>
     <% end %>
