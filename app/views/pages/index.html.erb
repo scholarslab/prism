@@ -1,31 +1,8 @@
-<div class="page-margin">
 
-<%= image_tag ('fakeviz5.png'), :id => 'homepic' %>
-<div id="index-text">
-	  <p> <%=t 'index.about_text_html' %></p>
- </div>
+<p class="motto">A Tool for Collaborative Interpretation of Texts</p>
 
- <ul id="texts" class="mention">
-   <li> <span class='doctitle'>"The Sneetches"</span>
-        <span class='author'>Dr. Seuss</span>
-        <a href="/prisms/sandbox/highlight">Play in the Sandbox</a>
-  <% @prisms.each do | prism | %>
-    <li>
-    <div class="doc-display">
-      <span class='doctitle'><%= prism.document.title.html_safe %></span>
-      <span class='author'><%= prism.document.author %></span>
-     <div class="doc-tools">
-      <%= link_to(highlight_path(prism), :class => 'highlight') do %>
-        <%= t 'index.highlight' %>
-      <% end %>
-      <%= link_to(visualize_path(prism), :class => 'visualize') do %>
-        <%= t 'index.visualize' %>
-      <% end %>
-      </div>
-     </div>
-    </li>
-  <% end %>
-</ul>
-
+<div id="buttons">
+<%= link_to image_tag('button1.png'), home_path %>
+<%= link_to image_tag('button2.png'), home_path %>
+<%= link_to image_tag('button3.png'), home_path %>
 </div>
-

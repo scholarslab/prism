@@ -2,6 +2,7 @@ Testing::Application.routes.draw do
   resources :authentications
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   scope ':locale' do
     resources :buckets, :only => [ :index ]
     resources :items, :only => [ :index, :show, :edit, :update ]
@@ -9,6 +10,7 @@ Testing::Application.routes.draw do
  resources :documents do
     resources :markings
   end
+ resources :prisms
   
   # Add routes to your pages, using get "pages/pagename"
   get "pages/index", :as => :home

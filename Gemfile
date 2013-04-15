@@ -1,29 +1,31 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '~>3.2.11'
+gem 'rails', '~>3.2.13'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
+gem 'bcrypt-ruby', '~> 3.0.0'
 gem "devise", "~> 2.2.0"
 
 gem 'omniauth'
-gem "omniauth-twitter"
 
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+gem 'omniauth-browserid'
 
 gem 'figaro'
 
-gem 'compass-rails', '~> 1.0.1'
+# Error notifications
+gem 'airbrake', '~> 3.1.6'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+gem 'jquery-rails'
+gem "nokogiri", "~> 1.5.0"
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   #gem 'compass', git: 'https://github.com/chriseppstein/compass.git' # beta until release
   gem 'compass', '~> 0.12.1'
-  #gem 'compass-rails', '~> 1.0.1'
+  gem 'compass-rails', '~> 1.0.1'
   gem 'compass-susy-plugin', '~> 0.9'
   gem 'sass-rails'
   gem 'coffee-rails', '~> 3.2.1'
@@ -31,42 +33,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Error notifications
-gem 'airbrake', '~> 3.1.6'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-#gem 'ruby-debug19', :require => 'ruby-debug'
-#
-
-group :production, :development do
+group :production, :staging, :development do
   gem 'dalli', '~>1.0.5' # for memcached
+  gem 'memcachier', "~> 0.0.2"
 end
 
 group :development do
-   #gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
-   gem 'annotate',"2.4.1.beta1"
-   gem "ffaker", "~> 1.8.1"
-   # gem "rails-footnotes", "~> 3.7.5"
-   gem "rails_best_practices"
-   #gem "heroku", "~> 2.9.0"
-   gem "nokogiri", "~> 1.5.0"
-   # gem 'rails-dev-tweaks', '~> 0.5.1'
-   # gem 'rails-dev-tweaks', '~> 0.5.1'
-end
-
-group :pgdev do
-  gem 'pg'
+  gem 'annotate',"2.4.1.beta1"
+  gem "ffaker", "~> 1.8.1"
+  gem "rails_best_practices"
 end
 
 group :development, :test do
@@ -93,12 +69,10 @@ group :test do
   gem 'jasmine-jquery-rails'
 end
 
-group :production do
+group :production, :staging do
   #gem "heroku", "~>2.9.0"
   gem "pg"
   gem "thin" # use thin as the production server
- # gem "devise", "~> 2.0.0"
-  gem "nokogiri", "~> 1.5.0"
   gem 'jasmine-jquery-rails'
   gem 'newrelic_rpm'
 end

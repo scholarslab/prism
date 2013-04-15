@@ -1,1 +1,73 @@
 // @media print --------------------------------------------------------------
+@page {
+  margin: 0.75in;
+}
+
+* {
+  background: transparent !important;
+  color: black !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  -ms-filter: none !important;
+  float:none !important;
+}
+
+body {
+  font-family: "Times New Roman", serif;
+  color: black;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+abbr[title]:after {
+  content: " (" attr(title) ")";
+}
+
+pre, blockquote {
+  page-break-inside: avoid;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tr, img {
+  page-break-inside: avoid;
+}
+
+img {
+  max-width: 100% !important;
+}
+
+p, ul, ol {
+  orphans: 3;
+  widows: 3;
+}
+
+#{headings(1,6)} {
+  page-break-after: avoid;
+}
+
+div[role=main] {
+  #{headings(1,2)}{
+    margin: 2em 0 0;
+  }
+
+  #{headings(3,6)} {
+    margin: 1em 0 0;
+
+    & + p,
+    & + ul,
+    & + ol,
+    & + blockquote {
+      margin-top:0;
+    }
+  }
+}
+
+nav {
+  display:none;
+}

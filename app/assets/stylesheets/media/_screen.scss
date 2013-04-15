@@ -1,0 +1,181 @@
+html {	
+	background: white;
+}
+
+body {
+	max-width: 800px; 
+	background: white; 
+	margin: 20px auto;
+	padding-top: 0 px;
+	@include border-radius(20px);
+	font-family: $headerfont;
+}
+
+
+header {
+	
+	text-align: center;
+	padding-top: 0px;
+}
+
+.motto {text-align: center;
+	font-size: 16px;
+}
+
+#buttons img{
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    @include border-radius(20px);
+}
+
+#buttons {text-align: center;
+	margin-top:25px;}
+
+nav {
+
+	font-family: $headerfont;
+	text-align: center;
+	width: 428px;
+	margin-left: auto;
+	margin-right: auto;
+
+	ul {
+		list-style: none;
+		margin-left: 0px;
+		padding-top: 25px;
+		padding-left: 0px;
+		padding-bottom: 0px;
+	}
+
+	li {
+		display:inline-block;
+		padding: 30px 30px;
+		padding-bottom: 0px;
+	}
+
+	a { 
+		text-decoration: none;
+		color: black;
+	}
+}
+ 
+a {text-decoration: none; color: $blue;}
+
+h {padding: 0;
+}
+
+nav, h1, h2,
+.motto {text-transform: uppercase;
+		font-weight: normal;
+		font-size: 18px;
+}
+
+h2 {
+	padding-top: 20px;	
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 18px;
+}
+
+p {
+	font-family: $parafont;
+	font-size:15px;
+}
+
+p.motto {
+	font-family: $headerfont;
+}
+
+//sign-in elements---------------------------
+
+label, 
+input[type=email], 
+input[type=password] 
+{display: block;
+border-radius:20px;
+height: 30px;
+width: 300px;
+}
+
+#socialmedia {
+	text-align:center; 
+	border-bottom: 1px solid #ccc;
+	padding: 20px 0;
+
+	img{
+    	width: 50px;
+    	height: 50px;
+    	padding: 10px;
+    	display: inline-block;
+
+    }
+    }
+
+#signinpage {
+	width: 650px;
+	margin: 0 auto;
+	@include clearfix;
+}
+
+#signinform {
+	width: 47%;
+	float:left;
+}
+
+#userform {
+	width: 47%;
+	float:right;
+}
+
+#user_meta {
+	float: right;
+	font-size: 12px;
+	color: grey;
+
+}
+
+
+
+//footer elements-----------------------------
+
+#footernav {
+	text-align: center;	
+	margin-top: 50px;
+	clear: both;
+
+	a {
+		display:inline-block;
+		text-transform: uppercase;
+		color: grey;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	img {
+    	width: 100px;
+    	height: 15px;
+    	display: inline-block;
+    	}
+}
+
+//flash notice---------------------------------
+
+#flash_notice {
+	text-align: center;
+	background: #00CCFF;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 394px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+
+
+}
+
