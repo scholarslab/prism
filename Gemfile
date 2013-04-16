@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~>3.2.13'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
+
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "devise", "~> 2.2.0"
 
@@ -11,6 +12,9 @@ gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-browserid'
+
+gem "uuidtools"
+
 
 gem 'figaro'
 

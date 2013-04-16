@@ -1,59 +1,55 @@
 <% content_for :extra_head do %>
-<script type="text/javascript" charset="utf-8">
-$(function() {
-  setup_visualize();
-  select_facet($("li.vis_facet").eq(0));
-})
+  <script type="text/javascript" charset="utf-8">
+$(setup_highlight)
 </script>
 <% end %>
 
-<div class="page-margin">
-  <div id="Prismabob">
-    <h1><%= @prism.title.html_safe %></h1>
-    <h2><%= @prism.author %></h2>
+<div id="Prismabob">
+  <h1><%= @prism.title.html_safe %></h1>
+  <h2><%= @prism.author %></h2>
+  <h2><%= @prism.publication_date %></h2>
+  <h2><%= @prism.description %></h2>
+  <div class="text">
+    <%= @prism.content.html_safe %>
+  </div>
+</div>
 
-    <div class="text">
-      <%= @prism.content.html_safe %>
-    </div>
+
+<div class="page-margin">
+  <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
+  <div id="Prismabob">
+
   </div>
   <div id="sidebar">
-    <div id="visualizations">
-      <p id="visualization-help"><%= t "visualize.instructions" %> </p>
+    <div id="tools">
       <ul id="highlighters">
-        <% for facet in @prism.facets %>
-          <li class="vis_facet">
-        <input type="hidden" class="color" value="<%=facet.color%>"/>
-        <input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/>
-        <span class="facet <%=facet.color%>"></span><%=facet.category%></li>
-      <% end %>
-      </ul>
-      <p id="viz-count">
-      <span><% if @usercounter != nil %>
-        <%=@usercounter%></span> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
-    <% end %>
-      </p>
-      <p id="sketchtext"><%= t 'visualize.sketches' %></p>
-      <ul id="viz-sketches">
-        <li>
-        <%= link_to image_tag('viz001.jpg'), image_path('viz001.jpg') %>
-        </li>
-        <li>
-        <%= link_to image_tag('viz002.jpg'), image_path('viz002.jpg') %>
-        </li>
-        <li>
-        <%= link_to image_tag('viz003.jpg'), image_path('viz003.jpg') %>
-        </li>
-        <li>
-        <%= link_to image_tag('viz004.jpg'), image_path('viz004.jpg') %>
-        </li>
-        <li>
-        <%= link_to image_tag('viz005.jpg'), image_path('viz005.jpg') %>
-        </li>
-        <li>
-        <%= link_to image_tag('viz006.jpg'), image_path('viz006.jpg') %>
-        </li>
-      </ul>
 
+        <% if @prism.facet1? %>
+          <li class="facet"><input type="hidden" value="red"/><span class="facet red"></span><%=@prism.facet1%></li>
+      <% end %>
+        <% if @prism.facet2? %>
+          <li class="facet"><input type="hidden" value="green"/><span class="facet green"></span><%=@prism.facet2%></li>
+      <% end %>
+        <% if @prism.facet3? %>
+          <li class="facet"><input type="hidden" value="blue"/><span class="facet blue"></span><%=@prism.facet3%></li>
+      <% end %>
+        <% if @prism.facet4? %>
+          <li class="facet"><input type="hidden" value="yellow"/><span class="facet yellow"></span><%=@prism.facet4%></li>
+      <% end %>
+
+        <li class="facet eraser"><input type="hidden" value="delete"/><span class="facet"><%= image_tag ('eraser3.png'), :id => 'eraser' %></span><%= t "highlight.eraser" %></li>
+      </ul>
+      <%= form_tag do %>
+        <input type="hidden" value="" name="facet1_indices" id="red_indices"/>
+      <input type="hidden" value="" name="facet2_indices" id="green_indices"/>
+      <input type="hidden" value="" name="facet3_indices" id="blue_indices"/>
+      <input type="hidden" value="" name="facet4_indices" id="yellow_indices"/>
+
+      <input type="submit" value="Save Highlights" />
+    <% end %>
+      <p id ="publication_date"><%= @prism.publication_date %> </p>
+      <p id="description"><%= @prism.description %></p>
     </div>
   </div>
 </div>
+

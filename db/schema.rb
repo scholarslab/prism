@@ -11,30 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411151203) do
-
-  create_table "documents", :force => true do |t|
-    t.string   "title"
-    t.string   "author"
-    t.integer  "pub_date"
-    t.text     "description"
-    t.string   "format"
-    t.text     "content"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.integer  "num_words"
-    t.boolean  "sandbox"
-  end
-
-  add_index "documents", ["title"], :name => "index_documents_on_title"
-
-  create_table "facets", :force => true do |t|
-    t.string   "color"
-    t.string   "category"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "prism_id"
-  end
+ActiveRecord::Schema.define(:version => 20130411031032) do
 
   create_table "markings", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -43,23 +20,26 @@ ActiveRecord::Schema.define(:version => 20130411151203) do
     t.text     "word_array"
     t.integer  "facet_id"
     t.integer  "prism_id"
+    t.integer  "facet_num"
   end
 
-  create_table "prisms", :force => true do |t|
-    t.text     "prompt"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.integer  "document_id"
+  create_table "prisms", :id => false, :force => true do |t|
+    t.string   "uuid",             :limit => 36
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "title"
     t.string   "author"
     t.text     "content"
-    t.boolean  "sandbox"
     t.integer  "num_words"
     t.string   "facet1"
     t.string   "facet2"
     t.string   "facet3"
     t.string   "facet4"
     t.string   "description"
+    t.integer  "user_id"
+    t.boolean  "unlisted"
+    t.string   "publication_date"
+    t.string   "language"
   end
 
   create_table "users", :force => true do |t|
@@ -77,9 +57,6 @@ ActiveRecord::Schema.define(:version => 20130411151203) do
     t.datetime "updated_at",                             :null => false
     t.string   "authentication_token"
     t.string   "password_confirmation"
-    t.string   "provider"
-    t.string   "uid"
-    t.integer  "facet_num"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
