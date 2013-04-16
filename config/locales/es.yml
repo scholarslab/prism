@@ -6,35 +6,35 @@ es:
     visualize: "Visualizar"
     in_development: "Estamos trabajando a la velocidad de la luz."
     about_text_html: >-
-      Bienvenidos a nuestro  <a href='/pages/about'>experimento</a> de visualización de multiples lecturas de un texto en común. Prism, o Prisma, es el practicum digital del <a href='http://praxis.scholarslab.org'>Programa Praxis</a>, año escolar 2011-2012. Juega en nuestro <a href='/prisms/sandbox/highlight'>modelo de prueba</a>, o crea <a href='/users/sign_up'>una cuenta</a> y comparte tus lecturas de Jefferson, Joyce y Poe. Prism es  <a href='https://github.com/scholarslab/prism'>open-source</a>. Sugerencias y reportes de errores son <a href='https://github.com/scholarslab/prism/issues'>bienvenidos</a>."
+      Bienvenidos a nuestro  <a href='/pages/about'>experimento</a> de colaboración pública mediante la visualización de múltiples lecturas del mismo texto. Prism, o Prisma, es el proyecto de humanidades digitales de la práctica digital del <a href='http://praxis.scholarslab.org'>Programa Praxis</a>, año escolar 2011-2012. Juega en nuestro <a href='/prisms/sandbox/highlight'>modelo de prueba</a>, o crea <a href='/users/sign_up'>una cuenta</a> y comparte tus lecturas de Jefferson, Joyce y Poe. Prism es  <a href='https://github.com/scholarslab/prism'>open-source</a>. Sugerencias y reportes de errores son <a href='https://github.com/scholarslab/prism/issues'>bienvenidos</a>."
   header:
     link_home: "Portada"
     description_html: >-
-      Prism es una herramienta creada con el fin de <a href='%{about_url}'>colectivizar la interpretación</a> de textos. El proyecto forma parte del <a href='http://praxis.scholarslab.org'>Praxis Program,</a> una iniciativa del <a href='http://scholarslab.org'>Scholars' Lab</a> de la Universidad de Virginia.
+      Prism es una herramienta para la <a href='%{about_url}'>interpretación colectiva</a> de textos. El proyecto forma parte del <a href='http://praxis.scholarslab.org'>Praxis Program,</a> una iniciativa del <a href='http://scholarslab.org'>Scholars' Lab</a> de la Universidad de Virginia.
     link_instructions: "Instrucciones"
     link_documents: "Documentos"
     link_about: "Información"
     signed_in: "Conectad@ como "
     form_email: "Email:"
     form_password: "Contraseña:"
-    remember_me: "Manten la conexión"
+    remember_me: "Recordarme"
     sign_in: "Iniciar sesión"
     sign_out: "Terminar sesión"
-    forgot: "¿Olvidó la contraseña?"
+    forgot: "¿Olvidaste la contraseña?"
     register: "Regístrate"
 
   about:
     prism_title: "Sobre Prism"
     description_p1_html: >-
-      Prism es una herramienta para la "colectivización de la interpretación." El concepto nace de una decada de conversaciones alrededor de los diferentes tipos de interpretación posibles, y de juegos con marcadores y transparencias diseñados por <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">Bethany Nowviskie</a> y sus colegas del <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> :
+      Prism es una herramienta para la "interpretación colectiva." El concepto nace de una decada de conversaciones alrededor de los diferentes tipos de interpretación posibles, y de juegos con marcadores y transparencias diseñados por <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">Bethany Nowviskie</a> y sus colegas del <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a> :
     description_p2: >-
-      "el juego original consistía de fotocopias, transparencias, marcadores y una pregunta en común. En un momento dado, alguien llamaba '¡Paren!' y las transparencias se comparaban unas con las otras."
+      "el juego original consistía de fotocopias, transparencias, marcadores y una pregunta común. En un momento dado, alguien llamaba '¡Paren!' y las transparencias se juntaban para formar la base de una discusión."
     description_p3_html: >-
-      En el SpecLab, Jerome McGann continuo desarrollando el concepto, que llegará a ser conocido como el "Demonio Patacrítico".
+      En el SpecLab, Jerome McGann continuo desarrollando el concepto, que llegó a ser conocido como el "Demonio Patacrítico".
     description_p4_html: >-
-      El Scholars' Lab ofreció estas ideas como inspiración para el primer proyecto a realizar por los becarios de posgrado del <a href="http://praxis.scholarslab.org/">Programa Praxis </a> en su año inaugural. Nuestra primera tarea fue la de determinar la manera más eficaz de traducir el ejercicio físico de marcar un texto al ambito digital. Decidimos que continuaríamos empleando un vocabulario de interpretación limitado y limitaríamos la talla de los textos con el fin de permanecer fiel al juego original, en el cual los textos se marcaban en poco tiempo, idealmente en una sola sesión. Al igual que el ejercicio con las transparencias, el objetivo final de Prism es la producción de "provocaciones estéticas", es decir, de visualizaciones que provoquen más debate. En razón de ser digital, Prism puede integrar muchas de las interpretaciones individuales y crear una amplia gama de visualizaciones, sin reducción en la integridad de los datos almacenados.
+      El Scholars' Lab ofreció estas ideas como inspiración para el primer proyecto que los becarios de posgrado del <a href="http://praxis.scholarslab.org/">Programa Praxis </a> realizaron en su año inaugural. Nuestra primera tarea fue la de determinar la manera más eficaz de traducir el ejercicio físico de marcar un texto al ámbito digital. Decidimos que continuaríamos empleando un vocabulario de interpretación limitado y limitaríamos la talla de los textos con el fin de permanecer fiel al juego original, en el cual los textos se marcaban en poco tiempo, idealmente en una sola sesión. Al igual que el ejercicio con las transparencias, el objetivo final de Prism es la producción de "provocaciones estéticas", es decir, de visualizaciones que provoquen más debate. Sin embargo, por ser digital, Prism puede integrar muchas de las interpretaciones individuales y crear una amplia gama de visualizaciones, sin reducción en la integridad de los datos almacenados.
     description_p5_html: >-
-      Prism agrega al concepto actual de la colectivización una interacción más significativa con "la multitud". Al interactuar con un texto como individuos, los usuarios contribuyen al dinamismo de una interpretación colectiva, con infinitas posibilidades más allá del ejercicio en sí - en la investigación, en el aula, o en la participación y la experimentación con grandes cantidades de datos en las ciencias humanas (lingüística computacional y la minería de textos, por ejemplo).
+      Prism agrega al concepto actual de la colaboración pública una interacción más significativa con "la pública". Al interactuar con un texto como individuos, los usuarios contribuyen al dinamismo de una interpretación colectiva, con infinitas posibilidades más allá del ejercicio en sí - en la investigación, en la sala de clase, o en la participación y la experimentación con grandes cantidades de datos en las ciencias humanas (lingüística computacional y la minería de textos, por ejemplo).
     praxis_title: "El Programa Praxis"
     praxis_description_html: >-
       <a href='http://praxis.scholarslab.org/'>El Programa Praxis</a> es un proyecto piloto del <a href="http://www2.lib.virginia.edu/scholarslab/">Scholars' Lab</a> de la <a href='http://www.lib.virginia.edu/index.html'>Biblioteca de la Universidad de Virginia</a>, iniciado durante el año escolar 2011-2012, en el que seis estudiantes de posgrado de artes, ciencias humanas y ciencias sociales trabajaron un año en un entorno práctico de colaboración e instrucción en las humanidades digitales. El objetivo del Programa Praxis es equipar mejor a los trabajadores del conocimiento para los nuevos cargos docentes y de investigación, <a href=http://mediacommons.futureofthebook.org/alt-ac/'>o carreras alternativas,</a> en un momento en el que se presentan nuevas preguntas y se construyen nuevos sistemas en nuestro entorno académico. Visita la página web del Programa Praxis para aprender más sobre nuestro plan de estudios, nuestra bibliografía, la evolución del programa y para escuchar directamente a los becarios Praxis y el personal del laboratorio hablar directamente de sus experiencias en nuestro <a href='http://www.scholarslab.org/blog/'>blog</a>. El Programa Praxis es patrocinado por una generosa donación del Mellon Foundation al <a href="http://uvasci.org">Scholarly Communication Institute</a> de la Biblioteca de la Universidad de Virginia.
@@ -62,31 +62,31 @@ es:
       <h3>Ed Triplett</h3> <p>Praxis Fellow and doctoral candidate, UVa McIntire Department of Art</p>
 
   highlight:
-    instructions: Elige un marcador en el menu a la derecha y marca el texto a tu medida. Puedes cambiar de marcador y borrar. Cuando termines, presiona "submit" para ver los resultados del Prisma.
+    instructions: Elige un marcador en el menú a la derecha y marca el texto a tu medida. Puedes cambiar de marcador y borrar. Cuando termines, presiona "submit" para ver los resultados del Prisma.
     eraser: Borrador
   visualize:
 
     instructions: Elije una de las opciones siguientes para visualizar el agregado de interpretationes.
-    sketches: Hasta ahora, Prism solo ofrece una visualización. Esperamos que los bosquejos siguientes sirvan de inspiración y prococación para el futuro.
+    sketches: Hasta ahora, Prism solo ofrece una visualización. Esperamos que los bosquejos siguientes sirvan de inspiración y provocación para el futuro.
 
   log-in:
-    resend: Resend confirmation instructions 
-    change: Change your password
+    resend: Mandara instrucciones para confirmación de nuevo 
+    change: Cabmia tu contraseña
     forgot: ¿Olvidaste tu contraseña?
     in: Inicia la sesión
-    up: Registrate
-    locked: Your account has been locked due to an excessive amount of unsuccessful sign in attempts.
-    click: "Click the link below to unlock your account:"
-    confirm: "You can confirm your account email through the link below:"
-    welcome: Welcome
-    hello: Hello
-    requested: "Someone has requested a link to change your password, and you can do this through the link below."
-    ignore: "If you didn't request this, please ignore this email."
-    wont: "Your password won't change until you access the link above and create a new one."
-    privacy: "We won't share your e-mail address, we promise."  
-    edit: Edit 
-    cancel: Cancel my account
-    unhappy: "Unhappy?"
+    up: Regístrate
+    locked: Tu cuenta ha sido bloqueado por una cantidad excesiva de fallados intentos de iniciar una sesión.
+    click: "Haz click en el siguiente enlace para desbloquear tu cuenta:"
+    confirm: "Puedes confirmar el correo asociado con tu cuenta mediante el siguiente enlace:"
+    welcome: Bienvend@
+    hello: Hola
+    requested: "Alguien ha pedido un enlace para cambiar tu contraseña, y lo puedes hacer mediante el siguiente enlace."
+    ignore: "Si no iniciaste este pedido, por favor no haga caso a este mensaje."
+    wont: "Tu contraseña no cambiará hasta que accedes el enlace de arriba y creas una nueva."
+    privacy: "No compartiremos tu dirección de correo, lo prometemos."  
+    edit: Editar
+    cancel: Cancelar mi cuenta
+    unhappy: "¿No estás satisfech@?"
   date:
     abbr_day_names:
     - dom
@@ -195,7 +195,7 @@ es:
       exclusion: está reservado
       greater_than: debe ser mayor que %{count}
       greater_than_or_equal_to: debe ser mayor que o igual a %{count}
-      inclusion: no está incluido en la lista
+      inclusion: no está incluído en la lista
       invalid: no es válido
       less_than: debe ser menor que %{count}
       less_than_or_equal_to: debe ser menor que o igual a %{count}
