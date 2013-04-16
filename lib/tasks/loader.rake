@@ -67,6 +67,7 @@ namespace :import do
     prompt = doc.xpath("//div[@id='bib']/div[@class='prompt']").text
     sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']").text.to_bool
     body_p = doc.xpath("//body/p")
+
     counter = 0
     for ptag in body_p
       counter = numberize(ptag, counter)
@@ -74,7 +75,7 @@ namespace :import do
     content = body_p.to_s
 
     html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, sandbox: sandbox, content: content, num_words:counter)
-    prism = Prism.create(prompt: prompt, document: html)
+    prism = Prism.create(prompt: prompt, document: html, title: title, author: author, content: content, num_words: counter, sandbox: sandbox, description: description )
     facets = []
 
     for facet_data in facet_tags

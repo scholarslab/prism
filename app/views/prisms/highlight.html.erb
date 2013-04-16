@@ -1,44 +1,45 @@
 <% content_for :extra_head do %>
   <script type="text/javascript" charset="utf-8">
-    $(setup_highlight)
-  </script>
+$(setup_highlight)
+</script>
 <% end %>
 
+<div id="Prismabob">
+  <h1><%= @document.title.html_safe %></h1>
+  <h2><%= @document.author %></h2>
+  <div class="text">
+    <%= @document.content.html_safe %>
+  </div>
+</div>
 
 <div class="page-margin">
   <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
-  <div id="Prismabob">
-    
-  </div>
   <div id="sidebar">
     <div id="tools">
-        <ul id="highlighters">
-          
-          <% if @prism.facet1? %>
-            <li class="facet"><input type="hidden" value="red"/><span class="facet red"></span><%=@prism.facet1%></li>
-          <% end %>
-          <% if @prism.facet2? %>
-            <li class="facet"><input type="hidden" value="green"/><span class="facet green"></span><%=@prism.facet2%></li>
-          <% end %>
-          <% if @prism.facet3? %>
-            <li class="facet"><input type="hidden" value="blue"/><span class="facet blue"></span><%=@prism.facet3%></li>
-          <% end %>
-          <% if @prism.facet4? %>
-            <li class="facet"><input type="hidden" value="yellow"/><span class="facet yellow"></span><%=@prism.facet4%></li>
-          <% end %>
-          
-          <li class="facet eraser"><input type="hidden" value="delete"/><span class="facet"><%= image_tag ('eraser3.png'), :id => 'eraser' %></span><%= t "highlight.eraser" %></li>
-        </ul>
-          <%= form_tag do %>
-          <input type="hidden" value="" name="red_indices" id="red_indices"/>
-          <input type="hidden" value="" name="green_indices" id="green_indices"/>
-          <input type="hidden" value="" name="blue_indices" id="blue_indices"/>
-          <input type="hidden" value="" name="yellow_indices" id="yellow_indices"/>
-          
-          <input type="submit" value="Save Highlights" />
-        <% end %>
-         <p id="highlighter-help"><%= @prism.prompt %><%= @prism.description %></p>
-      </div>
+      <ul id="highlighters">
+        <% if @prism.facet1? %>
+          <li class="facet"><input type="hidden" value="red"/><span class="facet red"></span><%=@prism.facet1%></li>
+      <% end %>
+        <% if @prism.facet2? %>
+          <li class="facet"><input type="hidden" value="green"/><span class="facet green"></span><%=@prism.facet2%></li>
+      <% end %>
+        <% if @prism.facet3? %>
+          <li class="facet"><input type="hidden" value="blue"/><span class="facet blue"></span><%=@prism.facet3%></li>
+      <% end %>
+        <% if @prism.facet4? %>
+          <li class="facet"><input type="hidden" value="yellow"/><span class="facet yellow"></span><%=@prism.facet4%></li>
+      <% end %>
+        <li class="facet eraser"><input type="hidden" value="delete"/><span class="facet"><%= image_tag ('eraser3.png'), :id => 'eraser' %></span><%= t "highlight.eraser" %></li>
+      </ul>
+      <%= form_tag do %>
+        <input type="hidden" value="" name="red_indices" id="red_indices"/>
+      <input type="hidden" value="" name="green_indices" id="green_indices"/>
+      <input type="hidden" value="" name="blue_indices" id="blue_indices"/>
+      <input type="hidden" value="" name="yellow_indices" id="yellow_indices"/>
+      <input type="submit" value="Save Highlights" />
+    <% end %>
+      <p id="highlighter-help"><%= @prism.prompt %><%= @prism.description %></p>
     </div>
+  </div>
 </div>
 
