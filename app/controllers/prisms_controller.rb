@@ -3,106 +3,34 @@ require 'set'
 class PrismsController < ApplicationController 
     before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
 
-    def before_create()
-        require 'uuidtools'
-        self.id = UUID.timestamp_create().to_s
-    end
-
     def highlight
         @title = "Highlight"
         @prism = Prism.find(params[:id])
     end
 
-    def sandbox_highlight
-        @title = "Highlight"
-        @prism = Prism.find(params[:id])            
-        @document = @prism.document
-        render "highlight"
-    end
-
-    def sandbox_post
-        prism = Prism.find(params[:id])
-        if @prism.facet1?
-            indices = params[("facet1_indices").to_sym]
-            Marking.new(user_id:current_user, word_array:indices, facet_num: 1, prism_id:prism).save()
-        end
-        if @prism.facet2?
-            indices = params[("facet2_indices").to_sym]
-            Marking.new(user_id:current_user, word_array:indices, facet_num: 2, prism_id:prism).save()
-        end
-        if @prism.facet3?
-            indices = params[("facet3_indices").to_sym]
-            Marking.new(user_id:current_user, word_array:indices, facet_num: 3, prism_id:prism).save()
-        end
-        if @prism.facet4?
-            indices = params[("facet4_indices").to_sym]
-            Marking.new(user_id:current_user, word_array:indices, facet_num: 4, prism_id:prism).save()
-        end
-        redirect_to(sandbox_visualize_path(prism))    
-    end
     def highlight_post
         prism = Prism.find(params[:id])
-        if prism.facet1?
-            indices = params[("facet1_indices").to_sym]
-            marking = Marking.new(user:current_user, word_array:indices, facet_num: 1, prism:prism)
-            marking.save()
-            update_word_markings(marking)
-        end
-        if prism.facet2?
-            indices = params[("facet2_indices").to_sym]
-            marking = Marking.new(user:current_user, word_array:indices, facet_num: 2, prism:prism)
-            marking.save()
-            update_word_markings(marking)
-        end
-        if prism.facet3?
-            indices = params[("facet3_indices").to_sym]
-            marking = Marking.new(user:current_user, word_array:indices, facet_num: 3, prism:prism)
-            marking.save()
-            update_word_markings(marking)
-        end
-        if prism.facet4?
-            indices = params[("facet4_indices").to_sym]
-            marking = Marking.new(user:current_user, word_array:indices, facet_num: 4, prism:prism)
-            marking.save()
-            update_word_markings(marking)
+        @facets = @prism.facets
+        for facet in @facets
+            indices = params[("facet#{facet.order}_indices").to_sym]
+            for index in JSON.load(indices)
+                word_marking = Word_Marking.new(user:current_user, index:index, facet_id: facet.order, prism:prism)
+                word_marking.save()
+            end
         end
         redirect_to(visualize_path(prism))    
-    end
-
-    def sandbox_visualize
-        @title = "Sandbox Visualize"
-        @prism = Document.where(:sandbox => true)[0].prisms[0]
-        @frequencies = {}
-              # Step 1: Create a list of N 0s, where N is the total number of words
-        @frequencies["red"] = [0.0] * @prism.num_words
-        @frequencies["blue"] = [0.0] * @prism.num_words
-        @frequencies["green"] = [0.0] * @prism.num_words
-        @frequencies["yellow"] = [0.0] * @prism.num_words
-            # Step 2: For each marking, update the frequencies with which words were marked
-                for word_marking in @prism.word_markings
-                    # To scale accordingly, # of times word was marked divided by total # of markings
-                    if @prism.facet1?
-                        @frequencies["red"][word_markings.index] += 1.0 / word_marking.facet1_count
-                    end
-                    if @prism.facet2? 
-                        @frequencies["blue"][word_markings.index] += 1.0 / word_marking.facet2_count
-                    end
-                    if @prism.facet3?
-                        @frequencies["green"][word_markings.index] += 1.0 / word_marking.facet3_count
-                    end
-                    if @prism.facet4?
-                        @frequencies["yellow"][word_markings.index] += 1.0 / word_marking.facet4_count
-                    end
-                end 
-        render "visualize"
     end
 
     def visualize
         @title = "Visualize"
         @prism = Prism.find(params[:id])
-        @markings = @prism.markings 
+        @word_markings = @prism.word_markings 
         @usercounter = 0
         
+        for word_marking in @word_markings
+
+        end
+
         users = []
         for marking in @markings
             if ! users.include?(marking.user)
@@ -209,38 +137,6 @@ class PrismsController < ApplicationController
       end
       prism.content=doc.root().to_s()
       prism.num_words = counter
-    end
-
-    def update_word_markings(marking)
-        @prism = Prism.find(params[:id])
-        # goes through each word marked
-        word_marking_map = Hash.new
-        for word_marking in @prism.word_markings
-            word_marking_map[word_marking.index] = word_marking
-        end
-
-        # searches the set of markings to find out if the index of a marked word matches the current word index under examination.
-        touched_word_markings = Set.new
-
-        # does this for each facet, and will add one to the word_marking facet count if the facet exists and it is marked
-        for word_index in JSON.load(marking.word_array)
-            if marking.facet_num == 1
-                word_marking_map[word_index].facet1_count += 1
-                touched_word_markings.add(word_index)
-            elsif marking.facet_num == 2
-                word_marking_map[word_index].facet2_count += 1
-                touched_word_markings.add(word_index)
-            elsif   marking.facet_num == 3
-                word_marking_map[word_index].facet3_count += 1
-                touched_word_markings.add(word_index)
-            elsif marking.facet_num == 4
-                word_marking_map[word_index].facet4_count += 1
-                touched_word_markings.add(word_index)
-            end
-        end
-        for touched in touched_word_markings
-            word_marking_map[touched].save
-        end
     end
 
 def destroy
