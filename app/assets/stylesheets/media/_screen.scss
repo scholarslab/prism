@@ -193,3 +193,22 @@ width: 300px;
 	float: right;
 	
 }
+
+#highlighters {
+  list-style:none;
+  padding-left:0;
+
+  li {
+    @include clearfix;
+
+    span.facet {
+      display: block;
+      float: left;
+      width: 30px;
+      height: 30px;
+      margin-right: 2%;
+      @include border-radius(16px);
+    }
+  }
+}
+
