@@ -1,0 +1,18 @@
+<h1>Prisms</h1>
+
+<p>This shouldn't be in a table...and it needs pagination.</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Actions</th>
+  </tr>
+  <% @prisms.each do |prism| %>
+    <tr>
+    <td><%= prism.title.html_safe %></td>
+    <td><%= link_to 'Show', highlight_path(prism) %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New prism', new_prism_path %>

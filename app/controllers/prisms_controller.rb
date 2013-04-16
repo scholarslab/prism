@@ -8,6 +8,16 @@ class PrismsController < ApplicationController
         self.id = UUID.timestamp_create().to_s
     end
 
+    def index
+      @prisms = Prism.all
+      @title = "Browse prisms"
+
+      respond_to do |format|
+        format.html
+        format.json { render :json => @prisms }
+      end
+    end
+
     def highlight
         @title = "Highlight"
         @prism = Prism.find(params[:id])
