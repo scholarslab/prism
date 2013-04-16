@@ -11,13 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130416172458) do
+ActiveRecord::Schema.define(:version => 20130416175327) do
 
   create_table "facets", :force => true do |t|
     t.string  "description"
     t.integer "prism_id"
     t.integer "order"
   end
+
+  add_index "facets", ["order"], :name => "index_facets_on_order", :unique => true
 
   create_table "prisms", :id => false, :force => true do |t|
     t.string   "uuid",             :limit => 36
@@ -33,6 +35,9 @@ ActiveRecord::Schema.define(:version => 20130416172458) do
     t.string   "publication_date"
     t.string   "language"
   end
+
+  add_index "prisms", ["user_id"], :name => "index_prisms_on_user_id", :unique => true
+  add_index "prisms", ["uuid"], :name => "index_prisms_on_uuid", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -62,5 +67,7 @@ ActiveRecord::Schema.define(:version => 20130416172458) do
     t.integer  "user_id"
     t.integer  "facet_id"
   end
+
+  add_index "word_markings", ["index"], :name => "index_word_markings_on_index", :unique => true
 
 end
