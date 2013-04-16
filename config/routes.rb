@@ -2,6 +2,9 @@ Testing::Application.routes.draw do
   resources :authentications
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
+  match '/users/:id' => 'users#show'
+  #resources :users
 
   scope ':locale' do
     resources :buckets, :only => [ :index ]
