@@ -10,4 +10,12 @@ class PagesController < ApplicationController
   def about
     @title = "About Prism"
   end
+
+  def alumni
+  	@title = "Alumni"
+  end
+
+  def terms
+    @title = "Terms of Service"
+  end
 end
