@@ -155,18 +155,25 @@ width: 300px;
 	clear: both;
 
 	a {
-		display:inline-block;
 		text-transform: uppercase;
 		color: grey;
 		padding-left: 20px;
 		padding-right: 20px;
+
+    &#slab-link {
+      width: 150px;
+      display:block;
+      text-align:center;
+      margin:20px auto;
+      opacity: 0.5;
+      img {
+        max-width: 100%;
+        width:auto;
+        height:auto;
+      }
+    }
 	}
 
-	img {
-    	width: 100px;
-    	height: 15px;
-    	display: inline-block;
-    	}
 }
 
 //flash notice---------------------------------
