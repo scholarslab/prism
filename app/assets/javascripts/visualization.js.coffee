@@ -16,15 +16,38 @@ window.setup_visualize = ->
 
 	words = $("span.word")
 	words.each( (i,word) ->
+
+		r = frequencies['red'][i]
+		g = frequencies['green'][i]
+		b = frequencies['blue'][i]
+
 		$(word).mouseenter( () ->
 			for color in all_colors
 				#console.log(color, frequencies[color][i])
-				$("span.red-percent").text(Math.round(frequencies['red'][i]*100) + "%")
-				$("span.green-percent").text(Math.round(frequencies['green'][i]*100) + "%")
-				$("span.blue-percent").text(Math.round(frequencies['blue'][i]*100) + "%")
+				$("span.red-percent").text(Math.round(r*100) + "%")
+				$("span.green-percent").text(Math.round(g*100) + "%")
+				$("span.blue-percent").text(Math.round(b*100) + "%")
 		)
-		f=200
-		$(word).css('color', 'rgb('+Math.round(f*frequencies['red'][i])+','+Math.round(f*frequencies['green'][i])+','+Math.round(f*frequencies['blue'][i])+')')
+		f=150
+
+		word_freqs = [['red',r],['green',g],['blue',b]];
+		word_freqs.sort (a,b) ->
+			return ((a[1] < b[1]) ? -1 : ((a[1] > b[1]) ? 1 : 0));
+
+		#no highlighting gets grey, ties get pink
+		#winning_color = ((a[0][1] > a[1][1]) ? a[0][0] : ((a[0][1] == 0) ? "grey" : "pink"))
+		#winning_color = ((word_freqs[0][1] > word_freqs[1][1]) ? word_freqs[0][0] : "pink")
+
+		winning_color = "lightgrey"
+		if word_freqs[0][1] > word_freqs[1][1]
+			winning_color = word_freqs[0][0]
+		else if word_freqs[0][1] != 0
+			winning_color = "orange"
+
+
+		$(word).css('color', winning_color)
+		
+		#$(word).css('color', 'rgb('+Math.round(f*frequencies['red'][i])+','+Math.round(f*frequencies['green'][i])+','+Math.round(f*frequencies['blue'][i])+')')
 	)
 
 # This function selects a facet, gives the box a border, and highlights text
