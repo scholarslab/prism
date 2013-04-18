@@ -1,12 +1,12 @@
 class MergeDocumentToPrism < ActiveRecord::Migration
   def up
-    say "Copying Documents table data to the Prisms table"
-    execute "
-      INSERT INTO prisms(title, author, content, created_at, updated_at, num_words, description)
-        SELECT title, author, content, created_at, updated_at, num_words, description
-        FROM documents"
+    #say "Copying Documents table data to the Prisms table"
+    #execute "
+      #INSERT INTO prisms(title, author, content, created_at, updated_at, num_words, description)
+        #SELECT title, author, content, created_at, updated_at, num_words, description
+        #FROM documents"
 
-    say "Cleaning up the documents table by removing the columns"
+    #say "Cleaning up the documents table by removing the columns"
     #remove_column :documents, :title
     #remove_column :documents, :author
     #remove_column :documents, :content

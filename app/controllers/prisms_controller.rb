@@ -1,93 +1,151 @@
-class PrismsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:highlight, :highlight_post, :visualize]
+require 'set'
 
-  def index
-    @title = "Prisms"
-    @prisms = Prism.all
-  end
+class PrismsController < ApplicationController 
+    before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
 
-  def highlight
-    @title = "Highlight"
-    @prism = Prism.find(params[:id])
-    @document = @prism.document
-  end
+    def before_create()
+        require 'uuidtools'
+        self.id = UUID.timestamp_create().to_s
+    end
 
-  def sandbox_highlight
-    @title = "Highlight"
-    @prism = Document.where(:sandbox => true)[0].prisms[0]
-    @document = @prism.document
-    render "highlight"
-  end
+    def index
+      @prisms = Prism.all
+      @title = "Browse prisms"
 
-  def sandbox_post
-    prism = Document.where(:sandbox => true)[0].prisms[0]
-    save_markings(prism)
-
-    redirect_to(sandbox_visualize_path(prism))
-  end
-
-  def highlight_post
-    prism = Prism.find(params[:id])
-    save_markings(prism)
-
-    redirect_to(visualize_path(prism))
-  end
-
-  def sandbox_visualize
-    @title = "Sandbox Visualize"
-    @prism = Document.where(:sandbox => true)[0].prisms[0]
-    @document = @prism.document
-
-    @frequencies = calculate_freuquencies(@prism, @document.num_words)
-
-    render "visualize"
-  end
-
-  def visualize
-    @title = "Visualize"
-    @prism = Prism.find(params[:id])
-    @document = @prism.document
-    @markings = @prism.markings 
-    @usercounter = 0
-
-    users = []
-    for marking in @markings
-      if ! users.include?(marking.user)
-        users.push(marking.user)
-        @usercounter += 1
+      respond_to do |format|
+        format.html
+        format.json { render :json => @prisms }
       end
     end
 
-    @frequencies = calculate_freuquencies(@prism, @document.num_words)
-  end
-
-  private
-
-  def save_markings(prism)
-    for facet in prism.facets
-      indices = params[(facet.color + "_indices").to_sym]
-      Marking.new(word_array:indices, prism:prism, facet:facet, user:current_user).save()
+    def highlight
+        @title = "Highlight"
+        @prism = Prism.find(params[:id])
     end
-  end
 
-  def calculate_freuquencies(prism, num_words)
-    frequencies = {}
+    def sandbox_highlight
+        @title = "Highlight"
+        @prism = Prism.find(params[:id])            
+        @document = @prism.document
+        render "highlight"
+    end
 
-    for facet in prism.facets
-      # Step 1: Create a list of N 0s, where N is the total number of words
-      frequencies[facet.color] = [0.0] * num_words
-      # Step 2: For each marking, update the frequencies with which words were marked
-      for marking in facet.markings
-        if marking.word_array != ""
-          for word_num in JSON.load(marking.word_array)
-            # To scale accordingly, # of times word was marked divided by total # of markings
-            frequencies[facet.color][word_num] += 1.0 / facet.markings.length
-          end
+    def sandbox_post
+        prism = Prism.find(params[:id])
+        if @prism.facet1?
+            indices = params[("facet1_indices").to_sym]
+            Marking.new(user_id:current_user, word_array:indices, facet_num: 1, prism_id:prism).save()
         end
-      end
+        if @prism.facet2?
+            indices = params[("facet2_indices").to_sym]
+            Marking.new(user_id:current_user, word_array:indices, facet_num: 2, prism_id:prism).save()
+        end
+        if @prism.facet3?
+            indices = params[("facet3_indices").to_sym]
+            Marking.new(user_id:current_user, word_array:indices, facet_num: 3, prism_id:prism).save()
+        end
+        if @prism.facet4?
+            indices = params[("facet4_indices").to_sym]
+            Marking.new(user_id:current_user, word_array:indices, facet_num: 4, prism_id:prism).save()
+        end
+        redirect_to(sandbox_visualize_path(prism))    
     end
-    frequencies
-  end
+    def highlight_post
+        prism = Prism.find(params[:id])
+        if prism.facet1?
+            indices = params[("facet1_indices").to_sym]
+            marking = Marking.new(user:current_user, word_array:indices, facet_num: 1, prism:prism)
+            marking.save()
+            update_word_markings(marking)
+        end
+        if prism.facet2?
+            indices = params[("facet2_indices").to_sym]
+            marking = Marking.new(user:current_user, word_array:indices, facet_num: 2, prism:prism)
+            marking.save()
+            update_word_markings(marking)
+        end
+        if prism.facet3?
+            indices = params[("facet3_indices").to_sym]
+            marking = Marking.new(user:current_user, word_array:indices, facet_num: 3, prism:prism)
+            marking.save()
+            update_word_markings(marking)
+        end
+        if prism.facet4?
+            indices = params[("facet4_indices").to_sym]
+            marking = Marking.new(user:current_user, word_array:indices, facet_num: 4, prism:prism)
+            marking.save()
+            update_word_markings(marking)
+        end
+        redirect_to(visualize_path(prism))    
+    end
+
+    def sandbox_visualize
+        @title = "Sandbox Visualize"
+        @prism = Document.where(:sandbox => true)[0].prisms[0]
+        @frequencies = {}
+              # Step 1: Create a list of N 0s, where N is the total number of words
+        @frequencies["red"] = [0.0] * @prism.num_words
+        @frequencies["blue"] = [0.0] * @prism.num_words
+        @frequencies["green"] = [0.0] * @prism.num_words
+        @frequencies["yellow"] = [0.0] * @prism.num_words
+            # Step 2: For each marking, update the frequencies with which words were marked
+                for word_marking in @prism.word_markings
+                    # To scale accordingly, # of times word was marked divided by total # of markings
+                    if @prism.facet1?
+                        @frequencies["red"][word_markings.index] += 1.0 / word_marking.facet1_count
+                    end
+                    if @prism.facet2? 
+                        @frequencies["blue"][word_markings.index] += 1.0 / word_marking.facet2_count
+                    end
+                    if @prism.facet3?
+                        @frequencies["green"][word_markings.index] += 1.0 / word_marking.facet3_count
+                    end
+                    if @prism.facet4?
+                        @frequencies["yellow"][word_markings.index] += 1.0 / word_marking.facet4_count
+                    end
+                end 
+        render "visualize"
+    end
+
+    def visualize
+        @title = "Visualize"
+        @prism = Prism.find(params[:id])
+        @markings = @prism.markings 
+        @usercounter = 0
+        
+        users = []
+        for marking in @markings
+            if ! users.include?(marking.user)
+                users.push(marking.user)
+                @usercounter += 1
+            end
+        end
+        
+        @frequencies = {}
+        @frequencies["red"] = [0.0] * @prism.num_words
+        @frequencies["blue"] = [0.0] * @prism.num_words
+        @frequencies["green"] = [0.0] * @prism.num_words
+        @frequencies["yellow"] = [0.0] * @prism.num_words
+        
+        # Step 2: For each marking, update the frequencies with which words were marked
+        for word_marking in @prism.word_markings
+            # To scale accordingly, # of times word was marked divided by total # of markings
+            if @prism.facet1 && word_marking.facet1_count > 0
+                @frequencies["red"][word_marking.index] += 1.0 / word_marking.facet1_count
+            end
+            if @prism.facet2 && word_marking.facet2_count > 0 
+                @frequencies["green"][word_marking.index] += 1.0 / word_marking.facet2_count
+            end
+            if @prism.facet3 && word_marking.facet3_count > 0
+                @frequencies["blue"][word_marking.index] += 1.0 / word_marking.facet3_count
+            end
+            if @prism.facet4 && word_marking.facet4_count > 0
+                @frequencies["yellow"][word_marking.index] += 1.0 / word_marking.facet4_count
+            end
+        end         
+    end
+    
+
     def new
       @prism = Prism.new
       respond_to do |format|
@@ -98,10 +156,19 @@ class PrismsController < ApplicationController
   
     def create
       @prism = Prism.new(params[:prism])
-      @prism.content = process_text(@prism.content)
-       
+      process_text(@prism)
+      word_markings = Array.new
+      for word_index in Array(0..@prism.num_words)
+        word_markings << WordMarking.new(prism:@prism, index:word_index, facet1_count: 0, facet2_count: 0, facet3_count: 0, facet4_count: 0)
+        
+      end
+      success = @prism.save
+      for word_marking in word_markings
+            word_marking.prism = @prism
+            success = success && word_marking.save
+      end
       respond_to do |format|
-        if @prism.save
+        if success
           format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully created.' }
           format.json { render json: @prism, status: :created, location: @prism }
         else
@@ -114,8 +181,8 @@ class PrismsController < ApplicationController
 
     def update
       @prism = Prism.find(params[:id])
-      @prism.content = process_text(@prism.content)
-      
+      process_text(@prism)
+
       respond_to do |format|
         if @prism.update_attributes(params[:prism])
           format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully updated.' }
@@ -127,7 +194,8 @@ class PrismsController < ApplicationController
       end
     end
     
-    def process_text(text)
+    def process_text(prism)
+      text = prism.content
       doc = Nokogiri::XML("")
       doc << doc.create_element("content")
       counter = 0
@@ -149,6 +217,59 @@ class PrismsController < ApplicationController
         span_nodeset = Nokogiri::XML::NodeSet.new(doc, span_list)
         paragraph << span_nodeset
       end
-      doc.root().to_s()
+      prism.content=doc.root().to_s()
+      prism.num_words = counter
     end
+
+    def update_word_markings(marking)
+        @prism = Prism.find(params[:id])
+        # goes through each word marked
+        word_marking_map = Hash.new
+        for word_marking in @prism.word_markings
+            word_marking_map[word_marking.index] = word_marking
+        end
+
+        # searches the set of markings to find out if the index of a marked word matches the current word index under examination.
+        touched_word_markings = Set.new
+
+        # does this for each facet, and will add one to the word_marking facet count if the facet exists and it is marked
+        for word_index in JSON.load(marking.word_array)
+            if marking.facet_num == 1
+                word_marking_map[word_index].facet1_count += 1
+                touched_word_markings.add(word_index)
+            elsif marking.facet_num == 2
+                word_marking_map[word_index].facet2_count += 1
+                touched_word_markings.add(word_index)
+            elsif   marking.facet_num == 3
+                word_marking_map[word_index].facet3_count += 1
+                touched_word_markings.add(word_index)
+            elsif marking.facet_num == 4
+                word_marking_map[word_index].facet4_count += 1
+                touched_word_markings.add(word_index)
+            end
+        end
+        for touched in touched_word_markings
+            word_marking_map[touched].save
+        end
+    end
+
+def destroy
+    @prism = Prism.find(params[:id])
+    for marking in @prism.markings
+        marking.destroy
+    end
+    for word_marking in @prism.word_markings
+        word_marking.destroy
+    end
+     respond_to do |format|
+        if @prism.destroy
+          format.html { redirect_to index, notice: 'Prism was successfully destroyed.' }
+          format.json { head :no_content }
+        else
+          format.html { redirect_to index, notice: 'Prism could not be destroyed.' }
+          format.json { head :no_content }
+        end
+    end
+end
+
 end

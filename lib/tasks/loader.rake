@@ -36,21 +36,22 @@ namespace :import do
     puts "Importing..."
     files = "./spec/fixtures/html"
     Dir["#{files}/*.html"].each do |file|
-      doc, prism, facets = builder(file)
-      doc.save()
-      prism.save()
-      for facet in facets
-        facet.save()
-      end
+      #doc, prism, facets = builder(file)
+      prism = builder(file)
+      #doc.save()
+      #prism.save
+      #for facet in facets
+        #facet.save()
+      #end
     end
   end
   
   desc "Delete all prisms, documents, markings, and facets"
   task :clear => :environment do
     Prism.delete_all()
-    Document.delete_all()
+    #Document.delete_all()
     Marking.delete_all()
-    Facet.delete_all()
+    #Facet.delete_all()
   end
 
   def builder(file)
@@ -64,27 +65,28 @@ namespace :import do
     pub_date = doc.xpath("//div[@id='bib']/div[@class='pub_date']").text
     format = doc.xpath("//div[@id='bib']/div[@class='format']").text
     facet_tags = doc.css("div#facets div.facet")
-    prompt = doc.xpath("//div[@id='bib']/div[@class='prompt']").text
-    sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']").text.to_bool
+   # prompt = doc.xpath("//div[@id='bib']/div[@class='prompt']").text
+   # sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']").text.to_bool
     body_p = doc.xpath("//body/p")
+
     counter = 0
     for ptag in body_p
       counter = numberize(ptag, counter)
     end
     content = body_p.to_s
 
-    html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, sandbox: sandbox, content: content, num_words:counter)
-    prism = Prism.create(prompt: prompt, document: html)
-    facets = []
+    #html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, sandbox: sandbox, content: content, num_words:counter)
+    prism = Prism.create(title: title, author: author, content: content, num_words: counter, description: description )
+    #facets = []
 
-    for facet_data in facet_tags
-      color = facet_data.css("div.color").text
-      category = facet_data.css("div.category").text
-      facet = Facet.create(color: color, category: category, prism: prism)
-      facets.push(facet)
-    end
+    #for facet_data in facet_tags
+      #color = facet_data.css("div.color").text
+      #category = facet_data.css("div.category").text
+      #facet = Facet.create(color: color, category: category, prism: prism)
+      #facets.push(facet)
+    #end
     f.close
-    return [html, prism, facets]
-
+    #return [html, prism, facets]
+    return [prism]
   end
 end
