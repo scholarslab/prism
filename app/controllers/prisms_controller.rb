@@ -25,7 +25,7 @@ class PrismsController < ApplicationController
 
     def sandbox_highlight
         @title = "Highlight"
-        @prism = Prism.find(params[:id])            
+        @prism = Prism.find(params[:id])
         @document = @prism.document
         render "highlight"
     end
