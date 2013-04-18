@@ -45,6 +45,7 @@
             <span class="facet <%="yellow"%>"></span><%=@prism.facet4%></li>
         <% end %>
       </ul>
+      <p><%= render 'cc_license' %></p>
       <p id="viz-count">
       <span><% if @usercounter != nil %>
           <%=@usercounter%></span> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
