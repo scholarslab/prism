@@ -16,7 +16,7 @@
 <% @prisms.each do |prism| %>
 <tr> 
 
-	<td><%= prism.title %></td>
+	<td><%= prism.title.html_safe %></td>
 
      <td class="highlight"> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
         <%= image_tag('highlight_button.png') %>
