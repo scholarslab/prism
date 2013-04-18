@@ -16,20 +16,9 @@
   <div id="sidebar">
     <div id="tools">
         <ul id="highlighters">
-          
-          <% if @prism.facet1? %>
-            <li class="facet"><input type="hidden" value="red"/><span class="facet red"></span><%=@prism.facet1%></li>
+          <% for facet in @prism.facets %>
+            <li class ="facet"><input type="hidden" value="<%=facet.color%>"/><span class="facet <%=facet.color%>"></span><%=facet.description%></li>
           <% end %>
-          <% if @prism.facet2? %>
-            <li class="facet"><input type="hidden" value="green"/><span class="facet green"></span><%=@prism.facet2%></li>
-          <% end %>
-          <% if @prism.facet3? %>
-            <li class="facet"><input type="hidden" value="blue"/><span class="facet blue"></span><%=@prism.facet3%></li>
-          <% end %>
-          <% if @prism.facet4? %>
-            <li class="facet"><input type="hidden" value="yellow"/><span class="facet yellow"></span><%=@prism.facet4%></li>
-          <% end %>
-          
           <li class="facet eraser"><input type="hidden" value="delete"/><span class="facet"><%= image_tag ('eraser3.png'), :id => 'eraser' %></span><%= t "highlight.eraser" %></li>
         </ul>
           <%= form_tag do %>
