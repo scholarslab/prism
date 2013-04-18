@@ -19,6 +19,9 @@
   <div id="sidebar">
     <div id="visualizations">
       <p id="visualization-help"><%= t "visualize.instructions" %> </p>
+		<span class="red-percent" style="color:red"></span>
+		<span class="green-percent" style="color:green"></span>
+		<span class="blue-percent" style="color:blue"> </span>
       <ul id="highlighters">
         <% if @prism.facet1? %>
           <li class="vis_facet">

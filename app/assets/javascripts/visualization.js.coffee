@@ -18,7 +18,10 @@ window.setup_visualize = ->
 	words.each( (i,word) ->
 		$(word).mouseenter( () ->
 			for color in all_colors
-				console.log(color, frequencies[color][i])
+				#console.log(color, frequencies[color][i])
+				$("span.red-percent").text(frequencies['red'][i]*100 + "%")
+				$("span.green-percent").text(frequencies['green'][i]*100 + "%")
+				$("span.blue-percent").text(frequencies['blue'][i]*100 + "%")
 		)
 		f=150
 		$(word).css('color', 'rgb('+f*frequencies['red'][i]+','+f*frequencies['green'][i]+','+f*frequencies['blue'][i]+')')
