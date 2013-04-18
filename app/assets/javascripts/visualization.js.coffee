@@ -19,12 +19,12 @@ window.setup_visualize = ->
 		$(word).mouseenter( () ->
 			for color in all_colors
 				#console.log(color, frequencies[color][i])
-				$("span.red-percent").text(frequencies['red'][i]*100 + "%")
-				$("span.green-percent").text(frequencies['green'][i]*100 + "%")
-				$("span.blue-percent").text(frequencies['blue'][i]*100 + "%")
+				$("span.red-percent").text(Math.round(frequencies['red'][i]*100) + "%")
+				$("span.green-percent").text(Math.round(frequencies['green'][i]*100) + "%")
+				$("span.blue-percent").text(Math.round(frequencies['blue'][i]*100) + "%")
 		)
-		f=150
-		$(word).css('color', 'rgb('+f*frequencies['red'][i]+','+f*frequencies['green'][i]+','+f*frequencies['blue'][i]+')')
+		f=200
+		$(word).css('color', 'rgb('+Math.round(f*frequencies['red'][i])+','+Math.round(f*frequencies['green'][i])+','+Math.round(f*frequencies['blue'][i])+')')
 	)
 
 # This function selects a facet, gives the box a border, and highlights text
@@ -39,4 +39,4 @@ window.select_facet = (facet) ->
 		#words.classed(current_color+"-vis", (d) -> (d > 0))
 		words.transition()
 		#words.style("font-size", (d) -> (10+20*d) + "px" )
-		words.on('click', (d) -> alert(current_color + ": " + d)) 
+		#words.on('click', (d) -> alert(current_color + ": " + d)) 
