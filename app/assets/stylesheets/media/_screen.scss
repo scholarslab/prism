@@ -193,9 +193,8 @@ width: 300px;
 
 }
 
-//table styling--------------------------------
+//browse styling--------------------------------
 
-h1 {text-align: center;}
 
 th, td {
 	border-bottom: 1px solid #CCCCCC;
@@ -214,19 +213,25 @@ td {
 	&.highlight {width: 15%;}
 }
 
+#new-prism {
+	display: block;
+	width: 150px;
+	background-color: lighten(green, 15%);
+	color: white;
+	text-transform: uppercase;
+	float: right;
+	text-align: center;
+	padding: 10px;
+	@include border-radius(15px);
+	margin-bottom: 20px;
+
+}
+
 //highlight pages------------------------------
 
 .text-area {
 	width: 200px;
 	display: inline;
-}
-
-.page-margin {
-	width: 200px;
-	display: inline;
-	text-align: left;
-	float: right;
-	
 }
 
 #highlighters {
@@ -245,4 +250,21 @@ td {
       @include border-radius(16px);
     }
   }
+}
+
+//new prism page-------------------------------
+
+.field {
+	color: blue;
+	padding: 0px;
+}
+
+#content {
+	float: left;	
+
+}
+
+#prism-meta-data {
+	
+	float: right;
 }
