@@ -80,6 +80,14 @@ h3 {
 	font-size: 18px;
 }
 
+table {
+	width: 100%;
+
+	th {
+	 text-align:left;
+	}
+}
+
 p {
 	font-family: $parafont;
 	font-size:15px;
@@ -163,20 +171,47 @@ width: 300px;
 
 //flash notice---------------------------------
 
-#flash_notice {
+.flashmessage{
 	text-align: center;
-	background: #00CCFF;
-	color: white;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 15px;
-	padding-bottom: 15px;
 	width: 394px;
+	font-weight: bold;
+	padding-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 20px;
+	text-transform: uppercase;
+}
 
+#flash_notice {
+	color: #00CCFF;
 
+}
+
+#flash_alert {
+	color: #FF4747;
+
+}
+
+//table styling--------------------------------
+
+h1 {text-align: center;}
+
+th, td {
+	border-bottom: 1px solid #CCCCCC;
+	padding: 10px;
+	}
+
+th {
+	height: 50px;
+	border-bottom-width: 3px;
+}
+
+td {
+	height:50px;
+	vertical-align:bottom;
+	&.visualize,
+	&.highlight {width: 15%;}
 }
 
 //highlight pages------------------------------
@@ -211,4 +246,3 @@ width: 300px;
     }
   }
 }
-
