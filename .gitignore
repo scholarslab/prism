@@ -11,5 +11,7 @@ db/*.sqlite3
 *~
 public/assets/
 
+latest.dump
+
 # Ignore application configuration
 /config/application.yml
