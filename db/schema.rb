@@ -11,12 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130416175327) do
+ActiveRecord::Schema.define(:version => 20130417183958) do
 
   create_table "facets", :force => true do |t|
-    t.string  "description"
-    t.integer "prism_id"
-    t.integer "order"
+    t.string   "color"
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "prism_id"
+    t.integer  "order"
   end
 
   add_index "facets", ["order"], :name => "index_facets_on_order", :unique => true
@@ -66,8 +69,10 @@ ActiveRecord::Schema.define(:version => 20130416175327) do
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
     t.integer  "facet_id"
+    t.integer  "prism_id"
   end
 
   add_index "word_markings", ["index"], :name => "index_word_markings_on_index", :unique => true
+  add_index "word_markings", ["prism_id"], :name => "index_word_markings_on_prism_id", :unique => true
 
 end
