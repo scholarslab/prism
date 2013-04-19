@@ -9,6 +9,10 @@ $(setup_highlight);
   <h2><%= @prism.author %></h2>
   <div class="text">
     <%= @prism.content.html_safe %>
+  <p id ="publication_date"><%= @prism.publication_date %> </p>
+  <div id="license">
+   <%= render 'cc_license' %>
+  </div>
   </div>
 </div>
 
@@ -29,6 +33,7 @@ $(setup_highlight);
       <% end %>
         <li class="facet eraser"><input type="hidden" value="delete"/><span class="facet"><%= image_tag ('eraser3.png'), :id => 'eraser' %></span><%= t "highlight.eraser" %></li>
       </ul>
+      <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
       <%= form_tag do %>
         <input type="hidden" value="" name="facet1_indices" id="red_indices"/>
       <input type="hidden" value="" name="facet2_indices" id="green_indices"/>
@@ -36,9 +41,6 @@ $(setup_highlight);
       <input type="hidden" value="" name="facet4_indices" id="yellow_indices"/>
       <input type="submit" value="Save Highlights" />
     <% end %>
-      <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
-      <p id ="publication_date"><%= @prism.publication_date %> </p>
       <p id="description"><%= @prism.description %></p>
-      <%= render 'cc_license' %>
     </div>
   </div>

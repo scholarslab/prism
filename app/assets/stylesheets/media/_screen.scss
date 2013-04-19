@@ -238,9 +238,14 @@ td {
 	float: left;
 }
 
+#license {
+	padding-top: 20px;
+}
+
 #highlighters {
   list-style:none;
   padding-left:0;
+  padding-top: 110px;
 
   li {
     @include clearfix;
@@ -261,4 +266,8 @@ td {
 	display: inline-block;
 	float: right;
 	padding: 0px;
+}
+
+li.facet {
+	padding: 5px;
 }
