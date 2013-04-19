@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'factory_girl'
+require 'pp'
 
 describe PrismsController do
 
@@ -8,11 +9,13 @@ describe PrismsController do
 
   before(:each) do
     @prism = Factory.create(:prism)
+    @user = sign_in Factory.create(:user)
   end
 
   describe "GET 'index'" do
     it "is successful" do
-      get :index
+
+      get :index, :id => @prism.uuid
       response.should be_success
     end
 
@@ -25,24 +28,6 @@ describe PrismsController do
       get :index
       response.should render_template('index')
     end
-  end
-
-  describe "Get 'visualize'" do
-    it 'is successful' do
-      get :visualize, :id => @prism.uuid
-      response.should be_success
-    end
-
-    it "assigns @prism" do
-      get :visualize, :id => @prism.uuid
-      response.should_not be_nill
-    end
-
-    it "renders the 'visualize' template" do
-      get :highlight, :id => @prism.uuid
-      response.should render_template('visualize')
-    end
-
   end
 
   describe "GET 'highlight'" do
@@ -59,11 +44,38 @@ describe PrismsController do
 
     it "renders the 'highlight' template" do
       get :highlight, :id => @prism.uuid
-      response.should render_template('show')
+      response.should render_template('highlight')
+    end
+  end
+
+  describe "GET 'highlight' when not authenticated" do
+    it 'is not successful' do
+      sign_out :user
+      get :highlight, :id => @prism.uuid
+      response.should_not be_success
     end
   end
 
 
+  #describe "Get 'visualize'" do
+  ##TODO write a factory for word_markings
+
+  #it 'is successful' do
+  #get :visualize, :id => @prism.uuid
+  #response.should be_success
+  #end
+
+  #it "assigns @prism" do
+  #get :visualize, :id => @prism.uuid
+  #response.should_not be_nill
+  #end
+
+  #it "renders the 'visualize' template" do
+  #get :highlight, :id => @prism.uuid
+  #response.should render_template('visualize')
+  #end
+
+  #end
 
   describe "GET 'new'" do
     it 'is successful' do
@@ -80,14 +92,16 @@ describe PrismsController do
       get :new
       response.should render_template('new')
     end
+
+    it 'is not succesful when not authenticated' do
+      get :new
+      sign_out :user
+      response.should_not be_redirect
+    end
   end
 
 
   describe "POST 'create'" do
-    before(:each) do
-      @prism = Prism.new
-      @prism.stub(:id).and_return(1)
-    end
 
     context "The save is successful" do
       before(:each) do
@@ -95,9 +109,9 @@ describe PrismsController do
         @prism.should_receive(:save).and_return(true)
       end
 
-      it "redirects to the 'show' action" do
+      it "redirects to the 'visualize' action" do
         post :create, :prism => @prism.attributes
-        response.should redirect_to(prism_path(@prism)) # Put the right show path here
+        response.should redirect_to(visualize_path(@prism))
       end
 
       it "sets a flash message" do
@@ -122,33 +136,9 @@ describe PrismsController do
         assigns(:prism).should_not be_nil
       end
     end
-  end  
-  describe "GET 'edit'" do
-    before(:each) do
-      # Replace this with your Mock Factory, for ex: Machinist, Fabrication...
-      @prism = prisms(:one)
-    end
+  end
 
-    it 'is successful' do
-      get :edit, :id => @prism.id
-      response.should be_success
-    end
-
-    it "assigns @prism" do
-      get :edit, :id => @prism.id
-      assigns(:prism).should_not be_nil
-    end
-
-    it "renders the 'edit' template" do
-      get :edit, :id => @prism.id
-      response.should render_template('edit')
-    end
-  end  
   describe "PUT 'update'" do
-    before(:each) do
-      # Replace this with your Mock Factory, for ex: Machinist, Fabrication...
-      @prism = prisms(:one)
-    end
 
     context "the update is successful" do
       before(:each) do
@@ -157,53 +147,33 @@ describe PrismsController do
       end
 
       it "redirects to 'show' action" do
-        put :update, :id => @prism.id, :prism => {} # Add here some attributes for the model
-        response.should redirect_to(prism_path(@prism)) # Put the right show path here
+        put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'} 
+        response.should redirect_to(visualize_path(@prism))
       end
 
       it "sets a flash message" do
-        put :update, :id => @prism.id, :prism => {} # Add here some attributes for the model
-        flash[:notice].should == 'Prism was successfully updated.' # Your flash message here
+        put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'}
+        flash[:notice].should == 'Prism was successfully updated.'
       end
     end
 
-    context "the update fails" do
-      before(:each) do
-        @prism.should_receive(:update_attributes).and_return(false)
-        Prism.should_receive(:find).with(@prism.id).and_return(@prism)
-      end
-
-      it "renders the 'edit' action" do
-        put :update, :id => @prism.id, :prism => {} # Add here some attributes for the model
-        response.should render_template(:edit)
-      end
-
-      it "assigns @prism" do
-        put :update, :id => @prism.id, :prism => {} # Add here some attributes for the model
-        assigns(:prism).should_not be_nil
-      end
-    end
-  end  
-  describe "DELETE 'destroy'" do
-    before(:each) do
-      # Replace this with your Mock Factory, for ex: Machinist, Fabrication...
-      @prism = prisms(:one)
-      Prism.should_receive(:find).with(@prism.id).and_return(@prism)
-    end
-
-    it "should delete the prism" do
-      @prism.should_receive(:delete).and_return(true)
-      delete :destroy, :id => @prism.id
-    end
-
-    it "should redirect to index page" do
-      delete :destroy, :id => @prism.id
-      response.should redirect_to(:prisms)
-    end
-
-    it "sets a flash message" do
-      delete :destroy, :id => @prism.id
-      flash[:notice].should == 'Prism was successfully destroyed.' # Your flash message here
-    end
   end
+
+  #describe "DELETE 'destroy'" do
+
+    #it "should delete the prism" do
+      #@prism.should_receive(:delete).and_return(true)
+      #delete :destroy, :id => @prism.uuid
+    #end
+
+    #it "should redirect to index page" do
+      #delete :destroy, :id => @prism.uuid
+      #response.should redirect_to(:prisms)
+    #end
+
+    #it "sets a flash message" do
+      #delete :destroy, :id => @prism.uuid
+      #flash[:notice].should == 'Prism was successfully destroyed.'
+    #end
+  #end
 end
