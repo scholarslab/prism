@@ -5,16 +5,14 @@ $(setup_highlight);
 <% end %>
 
 <div id="Prismabob">
-  <h1><%= @prism.title.html_safe %></h1>
+  <h2><%= @prism.title.html_safe %></h2>
   <h2><%= @prism.author %></h2>
   <div class="text">
     <%= @prism.content.html_safe %>
   </div>
 </div>
 
-<div class="page-margin">
-  <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
-  <div id="sidebar">
+<div id="sidebar">
     <div id="tools">
       <ul id="highlighters">
         <% if @prism.facet1? %>
@@ -38,9 +36,9 @@ $(setup_highlight);
       <input type="hidden" value="" name="facet4_indices" id="yellow_indices"/>
       <input type="submit" value="Save Highlights" />
     <% end %>
+      <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
       <p id ="publication_date"><%= @prism.publication_date %> </p>
       <p id="description"><%= @prism.description %></p>
       <%= render 'cc_license' %>
     </div>
   </div>
-</div>
