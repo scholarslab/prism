@@ -1,9 +1,14 @@
 class Prism < ActiveRecord::Base
   has_many :markings
   has_many :word_markings
+  belongs_to :users
+
   attr_accessible :prompt, :document_id, :title, :author, :content, :sandbox, :num_words, :facet1, :facet2, :facet3, :facet4, :description, :user_id, :unlisted, :publication_date, :license
 
   self.primary_key = 'uuid'
+
+
+ feature/myprisms
 
 	before_create :set_uuid
 	def set_uuid
