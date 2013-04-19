@@ -58,7 +58,10 @@ nav {
 		text-decoration: none;
 		color: black;
 	}
-}
+
+	a:hover {
+  		color: blue;
+	}
  
 a {text-decoration: none; color: $blue;}
 
