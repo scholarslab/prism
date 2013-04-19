@@ -7,9 +7,6 @@ class Prism < ActiveRecord::Base
 
   self.primary_key = 'uuid'
 
-
- feature/myprisms
-
 	before_create :set_uuid
 	def set_uuid
 	    require 'uuidtools'
