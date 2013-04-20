@@ -25,8 +25,9 @@
         <% for facet in @prism.facets %>
           <li class="vis_facet">
             <input type="hidden" class="color" value="<%=facet.color%>"/>
-            <input type="hidden" value="<%=@frequencies[facet.color]%>" class="freq"/>
-            <span class="facet <%=facet.color%>"></span><%=facet.category%></li>
+            <input type="hidden" class="order" value="<%=facet.order%>"/>
+            <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
+            <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%></li>
         <% end %>
  
       </ul>

@@ -9,16 +9,15 @@ class PrismsController < ApplicationController
     end
 
     def highlight_post
-        prism = Prism.find(params[:id])
-        @facets = @prism.facets
-        for facet in @facets
+        @prism = Prism.find(params[:id])
+        for facet in @prism.facets
             indices = params[("facet#{facet.order}_indices").to_sym]
             for index in JSON.load(indices)
-                word_marking = Word_Marking.new(user:current_user, index:index, facet_id: facet.order, prism:prism)
+                word_marking = WordMarking.new(user:current_user, index:index, facet:facet, prism:@prism)
                 word_marking.save()
             end
         end
-        redirect_to(visualize_path(prism))    
+        redirect_to(visualize_path(@prism))    
     end
 
     def visualize
@@ -27,45 +26,32 @@ class PrismsController < ApplicationController
         @word_markings = @prism.word_markings 
         @usercounter = 0
         
-        for word_marking in @word_markings
-
-        end
-
         users = []
-        for marking in @markings
-            if ! users.include?(marking.user)
-                users.push(marking.user)
-                @usercounter += 1
-            end
+        @frequencies = {}
+        @totals = {}
+        
+        for facet in @prism.facets
+          @frequencies[facet.order] = [0.0] * @prism.num_words
+          @totals[facet.order] = 0
         end
         
-        @frequencies = {}
-        @frequencies["red"] = [0.0] * @prism.num_words
-        @frequencies["blue"] = [0.0] * @prism.num_words
-        @frequencies["green"] = [0.0] * @prism.num_words
-        @frequencies["yellow"] = [0.0] * @prism.num_words
-        
-        # Step 2: For each marking, update the frequencies with which words were marked
         for word_marking in @prism.word_markings
-            # To scale accordingly, # of times word was marked divided by total # of markings
-            if @prism.facet1 && word_marking.facet1_count > 0
-                @frequencies["red"][word_marking.index] += 1.0 / word_marking.facet1_count
-            end
-            if @prism.facet2 && word_marking.facet2_count > 0 
-                @frequencies["green"][word_marking.index] += 1.0 / word_marking.facet2_count
-            end
-            if @prism.facet3 && word_marking.facet3_count > 0
-                @frequencies["blue"][word_marking.index] += 1.0 / word_marking.facet3_count
-            end
-            if @prism.facet4 && word_marking.facet4_count > 0
-                @frequencies["yellow"][word_marking.index] += 1.0 / word_marking.facet4_count
-            end
-        end         
+          @totals[word_marking.facet.order] += 1
+        end
+        
+        for word_marking in @prism.word_markings
+            # To scale accordingly, # of times word was marked divided by total # of markings for that facet
+            @frequencies[word_marking.facet.order][word_marking.index] += 1.0 / @totals[word_marking.facet.order]
+        end
     end
     
 
     def new
       @prism = Prism.new
+      @facet1 = Facet.new
+      @facet2 = Facet.new
+      @facet3 = Facet.new
+      
       respond_to do |format|
         format.html # new.html.erb
         format.json { render json: @prism }  
@@ -74,17 +60,32 @@ class PrismsController < ApplicationController
   
     def create
       @prism = Prism.new(params[:prism])
+      @facet1 = Facet.new(params[:facet1])
+      @facet2 = Facet.new(params[:facet2])
+      @facet3 = Facet.new(params[:facet3])
+      
+      @facet1.order = 0
+      @facet2.order = 1
+      @facet3.order = 2
+      
+      #validate_colors
+      
       process_text(@prism)
-      word_markings = Array.new
-      for word_index in Array(0..@prism.num_words)
-        word_markings << WordMarking.new(prism:@prism, index:word_index, facet1_count: 0, facet2_count: 0, facet3_count: 0, facet4_count: 0)
-        
-      end
       success = @prism.save
-      for word_marking in word_markings
-            word_marking.prism = @prism
-            success = success && word_marking.save
+      
+      if @facet1.description.to_s.length > 0
+        @facet1.prism = @prism
+        success = success && @facet1.save
       end
+      if @facet2.description.to_s.length > 0
+        @facet2.prism = @prism
+        success = success && @facet2.save
+      end
+      if @facet3.description.to_s.length > 0
+        @facet3.prism = @prism
+        success = success && @facet3.save
+      end
+      
       respond_to do |format|
         if success
           format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully created.' }
@@ -96,22 +97,6 @@ class PrismsController < ApplicationController
       end
     end
   
-
-    def update
-      @prism = Prism.find(params[:id])
-      process_text(@prism)
-
-      respond_to do |format|
-        if @prism.update_attributes(params[:prism])
-          format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully updated.' }
-          format.json { head :no_content }
-        else
-          format.html { render action: "edit" }
-          format.json { render json: @prism.errors, status: :unprocessable_entity }
-        end
-      end
-    end
-    
     def process_text(prism)
       text = prism.content
       doc = Nokogiri::XML("")
@@ -155,6 +140,15 @@ def destroy
           format.html { redirect_to index, notice: 'Prism could not be destroyed.' }
           format.json { head :no_content }
         end
+    end
+end
+
+def validate_colors
+    for facet in [@facet1, @facet2, @facet3]
+      if facet.color.to_s.strip.length!=6
+        facet.color = "000000"
+        facet.color[facet.order*2,2] = "FF"
+      end
     end
 end
 
