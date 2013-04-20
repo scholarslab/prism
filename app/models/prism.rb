@@ -4,6 +4,8 @@ class Prism < ActiveRecord::Base
   attr_accessible :title, :author, :content, :num_words, :description, :user_id, :unlisted, :publication_date, :language
   set_primary_key "uuid"
 
+accepts_nested_attributes_for :facets
+
 	before_create :set_uuid
 	def set_uuid
 	    require 'uuidtools'

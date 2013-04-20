@@ -42,22 +42,25 @@
     <%= f.label :unlisted %>
     <%= f.check_box :unlisted%>
   </div>
+
+  <%= f.fields_for :facet do |facet_form| %>
+
   <div class="field">
-    <%= f.label :facet1 %><br />
-    <%= f.text_field :facet1 %>
+    <%= facet_form.label :facet %><br />
+    <%= facet_form.text_field :description %>
   </div>
-  <div class="field">
-    <%= f.label :facet2 %><br />
-    <%= f.text_field :facet2 %>
+
+   <div class="field">
+    <%= facet_form.label :facet %><br />
+    <%= facet_form.text_field :description %> 
   </div>
-  <div class="field">
-    <%= f.label :facet3 %><br />
-    <%= f.text_field :facet3 %>
+
+   <div class="field">
+    <%= facet_form.label :facet %><br />
+    <%= facet_form.text_field :description %> 
   </div>
-  <div class="field">
-    <%= f.label :facet4 %><br />
-    <%= f.text_field :facet4 %>
-  </div>
+
+  <% end %>
   
   <div class="actions">
     <%= f.submit %>
