@@ -58,6 +58,11 @@ nav {
 		text-decoration: none;
 		color: black;
 	}
+
+	a:hover {
+		color: blue;
+
+	}
 }
  
 a {text-decoration: none; color: $blue;}
@@ -220,17 +225,14 @@ td {
 
 //highlight pages------------------------------
 
-.text-area {
-	width: 200px;
-	display: inline;
+#main {
+	width: 100%;
 }
 
-.page-margin {
-	width: 200px;
-	display: inline;
-	text-align: left;
-	float: right;
-	
+#Prismabob {
+	width: 60%;
+	display: inline-block;
+	float: left;
 }
 
 #highlighters {
@@ -249,4 +251,11 @@ td {
       @include border-radius(16px);
     }
   }
+}
+
+#sidebar {
+	width: 30%;
+	display: inline-block;
+	float: right;
+	padding: 0px;
 }

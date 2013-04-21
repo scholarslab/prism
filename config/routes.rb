@@ -3,6 +3,8 @@ Testing::Application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
+  resources :users, :only => [:show]
+
   scope ':locale' do
     resources :buckets, :only => [ :index ]
     resources :items, :only => [ :index, :show, :edit, :update ]
