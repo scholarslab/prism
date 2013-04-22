@@ -1,12 +1,20 @@
-<h1><%= @user.email %></h1>
+<h1>myPrisms</h2>
+<h1>Email: <%= @user.email %></h1>
 
-<p> This needs to be refactored</p>
 <h3> Owned prisms:</h3>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Public</th>
-  </tr>
+<table cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Highlight</th>
+      <th>Visualize</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+
   <% @prisms.each do |prism| %>
     <tr>
     <td><%= prism.title.html_safe %></td>
@@ -22,20 +30,37 @@
 
   </tr>
 <% end %>
+</body>
+<br>
+<br>
+
 </table>
+<h3>Highlighted prisms: </h3>
+<table cellpadding="0" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Highlight</th>
+      <th>Visualize</th>
+    </tr>
 
-<!-- We don't need the user info do we? -->
-<!-- <h3>User info:</h3>
-<pre>
-<%= @user.email %>
-</pre> -->
+  </thead>
 
+  <tbody>
 
-<pre> 
-  <% @highlighted_prisms.each do |stuff| %>
-    <% prism = Prism.find_by_uuid(stuff) %>
-    <%= link_to(prism.title, highlight_path(prism)) %>
+    <% @highlighted_prisms.each do |stuff| %>
+      <% prism = Prism.find_by_uuid(stuff) %>
+    <td><%= prism.title.html_safe %></td>
+
+      <td class="highlight"> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+        <%= image_tag('highlight_button.png') %>
+      <% end %>
+      </td>
+      <td class="visualize">  <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+        <%= image_tag('visualize_button.png') %>
+      <% end %>
+      </td>
+  </tr>
   <% end %>
-
-  <%= @highlighted_prisms %>
-</pre
+</tbody>
+</table>
