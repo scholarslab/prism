@@ -58,12 +58,14 @@ nav {
 		text-decoration: none;
 		color: black;
 	}
+
+	a:hover {
+		color: blue;
+
+	}
 }
  
 a {text-decoration: none; color: $blue;}
-
-h {padding: 0;
-}
 
 nav, h1, h2,
 .motto {text-transform: uppercase;
@@ -155,18 +157,25 @@ width: 300px;
 	clear: both;
 
 	a {
-		display:inline-block;
 		text-transform: uppercase;
 		color: grey;
 		padding-left: 20px;
 		padding-right: 20px;
+
+    &#slab-link {
+      width: 150px;
+      display:block;
+      text-align:center;
+      margin:20px auto;
+      opacity: 0.5;
+      img {
+        max-width: 100%;
+        width:auto;
+        height:auto;
+      }
+    }
 	}
 
-	img {
-    	width: 100px;
-    	height: 15px;
-    	display: inline-block;
-    	}
 }
 
 //flash notice---------------------------------
@@ -229,9 +238,14 @@ td {
 
 //highlight pages------------------------------
 
-.text-area {
-	width: 200px;
-	display: inline;
+#main {
+	width: 100%;
+}
+
+#Prismabob {
+	width: 60%;
+	display: inline-block;
+	float: left;
 }
 
 #highlighters {
@@ -252,6 +266,7 @@ td {
   }
 }
 
+
 //new prism page-------------------------------
 
 .field {
@@ -267,4 +282,14 @@ td {
 #prism-meta-data {
 	
 	float: right;
-}
+
+	}
+
+#sidebar {
+	width: 30%;
+	display: inline-block;
+	float: right;
+	padding: 0px;
+
+	}
+

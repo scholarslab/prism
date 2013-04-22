@@ -1,23 +1,23 @@
-<div class="page-margin">
-  <h1>New Prism</h1>
+<h1>New Prism</h1>
 
-  <%= form_for(@prism) do |f| %>
-    <% if @prism.errors.any? %>
-    <div id="error_explanation">
-    <h2><%= pluralize(@prism.errors.count, "error") %> prohibited this prism from being saved:</h2>
+<%= form_for(@prism) do |f| %>
+  <% if @prism.errors.any? %>
+  <div id="error_explanation">
+  <h2><%= pluralize(@prism.errors.count, "error") %> prohibited this prism from being saved:</h2>
 
-    <ul>
-      <% @prism.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
+  <ul>
+    <% @prism.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
 <% end %>
   <div class="field" id="content">
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div> 
 
+<<<<<<< HEAD
   <div id="prism-meta-data">
   <div class="field" id="title">
     <%= f.label :title %><br />
@@ -69,4 +69,56 @@
 
   </div>
 <% end %>
+=======
+<div class="field">
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
 </div>
+<div class="field">
+  <%= f.label :author %><br />
+  <%= f.text_field :author %>
+</div>
+<div class="field">
+  <%= f.label :publication_date %><br />
+  <%= f.text_field :publication_date %>
+</div>
+<div class="field">
+  <%= f.label :language %><br />
+  <%= f.text_field :language %>
+</div>
+<div class="field">
+  <%= f.label :description %><br />
+  <%= f.text_area :description %>
+</div>
+<div class="field">
+  <%= f.label :content %><br />
+  <%= f.text_area :content %>
+</div> 
+<div class ="field">
+  <%= f.label :unlisted %>
+  <%= f.check_box :unlisted%>
+</div>
+<div class="field">
+  <%= f.label :facet1 %><br />
+  <%= f.text_field :facet1 %>
+</div>
+<div class="field">
+  <%= f.label :facet2 %><br />
+  <%= f.text_field :facet2 %>
+</div>
+<div class="field">
+  <%= f.label :facet3 %><br />
+  <%= f.text_field :facet3 %>
+</div>
+<div class="field">
+  <%= f.label :facet4 %><br />
+  <%= f.text_field :facet4 %>
+</div>
+
+<%= render "cc_license_form" %>
+
+<div class="actions">
+  <%= f.submit %>
+>>>>>>> 7dd6cf26ecd1471ea327f377a76d57a125752645
+</div>
+<% end %>

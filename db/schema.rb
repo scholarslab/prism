@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411151203) do
+ActiveRecord::Schema.define(:version => 20130418131546) do
 
   create_table "markings", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20130411151203) do
     t.boolean  "unlisted"
     t.string   "publication_date"
     t.string   "language"
+    t.string   "license"
   end
 
   create_table "users", :force => true do |t|
