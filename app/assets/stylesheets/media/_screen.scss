@@ -202,9 +202,8 @@ width: 300px;
 
 }
 
-//table styling--------------------------------
+//browse styling--------------------------------
 
-h1 {text-align: center;}
 
 th, td {
 	border-bottom: 1px solid #CCCCCC;
@@ -221,6 +220,20 @@ td {
 	vertical-align:bottom;
 	&.visualize,
 	&.highlight {width: 15%;}
+}
+
+#new-prism {
+	display: block;
+	width: 150px;
+	background-color: lighten(green, 15%);
+	color: white;
+	text-transform: uppercase;
+	float: right;
+	text-align: center;
+	padding: 10px;
+	@include border-radius(15px);
+	margin-bottom: 20px;
+
 }
 
 //highlight pages------------------------------
@@ -253,9 +266,30 @@ td {
   }
 }
 
+
+//new prism page-------------------------------
+
+.field {
+	color: blue;
+	padding: 0px;
+}
+
+#content {
+	float: left;	
+
+}
+
+#prism-meta-data {
+	
+	float: right;
+
+	}
+
 #sidebar {
 	width: 30%;
 	display: inline-block;
 	float: right;
 	padding: 0px;
-}
+
+	}
+
