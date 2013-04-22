@@ -20,30 +20,14 @@
     <div id="visualizations">
       <p id="visualization-help"><%= t "visualize.instructions" %> </p>
       <ul id="highlighters">
-        <% if @prism.facet1? %>
+        <% for facet in @prism.facets %>
           <li class="vis_facet">
-            <input type="hidden" class="color" value="<%="red"%>"/>
-            <input type="hidden" value="<%=@frequencies["red"]%>" class="freq"/>
-            <span class="facet <%="red"%>"></span><%=@prism.facet1%></li>
+            <input type="hidden" class="color" value="<%=facet.color%>"/>
+            <input type="hidden" class="order" value="<%=facet.order%>"/>
+            <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
+            <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%></li>
         <% end %>
-        <% if @prism.facet2? %>
-          <li class="vis_facet">
-            <input type="hidden" class="color" value="<%="green"%>"/>
-            <input type="hidden" value="<%=@frequencies["green"]%>" class="freq"/>
-            <span class="facet <%="green"%>"></span><%=@prism.facet2%></li>
-        <% end %>
-        <% if @prism.facet3? %>
-          <li class="vis_facet">
-            <input type="hidden" class="color" value="<%="blue"%>"/>
-            <input type="hidden" value="<%=@frequencies["blue"]%>" class="freq"/>
-            <span class="facet <%="blue"%>"></span><%=@prism.facet3%></li>
-        <% end %>
-        <% if @prism.facet4? %>
-          <li class="vis_facet">
-            <input type="hidden" class="color" value="<%="yellow"%>"/>
-            <input type="hidden" value="<%=@frequencies["yellow"]%>" class="freq"/>
-            <span class="facet <%="yellow"%>"></span><%=@prism.facet4%></li>
-        <% end %>
+ 
       </ul>
       <p><%= render 'cc_license' %></p>
       <p id="viz-count">
