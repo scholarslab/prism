@@ -14,7 +14,6 @@
 
 	<tbody>
 
-
 <% @prisms.each do |prism| %>
 <tr> 
 
@@ -22,8 +21,6 @@
 
      <td class="highlight"> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
         <%= image_tag('highlight_button.png') %>
-
-<!-- <%= image_tag('LOGO.png') %> -->
       <% end %>
      </td>
 
@@ -41,3 +38,4 @@
 
 
 </table>
+
