@@ -75,15 +75,16 @@ class PrismsController < ApplicationController
 
   def create
     @prism = Prism.new(params[:prism])
-    @facet1 = Facet.new(params[:facet1])
-    @facet2 = Facet.new(params[:facet2])
-    @facet3 = Facet.new(params[:facet3])
+    @facet1 = Facet.new(params[:facet1]) 
+    @facet2 = Facet.new(params[:facet2]) 
+    @facet3 = Facet.new(params[:facet3]) 
     
-    #if we want to hard code colors based on the order, this is where it would go.
-
     @facet1.order = 0
+    @facet1.color = "red"
     @facet2.order = 1
+    @facet2.color = "green"
     @facet3.order = 2
+    @facet3.color = "blue"
     
     #validate_colors
     
