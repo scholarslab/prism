@@ -10,7 +10,12 @@ class PrismsController < ApplicationController
   end
 
   def index
-    @prisms = Prism.all
+    @prisms = []
+    for prism in Prism.all
+      if !prism.unlisted
+        @prisms << prism
+      end
+    end
     @title = "Browse prisms"
 
     respond_to do |format|
