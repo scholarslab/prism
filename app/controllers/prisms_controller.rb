@@ -2,7 +2,8 @@ require 'set'
 
 class PrismsController < ApplicationController 
   before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
-
+  
+  # this method appears in both the model and the controller. Shane deleted it on his controller on the feature branch.
   def before_create()
     require 'uuidtools'
     self.id = UUID.timestamp_create().to_s
@@ -19,135 +20,53 @@ class PrismsController < ApplicationController
   end
 
   def highlight
-    @title = "Highlight"
-    @prism = Prism.find(params[:id])
+      @title = "Highlight"
+      @prism = Prism.find(params[:id])
   end
 
-  def sandbox_highlight
-    @title = "Highlight"
-    @prism = Prism.find(params[:id])
-    @document = @prism.document
-    render "highlight"
-  end
-
-  def sandbox_post
-    prism = Prism.find(params[:id])
-    if @prism.facet1?
-      indices = params[("facet1_indices").to_sym]
-      Marking.new(user_id:current_user, word_array:indices, facet_num: 1, prism_id:prism).save()
-    end
-    if @prism.facet2?
-      indices = params[("facet2_indices").to_sym]
-      Marking.new(user_id:current_user, word_array:indices, facet_num: 2, prism_id:prism).save()
-    end
-    if @prism.facet3?
-      indices = params[("facet3_indices").to_sym]
-      Marking.new(user_id:current_user, word_array:indices, facet_num: 3, prism_id:prism).save()
-    end
-    if @prism.facet4?
-      indices = params[("facet4_indices").to_sym]
-      Marking.new(user_id:current_user, word_array:indices, facet_num: 4, prism_id:prism).save()
-    end
-    redirect_to(sandbox_visualize_path(prism))    
-  end
   def highlight_post
-    prism = Prism.find(params[:id])
-    if prism.facet1?
-      indices = params[("facet1_indices").to_sym]
-      marking = Marking.new(user:current_user, word_array:indices, facet_num: 1, prism:prism)
-      marking.save()
-      update_word_markings(marking)
-    end
-    if prism.facet2?
-      indices = params[("facet2_indices").to_sym]
-      marking = Marking.new(user:current_user, word_array:indices, facet_num: 2, prism:prism)
-      marking.save()
-      update_word_markings(marking)
-    end
-    if prism.facet3?
-      indices = params[("facet3_indices").to_sym]
-      marking = Marking.new(user:current_user, word_array:indices, facet_num: 3, prism:prism)
-      marking.save()
-      update_word_markings(marking)
-    end
-    if prism.facet4?
-      indices = params[("facet4_indices").to_sym]
-      marking = Marking.new(user:current_user, word_array:indices, facet_num: 4, prism:prism)
-      marking.save()
-      update_word_markings(marking)
-    end
-    redirect_to(visualize_path(prism))    
-  end
-
-  def sandbox_visualize
-    @title = "Sandbox Visualize"
-    @prism = Document.where(:sandbox => true)[0].prisms[0]
-    @frequencies = {}
-    # Step 1: Create a list of N 0s, where N is the total number of words
-    @frequencies["red"] = [0.0] * @prism.num_words
-    @frequencies["blue"] = [0.0] * @prism.num_words
-    @frequencies["green"] = [0.0] * @prism.num_words
-    @frequencies["yellow"] = [0.0] * @prism.num_words
-    # Step 2: For each marking, update the frequencies with which words were marked
-    for word_marking in @prism.word_markings
-      # To scale accordingly, # of times word was marked divided by total # of markings
-      if @prism.facet1?
-        @frequencies["red"][word_markings.index] += 1.0 / word_marking.facet1_count
+      @prism = Prism.find(params[:id])
+      for facet in @prism.facets
+          indices = params[("facet#{facet.order}_indices").to_sym]
+          for index in JSON.load(indices)
+              word_marking = WordMarking.new(user:current_user, index:index, facet:facet, prism:@prism)
+              word_marking.save()
+          end
       end
-      if @prism.facet2? 
-        @frequencies["blue"][word_markings.index] += 1.0 / word_marking.facet2_count
-      end
-      if @prism.facet3?
-        @frequencies["green"][word_markings.index] += 1.0 / word_marking.facet3_count
-      end
-      if @prism.facet4?
-        @frequencies["yellow"][word_markings.index] += 1.0 / word_marking.facet4_count
-      end
-    end 
-    render "visualize"
+      redirect_to(visualize_path(@prism))    
   end
 
   def visualize
     @title = "Visualize"
     @prism = Prism.find(params[:id])
-    @markings = @prism.markings 
+    @word_markings = @prism.word_markings 
     @usercounter = 0
-
+    
     users = []
-    for marking in @markings
-      if ! users.include?(marking.user)
-        users.push(marking.user)
-        @usercounter += 1
-      end
-    end
-
     @frequencies = {}
-    @frequencies["red"] = [0.0] * @prism.num_words
-    @frequencies["blue"] = [0.0] * @prism.num_words
-    @frequencies["green"] = [0.0] * @prism.num_words
-    @frequencies["yellow"] = [0.0] * @prism.num_words
-
-    # Step 2: For each marking, update the frequencies with which words were marked
+    @totals = {}
+    
+    for facet in @prism.facets
+      @frequencies[facet.order] = [0.0] * @prism.num_words
+      @totals[facet.order] = 0
+    end
+    
     for word_marking in @prism.word_markings
-      # To scale accordingly, # of times word was marked divided by total # of markings
-      if @prism.facet1 && word_marking.facet1_count > 0
-        @frequencies["red"][word_marking.index] += 1.0 / word_marking.facet1_count
-      end
-      if @prism.facet2 && word_marking.facet2_count > 0 
-        @frequencies["green"][word_marking.index] += 1.0 / word_marking.facet2_count
-      end
-      if @prism.facet3 && word_marking.facet3_count > 0
-        @frequencies["blue"][word_marking.index] += 1.0 / word_marking.facet3_count
-      end
-      if @prism.facet4 && word_marking.facet4_count > 0
-        @frequencies["yellow"][word_marking.index] += 1.0 / word_marking.facet4_count
-      end
-    end         
+      @totals[word_marking.facet.order] += 1
+    end
+    
+    for word_marking in @prism.word_markings
+        # To scale accordingly, # of times word was marked divided by total # of markings for that facet
+        @frequencies[word_marking.facet.order][word_marking.index] += 1.0 / @totals[word_marking.facet.order]
+    end   
   end
-
 
   def new
     @prism = Prism.new
+    @facet1 = Facet.new
+    @facet2 = Facet.new
+    @facet3 = Facet.new
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @prism }  
@@ -156,17 +75,35 @@ class PrismsController < ApplicationController
 
   def create
     @prism = Prism.new(params[:prism])
+    @facet1 = Facet.new(params[:facet1]) 
+    @facet2 = Facet.new(params[:facet2]) 
+    @facet3 = Facet.new(params[:facet3]) 
+    
+    @facet1.order = 0
+    @facet1.color = "red"
+    @facet2.order = 1
+    @facet2.color = "green"
+    @facet3.order = 2
+    @facet3.color = "blue"
+    
+    #validate_colors
+    
     process_text(@prism)
-    word_markings = Array.new
-    for word_index in Array(0..@prism.num_words)
-      word_markings << WordMarking.new(prism:@prism, index:word_index, facet1_count: 0, facet2_count: 0, facet3_count: 0, facet4_count: 0)
-
-    end
     success = @prism.save
-    for word_marking in word_markings
-      word_marking.prism = @prism
-      success = success && word_marking.save
+    
+    if @facet1.description.to_s.length > 0
+      @facet1.prism = @prism
+      success = success && @facet1.save
     end
+    if @facet2.description.to_s.length > 0
+      @facet2.prism = @prism
+      success = success && @facet2.save
+    end
+    if @facet3.description.to_s.length > 0
+      @facet3.prism = @prism
+      success = success && @facet3.save
+    end
+    
     respond_to do |format|
       if success
         format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully created.' }
@@ -176,23 +113,7 @@ class PrismsController < ApplicationController
         format.json { render json: @prism.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-
-  def update
-    @prism = Prism.find(params[:id])
-    process_text(@prism)
-
-    respond_to do |format|
-      if @prism.update_attributes(params[:prism])
-        format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @prism.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  end         
 
   def process_text(prism)
     text = prism.content
@@ -221,41 +142,9 @@ class PrismsController < ApplicationController
     prism.num_words = counter
   end
 
-  def update_word_markings(marking)
-    @prism = Prism.find(params[:id])
-    # goes through each word marked
-    word_marking_map = Hash.new
-    for word_marking in @prism.word_markings
-      word_marking_map[word_marking.index] = word_marking
-    end
-
-    # searches the set of markings to find out if the index of a marked word matches the current word index under examination.
-    touched_word_markings = Set.new
-
-    # does this for each facet, and will add one to the word_marking facet count if the facet exists and it is marked
-    for word_index in JSON.load(marking.word_array)
-      if marking.facet_num == 1
-        word_marking_map[word_index].facet1_count += 1
-        touched_word_markings.add(word_index)
-      elsif marking.facet_num == 2
-        word_marking_map[word_index].facet2_count += 1
-        touched_word_markings.add(word_index)
-      elsif   marking.facet_num == 3
-        word_marking_map[word_index].facet3_count += 1
-        touched_word_markings.add(word_index)
-      elsif marking.facet_num == 4
-        word_marking_map[word_index].facet4_count += 1
-        touched_word_markings.add(word_index)
-      end
-    end
-    for touched in touched_word_markings
-      word_marking_map[touched].save
-    end
-  end
-
   def destroy
     @prism = Prism.find(params[:id])
-
+    # Markings table no longer exists. We would need to switch it to facets?
     for marking in @prism.markings
       marking.destroy
     end
@@ -275,4 +164,12 @@ class PrismsController < ApplicationController
     end
   end
 
+  def validate_colors
+      for facet in [@facet1, @facet2, @facet3]
+        if facet.color.to_s.strip.length!=6
+          facet.color = "000000"
+          facet.color[facet.order*2,2] = "FF"
+        end
+      end
+  end
 end

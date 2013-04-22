@@ -29,6 +29,7 @@ Testing::Application.routes.draw do
   match '/prisms/:id/visualize(.:format)' => 'prisms#visualize', :as => :visualize
   match '/prisms/:id/highlight(.:format)' => 'prisms#highlight', :as => :highlight, :via => :get
   match '/prisms/:id/highlight(.:format)' => 'prisms#highlight_post', :as => :highlight_post, :via => :post
+  match '/myprisms/:id' => 'users#show', :as => :users
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
