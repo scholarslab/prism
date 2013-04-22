@@ -44,6 +44,7 @@ en:
     ignore: "If you didn't request this, please ignore this email."
     wont: "Your password won't change until you access the link above and create a new one."
     privacy_html: "We will never give your email away except to comply with the law. For more information, read our <a href='/pages/terms'>Terms of Service</a>."  
+    privacy: "We will never give your email away except to comply with the law. For more information, read our <a href='/pages/terms'>Terms of Service</a>."
     edit: Edit 
     cancel: Cancel my account
     unhappy: "Unhappy?"
@@ -64,7 +65,9 @@ en:
       of marking a text into a digital one. They chose to employ a constrained interpretive vocabulary and to limit the length of the text in
       order to stay true to the transparency game. Like the transparency exercise, the end goal of Prism is to produce <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10">aesthetic provocations</a>, that is, visualizations which provoke further discussion.  
     description_p5_html: >-
-      The 2012-2013 Praxis Team has retained the vision set by the original team.  Our primary goal was to expand Prism in a format that would allow for actual implementation in the classroom and scholarly conversation.  This led us to define two primary objectives.  The first was the ability for users to upload their own texts and to define their own interpretive categories.   The second was to create a more inviting and user-friendly environment that would encourage participation and exploration.  To that end, we have redesigned the website, paying special attention to work flow, ease of use, and aesthetic concerns.  In addition, both the visualization feature and highlighting function were refined.  Our hope is that Prism can now be more easily adapted by the user for a variety of interpretive projects.  
+      The 2012-2013 Praxis Team has retained the vision set by the original team.  Our primary goal was to expand Prism in a format that would allow for actual implementation in the classroom and scholarly conversation.  This led us to define two primary objectives.  
+      The first was the ability for users to upload their own texts and to define their own interpretive categories.   The second was to create a more inviting and user-friendly environment that would encourage participation and exploration.  To that end, we have redesigned the website, paying special attention to work flow, ease of use, and aesthetic concerns.  
+      In addition, both the visualization feature and highlighting function were refined.  Our hope is that Prism can now be more easily adapted by the user for a variety of interpretive projects.  Be sure to check out our <a href='/pages/future'>future directions</a> page to learn more about additional potential capabilities of Prism!
     praxis_title: The Praxis Program
     praxis_description_html: >
       <a href='http://praxis.scholarslab.org/'>The Praxis Program</a> is a 2011-13 pilot project of the <a href='http://www2.lib.virginia.edu/scholarslab/'>

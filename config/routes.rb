@@ -19,6 +19,7 @@ Testing::Application.routes.draw do
   get "pages/about", :as => :about
   get "pages/alumni", :as => :alumni
   get "pages/terms", :as => :terms
+  get "pages/future", :as => :future
 
   # To rewrite URLs, match the desired route to a current route:
   #match "about" => "pages#about"
