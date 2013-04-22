@@ -9,22 +9,19 @@
   </tr>
   <% @prisms.each do |prism| %>
     <tr>
-   <td><%= prism.title.html_safe %></td>
+    <td><%= prism.title.html_safe %></td>
 
-     <td class="highlight"> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
-        <%= image_tag('highlight_button.png') %>
-
-      <% end %>
-     </td>
-
-
+    <td class="highlight"> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+      <%= image_tag('highlight_button.png') %>
+    <% end %>
+    </td>
     <td class="visualize">  <%= link_to(visualize_path(prism), :class => 'visualize') do %>
-        <%= image_tag('visualize_button.png') %>
-      <% end %>
-     </td>
+      <%= image_tag('visualize_button.png') %>
+    <% end %>
+    </td>
 
-    </tr>
-  <% end %>
+  </tr>
+<% end %>
 </table>
 
 <!-- We don't need the user info do we? -->
@@ -35,7 +32,10 @@
 
 
 <pre> 
-  <%= @highlighted_prisms.each do |stuff| %>
-  <%= stuff.inspect %>
+  <% @highlighted_prisms.each do |stuff| %>
+    <% prism = Prism.find_by_uuid(stuff) %>
+    <%= link_to(prism.title, highlight_path(prism)) %>
   <% end %>
-  </pre
+
+  <%= @highlighted_prisms %>
+</pre
