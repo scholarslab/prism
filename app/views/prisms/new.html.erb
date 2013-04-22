@@ -1,3 +1,4 @@
+<div class="userupload">
 <h1>New Prism</h1>
 
 <%= form_for(@prism) do |f| %>
@@ -22,13 +23,34 @@
 </div>
 
 <div id="sidebar">
+
+<div id="facetbutton">
+ <%= fields_for :facet1 do |f1| %>
+    <div class="field">
+      <%= image_tag('button3.png') %>
+      <%= f1.text_field :description, :placeholder => 'Facet 1' %>
+    </div>
+  <% end %>
+  
+  <%= fields_for :facet2 do |f2| %>
+    <div class="field">
+    <%= image_tag('button2.png') %>
+      <%= f2.text_field :description, :placeholder => 'Facet 2' %>
+    </div>
+  <% end %>
+  
+  
+  <%= fields_for :facet3 do |f3| %>
+    <div class="field">
+    <%= image_tag('button1.png') %>
+      <%= f3.text_field :description, :placeholder => 'Facet 3' %>
 <div class="field">
   <%= f.label :title %><br />
-  <%= f.text_field :title %>
+  <%= f.text_field :title, :required => 'true', :placeholder => 'Required'  %>
 </div>
 <div class="field">
   <%= f.label :author %><br />
-  <%= f.text_field :author %>
+  <%= f.text_field :author, :required => 'true', :placeholder => 'Required'  %>
 </div>
 <div class="field">
   <%= f.label :publication_date %><br />
@@ -47,36 +69,18 @@
   <%= f.check_box :unlisted%>
 </div>
 
- <%= fields_for :facet1 do |f1| %>
-    Facet 1:
-    <div class="field">
-      <%= f1.label :description %><br />
-      <%= f1.text_field :description %>
-    </div>
   <% end %>
-  
-  <%= fields_for :facet2 do |f2| %>
-    Facet 2:
-    <div class="field">
-      <%= f2.label :description %><br />
-      <%= f2.text_field :description %>
-    </div>
-  <% end %>
-  
-  
-  <%= fields_for :facet3 do |f3| %>
-    Facet 3:
-    <div class="field">
-      <%= f3.label :description %><br />
-      <%= f3.text_field :description %>
-    </div>
-  <% end %>
+</div>
 
 <%= render "cc_license_form" %>
-</div>
 
 <div class="actions">
   <%= f.submit %>
 </div>
-
+</div>
 <% end %>
+</div>
+
+
+<div class="clearfix">
+  </div>
