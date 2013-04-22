@@ -13,6 +13,15 @@
 </div>
 <% end %>
 
+<div class="leftcolumn">
+  <div class="field" id="content">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div> 
+
+</div>
+
+<div id="sidebar">
 <div class="field">
   <%= f.label :title %><br />
   <%= f.text_field :title %>
@@ -33,34 +42,41 @@
   <%= f.label :description %><br />
   <%= f.text_area :description %>
 </div>
-<div class="field">
-  <%= f.label :content %><br />
-  <%= f.text_area :content %>
-</div> 
 <div class ="field">
   <%= f.label :unlisted %>
   <%= f.check_box :unlisted%>
 </div>
-<div class="field">
-  <%= f.label :facet1 %><br />
-  <%= f.text_field :facet1 %>
-</div>
-<div class="field">
-  <%= f.label :facet2 %><br />
-  <%= f.text_field :facet2 %>
-</div>
-<div class="field">
-  <%= f.label :facet3 %><br />
-  <%= f.text_field :facet3 %>
-</div>
-<div class="field">
-  <%= f.label :facet4 %><br />
-  <%= f.text_field :facet4 %>
-</div>
+
+ <%= fields_for :facet1 do |f1| %>
+    Facet 1:
+    <div class="field">
+      <%= f1.label :description %><br />
+      <%= f1.text_field :description %>
+    </div>
+  <% end %>
+  
+  <%= fields_for :facet2 do |f2| %>
+    Facet 2:
+    <div class="field">
+      <%= f2.label :description %><br />
+      <%= f2.text_field :description %>
+    </div>
+  <% end %>
+  
+  
+  <%= fields_for :facet3 do |f3| %>
+    Facet 3:
+    <div class="field">
+      <%= f3.label :description %><br />
+      <%= f3.text_field :description %>
+    </div>
+  <% end %>
 
 <%= render "cc_license_form" %>
+</div>
 
 <div class="actions">
   <%= f.submit %>
 </div>
+
 <% end %>

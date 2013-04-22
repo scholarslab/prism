@@ -3,6 +3,8 @@ Testing::Application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
+  resources :users, :only => [:show]
+
   scope ':locale' do
     resources :buckets, :only => [ :index ]
     resources :items, :only => [ :index, :show, :edit, :update ]
@@ -17,6 +19,7 @@ Testing::Application.routes.draw do
   get "pages/about", :as => :about
   get "pages/alumni", :as => :alumni
   get "pages/terms", :as => :terms
+  get "pages/future", :as => :future
 
   # To rewrite URLs, match the desired route to a current route:
   #match "about" => "pages#about"
@@ -27,6 +30,7 @@ Testing::Application.routes.draw do
   match '/prisms/:id/visualize(.:format)' => 'prisms#visualize', :as => :visualize
   match '/prisms/:id/highlight(.:format)' => 'prisms#highlight', :as => :highlight, :via => :get
   match '/prisms/:id/highlight(.:format)' => 'prisms#highlight_post', :as => :highlight_post, :via => :post
+  match '/myprisms/:id' => 'users#show', :as => :users
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

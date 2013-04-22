@@ -19,7 +19,7 @@
     </li>
     <li>
     <% if user_signed_in? %>
-        <a href="myprism">myPrism</a>
+        <%= link_to t('myPrisms'), users_path(current_user) %>
     <% else %>
           <%= link_to t('header.sign_in'), new_user_session_path %>
     <% end %>
@@ -29,12 +29,10 @@
 </ul>
 </nav>
 
-  
-
 <header>
 <div class="header">
 
-  <h><%= link_to image_tag('LOGO.png'), home_path %></h>
+  <%= link_to image_tag('LOGO.png'), home_path %>
   <% if current_page?('/') %>
   <p class="motto">A Tool for Collaborative Interpretation of Texts</p>
   <% end %>
