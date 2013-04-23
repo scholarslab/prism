@@ -27,7 +27,7 @@ input[type=submit] {
 .button {
 	display: block;
 	width: 150px;
-	background-color: $green;
+	background-color: $yellow;
 	color: white;
 	text-transform: uppercase;
 	text-align: center;
@@ -46,15 +46,50 @@ header {
 	font-size: 16px;
 }
 
-#buttons img{
-    width: 200px;
-    height: 200px;
-    margin: 25px;
-    @include border-radius(20px);
-}
+#buttons {
+  @include clearfix;
+  text-align:center;
+  margin: 4em 0;
 
-#buttons {text-align: center;
-	margin-top:25px;}
+  span {
+    display:inline-block;
+  }
+
+  a {
+    color: white;
+    background-color: $blue;
+    width: 220px;
+    line-height: 220px;
+    text-align:center;
+    font-size: 1.25em;
+    text-transform:uppercase;
+    @include border-radius(110px);
+    float:left;
+    margin: 0 20px;
+
+    &.demo {
+      background-color: $red;
+      &:hover,
+      &:active {
+        background-color: darken($red, 10%);
+      }
+    }
+    &.create {
+      background-color: $green;
+      &:hover,
+      &:active {
+        background-color: darken($green, 10%);
+      }
+    }
+    &.play {
+      background-color: $blue;
+      &:hover,
+      &:active {
+        background-color: darken($blue, 10%);
+      }
+    }
+  }
+}
 
 nav {
 
@@ -177,7 +212,7 @@ width: 300px;
 
 #footernav {
 	text-align: center;	
-	margin-top: 100px;
+	margin-top: 200px;
 	clear: both;
 
 	a {
@@ -263,14 +298,14 @@ td {
 	float: right;	
 }
 
-#license {
-	padding-top: 20px;
+#tools {
+	padding-bottom: 50px;
 }
 
 #highlighters {
   list-style:none;
   padding-left:0;
-  padding-top: 110px;
+  padding-top: 76px;
 
   li {
     @include clearfix;
@@ -289,6 +324,9 @@ li.facet{
 	padding: 5px;
 }
 
+li.vis_facet{
+	padding: 5px;
+}
 }
 
 
