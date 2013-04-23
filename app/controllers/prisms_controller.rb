@@ -10,7 +10,12 @@ class PrismsController < ApplicationController
   end
 
   def index
-    @prisms = Prism.all
+    @prisms = []
+    for prism in Prism.all
+      if !prism.unlisted
+        @prisms << prism
+      end
+    end
     @title = "Browse prisms"
 
     respond_to do |format|
@@ -106,7 +111,7 @@ class PrismsController < ApplicationController
     
     respond_to do |format|
       if success
-        format.html { redirect_to visualize_path(@prism), notice: 'Prism was successfully created.' }
+        format.html { redirect_to highlight_path(@prism), notice: 'Prism was successfully created.' }
         format.json { render json: @prism, status: :created, location: @prism }
       else
         format.html { render action: "new" }

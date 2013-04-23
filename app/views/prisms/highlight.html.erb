@@ -9,8 +9,14 @@ $(setup_highlight);
   <h2><%= @prism.author %></h2>
   <div class="text">
     <%= @prism.content.html_safe %>
+  <p id ="publication_date"><%= @prism.publication_date %> </p>
+  <div id="license">
+   <%= render 'cc_license' %>
   </div>
-  <div id="sidebar">
+  </div>
+</div>
+
+  <div id="highlight_sidebar">
     <div id="tools">
         <ul id="highlighters">
           <% for facet in @prism.facets %>
@@ -31,7 +37,5 @@ $(setup_highlight);
           <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
           <p id ="publication_date"><%= @prism.publication_date %> </p>
           <p id="description"><%= @prism.description %></p>
-          <%= render 'cc_license' %>
       </div>
     </div>
-</div>
