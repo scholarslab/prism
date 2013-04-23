@@ -1,5 +1,5 @@
 <div id="buttons">
-  <%= link_to image_tag('button1.png'), demo_path %>
-  <%= link_to image_tag('button2.png'), new_prism_path %>
-  <%= link_to image_tag('button3.png'), prisms_path %>
+  <span><%= link_to 'Demo', demo_path, :class => 'demo' %></span>
+  <span><%= link_to 'Create', new_prism_path, :class => 'create' %></span>
+  <span><%= link_to 'Play', prisms_path, :class => 'play' %></span>
 </div>
