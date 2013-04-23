@@ -27,7 +27,7 @@ input[type=submit] {
 .button {
 	display: block;
 	width: 150px;
-	background-color: $green;
+	background-color: $yellow;
 	color: white;
 	text-transform: uppercase;
 	text-align: center;
@@ -305,7 +305,7 @@ td {
 #highlighters {
   list-style:none;
   padding-left:0;
-  padding-top: 110px;
+  padding-top: 76px;
 
   li {
     @include clearfix;
@@ -324,6 +324,9 @@ li.facet{
 	padding: 5px;
 }
 
+li.vis_facet{
+	padding: 5px;
+}
 }
 
 
