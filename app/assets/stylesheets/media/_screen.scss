@@ -27,7 +27,7 @@ input[type=submit] {
 .button {
 	display: block;
 	width: 150px;
-	background-color: lighten($green, 15%);
+	background-color: $green;
 	color: white;
 	text-transform: uppercase;
 	text-align: center;
