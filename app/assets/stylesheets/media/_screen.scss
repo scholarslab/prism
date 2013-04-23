@@ -11,6 +11,7 @@ html {
 	background: white;
 }
 
+
 body {
 	max-width: 800px; 
 	background: white; 
@@ -19,6 +20,7 @@ body {
 	@include border-radius(20px);
 	font-family: $headerfont;
 }
+
 
 input[type=submit] {
 	border: none;
@@ -35,6 +37,23 @@ input[type=submit] {
 	@include border-radius(15px);
 	margin-bottom: 20px;
 }
+
+ #corner-banner {
+        position: absolute;
+        left: -140px;
+        top: 100px;
+        display: block;
+        width: 600px;
+        background: $yellow;
+        text-align:center;
+        font-size:20px;
+        line-height:20px;
+        padding:3px 200px;
+        @include rotate(315deg);
+        @include box-sizing(border-box);
+}
+       
+
 
 header {
 	
