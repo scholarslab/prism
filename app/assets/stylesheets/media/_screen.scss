@@ -278,7 +278,26 @@ td {
       margin-right: 2%;
       @include border-radius(16px);
     }
-  }
+   }
+
+li.facet{
+	padding: 5px;
+}
+
+#save_highlight {
+	display: block;
+	width: 150px;
+	background-color: lighten($green, 15%);
+	color: white;
+	text-transform: uppercase;
+	float: right;
+	text-align: center;
+	padding: 10px;
+	@include border-radius(15px);
+	margin-bottom: 20px;
+}
+
+
 }
 
 
@@ -333,10 +352,6 @@ div.clearfix{
 		height: 20px;
 		width: 20px;
 
-
-	li.facet {
-		padding: 5px;
-		}
 
 	.leftcolumn {
 		background-color: $blue;
