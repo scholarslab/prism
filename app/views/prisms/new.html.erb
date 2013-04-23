@@ -46,23 +46,23 @@
       <%= f3.text_field :description, :placeholder => 'Facet 3' %>
 <div class="field">
   <%= f.label :title %><br />
-  <%= f.text_field :title, :required => 'true', :placeholder => 'Required'  %>
+  <%= f.text_field :title, :required => 'true', :placeholder => 'Required: Give your Prism a title!'  %>
 </div>
 <div class="field">
   <%= f.label :author %><br />
-  <%= f.text_field :author, :required => 'true', :placeholder => 'Required'  %>
+  <%= f.text_field :author, :required => 'true', :placeholder => 'Required: Original Author'  %>
 </div>
 <div class="field">
   <%= f.label :publication_date %><br />
-  <%= f.text_field :publication_date %>
+  <%= f.text_field :publication_date, :placeholder => 'You know the drill...mm/dd/year'  %>
 </div>
 <div class="field">
   <%= f.label :language %><br />
-  <%= f.text_field :language %>
+  <%= f.text_field :language, :placeholder => 'Language of the text' %>
 </div>
 <div class="field">
   <%= f.label :description %><br />
-  <%= f.text_area :description %>
+  <%= f.text_area :description, :placeholder => 'What do you want people to know about this text or your facet categories?' %>
 </div>
 <div class ="field">
   <%= f.label :unlisted %>

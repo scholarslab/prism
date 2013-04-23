@@ -80,16 +80,17 @@ class PrismsController < ApplicationController
 
   def create
     @prism = Prism.new(params[:prism])
+    @prism.user_id = current_user.id
     @facet1 = Facet.new(params[:facet1]) 
     @facet2 = Facet.new(params[:facet2]) 
     @facet3 = Facet.new(params[:facet3]) 
     
     @facet1.order = 0
-    @facet1.color = "red"
+    @facet1.color = "blue"
     @facet2.order = 1
-    @facet2.color = "green"
+    @facet2.color = "red"
     @facet3.order = 2
-    @facet3.color = "blue"
+    @facet3.color = "green"
     
     #validate_colors
     
