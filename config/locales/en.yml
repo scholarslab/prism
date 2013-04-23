@@ -99,11 +99,11 @@ en:
       <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research & Scholarship, UVa Library; Our Fearless Leader</p>
       <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab; Programming Jedi, Solver of Problems</p>
   highlight:
-    instructions: Select a highlighter from the menu on the right to highlight the text below. You can change your highlighting with the eraser. When you are done, click "submit" to see Prism's results.
+    instructions: Select a highlighter from the menu on the right. When you're done, just click the save button to register your interpretation and view the Prism!
     eraser: Eraser
   visualize:
     instructions: Select one of the options below to display a visualization of collected data for this text.
-    sketches: Right now, Prism has just one working visualization, but we hope these sketches will provide some ideas, inspiration, and provocation for the future.
+    sketches: You can also take a look at these sketches for potential visualizations imagined by the 2011-2012 Praxis Team.  
          
   alumni:
     alumni_title: Praxis Alumni
