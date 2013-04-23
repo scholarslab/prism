@@ -111,9 +111,14 @@ class PrismsController < ApplicationController
     end
     
     respond_to do |format|
-      if success
-        format.html { redirect_to highlight_path(@prism), notice: 'Prism was successfully created.' }
-        format.json { render json: @prism, status: :created, location: @prism }
+      if success 
+        if @prism.unlisted?
+          notice = "This prism will not show up in the public browse page. Be sure to copy the link to send to your friends!"
+        else
+          notice = "Prism was successfully created."
+        end
+          format.html { redirect_to highlight_path(@prism), notice: notice }
+          format.json { render json: @prism, status: :created, location: @prism }
       else
         format.html { render action: "new" }
         format.json { render json: @prism.errors, status: :unprocessable_entity }
