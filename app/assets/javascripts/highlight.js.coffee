@@ -76,6 +76,8 @@
 		currently_marking = false
 	
 	# Clicking on a facet sets the color
+	$("#Prismabob").css('cursor', 'url(/assets/highlighter-' + 0 + '.gif),crosshair')
+
 	$("li.facet").click ->
 		current_facet_num = $('input[name="order"]', this).val()
 		$("#Prismabob").css('cursor', 'url(/assets/highlighter-' + current_facet_num + '.gif),crosshair')
