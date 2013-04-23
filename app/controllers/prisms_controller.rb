@@ -117,7 +117,7 @@ class PrismsController < ApplicationController
         else
           notice = "Prism was successfully created."
         end
-          format.html { redirect_to highlight_path(@prism), notice: notice }
+          format.html { redirect_to highlight_path(@prism), notice: "success" }
           format.json { render json: @prism, status: :created, location: @prism }
       else
         format.html { render action: "new" }
