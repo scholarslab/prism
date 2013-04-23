@@ -33,9 +33,11 @@ class PrismsController < ApplicationController
       @prism = Prism.find(params[:id])
       for facet in @prism.facets
           indices = params[("facet#{facet.order}_indices").to_sym]
-          for index in JSON.load(indices)
-              word_marking = WordMarking.new(user:current_user, index:index, facet:facet, prism:@prism)
-              word_marking.save()
+          if JSON.load(indices)
+            for index in JSON.load(indices)
+                word_marking = WordMarking.new(user:current_user, index:index, facet:facet, prism:@prism)
+                word_marking.save()
+            end
           end
       end
       redirect_to(visualize_path(@prism))    
