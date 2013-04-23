@@ -31,8 +31,8 @@
       </ul>
       <p><%= render 'cc_license' %></p>
       <p id="viz-count">
-      <span><% if @usercounter != nil %>
-          <%=@usercounter%></span> <% if @usercounter == 1%>user <% else%>users <%end%>contributed to this visualization.
+      <span><% if @prism.word_markings.map(&:user_id).uniq != nil %>
+          <%=@prism.word_markings.map(&:user_id).uniq.size %></span> <% if @prism.word_markings.map(&:user_id).uniq.size == 1%>user <% else%>users <%end%>contributed to this visualization.
     <% end %>
     </p>
     
@@ -40,3 +40,4 @@
     </div>
   </div>
 </div>
+
