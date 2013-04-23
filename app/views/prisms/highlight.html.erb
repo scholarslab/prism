@@ -10,9 +10,6 @@ $(setup_highlight);
   <div class="text">
     <%= @prism.content.html_safe %>
   <p id ="publication_date"><%= @prism.publication_date %> </p>
-  <div id="license">
-  <%= render 'cc_license' %>
-  </div>
   </div>
 </div>
 
@@ -46,6 +43,10 @@ $(setup_highlight);
             <p><%= @prism.description %></p>
           </div>
               
+        <div id="license">
+        <h1>LICENSE</h1>
+        <p><%= render 'cc_license' %></p>
+        </div>
     
       </div>
     </div>
