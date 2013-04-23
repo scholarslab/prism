@@ -153,7 +153,7 @@ width: 300px;
 
 #footernav {
 	text-align: center;	
-	margin-top: 50px;
+	margin-top: 100px;
 	clear: both;
 
 	a {
@@ -278,6 +278,13 @@ td {
 .field {
 	color: $blue;
 	padding: 0px;
+	margin-top: 10px;
+}
+
+textarea[name="prism[content]"] {
+	
+	height: 500px;
+	width: 375px;
 }
 
 #content {
@@ -296,10 +303,41 @@ td {
 	display: inline-block;
 	float: right;
 	padding: 0px;
+
+	textarea{ 
+		border-radius: 20px;
+		}
+	}
+
+	input {
+		border-radius: 20px;
+	}
+
+div.clearfix{
+	clear: both;
 }
+
+#facetbutton img{
+
+	float:left;
+	display: inline;
+	height: 20px;
+	width: 20px;
+
 
 li.facet {
 	padding: 5px;
+}
+
+.leftcolumn {
+	background-color: $blue;
+	textarea{ border-radius: 20px;}
+
+	}
+
+label {
+	display: inline;
+
 }
 
 #leftcolumn {
