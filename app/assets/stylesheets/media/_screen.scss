@@ -11,6 +11,7 @@ html {
 	background: white;
 }
 
+
 body {
 	max-width: 800px; 
 	background: white; 
@@ -20,6 +21,28 @@ body {
 	font-family: $headerfont;
 }
 
+ #corner-banner {
+        position: absolute;
+        left: -100px;
+        top: 25px;
+        display: block;
+        width: 400px;
+        background: #333; /* old browsers */
+        background: -moz-linear-gradient(top, #333 0%, #000 100%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333), color-stop(100%,#444)); /* webkit */
+        
+        text-align:center;
+        font-size:11px;
+        line-height:100px;
+        padding:3px 3px 4px 3px;
+        text-shadow: #000 1px 1px 0;
+        
+        -moz-transform: rotate(-45deg);  /* FF3.5+ */
+        -o-transform: rotate(-45deg);  /* Opera 10.5 */
+        -webkit-transform: rotate(-45deg);  /* Saf3.1+, Chrome */
+        transform: rotate(-45deg);  /* CSS3 (for when it gets supported) */
+
+       
 
 header {
 	
