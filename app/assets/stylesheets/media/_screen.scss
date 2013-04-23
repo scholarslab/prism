@@ -319,28 +319,29 @@ div.clearfix{
 
 #facetbutton img{
 
-	float:left;
-	display: inline;
-	height: 20px;
-	width: 20px;
+		float:left;
+		display: inline;
+		height: 20px;
+		width: 20px;
 
 
-li.facet {
-	padding: 5px;
+	li.facet {
+		padding: 5px;
+		}
+
+	.leftcolumn {
+		background-color: $blue;
+		textarea{ border-radius: 20px;}
+
+		}
+
+	label {
+		display: inline;
+
+		}
+
+	#leftcolumn {
+		background-color: $blue;
+		
+		}
 }
-
-.leftcolumn {
-	background-color: $blue;
-	textarea{ border-radius: 20px;}
-
-	}
-
-label {
-	display: inline;
-
-}
-
-#leftcolumn {
-	background-color: $blue;
-	
-	}
