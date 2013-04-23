@@ -22,4 +22,8 @@ class PagesController < ApplicationController
   def future
     @title = "Future Directions"
   end
+
+  def demo
+    @title = "Demo"
+  end
 end
