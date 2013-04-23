@@ -2,21 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$blueval: color-stops(
-rgba(0,0,255,1) 0%,
-rgba(0,0,255,0) 100%
-);
-
-$redval : color-stops(
-rgba(255,0,0,0) 0%,
-rgba(255,0,0,1)50%,
-rgba(255,0,0,0) 100%
-);
-
-$greenval : color-stops(
-rgba(0,255,0,0) 0%,
-rgba(0,255,0,1) 100%
-);
 
 #highlighters span.facet.border {
   border: 2px solid black;
@@ -39,31 +24,31 @@ rgba(0,255,0,1) 100%
 }
 
 .red {
-  @include background(linear-gradient($redval));
+  @include background(linear-gradient($twoval));
 }
 
 .green {
-  @include background(linear-gradient($greenval));
+  @include background(linear-gradient($threeval));
 }
 
 .blue {
-  @include background(linear-gradient($blueval));
+  @include background(linear-gradient($oneval));
 }
 
 .blue.green {
-  @include background(linear-gradient($blueval), linear-gradient($greenval));
+  @include background(linear-gradient($oneval), linear-gradient($threeval));
 }
 
 .red.green {
-  @include background(linear-gradient($redval), linear-gradient($greenval));
+  @include background(linear-gradient($twoval), linear-gradient($threeval));
 }
 
 .red.blue {
-  @include background(linear-gradient($redval), linear-gradient($blueval));
+  @include background(linear-gradient($twoval), linear-gradient($oneval));
 }
 
 .red.green.blue {
-  @include background(linear-gradient($redval), linear-gradient($greenval),linear-gradient($blueval));
+  @include background(linear-gradient($twoval), linear-gradient($threeval),linear-gradient($oneval));
 }
 
 .word {
