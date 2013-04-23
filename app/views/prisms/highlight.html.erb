@@ -28,16 +28,15 @@ $(setup_highlight);
           <% end %>
           <li class="facet eraser"><input type="hidden" name="order" value="delete"/><span class="facet"><%= image_tag ('eraser3.png'), :id => 'eraser' %></span><%= t "highlight.eraser" %></li>
         </ul>
-          <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
-                  <%= form_tag do %>
           <p id="description"><%= @prism.description %></p>
-
-          <div id="save_hihglight"> 
-            <% for facet in @prism.facets %>
-            <input type="hidden" value="" name="facet<%=facet.order%>_indices" id="facet<%=facet.order%>_indices"/>
+          <p id="highlight_instructions"><%= t "highlight.instructions" %></p>
+        
+          <%= form_tag do %>
+          <% for facet in @prism.facets %>
+          <input type="hidden" value="" name="facet<%=facet.order%>_indices" id="facet<%=facet.order%>_indices"/>
           <% end %>
-          <input type="submit" value="Save Highlights" />
-        <% end %>
-          </div>
+          <input type="submit" value="Save Highlights" class='button'/>
+          <% end %>
+    
       </div>
     </div>

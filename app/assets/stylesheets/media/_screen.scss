@@ -20,6 +20,21 @@ body {
 	font-family: $headerfont;
 }
 
+input[type=submit] {
+	border: none;
+}
+
+.button {
+	display: block;
+	width: 150px;
+	background-color: lighten($green, 15%);
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px;
+	@include border-radius(15px);
+	margin-bottom: 20px;
+}
 
 header {
 	
@@ -232,17 +247,7 @@ td {
 }
 
 #new-prism {
-	display: block;
-	width: 150px;
-	background-color: lighten($green, 15%);
-	color: white;
-	text-transform: uppercase;
 	float: right;
-	text-align: center;
-	padding: 10px;
-	@include border-radius(15px);
-	margin-bottom: 20px;
-
 }
 
 //highlight pages------------------------------
@@ -283,20 +288,6 @@ td {
 li.facet{
 	padding: 5px;
 }
-
-#save_highlight {
-	display: block;
-	width: 150px;
-	background-color: lighten($green, 15%);
-	color: white;
-	text-transform: uppercase;
-	float: right;
-	text-align: center;
-	padding: 10px;
-	@include border-radius(15px);
-	margin-bottom: 20px;
-}
-
 
 }
 
