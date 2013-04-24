@@ -3,7 +3,7 @@
 <% if user_signed_in? %>
 <div id="user_meta">
         <!-- The following code shows the user's email if they are signed in. !-->
-          <%= current_user.email %>.
+          <%= current_user.email %> |
           <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
         <!-- end. !-->
 </div>
