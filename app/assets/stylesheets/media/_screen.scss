@@ -192,7 +192,6 @@ label,
 input[type=email], 
 input[type=password] 
 {display: block;
-border-radius:20px;
 height: 30px;
 width: 300px;
 }
@@ -403,14 +402,6 @@ textarea[name="prism[content]"] {
 	display: inline-block;
 	float: right;
 	padding: 0px;
-
-	textarea{ 
-		border-radius: 20px;
-		}
-	}
-
-	input {
-		border-radius: 20px;
 	}
 
 div.clearfix{
@@ -427,7 +418,6 @@ div.clearfix{
 
 	.leftcolumn {
 		background-color: $blue;
-		textarea{ border-radius: 20px;}
 
 		}
 
