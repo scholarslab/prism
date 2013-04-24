@@ -30,7 +30,7 @@ input[type=submit] {
 	display: block;
 	width: 150px;
 	background-color: $yellow;
-	color: white;
+	color: white !important;
 	text-transform: uppercase;
 	text-align: center;
 	padding: 10px;
@@ -132,18 +132,33 @@ nav {
 		padding-bottom: 0px;
 	}
 
-	a { 
-		text-decoration: none;
-		color: black;
-	}
-
-	a:hover {
-		color: $blue;
-
-	}
+	a {
+    &:link,
+    &:visited {
+      color:lighten(black, 50%);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: black;
+    }
+  }
 }
  
-a {text-decoration: none; color: $blue;}
+a {
+  text-decoration: none;
+  color: $blue;
+
+  &:link,
+  &:visited {
+    color: $blue;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($blue, 20%);
+  }
+}
 
 nav, h1, h2,
 .motto {text-transform: uppercase;
@@ -236,9 +251,19 @@ width: 300px;
 
 	a {
 		text-transform: uppercase;
-		color: $gray;
 		padding-left: 20px;
 		padding-right: 20px;
+
+    &:link,
+    &:visited {
+      color:lighten(black, 50%);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: black;
+    }
 
     &#slab-link {
       width: 150px;
@@ -246,6 +271,13 @@ width: 300px;
       text-align:center;
       margin:20px auto;
       opacity: 0.5;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 0.9;
+      }
+
       img {
         max-width: 100%;
         width:auto;
@@ -253,7 +285,6 @@ width: 300px;
       }
     }
 	}
-
 }
 
 //flash notice---------------------------------
