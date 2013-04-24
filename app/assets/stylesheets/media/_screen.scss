@@ -1,11 +1,5 @@
-
-$white: #fff;
-
-::selection { background: $white; text-shadow: none;}
-
-::-moz-selection { background: $white; text-shadow: none;}
-
-
+::selection,
+::-moz-selection { background: white; text-shadow: none;}
 
 html {	
 	background: white;
