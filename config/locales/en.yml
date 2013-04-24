@@ -54,27 +54,27 @@ en:
       Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia, and specifically from <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">transparency mark-up games</a> designed by Bethany Nowviskie for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a>:
     description_p2: >
       the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
-      somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion.
+      somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion. (Nowviskie)
     description_p3_html: >-
-      At SpecLab, Jerome McGann <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-1-1">further 
-      developed the concept</a>, which became known as the "Patacritical Demon" &mdash; the best bit of vaporware to emerge from UVa at the turn of the century.
+      At SpecLab, Jerome McGann <a href="http://nora.lis.uiuc.edu:3030/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-3-4&toc.depth=1&toc.id=ss1-3-4">further 
+      developed the concept</a>, which became known as the "Patacritical Demon" &mdash; the best bit of vaporware (not) to emerge from UVa at the turn of the century.
     description_p4_html: >-
-      The Scholars' Lab offered these ideas as inspiration for the first project to be undertaken by graduate student fellows of 
-      <a href="http://praxis.scholarslab.org/">the Praxis Program</a> in its inaugural year. The task of the 2011-2012 team was to determine how to translate the physical exercise 
+      The Scholars' Lab offered these un-realized concepts as inspiration for the first project to be undertaken by graduate student fellows of the
+      <a href="http://praxis.scholarslab.org/">Praxis Program</a> in its inaugural year. The task of <a href='/pages/alumni'>the 2011-2012 team</a> of students was to determine how to translate the physical exercise 
       of marking a text into a digital one. They chose to employ a constrained interpretive vocabulary and to limit the length of the text in
-      order to stay true to the transparency game. Like the transparency exercise, the end goal of Prism is to produce <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10">aesthetic provocations</a>, that is, visualizations which provoke further discussion.  
+      order to stay true to the transparency game. Like the transparency exercise, the end goal of Prism was to produce <a href="http://www.digitalhumanities.org/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-4-10">aesthetic provocations</a>, that is, visualizations which provoke further discussion.  
     description_p5_html: >-
-      The 2012-2013 Praxis Team has retained the vision set by the original team.  Our primary goal was to expand Prism in a format that would allow for actual implementation in the classroom and scholarly conversation.  This led us to define two primary objectives.  
-      The first was the ability for users to upload their own texts and to define their own interpretive categories.   The second was to create a more inviting and user-friendly environment that would encourage participation and exploration.  To that end, we have redesigned the website, paying special attention to work flow, ease of use, and aesthetic concerns.  
-      In addition, both the visualization feature and highlighting function were refined.  Our hope is that Prism can now be more easily adapted by the user for a variety of interpretive projects.  Be sure to check out our <a href='/pages/future'>future directions</a> page to learn more about additional potential capabilities of Prism!
+      The 2012-2013 cohort of Praxis fellows (listed below) retained the vision set by the original team.  Their goal was to expand Prism to a format that would promote classroom use and scholarly conversation.  This led them to define two primary objectives.  
+      The first was the ability for users to upload their own texts and to define their own interpretive categories.   The second was to create a more inviting and user-friendly environment that would encourage participation and exploration.  To that end, they redesigned the website, paying special attention to workflow, ease of use, and aesthetic concerns.  
+      In addition, both the simple visualization feature and highlighting function were refined, in hope that Prism can now be more easily employed by the user for a variety of interpretive projects.  Be sure to check out the <a href='/pages/future'>future directions</a> page to learn more about additional potential capabilities of Prism, including enhanced visualizations, image annotation, and computational linguistic analysis.
     praxis_title: The Praxis Program
     praxis_description_html: >
-      <a href='http://praxis.scholarslab.org/'>The Praxis Program</a> is a 2011-13 pilot project of the <a href='http://www2.lib.virginia.edu/scholarslab/'>
-      Scholars' Lab</a> at the <a href='http://www.lib.virginia.edu/index.html'>University of Virginia Library</a> in which six humanities graduate students 
-      spend a year in a collaborative, hands-on, digital humanities apprenticeship. The Praxis Program’s goal is to better equip knowledge workers for emerging 
+      <a href='http://praxis.scholarslab.org/'>The Praxis Program</a> is a key mentoring and training project of the <a href='http://www2.lib.virginia.edu/scholarslab/'>
+      Scholars' Lab</a> at the <a href='http://www.lib.virginia.edu/index.html'>University of Virginia Library</a>, in which six humanities graduate students 
+      spend a year in a collaborative, hands-on, digital humanities apprenticeship. The program’s goal is to better equip knowledge workers for emerging 
       faculty positions and <a href=http://mediacommons.futureofthebook.org/alt-ac/'>alternative academic careers</a> at a moment in which new questions can be asked and new systems built. Visit the Praxis Program 
       site to learn more about the program’s evolving curriculum and to hear directly from Praxis Fellows and Scholars’ 
-      Lab faculty and staff as they <a href='http://www.scholarslab.org/blog/'>blog</a> about their experience. The Praxis Program is supported by a generous grant from the Mellon Foundation to UVa Library's <a href="http://uvasci.org">Scholarly Communication Institute</a>.
+      Lab faculty and staff as they <a href='http://www.scholarslab.org/blog/'>blog</a> about their experiences. The first two, pilot years of the Praxis Program were supported by a generous grant from the Mellon Foundation to UVa Library's <a href="http://uvasci.org">Scholarly Communication Institute</a>, which also allowed the Scholars' Lab to create a broader <a href="http://praxis-network.org/">Praxis Network</a>, in collaboration with six other universities in three countries.
     scholarslab_title: The Scholars' Lab
     scholarslab_description_html: >
      <a href='http://www2.lib.virginia.edu/scholarslab/'>The Scholars’ Lab</a>
@@ -82,22 +82,22 @@ en:
       The Scholars' Lab is a place where faculty and advanced students can explore digital resources, find expert help, and collaborate on innovative research projects.
       The SLab also hosts events, such as workshops, talks, and roundtables, and sponsors the <a href="http://praxis.scholarslab.org">Praxis Program</a> and a prestigious <a href='http://www2.lib.virginia.edu/scholarslab/about/fellowship.html'>
       graduate fellowship</a> in the digital humanities.
-    contributors_title: Contributors
+    contributors_title: 2012-13 Contributors
     contributors_fellows_html: >-
       <h3>Shane Lin</h3> <p>Shane Lin refactored the database schema and worked on user uploads. He commands the loyalty of forest creatures and once won second place in a baking competition.  He is a graduate student in the History department.</p>  
       <h3>Claire Maiers</h3> <p>Claire Maiers, herder of cats, served as the Program Manager and worked on copy for the Prism website.  She is a PhD student in the Sociology department.</p>
       <h3>Cecilia Márquez</h3> <p>Cecilia Márquez worked on the design team building and breaking CSS like it was her full time job. Her crowning achievement in Praxis was he making almost everyone in the office say "Honey Boo Boo" at least once. She is a PHD student in the History department.</p> 
       <h3>Gwen Nally</h3> <p>Gwen Nally was our Prism Designer.  She worked with Cecilia Márquez to create wire frames and to style the website.  She is a PhD candidate in the Philosophy department.</p> 
       <h3>Chris Peck</h3> <p>Chris Peck worked on improvements to the highlighter tool and visualizations. He is a PhD student in the Music Department.</p>
-      <h3>Brandon Walsh</h3> <p>Brandon Walsh worked on implementing Omniauth, helped with user uploads, and generally made snarky comments while the rest of the design team was working. He is a PhD student in the English department.</p>
-      <h3><a href='/pages/alumni'>Praxis Alumni</a></h3>
+      <h3>Brandon Walsh</h3> <p>Brandon Walsh worked on implementing Omniauth, helped with user uploads, and generally made snarky comments while the rest of the design team was working. He is a PhD student in the English department.</p>    <h3>With thanks to our <a href='/pages/alumni'>2011-12 Praxis Alumni</a></h3> 
+      
     contributors_advisors_html:
       <h3>Jeremy Boggs</h3> <p>Humanities Design Architect (of Dreams), UVa Library Scholars' Lab; Wizard of Web Aesthetics</p>
       <h3>Wayne Graham</h3> <p>Head of R&D, UVa Library Scholars' Lab; The Obi-Wan Kenobi of Programming</p>
       <h3>Eric Johnson</h3> <p>Head of Outreach & Consulting, UVa Library Scholars' Lab; Resident Nice Guy</p>
       <h3>David McClure</h3> <p>Web Applications Specialist, UVa Library Scholars' Lab; All-Around Wunderkind</p>
       <h3>Dr. Bethany Nowviskie</h3> <p>Director, Digital Research & Scholarship, UVa Library; Our Fearless Leader</p>
-      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab; Programming Jedi, Solver of Problems</p>
+      <h3>Dr. Eric Rochester</h3> <p>Senior Developer, UVa Library Scholars' Lab; Programming Jedi, Solver of Problems</p>    
   highlight:
     instructions: Select a highlighter from the menu on the right. When you're done, just click the save button to register your interpretation and view the Prism!
     eraser: Eraser
@@ -107,7 +107,7 @@ en:
          
   alumni:
     alumni_title: Praxis Alumni
-    year_title: 2011-2012 Contributors
+    year_title: 2011-2012 Fellows
     contributors_alumni_html:
       <h3>Alex Gil</h3> <p>Alex Gil did early development on the Rails setup. The most continental of the Fellows, Alex also built an i18n framework for multi-lingual support and translated the site into French, Spanish, and German. Towards the end he worked on migrating Prism to production. Alex is a doctoral candidate in the UVa English Department.</p>  
       <h3>Brooke Lestock</h3> <p>Brooke Lestock served as Project Co-Manager, along with the fabulous Sarah Storti. Brooke was also a member of the design team, which entailed conceptualizing and wireframing the Prism site, styling odds and ends, as well as contributing and editing prose for the site as needed. She is a master's candidate in the UVa English Department.</p>

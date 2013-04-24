@@ -24,16 +24,6 @@ ActiveRecord::Schema.define(:version => 20130420063736) do
 
   add_index "facets", ["prism_id", "order"], :name => "index_facets_on_prism_id_and_order", :unique => true
 
-  create_table "markings", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "user_id"
-    t.text     "word_array"
-    t.integer  "facet_id"
-    t.integer  "prism_id"
-    t.integer  "facet_num"
-  end
-
   create_table "prisms", :id => false, :force => true do |t|
     t.string   "uuid",             :limit => 36
     t.datetime "created_at",                     :null => false
