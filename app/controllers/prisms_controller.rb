@@ -51,20 +51,14 @@ class PrismsController < ApplicationController
     
     users = []
     @frequencies = {}
-    @totals = {}
     
     for facet in @prism.facets
       @frequencies[facet.order] = [0.0] * @prism.num_words
-      @totals[facet.order] = 0
     end
     
     for word_marking in @prism.word_markings
-      @totals[word_marking.facet.order] += 1
-    end
-    
-    for word_marking in @prism.word_markings
-        # To scale accordingly, # of times word was marked divided by total # of markings for that facet
-        @frequencies[word_marking.facet.order][word_marking.index] += 1.0 / @totals[word_marking.facet.order]
+        # Make accessible the count of all the markings per word per facet
+        @frequencies[word_marking.facet.order][word_marking.index] += 1.0
     end   
   end
 
