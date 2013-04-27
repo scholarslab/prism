@@ -23,7 +23,7 @@ window.setup_visualize = ->
 	$("li.vis_facet").click ->
 		window.select_facet($(this))
 
-	words = $("span.word")
+	words = $("span.word")	
 	words.each( (i,word) ->
 
 		r = frequencies[0][i]
@@ -31,34 +31,20 @@ window.setup_visualize = ->
 		b = frequencies[2][i]
 
 		$(word).mouseenter( () ->
+			$("span.current-word").text(this.textContent)
+			$(this).css("text-decoration","underline")
 			for facet_num in all_facet_nums 
 				console.log(facet_num, frequencies[facet_num][i])
 				$("span.red-percent").text(Math.round(r*100) + "%")
 				$("span.green-percent").text(Math.round(g*100) + "%")
 				$("span.blue-percent").text(Math.round(b*100) + "%")
 		)
-		f=150
+		$(word).mouseout( () ->
+			$(this).css("text-decoration","none")
+		)
 
-		word_freqs = [['red',r],['green',g],['blue',b]];
-		word_freqs.sort (a,b) ->
-			return ((a[1] < b[1]) ? -1 : ((a[1] > b[1]) ? 1 : 0));
-
-		#no highlighting gets grey, ties get pink
-		#winning_color = ((a[0][1] > a[1][1]) ? a[0][0] : ((a[0][1] == 0) ? "grey" : "pink"))
-		#winning_color = ((word_freqs[0][1] > word_freqs[1][1]) ? word_freqs[0][0] : "pink")
-
-		winning_color = "lightgrey"
-		if word_freqs[0][1] > word_freqs[1][1]
-			winning_color = word_freqs[0][0]
-		else if word_freqs[0][1] != 0
-			winning_color = "orange"
-
-
-		$(word).css('color', winning_color)
-
-		#$(word).css('color', 'rgb('+Math.round(f*frequencies['red'][i])+','+Math.round(f*frequencies['green'][i])+','+Math.round(f*frequencies['blue'][i])+')')
 	)
-
+	
 # This function selects a facet, gives the box a border, and highlights text
 window.select_facet = (facet) ->
 	current_color = $("input.color", facet).val()
@@ -75,12 +61,41 @@ window.select_facet = (facet) ->
 		words.data(window.frequencies[0])
 			.transition()
 			.style("font-size", (d) -> min_size + "px")
+
+		words = $("span.word")
+		words.each( (i,word) ->
+
+			r = frequencies[0][i]
+			g = frequencies[1][i]
+			b = frequencies[2][i]
+			
+			f=150
+
+			word_freqs = [['red',r],['green',g],['blue',b]];
+			word_freqs.sort (a,b) ->
+				return ((a[1] < b[1]) ? -1 : ((a[1] > b[1]) ? 1 : 0));
+
+			#no highlighting gets grey, ties get pink
+			#winning_color = ((a[0][1] > a[1][1]) ? a[0][0] : ((a[0][1] == 0) ? "grey" : "pink"))
+			#winning_color = ((word_freqs[0][1] > word_freqs[1][1]) ? word_freqs[0][0] : "pink")
+
+			winning_color = "lightgrey"
+			if word_freqs[0][1] > word_freqs[1][1]
+				winning_color = word_freqs[0][0]
+			else if word_freqs[0][1] != 0
+				winning_color = "black"
+
+			$(word).css('color', winning_color)
+			#$(word).css('color', 'rgb('+Math.round(f*frequencies['red'][i])+','+Math.round(f*frequencies['green'][i])+','+Math.round(f*frequencies['blue'][i])+')')
+		)
+
 	else
 		min = Math.min.apply @, window.frequencies[current_num]
 		max = Math.max.apply @, window.frequencies[current_num]
 		multiplier = if max == 0 then 0 else (max_size-min_size)/(max-min)
 		# sets color and font-size by linear interpolation
 		words.data(window.frequencies[current_num])
+			.style("color", "") #clear color from 'winning' viz
 			.classed(current_color+"-vis", (d) -> (d > 0))
 			.transition()
 			.style("font-size", (d) -> (min_size+(d-min)*multiplier) + "px" )
