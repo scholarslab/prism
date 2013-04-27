@@ -31,6 +31,12 @@
             <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
             <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%></li>
         <% end %>
+		  	 <li class="vis_facet">
+			 	<input type="hidden" class="color" value="winning"/>
+			 	<input type="hidden" class="order" value=""/>
+            <input type="hidden" value="<%=@frequencies[0]%>" class="freq"/>
+			 	<span class="facet red"></span>Winning Color
+			 </li>
   <p id="visualization-help"><%= t "visualize.instructions" %> </p>
      
       </ul>
