@@ -76,7 +76,7 @@ namespace :import do
     content = body_p.to_s
 
     #html = Document.create(title: title, author: author, description: description, pub_date: pub_date, format: format, sandbox: sandbox, content: content, num_words:counter)
-    prism = Prism.create(title: title, author: author, content: content, num_words: counter, description: description )
+    prism = Prism.create(title: title, author: author, content: content, num_words: counter, description: description, user_id: 1)
     #facets = []
 
     #for facet_data in facet_tags

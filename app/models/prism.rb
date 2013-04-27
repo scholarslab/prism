@@ -1,9 +1,12 @@
 class Prism < ActiveRecord::Base
-  has_many :markings
   has_many :word_markings
-  attr_accessible :prompt, :document_id, :title, :author, :content, :sandbox, :num_words, :facet1, :facet2, :facet3, :facet4, :description, :user_id, :unlisted, :publication_date
+  belongs_to :users
+  has_many :facets
+  attr_accessible :title, :author, :content, :num_words, :description, :user_id, :unlisted, :publication_date, :language, :license, :uuid
+  validates_presence_of :title, :content, :license
 
-  self.primary_key = 'uuid'
+  # Develop had self.primary_key ='uuid' pre-merge, if the following doesn't work.
+  set_primary_key "uuid"
 
 	before_create :set_uuid
 	def set_uuid

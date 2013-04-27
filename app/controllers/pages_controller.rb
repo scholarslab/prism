@@ -18,4 +18,12 @@ class PagesController < ApplicationController
   def terms
     @title = "Terms of Service"
   end
+
+  def future
+    @title = "Future Directions"
+  end
+
+  def demo
+    @title = "Demo"
+  end
 end

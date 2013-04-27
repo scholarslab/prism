@@ -3,7 +3,6 @@ class CreateFacets < ActiveRecord::Migration
     create_table :facets do |t|
       t.string :color
       t.string :category
-
       t.timestamps
     end
   end

@@ -7,7 +7,7 @@ describe PagesController do
 
   before(:each) do
     10.times do |populate|
-      Factory.create(:document)
+      Factory.create(:prism)
     end
   end
 

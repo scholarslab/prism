@@ -383,19 +383,19 @@ span.facet {
   -webkit-border-radius: 17px;
 
   &.red {
-    background-color: rgb(155,25,25);
+    background-color: $red;
   }
 
   &.green {
-    background-color: rgb(25,155,25);
+    background-color: $green;
   }
 
   &.blue {
-    background-color: rgb(25,25,155);
+    background-color: $blue;
   }
   
   &.yellow {
-    background-color: rgb(155,155,25);
+    background-color: $yellow;
   }
 }
 

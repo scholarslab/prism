@@ -1,29 +1,38 @@
 # Get the global namespace so that we can make things global
 window = (exports ? this)
+# max and min font-size for visualization
+max_size = 40
+min_size = 15
 
 # This function extracts the colors and frequencies from our input data
 window.setup_visualize = ->
 	window.all_colors = []
+	window.all_facet_nums = []
+	window.colormap = {}
 	window.frequencies = {}
 	facets = $("li.vis_facet")
+	
 	for facet in facets
 		color = $("input.color", facet).val()
+		facet_num = $("input.order", facet).val()
 		window.all_colors.push(color)
-		window.frequencies[color] = JSON.parse($("input.freq", facet).val())
-	# Clicking on a facet sets the color
+		window.all_facet_nums.push(facet_num)
+		window.frequencies[facet_num] = JSON.parse($("input.freq", facet).val())
+		
+		# Clicking on a facet sets the color
 	$("li.vis_facet").click ->
 		window.select_facet($(this))
 
 	words = $("span.word")
 	words.each( (i,word) ->
 
-		r = frequencies['red'][i]
-		g = frequencies['green'][i]
-		b = frequencies['blue'][i]
+		r = frequencies[0][i]
+		g = frequencies[1][i]
+		b = frequencies[2][i]
 
 		$(word).mouseenter( () ->
-			for color in all_colors
-				#console.log(color, frequencies[color][i])
+			for facet_num in all_facet_nums 
+				console.log(facet_num, frequencies[facet_num][i])
 				$("span.red-percent").text(Math.round(r*100) + "%")
 				$("span.green-percent").text(Math.round(g*100) + "%")
 				$("span.blue-percent").text(Math.round(b*100) + "%")
@@ -46,20 +55,24 @@ window.setup_visualize = ->
 
 
 		$(word).css('color', winning_color)
-		
+
 		#$(word).css('color', 'rgb('+Math.round(f*frequencies['red'][i])+','+Math.round(f*frequencies['green'][i])+','+Math.round(f*frequencies['blue'][i])+')')
 	)
 
 # This function selects a facet, gives the box a border, and highlights text
 window.select_facet = (facet) ->
-	current_color = $("input", facet).val()
-	$("span.facet.border").removeClass("border")
-	$(facet).find("span.facet").addClass("border")
-	words = d3.selectAll("span.word")
-	for color in window.all_colors
-		words.classed(color+"-vis", false)
-		words.data(window.frequencies[current_color])
-		#words.classed(current_color+"-vis", (d) -> (d > 0))
-		words.transition()
-		#words.style("font-size", (d) -> (10+20*d) + "px" )
-		#words.on('click', (d) -> alert(current_color + ": " + d)) 
+    current_color = $("input.color", facet).val()
+    current_num = $("input.order", facet).val()
+    $("span.facet.border").removeClass("border")
+    $(facet).find("span.facet").addClass("border")
+    words = d3.selectAll("span.word")
+    for color in window.all_colors
+        words.classed(color+"-vis", false)
+    min = Math.min.apply @, window.frequencies[current_num]
+    max = Math.max.apply @, window.frequencies[current_num]
+    multiplier = if max == 0 then 0 else (max_size-min_size)/(max-min)
+    # sets color and font-size by linear interpolation
+    words.data(window.frequencies[current_num])
+         .classed(current_color+"-vis", (d) -> (d > 0))
+         .transition()
+         #.style("font-size", (d) -> (min_size+(d-min)*multiplier) + "px" )

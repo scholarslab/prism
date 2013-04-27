@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe WordMarking do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "has a valid factory" do
+    Factory.build(:word_marking).should be_valid
+  end
+
 end

@@ -1,6 +1,10 @@
+::selection,
+::-moz-selection { background: white; text-shadow: none;}
+
 html {	
 	background: white;
 }
+
 
 body {
 	max-width: 800px; 
@@ -10,6 +14,39 @@ body {
 	@include border-radius(20px);
 	font-family: $headerfont;
 }
+
+
+input[type=submit] {
+	border: none;
+}
+
+.button {
+	display: block;
+	width: 150px;
+	background-color: $yellow;
+	color: white !important;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px;
+	@include border-radius(15px);
+	margin-bottom: 20px;
+}
+
+ #corner-banner {
+        position: absolute;
+        left: -140px;
+        top: 100px;
+        display: block;
+        width: 600px;
+        background: $yellow;
+        text-align:center;
+        font-size:20px;
+        line-height:20px;
+        padding:3px 200px;
+        @include rotate(315deg);
+        @include box-sizing(border-box);
+}
+       
 
 
 header {
@@ -22,15 +59,50 @@ header {
 	font-size: 16px;
 }
 
-#buttons img{
-    width: 200px;
-    height: 200px;
-    margin: 25px;
-    @include border-radius(20px);
-}
+#buttons {
+  @include clearfix;
+  text-align:center;
+  margin: 4em 0;
 
-#buttons {text-align: center;
-	margin-top:25px;}
+  span {
+    display:inline-block;
+  }
+
+  a {
+    color: white;
+    background-color: $blue;
+    width: 220px;
+    line-height: 220px;
+    text-align:center;
+    font-size: 1.25em;
+    text-transform:uppercase;
+    @include border-radius(110px);
+    float:left;
+    margin: 0 20px;
+
+    &.demo {
+      background-color: $red;
+      &:hover,
+      &:active {
+        background-color: darken($red, 10%);
+      }
+    }
+    &.create {
+      background-color: $green;
+      &:hover,
+      &:active {
+        background-color: darken($green, 10%);
+      }
+    }
+    &.play {
+      background-color: $blue;
+      &:hover,
+      &:active {
+        background-color: darken($blue, 10%);
+      }
+    }
+  }
+}
 
 nav {
 
@@ -54,15 +126,32 @@ nav {
 		padding-bottom: 0px;
 	}
 
-	a { 
-		text-decoration: none;
-		color: black;
-	}
+	a {
+    &:link,
+    &:visited {
+      color:lighten(black, 50%);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: black;
+    }
+  }
 }
  
-a {text-decoration: none; color: $blue;}
+a {
+  text-decoration: none;
+  color: $blue;
 
-h {padding: 0;
+  &:link,
+  &:visited {
+    color: $blue;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken($blue, 20%);
+  }
 }
 
 nav, h1, h2,
@@ -78,6 +167,14 @@ h2 {
 h3 {
 	font-weight: normal;
 	font-size: 18px;
+}
+
+table {
+	width: 100%;
+
+	th {
+	 text-align:left;
+	}
 }
 
 p {
@@ -132,9 +229,8 @@ width: 300px;
 
 #user_meta {
 	float: right;
-	font-size: 12px;
-	color: grey;
-
+	font-size: 13px;
+	color: lighten(black, 50%);
 }
 
 
@@ -143,60 +239,116 @@ width: 300px;
 
 #footernav {
 	text-align: center;	
-	margin-top: 50px;
+	margin-top: 200px;
 	clear: both;
 
 	a {
-		display:inline-block;
 		text-transform: uppercase;
-		color: grey;
 		padding-left: 20px;
 		padding-right: 20px;
-	}
 
-	img {
-    	width: 100px;
-    	height: 15px;
-    	display: inline-block;
-    	}
+    &:link,
+    &:visited {
+      color:lighten(black, 50%);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: black;
+    }
+
+    &#slab-link {
+      width: 150px;
+      display:block;
+      text-align:center;
+      margin:20px auto;
+      opacity: 0.5;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 0.9;
+      }
+
+      img {
+        max-width: 100%;
+        width:auto;
+        height:auto;
+      }
+    }
+	}
 }
 
 //flash notice---------------------------------
 
-#flash_notice {
+.flashmessage{
 	text-align: center;
-	background: #00CCFF;
-	color: white;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 15px;
-	padding-bottom: 15px;
 	width: 394px;
+	font-weight: bold;
+	padding-top: 15px;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 20px;
+	text-transform: uppercase;
+}
+
+#flash_notice {
+	color: $blue;
+
+}
+
+#flash_alert {
+	color: $red;
+
+}
+
+//browse styling--------------------------------
 
 
+th, td {
+	border-bottom: 1px solid $gray;
+	padding: 10px;
+	}
+
+th {
+	height: 50px;
+	border-bottom-width: 3px;
+}
+
+td {
+	height:50px;
+	vertical-align:bottom;
+	&.visualize,
+	&.highlight {width: 15%;}
+}
+
+#new-prism {
+	float: right;
 }
 
 //highlight pages------------------------------
 
-.text-area {
-	width: 200px;
-	display: inline;
+#Prismabob {
+	width: 60%;
+	display: inline-block;
+	float: left;
 }
 
-.page-margin {
-	width: 200px;
-	display: inline;
-	text-align: left;
-	float: right;
-	
+#highlight_sidebar {
+	width: 30%;
+	float: right;	
+}
+
+#tools {
+	padding-bottom: 50px;
 }
 
 #highlighters {
   list-style:none;
   padding-left:0;
+  padding-top: 76px;
 
   li {
     @include clearfix;
@@ -209,6 +361,86 @@ width: 300px;
       margin-right: 2%;
       @include border-radius(16px);
     }
-  }
+   }
+
+li.facet{
+	padding: 5px;
+}
+
+li.vis_facet{
+	padding: 5px;
+}
+}
+
+
+//new prism page-------------------------------
+
+.field {
+	color: $blue;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+textarea[name="prism[content]"] {
+	
+	height: 500px;
+	width: 375px;
+}
+
+#content {
+	float: left;	
+
+}
+
+#prism-meta-data {
+	
+	float: right;
+
+	}
+
+#sidebar {
+	width: 30%;
+	display: inline-block;
+	float: right;
+	padding: 0px;
+
+	textarea{ 
+		border-radius: 20px;
+		}
+	}
+
+	input {
+		border-radius: 20px;
+	}
+
+div.clearfix{
+	clear: both;
+}
+
+#facetbutton img{
+
+		float:left;
+		display: inline;
+		height: 20px;
+		width: 20px;
+
+
+	.leftcolumn {
+		background-color: $blue;
+		textarea{ border-radius: 20px;}
+
+		}
+
+	label {
+		display: inline;
+
+		}
+
+
+
+	#leftcolumn {
+		background-color: $blue;
+		
+		}
 }
 

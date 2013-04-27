@@ -28,4 +28,25 @@ $parafont: 'source sans pro', sans-serif;
 
 //colors---------------------------------------------------------------------
 
-$blue: #2E64FE;
+$blue: #5683ff;
+$red: #ff3737;
+$green: #00f3b1;
+$yellow: #ffe400;
+$gray: #CCCCCC;
+$white: #fff;
+
+$oneval: color-stops(
+rgba(86,131,255,1) 0%,
+rgba(0,0,255,0) 100%
+);
+
+$twoval : color-stops(
+rgba(255,0,0,0) 0%,
+rgba(255,55,55,1)50%,
+rgba(255,0,0,0) 100%
+);
+
+$threeval : color-stops(
+rgba(0,255,0,0) 0%,
+rgba(0,243,177,1) 100%
+);

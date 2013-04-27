@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411151203) do
+ActiveRecord::Schema.define(:version => 20130420063736) do
 
-  create_table "markings", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "user_id"
-    t.text     "word_array"
-    t.integer  "facet_id"
-    t.integer  "prism_id"
-    t.integer  "facet_num"
+  create_table "facets", :force => true do |t|
+    t.string   "color"
+    t.string   "description"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.integer  "order"
+    t.string   "prism_id",    :limit => 36
   end
+
+  add_index "facets", ["prism_id", "order"], :name => "index_facets_on_prism_id_and_order", :unique => true
 
   create_table "prisms", :id => false, :force => true do |t|
     t.string   "uuid",             :limit => 36
@@ -31,16 +32,16 @@ ActiveRecord::Schema.define(:version => 20130411151203) do
     t.string   "author"
     t.text     "content"
     t.integer  "num_words"
-    t.string   "facet1"
-    t.string   "facet2"
-    t.string   "facet3"
-    t.string   "facet4"
     t.string   "description"
     t.integer  "user_id"
     t.boolean  "unlisted"
     t.string   "publication_date"
     t.string   "language"
+    t.string   "license"
   end
+
+  add_index "prisms", ["user_id"], :name => "index_prisms_on_user_id"
+  add_index "prisms", ["uuid"], :name => "index_prisms_on_uuid", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -68,15 +69,14 @@ ActiveRecord::Schema.define(:version => 20130411151203) do
 
   create_table "word_markings", :force => true do |t|
     t.integer  "index"
-    t.integer  "facet1_count", :default => 0
-    t.integer  "facet2_count", :default => 0
-    t.integer  "facet3_count", :default => 0
-    t.integer  "facet4_count", :default => 0
-    t.integer  "prism_id"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.integer  "user_id"
+    t.integer  "facet_id"
+    t.string   "prism_id",   :limit => 36
   end
 
-  add_index "word_markings", ["prism_id"], :name => "index_word_markings_on_prism_id"
+  add_index "word_markings", ["index"], :name => "index_word_markings_on_index"
+  add_index "word_markings", ["index"], :name => "index_word_markings_on_prism_id_and_index"
 
 end

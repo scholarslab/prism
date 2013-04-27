@@ -1,18 +1,41 @@
-<h1>Prisms</h1>
+<%= link_to 'New prism', new_prism_path, :id => 'new-prism', :class => 'button' %>
 
-<p>This shouldn't be in a table...and it needs pagination.</p>
+<h1>Browse Prisms</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Actions</th>
-  </tr>
-  <% @prisms.each do |prism| %>
-    <tr>
-    <td><%= prism.title.html_safe %></td>
-    <td><%= link_to 'Show', highlight_path(prism) %></td>
-  </tr>
+<table cellpadding="0" cellspacing="0">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Highlight</th>
+			<th>Visualize</th>
+		</tr>
+
+	</thead>
+
+	<tbody>
+
+<% @prisms.each do |prism| %>
+<tr> 
+
+	<td><%= prism.title.html_safe %></td>
+
+     <td class="highlight"> <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+        <%= image_tag('highlight_button.png') %>
+      <% end %>
+     </td>
+
+
+    <td class="visualize">  <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+        <%= image_tag('visualize_button.png') %>
+      <% end %>
+     </td>
+
+</tr>
 <% end %>
+	
+
+	</tbody>
+
+
 </table>
 
-<%= link_to 'New prism', new_prism_path %>

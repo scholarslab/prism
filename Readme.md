@@ -1,13 +1,6 @@
-# Readme
-PRISM
+# Prism
 
-# Badges
-[![Build Status](https://secure.travis-ci.org/scholarslab/prism.png)](http://travis-ci.org/scholarslab/prism?branch=master,production)
-[![Code Climate](https://codeclimate.com/github/scholarslab/prism.png)](https://codeclimate.com/github/scholarslab/prism)
-
-# Getting Started
-
-Prism is a tool for collective interpretation, an experiment in crowd-sourcing and visualizing many readings of  a set of common texts.  As part of our project to make crowd-sourcing more meaningful and less mechanical, users interact subjectively with a text, highlighting it in accordance with certain interpretive categories, such as sound, sense, and modernism, to produce an aggregate visualization of all other users' markings that shows points of analytical agreement or disagreement.  
+Prism is a tool for collective interpretation, an experiment in crowd-sourcing and visualizing many readings of  a set of common texts.  As part of our project to make crowd-sourcing more meaningful and less mechanical, users interact subjectively with a text, highlighting it in accordance with certain interpretive categories, such as sound, sense, and modernism, to produce an aggregate visualization of all other users' markings that shows points of analytical agreement or disagreement.   
 
 The basic workflow is simple:
 
@@ -17,28 +10,32 @@ The basic workflow is simple:
 4. When done, click the submit button to see a visualization.
 5. To switch to the visualization for a different category, simply click on a different category.
 
-Prism is an ideal tool for research and pedagogy alike; students can highlight a text and discuss their markings in class, and scholars can see how the world at large views these three texts.
+Prism is an ideal tool for research and pedagogy alike; students can highlight a text and discuss their markings in class, and scholars can see how the world at large views these texts.
 
-Although right now Prism lacks the functionality necessary to enable users to upload texts, developers can add new texts very easily.  All texts belong in the ```app/spec/fixtures/html``` folder, and they should include the following div classes contained within a ```<div id='bib'>```:
+# Getting Started
 
-* **author**: Author's name (first and last)
-* **pub_date**: Publication date for the version of the text included in the database
-* **format**: Text or image
-* **description**: Bibliographic information (publisher, context, etc.)
-* **sandbox**: false (unless you are replacing the sandbox text)
-
-Each category and color are joined within ```<div id='facets'>``` tag and are given class category and color accordingly.
-
-If these documents are changed in any way, developers should type the following to clear and then rebuild the database:  
+Prism is a Ruby and Rails project, with several tools to get you
+up-and-running quickly. Assuming you have Ruby and git installed
+properly, the following commands will pull the latest version of the
+software, set up the database, and import some default documents.
 
 ```
-rake import:clear import:docs
+$ git clone git://github.com/scholarslab/prism.git
+$ cd prism
+$ bundle install
+$ rake db:migrate
+$ rake import:docs
 ```
 
 ## Contributing to the Project
-### Feedback
-We rely on the [Github issues tracker][issues] for feedback on issues
-and improvements.
+
+[![Build Status](https://secure.travis-ci.org/scholarslab/prism.png)](http://travis-ci.org/scholarslab/prism?branch=master,production)
+[![Code Climate](https://codeclimate.com/github/scholarslab/prism.png)](https://codeclimate.com/github/scholarslab/prism)
+
+For a list of people who have contributed to the codebase, see the 
+[list of contributors][contributors].
+
+[contributors]: https://github.com/scholarslab/prism/graphs/contributors
 
 ### Patches/Pull Requests
  
@@ -46,9 +43,15 @@ and improvements.
 * Make your feature addition or bug fix.
 * Add tests for it, and make sure all the tests pass. This is important so we don't unknowingly break your changes in a future release. If you're fixing a bug, it helps us to verify that your bug does in fact exist. 
 * Commit your changes to your own fork.
-* Send us a [pull request][pull], with a clear explanation of the changes. Bonus points for topic branches.
+* Send us a [pull request][pull], with a clear explanation of the
+changes. Bonus points for topic branches.
 
-## Copyright
+
+### Feedback
+We rely on the [Github issues tracker][issues] for feedback on issues
+and improvements.
+
+## Copyright / License
 This software is released under the [Apache 2.0][license]. 
 
 [fork]: http://help.github.com/fork-a-repo/

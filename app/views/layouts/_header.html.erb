@@ -1,7 +1,9 @@
+<span id="corner-banner">Official Launch<br>May 3rd!</span>
+
 <% if user_signed_in? %>
 <div id="user_meta">
         <!-- The following code shows the user's email if they are signed in. !-->
-          <%= current_user.email %>.
+          <%= current_user.email %> |
           <%= link_to t('header.sign_out'), destroy_user_session_path, :method => :delete, :id => 'sign-out' %>
         <!-- end. !-->
 </div>
@@ -14,14 +16,12 @@
     <li>
       <%= link_to t('About'), about_path %>
     </li>
-
     <li>
       <%= link_to t('Browse'), prisms_path %>
     </li>
-
     <li>
     <% if user_signed_in? %>
-        <a href="myprism">myPrism</a>
+        <%= link_to t('myPrisms'), users_path(current_user) %>
     <% else %>
           <%= link_to t('header.sign_in'), new_user_session_path %>
     <% end %>
@@ -31,20 +31,14 @@
 </ul>
 </nav>
 
-  
-
 <header>
 <div class="header">
 
-<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  <%= link_to image_tag('LOGO.png'), home_path %>
+  <% if current_page?('/') %>
+  <p class="motto">A Tool for Collaborative Interpretation of Texts</p>
+  <% end %>
 
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
-
-  <h><%= link_to image_tag('LOGO.png'), home_path %></h>
-
-  <div id="user-meta">
-  
-  </div>
 </div>
 
 

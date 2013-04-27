@@ -1,0 +1,76 @@
+<%= link_to 'New prism', new_prism_path, :class => 'button', :id => 'new-prism' %>
+<h1>myPrisms (<%= @user.email %>)</h1>
+
+<% if @prisms.size > 0 %>
+<h2>Owned Prisms</h2>
+<table cellpadding="0" cellspacing="0">
+
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Highlight</th>
+      <th>Visualize</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @prisms.each do |prism| %>
+    <tr>
+      <td><%= prism.title.html_safe %></td>
+      <td class="highlight">
+        <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+          <%= image_tag('highlight_button.png') %>
+        <% end %>
+      </td>
+      <td class="visualize">
+        <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+          <%= image_tag('visualize_button.png') %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+
+</table>
+
+<p>Have unlisted Prisms? Just copy and email the link to share with your Friends!</p>
+
+<% else %>
+
+<p>You have not added any Prisms. <%= link_to 'Add a Prism', new_prism_path %>
+
+<% end %>
+
+<% if @highlighted_prisms.size > 0 %>
+<h2>Highlighted Prisms</h2>
+<table cellpadding="0" cellspacing="0">
+
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Highlight</th>
+      <th>Visualize</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @highlighted_prisms.each do |stuff| %>
+    <tr>
+      <% prism = Prism.find_by_uuid(stuff) %>
+      <td><%= prism.title.html_safe %></td>
+      <td class="highlight">
+        <%= link_to(highlight_path(prism), :class => 'highlight') do %>
+          <%= image_tag('highlight_button.png') %>
+        <% end %>
+      </td>
+      <td class="visualize">
+        <%= link_to(visualize_path(prism), :class => 'visualize') do %>
+          <%= image_tag('visualize_button.png') %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+
+</table>
+<% end %>

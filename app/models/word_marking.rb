@@ -1,4 +1,7 @@
 class WordMarking < ActiveRecord::Base
   belongs_to :prism
-  attr_accessible :facet1_count, :facet2_count, :facet3_count, :facet4_count, :index, :prism_id
+  belongs_to :user
+  belongs_to :facet
+  
+  attr_accessible :index, :prism, :prism_id, :user, :user_id, :facet, :facet_id 
 end
