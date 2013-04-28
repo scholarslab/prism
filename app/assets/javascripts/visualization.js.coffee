@@ -8,6 +8,7 @@ min_size = 15
 window.setup_visualize = ->
 	window.all_colors = []
 	window.all_facet_nums = []
+	window.all_facet_names = []
 	window.colormap = {}
 	window.frequencies = {}
 	facets = $("li.vis_facet")
@@ -15,9 +16,12 @@ window.setup_visualize = ->
 	for facet in facets
 		color = $("input.color", facet).val()
 		facet_num = $("input.order", facet).val()
+		facet_name = facet.textContent
 		window.all_colors.push(color)
 		window.all_facet_nums.push(facet_num)
+		window.all_facet_names.push(facet_name)
 		window.frequencies[facet_num] = JSON.parse($("input.freq", facet).val())
+
 		
 	# Clicking on a facet sets the color
 	$("li.vis_facet").click ->
@@ -45,14 +49,19 @@ window.setup_visualize = ->
 
 			dataArray = [ 
 				['Facet', 'Highlights'],
-				[ 'red', r ], 
-				[ 'blue', b ], 
-				[ 'green', g]
+				[ window.all_facet_names[0], r ], 
+				[ window.all_facet_names[1], b ], 
+				[ window.all_facet_names[2], g]
 			]
 
 			data = google.visualization.arrayToDataTable(dataArray);
 			options = {
           	title: 'Highlights for "' + current_word + '"'
+				colors: [
+					$('.red-vis').css('color'),
+					$('.green-vis').css('color'),
+					$('.blue-vis').css('color'),
+				]
         	};
 			chart.draw(data, options);
 		)

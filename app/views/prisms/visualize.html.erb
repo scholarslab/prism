@@ -23,13 +23,13 @@
     <div id="visualizations">
       <p id="visualization-help"><%= t "visualize.instructions" %> </p>
 
-		<span class="current-word"></span>
-		<ul id="mousevoer-stats">
+		<span class="current-word" style="visibility:hidden"></span>
+		<ul id="mousevoer-stats" style="visibility:hidden">
 			<li><span class="red-percent red-vis"></span></li>
 			<li><span class="green-percent green-vis"></span></li>
 			<li><span class="blue-percent blue-vis"></span></li>
    	</ul>
-		<div id="chart_div" style="width: 900px; height: 500px;"></div>
+		<div id="chart_div" style="width: 450px; height: 250px;"></div>
       <ul id="highlighters">
         <% for facet in @prism.facets %>
           <li class="vis_facet">
