@@ -23,12 +23,6 @@
     <div id="visualizations">
       <p id="visualization-help"><%= t "visualize.instructions" %> </p>
 
-		<span class="current-word" style="visibility:hidden"></span>
-		<ul id="mousevoer-stats" style="visibility:hidden">
-			<li><span class="red-percent red-vis"></span></li>
-			<li><span class="green-percent green-vis"></span></li>
-			<li><span class="blue-percent blue-vis"></span></li>
-   	</ul>
 		<div id="chart_div" style="width: 450px; height: 250px;"></div>
       <ul id="highlighters">
         <% for facet in @prism.facets %>
@@ -38,12 +32,21 @@
             <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
             <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%></li>
         <% end %>
+
 		  	 <li class="vis_facet">
 			 	<input type="hidden" class="color" value="winning"/>
 			 	<input type="hidden" class="order" value=""/>
             <input type="hidden" value="<%=@frequencies[0]%>" class="freq"/>
-			 	<span class="facet red"></span>Winning Facet 
+			 	<span class="facet red green blue"></span>Winning Facet 
 			 </li>
+
+		<span class="current-word" style="visibility:hidden"></span>
+		<ul id="mousevoer-stats" style="visibility:hidden">
+			<li><span class="red-percent red-vis"></span></li>
+			<li><span class="green-percent green-vis"></span></li>
+			<li><span class="blue-percent blue-vis"></span></li>
+   	</ul>
+
   <p id="visualization-help"><%= t "visualize.instructions" %> </p>
      
       </ul>

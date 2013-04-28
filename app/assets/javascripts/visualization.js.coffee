@@ -50,8 +50,8 @@ window.setup_visualize = ->
 			dataArray = [ 
 				['Facet', 'Highlights'],
 				[ window.all_facet_names[0], r ], 
-				[ window.all_facet_names[1], b ], 
-				[ window.all_facet_names[2], g]
+				[ window.all_facet_names[1], g ], 
+				[ window.all_facet_names[2], b ]
 			]
 
 			data = google.visualization.arrayToDataTable(dataArray);
