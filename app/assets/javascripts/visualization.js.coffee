@@ -79,13 +79,14 @@ window.select_facet = (facet) ->
 			#winning_color = ((a[0][1] > a[1][1]) ? a[0][0] : ((a[0][1] == 0) ? "grey" : "pink"))
 			#winning_color = ((word_freqs[0][1] > word_freqs[1][1]) ? word_freqs[0][0] : "pink")
 
-			winning_color = "lightgrey"
 			if word_freqs[0][1] > word_freqs[1][1]
 				winning_color = word_freqs[0][0]
+				$(word).toggleClass(winning_color + "-vis", true)
 			else if word_freqs[0][1] != 0
-				winning_color = "black"
+				$(word).css('color', 'black')
+			else 
+				$(word).css('color', 'lightgrey')
 
-			$(word).css('color', winning_color)
 			#$(word).css('color', 'rgb('+Math.round(f*frequencies['red'][i])+','+Math.round(f*frequencies['green'][i])+','+Math.round(f*frequencies['blue'][i])+')')
 		)
 
