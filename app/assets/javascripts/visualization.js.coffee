@@ -1,5 +1,8 @@
 # Get the global namespace so that we can make things global
 window = (exports ? this)
+# max and min font-size for visualization
+max_size = 40
+min_size = 15
 
 # This function extracts the colors and frequencies from our input data
 window.setup_visualize = ->
@@ -27,10 +30,14 @@ window.select_facet = (facet) ->
     words = d3.selectAll("span.word")
     for color in window.all_colors
         words.classed(color+"-vis", false)
+    min = Math.min.apply @, window.frequencies[current_num]
+    max = Math.max.apply @, window.frequencies[current_num]
+    multiplier = if max == 0 then 0 else (max_size-min_size)/(max-min)
+    # sets color and font-size by linear interpolation
     words.data(window.frequencies[current_num])
          .classed(current_color+"-vis", (d) -> (d > 0))
          .transition()
-         .style("font-size", (d) -> (15+20*d) + "px" )
+         .style("font-size", (d) -> (min_size+(d-min)*multiplier) + "px" )
 
 
     
