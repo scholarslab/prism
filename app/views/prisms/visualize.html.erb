@@ -1,10 +1,14 @@
 <% content_for :extra_head do %>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script type="text/javascript" charset="utf-8">
     $(function() {
       setup_visualize();
       select_facet($("li.vis_facet").eq(0));
     })
   </script>
+  <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+    </script>
 <% end %>
 
     <div id="Prismabob">
@@ -25,6 +29,7 @@
 			<li><span class="green-percent green-vis"></span></li>
 			<li><span class="blue-percent blue-vis"></span></li>
    	</ul>
+		<div id="chart_div" style="width: 900px; height: 500px;"></div>
       <ul id="highlighters">
         <% for facet in @prism.facets %>
           <li class="vis_facet">

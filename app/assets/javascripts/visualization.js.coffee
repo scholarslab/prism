@@ -19,10 +19,13 @@ window.setup_visualize = ->
 		window.all_facet_nums.push(facet_num)
 		window.frequencies[facet_num] = JSON.parse($("input.freq", facet).val())
 		
-		# Clicking on a facet sets the color
+	# Clicking on a facet sets the color
 	$("li.vis_facet").click ->
 		window.select_facet($(this))
 
+	chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+
+	# moseover shows highlight data
 	words = $("span.word")	
 	words.each( (i,word) ->
 
@@ -31,6 +34,7 @@ window.setup_visualize = ->
 		b = frequencies[2][i]
 
 		$(word).mouseenter( () ->
+			current_word = this.textContent 
 			$("span.current-word").text(this.textContent)
 			$(this).css("text-decoration","underline")
 			for facet_num in all_facet_nums 
@@ -38,13 +42,26 @@ window.setup_visualize = ->
 				$("span.red-percent").text(Math.round(r*100) + "%")
 				$("span.green-percent").text(Math.round(g*100) + "%")
 				$("span.blue-percent").text(Math.round(b*100) + "%")
+
+			dataArray = [ 
+				['Facet', 'Highlights'],
+				[ 'red', r ], 
+				[ 'blue', b ], 
+				[ 'green', g]
+			]
+
+			data = google.visualization.arrayToDataTable(dataArray);
+			options = {
+          	title: 'Highlights for "' + current_word + '"'
+        	};
+			chart.draw(data, options);
 		)
 		$(word).mouseout( () ->
 			$(this).css("text-decoration","none")
 		)
-
 	)
-	
+
+
 # This function selects a facet, gives the box a border, and highlights text
 window.select_facet = (facet) ->
 	current_color = $("input.color", facet).val()
