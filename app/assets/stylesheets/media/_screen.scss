@@ -1,10 +1,13 @@
 ::selection,
 ::-moz-selection { background: white; text-shadow: none;}
 
+* {
+  @include box-sizing('border-box');
+}
+
 html {	
 	background: white;
 }
-
 
 body {
 	max-width: 800px; 
@@ -15,20 +18,57 @@ body {
 	font-family: $headerfont;
 }
 
+// Form elements
+label {
+  display:block;
+  color: lighten(black, 50%);
+  input[type=checkbox] + & {
+    display:inline;
+  }
+}
 
-input[type=submit] {
-	border: none;
+textarea {
+  font-family: $parafont;
+  font-size: 1em;
+  box-shadow:none;
+  border:1px solid #ccc;
+  padding: 0.25em;
+  width: 100%;
+  &:focus {
+    border-color: #777;
+    outline:none;
+  }
+}
+
+input {
+  margin-bottom:1em;
+
+  &[type=text],
+  &[type=email],
+  &[type=password] {
+    @extend textarea;
+  }
+
+  &[type=submit] {
+    border:none;
+    @extend .button;
+    background-color: $blue !important;
+    cursor:pointer;
+    &:hover {
+      background-color: darken($blue, 20%) !important;
+    }
+  }
+
 }
 
 .button {
 	display: block;
-	width: 150px;
 	background-color: $yellow;
 	color: white !important;
 	text-transform: uppercase;
 	text-align: center;
 	padding: 10px;
-	@include border-radius(15px);
+	@include border-radius(10px);
 	margin-bottom: 20px;
 }
 
@@ -187,15 +227,6 @@ p.motto {
 }
 
 //sign-in elements---------------------------
-
-label, 
-input[type=email], 
-input[type=password] 
-{display: block;
-height: 30px;
-width: 300px;
-}
-
 #socialmedia {
 	text-align:center; 
 	border-bottom: 1px solid #ccc;
