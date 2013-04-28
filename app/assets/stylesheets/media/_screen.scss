@@ -27,6 +27,10 @@ label {
   }
 }
 
+select {
+  width:100%;
+}
+
 textarea {
   font-family: $parafont;
   font-size: 1em;
@@ -404,64 +408,44 @@ li.vis_facet{
 
 
 //new prism page-------------------------------
-
-.field {
-	color: $blue;
-	padding: 0px;
-	margin-top: 10px;
-}
-
-textarea[name="prism[content]"] {
-	
-	height: 500px;
-	width: 375px;
+#new_prism {
+  @include clearfix;
 }
 
 #content {
-	float: left;	
-
+  float: left;
+  width: 65%;
 }
-
-#prism-meta-data {
-	
-	float: right;
-
-	}
 
 #sidebar {
 	width: 30%;
-	display: inline-block;
 	float: right;
-	padding: 0px;
-	}
-
-div.clearfix{
-	clear: both;
 }
 
-#facetbutton img{
+#facetbutton {
+  margin-bottom: 2em;
 
-		float:left;
-		display: inline;
-		height: 20px;
-		width: 20px;
+  .field {
+    @include clearfix;
+    position:relative;
+    margin-bottom:10px;
+  }
 
+  img, input {
+    float:left;
+  }
 
-	.leftcolumn {
-		background-color: $blue;
+  img {
+    width: 20px;
+    height: 20px;
+    position:absolute;
+    top: 50%;
+    margin-top: -10px;
+  }
 
-		}
-
-	label {
-		display: inline;
-
-		}
-
-
-
-	#leftcolumn {
-		background-color: $blue;
-		
-		}
+  input {
+    margin: 0 0 0 30px !important;
+    max-width: 80%;
+  }
 }
 
