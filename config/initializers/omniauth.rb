@@ -1,0 +1,1 @@
+OmniAuth.config.full_host = "http://prism-staging12.herokuapp.com/"
