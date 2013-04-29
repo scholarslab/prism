@@ -1,88 +1,78 @@
-<div class="userupload">
 <h1>New Prism</h1>
 
 <%= form_for(@prism) do |f| %>
   <% if @prism.errors.any? %>
   <div id="error_explanation">
-  <h2><%= pluralize(@prism.errors.count, "error") %> prohibited this prism from being saved:</h2>
+    <h2><%= pluralize(@prism.errors.count, "error") %> prohibited this prism from being saved:</h2>
 
-  <ul>
-    <% @prism.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-  <% end %>
-  </ul>
-</div>
-<% end %>
-
-<div class="leftcolumn">
-  <div class="field" id="content">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div> 
-
-</div>
-
-<div id="sidebar">
-
-<div id="facetbutton">
- <%= fields_for :facet1 do |f1| %>
-    <div class="field">
-      <%= image_tag('facetblue.png') %>
-      <%= f1.text_field :description, :placeholder => 'Facet 1' %>
-    </div>
-  <% end %>
-  
-  <%= fields_for :facet2 do |f2| %>
-    <div class="field">
-    <%= image_tag('facetred.png') %>
-      <%= f2.text_field :description, :placeholder => 'Facet 2' %>
-    </div>
-  <% end %>
-  
-  
-  <%= fields_for :facet3 do |f3| %>
-    <div class="field">
-    <%= image_tag('facetgreen.png') %>
-      <%= f3.text_field :description, :placeholder => 'Facet 3' %>
-<div class="field">
-  <%= f.label :title %><br />
-  <%= f.text_field :title, :placeholder => 'Required: Give your Prism a title!'  %>
-</div>
-<div class="field">
-  <%= f.label :author %><br />
-  <%= f.text_field :author, :placeholder => 'Required: Original Author'  %>
-</div>
-<div class="field">
-  <%= f.label :publication_date %><br />
-  <%= f.text_field :publication_date, :placeholder => 'You know the drill...mm/dd/year'  %>
-</div>
-<div class="field">
-  <%= f.label :language %><br />
-  <%= f.text_field :language, :placeholder => 'Language of the text' %>
-</div>
-<div class="field">
-  <%= f.label :description %><br />
-  <%= f.text_area :description, :placeholder => 'What do you want people to know about this text or your facet categories?' %>
-</div>
-<div class ="field">
-  <%= f.label :unlisted %>
-  <%= f.check_box :unlisted%>
-  <p>Check this box if you want to share your prism with friends only (you'll need to email the link to friends).</p>
-</div>
-
-  <% end %>
-</div>
-
-<%= render "cc_license_form" %>
-
-<div class="actions">
-  <p>Wait! Before you submit, read our <%= link_to "Terms of Service", terms_path %>!</p>
-  <%= f.submit :class => 'button' %>
-</div>
-</div>
-<% end %>
-</div>
-
-
-<div class="clearfix">
+    <ul>
+      <% @prism.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
   </div>
+  <% end %>
+
+  <div class="field" id="content">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+
+  <div id="sidebar">
+    <div id="facetbutton">
+     <%= fields_for :facet1 do |f1| %>
+        <div class="field">
+          <%= image_tag('facetblue.png') %>
+          <%= f1.text_field :description, :placeholder => 'Facet 1' %>
+        </div>
+      <% end %>
+
+      <%= fields_for :facet2 do |f2| %>
+        <div class="field">
+        <%= image_tag('facetred.png') %>
+          <%= f2.text_field :description, :placeholder => 'Facet 2' %>
+        </div>
+      <% end %>
+
+      <%= fields_for :facet3 do |f3| %>
+        <div class="field">
+          <%= image_tag('facetgreen.png') %>
+          <%= f3.text_field :description, :placeholder => 'Facet 3' %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, :placeholder => 'Required: Give your Prism a title!'  %>
+    </div>
+    <div class="field">
+      <%= f.label :author %>
+      <%= f.text_field :author, :placeholder => 'Required: Original Author'  %>
+    </div>
+    <div class="field">
+      <%= f.label :publication_date %>
+      <%= f.text_field :publication_date, :placeholder => 'You know the drill...mm/dd/year'  %>
+    </div>
+    <div class="field">
+      <%= f.label :language %>
+      <%= f.text_field :language, :placeholder => 'Language of the text' %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description, :rows => 6, :placeholder => 'What do you want people to know about this text or your facet categories?' %>
+    </div>
+    <div class ="field">
+      <%= f.check_box :unlisted%>
+      <%= f.label :unlisted %>
+      <p>Check this box if you want to share your prism with friends only (you'll need to email the link to friends).</p>
+    </div>
+
+    <%= render "cc_license_form" %>
+
+    <div class="actions">
+      <p>Wait! Before you submit, read our <%= link_to "Terms of Service", terms_path %>!</p>
+      <%= f.submit :class => 'button' %>
+    </div>
+  </div>
+<% end %>
