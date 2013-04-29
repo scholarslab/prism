@@ -109,11 +109,11 @@ class PrismsController < ApplicationController
     respond_to do |format|
       if success 
         if @prism.unlisted?
-          notice = "This prism will not show up in the public browse page. Be sure to copy the link to send to your friends!"
+          notice = "Success! Keep in mind that this prism will not show up in the public browse page. Be sure to copy the link to send to your friends!"
         else
           notice = "Prism was successfully created."
         end
-          format.html { redirect_to highlight_path(@prism), notice: "success" }
+          format.html { redirect_to highlight_path(@prism), notice: notice }
           format.json { render json: @prism, status: :created, location: @prism }
       else
         format.html { render action: "new" }
