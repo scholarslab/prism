@@ -24,7 +24,7 @@ window.setup_visualize = ->
 
 		
 	# Clicking on a facet sets the color
-	$("li.vis_facet").click ->
+	$("li.vis_button").click ->
 		window.select_facet($(this))
 
 	chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -33,35 +33,28 @@ window.setup_visualize = ->
 	words = $("span.word")	
 	words.each( (i,word) ->
 
-		r = frequencies[0][i]
-		g = frequencies[1][i]
-		b = frequencies[2][i]
+		#r = frequencies[0][i]
+		#g = frequencies[1][i]
+		#b = frequencies[2][i]
 
 		$(word).mouseenter( () ->
 			current_word = this.textContent 
 			$("span.current-word").text(this.textContent)
 			$(this).css("text-decoration","underline")
-			for facet_num in all_facet_nums 
+
+			dataArray = [['Facet', 'Highlights']]
+			for facet_num in all_facet_nums
 				console.log(facet_num, frequencies[facet_num][i])
-				$("span.red-percent").text(Math.round(r*100) + "%")
-				$("span.green-percent").text(Math.round(g*100) + "%")
-				$("span.blue-percent").text(Math.round(b*100) + "%")
+				dataArray.push([window.all_facet_names[facet_num], frequencies[facet_num][i]])
 
-			dataArray = [ 
-				['Facet', 'Highlights'],
-				[ window.all_facet_names[0], r ], 
-				[ window.all_facet_names[1], g ], 
-				[ window.all_facet_names[2], b ]
-			]
-
+			chartColors = [];
+			for facetColor in window.all_colors
+				chartColors.push($('.'+facetColor+'-vis').css('color'))
+		
 			data = google.visualization.arrayToDataTable(dataArray);
 			options = {
           	title: 'Highlights for "' + current_word + '"'
-				colors: [
-					$('.red-vis').css('color'),
-					$('.green-vis').css('color'),
-					$('.blue-vis').css('color'),
-				]
+				colors: chartColors 
         	};
 			chart.draw(data, options);
 		)
@@ -91,19 +84,14 @@ window.select_facet = (facet) ->
 		words = $("span.word")
 		words.each( (i,word) ->
 
-			r = frequencies[0][i]
-			g = frequencies[1][i]
-			b = frequencies[2][i]
-			
-			f=150
+			word_freqs = []
+			for facet_num in all_facet_nums
+				word_freqs.push([window.all_colors[facet_num],frequencies[facet_num][i]])
 
-			word_freqs = [['red',r],['green',g],['blue',b]];
 			word_freqs.sort (a,b) ->
 				return ((a[1] < b[1]) ? -1 : ((a[1] > b[1]) ? 1 : 0));
 
-			#no highlighting gets grey, ties get pink
-			#winning_color = ((a[0][1] > a[1][1]) ? a[0][0] : ((a[0][1] == 0) ? "grey" : "pink"))
-			#winning_color = ((word_freqs[0][1] > word_freqs[1][1]) ? word_freqs[0][0] : "pink")
+			#no highlighting gets grey, ties get black
 
 			if word_freqs[0][1] > word_freqs[1][1]
 				winning_color = word_freqs[0][0]

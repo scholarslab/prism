@@ -26,14 +26,14 @@
 		<div id="chart_div" style="width: 450px; height: 250px;"></div>
       <ul id="highlighters">
         <% for facet in @prism.facets %>
-          <li class="vis_facet">
+          <li class="vis_facet vis_button">
             <input type="hidden" class="color" value="<%=facet.color%>"/>
             <input type="hidden" class="order" value="<%=facet.order%>"/>
             <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
             <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%></li>
         <% end %>
 
-		  	 <li class="vis_facet">
+		  	 <li class="vis_button">
 			 	<input type="hidden" class="color" value="winning"/>
 			 	<input type="hidden" class="order" value=""/>
             <input type="hidden" value="<%=@frequencies[0]%>" class="freq"/>
