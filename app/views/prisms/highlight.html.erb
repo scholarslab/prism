@@ -7,13 +7,13 @@ $(setup_highlight);
 <div id="Prismabob">
   <h1><%= @prism.title.html_safe %></h1>
   <h2><%= @prism.author %></h2>
-  <div class="text">
+  <div class="text noselect" unselectable="on">
     <%= @prism.content.html_safe %>
   <p id ="publication_date"><%= @prism.publication_date %> </p>
   </div>
 </div>
 
-  <div id="highlight_sidebar">
+  <div id="highlight_sidebar" class="noselect" unselectable="on">
     <div id="tools">
         <ul id="highlighters">
          <% for facet in @prism.facets %>
