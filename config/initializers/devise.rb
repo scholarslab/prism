@@ -214,7 +214,12 @@ require "omniauth-facebook"
 require "omniauth-google"
 require "omniauth-browserid"
 
-  config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"], {:client_options => {:ssl => {:ca_path => "/usr/lib/ssl/certs/ca-certificates.crt"}}}
+  config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"], 
+    { :scope => 'email, offline_access',
+      :client_options => { :ssl => {
+      :ca_file => "/usr/lib/ssl/certs/ca-certificates.crt"
+      }}
+      }
   config.omniauth :google, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
   config.omniauth :browser_id
 
