@@ -393,17 +393,31 @@ td {
       height: 30px;
       margin-right: 2%;
       @include border-radius(16px);
-    }
+      }
    }
 
 li.facet{
 	padding: 5px;
 }
 
+
+span.facet.blue:hover {
+background-color: $blueroll;
+}
+
+span.facet.red:hover {
+background-color: $redroll;
+}
+
+span.facet.green:hover {
+background-color: $greenroll;
+}
+
 li.vis_facet{
 	padding: 5px;
 }
 }
+
 
 
 //new prism page-------------------------------
