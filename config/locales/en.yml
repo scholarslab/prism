@@ -103,7 +103,8 @@ en:
     eraser: Eraser
   visualize:
     instructions: Select one of the facets above to display the visualization of that category.  The larger the font size, the more users have highlighted that word with the relevant cateogry.
-    sketches: You can also take a look at these sketches for potential visualizations imagined by the 2011-2012 Praxis Team.  
+    sketches: You can also take a look at these sketches for potential visualizations imagined by the 2011-2012 Praxis Team. 
+    winningdescription: Each word is colored to match the category which received the most highlights.  Mouse over the pie chart to see the exact number of users who picked each category.  
          
   alumni:
     alumni_title: Praxis Alumni
