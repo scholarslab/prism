@@ -17,7 +17,7 @@ gem 'omniauth-browserid'
 
 gem "uuidtools"
 
-
+gem "language_list"
 gem 'figaro'
 
 # Error notifications
