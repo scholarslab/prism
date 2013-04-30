@@ -2,7 +2,8 @@ require 'set'
 
 class PrismsController < ApplicationController 
   before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
-  
+
+
   # this method appears in both the model and the controller. Shane deleted it on his controller on the feature branch.
   def before_create()
     require 'uuidtools'
@@ -67,7 +68,12 @@ class PrismsController < ApplicationController
     @facet1 = Facet.new
     @facet2 = Facet.new
     @facet3 = Facet.new
-    
+    @language_dump = LanguageList::COMMON_LANGUAGES
+    @languages = []
+    @language_dump.each do |lang|
+      @languages.push(lang.name)
+    end
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @prism }  

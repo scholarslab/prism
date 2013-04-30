@@ -56,8 +56,9 @@
     </div>
     <div class="field">
       <%= f.label :language %>
-      <%= f.text_field :language, :placeholder => 'Language of the text' %>
+      <%= f.select :language, options_for_select(@languages, "English") %>
     </div>
+
     <div class="field">
       <%= f.label :description %>
       <%= f.text_area :description, :rows => 6, :placeholder => 'What do you want people to know about this text or your facet categories?' %>

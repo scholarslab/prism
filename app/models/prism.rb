@@ -14,4 +14,5 @@ class Prism < ActiveRecord::Base
 	    self.uuid = UUIDTools::UUID.timestamp_create().to_s
 	end
 end
+  
 

@@ -140,6 +140,7 @@ GEM
     json (1.7.7)
     jwt (0.1.6)
       multi_json (>= 1.0)
+    language_list (1.0.0)
     listen (0.7.3)
     lumberjack (1.0.3)
     mail (2.5.3)
@@ -321,6 +322,7 @@ DEPENDENCIES
   jasmine
   jasmine-jquery-rails
   jquery-rails
+  language_list
   memcachier (~> 0.0.2)
   minitest
   newrelic_rpm
