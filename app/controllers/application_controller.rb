@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 def check_url
   url = request.url
   if url.include?('facebook')
-    redirect_to ('http://www.prism-staging12.herokuapp.com/users/auth/facebook')        
+    redirect_to ('http://www.prism-staging12.herokuapp.com/')        
   end
 end
 
