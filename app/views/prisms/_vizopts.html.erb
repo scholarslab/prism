@@ -11,8 +11,9 @@
       <input type="hidden" class="order" value="<%=facet.order%>"/>
       <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
       <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%></li>
-
+  
     <% end %>
+  </ul>
     </div>
 
     <h3>Visualization 2: Winning Facet</h3>
@@ -33,7 +34,10 @@
 
       <p id="visualization-help"><%= t "visualize.winningdescription" %> </p>
     </div>
-  </ul>
+
+
+
+</div>
   <p><%= render 'cc_license' %></p>
   <p id="viz-count">
   <span><% if @prism.word_markings.map(&:user_id).uniq != nil %>
