@@ -28,6 +28,20 @@
 
 <script>
  $(function() {
-    $( "#visualizations" ).accordion();
+    $( "#visualizations" ).accordion({heightStyle: "content"});
+    
+  });
+ $(function() {
+    $( "#accordion-resizer" ).resizable({
+      minHeight: 140,
+      minWidth: 250,
+      resize: function() {
+        $( "#accordion" ).accordion( "refresh" );
+      }
+    });
   });
 </script>
+
+ 
+  
+  
