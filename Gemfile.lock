@@ -36,6 +36,7 @@ GEM
     ansi (1.4.3)
     arel (3.0.2)
     awesome_print (1.1.0)
+    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.4)
     capybara (1.1.4)
@@ -87,6 +88,7 @@ GEM
       warden (~> 1.2.1)
     diff-lcs (1.1.3)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (1.3.0)
       multi_json (~> 1.0)
@@ -98,6 +100,7 @@ GEM
     faraday (0.8.7)
       multipart-post (~> 1.1)
     ffaker (1.8.1)
+    ffi (1.8.1)
     ffi (1.8.1-x86-mingw32)
     figaro (0.6.3)
       bundler (~> 1.0)
@@ -106,6 +109,8 @@ GEM
       nokogiri (~> 1.4)
     formatador (0.2.4)
     fssm (0.2.10)
+    gherkin (2.11.6)
+      json (>= 1.7.6)
     gherkin (2.11.6-x86-mingw32)
       json (>= 1.7.6)
     guard (1.8.0)
@@ -152,6 +157,7 @@ GEM
     multi_json (1.0.4)
     multipart-post (1.2.0)
     newrelic_rpm (3.6.1.88)
+    nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
     nyan-cat-formatter (0.0.9)
     oauth (0.4.7)
@@ -184,8 +190,13 @@ GEM
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
     orm_adapter (0.4.0)
+    pg (0.15.1)
     pg (0.15.1-x86-mingw32)
     polyglot (0.3.3)
+    pry (0.9.12.1)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     pry (0.9.12.1-x86-mingw32)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -267,6 +278,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sqlite3 (1.3.7)
     sqlite3 (1.3.7-x86-mingw32)
     thin (1.5.1)
       daemons (>= 1.0.9)
@@ -292,6 +304,7 @@ GEM
       nokogiri (~> 1.3)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
