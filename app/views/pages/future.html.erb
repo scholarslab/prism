@@ -6,49 +6,32 @@
     <p>Although the 2012-2013 eventually chose to focus our efforts on expanding the word-based capabilities of Prism, we had many discussions throughout year about expanding our conception of “texts” to include more than the written word.   Could Prism be used to generate collaborative readings of photographs, maps, musical scores, or audio clips?   In response to this question, we came up with a number of ideas. Here, we have chosen to share some of those possibilities.</p> 
 
     <h2>Interpreting Photographs</h2>
-    <p>There already exist a number of promising image-based web applications.   Projects such as <a href= "http://www.snapshotserengeti.org/">Snapshot Serengeti</a> use crowd sourcing to complete scholarly and research based projects.  Others, such as <a href=" http://lab.softwarestudies.com/p/imageplot.html">ImagePlot</a>, identify macro patterns through a series of images.  In addition, there are a number of applications which allow you to annotate images as an individual and perhaps view other annotations of the same document. (For example, see  <a href="http://mith.umd.edu/tile/">Tile</a>, <a href="http://tapor.uvic.ca/~mholmes/image_markup/index.php">Uvic</a>, and <a href="http://a.nnotate.com/">A.nnotate</a>.)   However, most of these applications don’t allow you to overlay multiple annotations and to generate a collaborative interpretation. That’s where Prism could come in.</p>
+    <p>There already exist a number of promising image-based web applications.   Projects such as <a href= "http://www.snapshotserengeti.org/">Snapshot Serengeti</a> use crowd sourcing to complete scholarly and research based projects.  Others, such as <a href=" http://lab.softwarestudies.com/p/imageplot.html">ImagePlot</a>, identify macro patterns through a series of images.  In addition, there are a number of applications which allow you to annotate images as an individual and perhaps view other annotations of the same document (e.g. <a href="http://mith.umd.edu/tile/">Tile</a>, <a href="http://tapor.uvic.ca/~mholmes/image_markup/index.php">Uvic</a>, and <a href="http://a.nnotate.com/">A.nnotate</a>).  However, most of these applications don’t allow you to overlay multiple annotations in order to generate a collaborative interpretation. That’s where Prism could come in.</p>
 
-    <p>As a test case, we tried using the transparency game on an image.  Drawing on her own research interests, Cecilia presented us with the following image.  In a manner similar to the transparency game (see about page), we were then asked to highlight areas of the image that we identified as “southern.”  The exercise resulted in some surprising results.  …..(what were those results)</p>
+    <p>As a test case, we tried using the transparency game on an image.  Drawing on her own research interests, Cecilia presented us with the following image.  In a manner similar to the transparency game, we were then asked to highlight areas of the image that we identified as “southern.”  The exercise resulted in some surprising results.  In addition to highlighting the "colored" sign that was emblematic of the Jim Crow South, most readers also highlighted the boy's body.  It is striking that they would see blackness, or this black boy, as representative of the South.  One could argue that this is because of the proliferation of photographic images during the Workers Progress Administration that highlighted black, southern poverty.</p>
 
     <p><%= image_tag "southernimage.jpg" %></p>
 
-    <p>How can this exercise be executed in a digital format?  There are two basic problems.  How will users be able to interact with the image and how will the resulting data then be aggregated and visualized?    We discussed several options for highlighting images, but there are two which seem to hold the most promise.  First, the image could be divided up into various sections which the users can “tag” with various categories, much like the tagging feature on facebook.  To visualize the collaborative interpretation, we could then display the “winning” category for each section, much like the current option to display the winning facet for each word in Prism.  Secondly, users could be given a paintbrush tool which would allow them to highlight whichever elements on the page they see fit.  In that case, we could visualize the resulting interpretation through a heat map layered over the photograph.  Those portions that receive the most marking would turn red and the least blue, for example. </p>
+    <p>How can this exercise be executed in a digital format?  There are two basic problems.  How will users be able to interact with the image and how will the resulting data then be aggregated and visualized?  We discussed several options for highlighting images, but there are two which seem to hold the most promise.  First, the image could be divided up into various sections which the users can “tag” with various categories, much like the tagging feature on facebook.  To visualize the collaborative interpretation, we could then display the “winning” category for each section, much like the current option to display the winning facet for each word in Prism.  Secondly, users could be given a paintbrush tool which would allow them to highlight whichever elements on the page they see fit.  In that case, we could visualize the resulting interpretation through a heat map layered over the photograph.  Those portions that receive the most markings would turn red and the least blue, for example. </p>
 
-    <p>More conversation about the potential capabilities of a collaborative interpretation tool like Prism coming May 6th! </p>
-    <p> In the mean time, check out Cecilia's <a href= "http://www.scholarslab.org/grad-student-research/images-in-prism/">blog post</a> on the collaborative interpretation of images! </p>
-
-    <h2>Prism and Music</h2>
-
-    <h2>Incorporating Existing Technology</h2> 
+    <h2>Word-based Texts: Additional Possibilites</h2> 
+    <p>In addition, there are a number of ways in which Prism might expand its ability to work with written texts.  The first is to offer additional ways to visualize the collaborative interpretations.  Below are a number of sketches from the 2011-2012 Praxis team.  You can see that we have realized some of these ideas in this edition of Prism.  Users can now view a pie chart which presents the percentage of users who highlighted for each facet under the “winning color” visualization option.  In addition, provocative visualizations could draw upon existing web applications that use text mining, such as the word clouds generated through applications like <a href="http://voyant-tools.org/">Voyant.</a></p>. 
+    <p>Other possibilities for Prism include expanding the way in which Prism creates collaborative interpretations by relying on computational linguistic analysis.  Specifically, this would allow for a more open-ended interpretation process.  Imagine if users were free to apply any description they see fit to a passage of text or a particular word (similar to the capabilities offered by <a href="http://nowcomment.com/">NowComment</a>).   Prism would then process these comments through topic modeling (e.g. <a href="http://www.matthewjockers.net/">Jockers’ work</a>) to visualize the most common words invoked by users.  In addition, this process could be paired with a thesaurus in order to computationally identify synonyms, allowing for a more synthesized collaborative interpretation based on open-ended commentary from users.</p>
     
 
 
-
-
-
-
-
-
-    	<p id="sketchtext"><%= t 'visualize.sketches' %></p>
     <ul id="viz-sketches">
-      <li>
-      <%= link_to image_tag('viz001.jpg', :width => "50%"), image_path('viz001.jpg') %>
-      </li>
-      <li>
-      <%= link_to image_tag('viz002.jpg', :width => "50%"), image_path('viz002.jpg') %>
-      </li>
-      <li>
-      <%= link_to image_tag('viz003.jpg', :width => "50%"), image_path('viz003.jpg') %>
-      </li>
-      <li>
-      <%= link_to image_tag('viz004.jpg', :width => "50%"), image_path('viz004.jpg') %>
-      </li>
-      <li>
-      <%= link_to image_tag('viz005.jpg', :width => "50%"), image_path('viz005.jpg') %>
-      </li>
-      <li>
-      <%= link_to image_tag('viz006.jpg', :width => "50%"), image_path('viz006.jpg') %>
-      </li>
+      <ul>
+      <%= link_to image_tag('viz001.jpg', :width => "40%"), image_path('viz001.jpg') %><%= link_to image_tag('viz002.jpg', :width => "40%"), image_path('viz002.jpg') %>
+      </ul>
+      <ul>
+      <%= link_to image_tag('viz003.jpg', :width => "40%"), image_path('viz003.jpg') %><%= link_to image_tag('viz004.jpg', :width => "40%"), image_path('viz004.jpg') %>
+      </ul>
+     
+      <ul>
+      <%= link_to image_tag('viz005.jpg', :width => "40%"), image_path('viz005.jpg') %><%= link_to image_tag('viz006.jpg', :width => "40%"), image_path('viz006.jpg') %>
+      </ul>
+      
     </ul>
 
 
