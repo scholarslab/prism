@@ -1,47 +1,47 @@
 <% content_for :extra_head do %>
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-  <script type="text/javascript" charset="utf-8">
-    $(function() {
-      setup_visualize();
-      select_facet($("li.vis_facet").eq(0));
-    })
-  </script>
-  <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-    </script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" charset="utf-8">
+$(function() {
+  setup_visualize();
+  select_facet($("li.vis_facet").eq(0));
+})
+</script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart"]});
+</script>
 <% end %>
 
-    <div id="Prismabob">
-    <h1><%= @prism.title.html_safe %></h1>
-    <h2><%= @prism.author %></h2>
+<div id="Prismabob">
+  <h1><%= @prism.title.html_safe %></h1>
+  <h2><%= @prism.author %></h2>
 
-    <div class="text">
-      <%= @prism.content.html_safe %>
-    </div>
+  <div class="text">
+    <%= @prism.content.html_safe %>
   </div>
-  <div id="sidebar">
-    
-    
-    <%= render 'vizopts' %>
-    
-  </div>
+</div>
+<div id="sidebar">
+
+
+  <%= render 'vizopts' %>
+
+</div>
 
 <script>
- $(function() {
-    $( "#visualizations" ).accordion({heightStyle: "content"});
-    
+$(function() {
+  $( "#visualizations" ).accordion({heightStyle: "content"});
+
+});
+$(function() {
+  $( "#accordion-resizer" ).resizable({
+    minHeight: 140,
+    minWidth: 250,
+    resize: function() {
+      $( "#accordion" ).accordion( "refresh" );
+    }
   });
- $(function() {
-    $( "#accordion-resizer" ).resizable({
-      minHeight: 140,
-      minWidth: 250,
-      resize: function() {
-        $( "#accordion" ).accordion( "refresh" );
-      }
-    });
-  });
+});
 </script>
 
- 
-  
-  
+
+
+
