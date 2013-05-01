@@ -1,5 +1,8 @@
 <div id="visualizations">
-  <h3>Font Size Visualization</h3>
+	<span class="vis_selection">
+			<h3>Font Size Visualization</h3>
+			<input type="hidden" class="vis_type" value="font_size" />
+	</span>
   <div>
     <p id="visualization-help"><%= t "visualize.instructions" %> </p>
 
@@ -15,8 +18,11 @@
     <% end %>
   </ul>
     </div>
-
-    <h3>Winning Facet Visualization</h3>
+	 
+	 <span class="vis_selection">
+		 <h3>Winning Facet Visualization</h3>
+		 <input type="hidden" class="vis_type" value="winning_facet" />
+	 </span>
     <div>
       <div id="chart_div"></div>
       <li class="vis_button">

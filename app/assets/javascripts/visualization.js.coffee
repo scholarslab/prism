@@ -26,6 +26,9 @@ window.setup_visualize = ->
 	# Clicking on a facet sets the color
 	$("li.vis_button").click ->
 		window.select_facet($(this))
+	
+	$("span.vis_selection").click ->
+		window.select_vis($(this))
 
 	chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 
@@ -114,3 +117,10 @@ window.select_facet = (facet) ->
 			.classed(current_color+"-vis", (d) -> (d > 0))
 			.transition()
 			.style("font-size", (d) -> (min_size+(d-min)*multiplier) + "px" )
+
+window.select_vis = (vis) ->
+	vis_type = $("input.vis_type", vis).val()
+	if vis_type == "font_size"
+		window.select_facet($("li.vis_button").first())
+	else if vis_type == "winning_facet"
+		window.select_facet($("li.vis_button").last())
