@@ -30,7 +30,13 @@ window.setup_visualize = ->
 	$("span.vis_selection").click ->
 		window.select_vis($(this))
 
-	chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+	window.chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+
+	#default empty chart for page load
+	dataArray = [['Facet', 'Highlights'],['Click a word to see highlight data.',1]]
+	chartColors = ["lightgrey"]
+	window.drawChart(dataArray,chartColors)
+
 
 	# moseover shows highlight data
 	words = $("span.word")	
@@ -40,33 +46,30 @@ window.setup_visualize = ->
 		#g = frequencies[1][i]
 		#b = frequencies[2][i]
 
-		$(word).mouseenter( () ->
+		$(word).click( () ->
 			current_word = this.textContent 
 			$("span.current-word").text(this.textContent)
-			$(this).css("text-decoration","underline")
+
+			$("span.word").css("background","none")
+			$(this).css("background","yellow")
 
 			dataArray = [['Facet', 'Highlights']]
+			totalHighlights = 0
 			for facet_num in all_facet_nums
-				console.log(facet_num, frequencies[facet_num][i])
 				dataArray.push([window.all_facet_names[facet_num], frequencies[facet_num][i]])
+				totalHighlights += frequencies[facet_num][i]
 
 			chartColors = [];
 			for facetColor in window.all_colors
 				chartColors.push($('.'+facetColor+'-vis').css('color'))
 		
-			data = google.visualization.arrayToDataTable(dataArray);
-			options = {
-        legend: {'position':'bottom'}
-        chartArea:{left:0,top:0,width:"99%",height:"50%"}
-        colors: chartColors
-      };
-			chart.draw(data, options);
-		)
-		$(word).mouseout( () ->
-			$(this).css("text-decoration","none")
+			if totalHighlights==0
+				dataArray = [['Facet', 'Highlights'],['No Highlights',1]]
+				chartColors = ["lightgrey"]
+
+			window.drawChart(dataArray,chartColors)
 		)
 	)
-
 
 # This function selects a facet, gives the box a border, and highlights text
 window.select_facet = (facet) ->
@@ -125,3 +128,12 @@ window.select_vis = (vis) ->
 		window.select_facet($("li.vis_button").first())
 	else if vis_type == "winning_facet"
 		window.select_facet($("li.vis_button").last())
+
+window.drawChart = (dataArray,chartColors) ->
+	data = google.visualization.arrayToDataTable(dataArray);
+	options = {
+		legend: {'position':'bottom'}
+		chartArea:{left:0,top:0,width:"99%",height:"50%"}
+		colors: chartColors
+	};
+	window.chart.draw(data, options);
