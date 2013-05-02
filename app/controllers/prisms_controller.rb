@@ -2,7 +2,8 @@ require 'set'
 
 class PrismsController < ApplicationController 
   before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
-  
+
+
   # this method appears in both the model and the controller. Shane deleted it on his controller on the feature branch.
   def before_create()
     require 'uuidtools'
@@ -67,7 +68,12 @@ class PrismsController < ApplicationController
     @facet1 = Facet.new
     @facet2 = Facet.new
     @facet3 = Facet.new
-    
+    @language_dump = LanguageList::COMMON_LANGUAGES
+    @languages = []
+    @language_dump.each do |lang|
+      @languages.push(lang.name)
+    end
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @prism }  
@@ -147,28 +153,6 @@ class PrismsController < ApplicationController
     end
     prism.content=doc.root().to_s()
     prism.num_words = counter
-  end
-
-  def destroy
-    @prism = Prism.find(params[:id])
-    # Markings table no longer exists. We would need to switch it to facets?
-    for marking in @prism.markings
-      marking.destroy
-    end
-
-    for word_marking in @prism.word_markings
-      word_marking.destroy
-    end
-
-    respond_to do |format|
-      if @prism.destroy
-        format.html { redirect_to prisms_path, notice: 'Prism was successfully destroyed.' }
-        format.json { head :no_content }
-      else
-        format.html { redirect_to prisms_path, notice: 'Prism could not be destroyed.' }
-        format.json { head :no_content }
-      end
-    end
   end
 
   def validate_colors
