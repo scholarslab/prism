@@ -1,12 +1,12 @@
 <% content_for :extra_head do %>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript" charset="utf-8">
 $(function() {
   setup_visualize();
   select_facet($("li.vis_facet").eq(0));
-})
-</script>
-<script type="text/javascript">
+  $( "#visualizations" ).accordion({heightStyle: "content"});
+});
+
 google.load("visualization", "1", {packages:["corechart"]});
 </script>
 <% end %>
@@ -25,23 +25,3 @@ google.load("visualization", "1", {packages:["corechart"]});
   <%= render 'vizopts' %>
 
 </div>
-
-<script>
-$(function() {
-  $( "#visualizations" ).accordion({heightStyle: "content"});
-
-});
-$(function() {
-  $( "#accordion-resizer" ).resizable({
-    minHeight: 140,
-    minWidth: 250,
-    resize: function() {
-      $( "#accordion" ).accordion( "refresh" );
-    }
-  });
-});
-</script>
-
-
-
-
