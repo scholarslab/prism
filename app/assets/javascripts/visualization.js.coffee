@@ -56,9 +56,10 @@ window.setup_visualize = ->
 		
 			data = google.visualization.arrayToDataTable(dataArray);
 			options = {
-          	title: 'Highlights for "' + current_word + '"'
-				colors: chartColors 
-        	};
+        legend: {'position':'bottom'}
+        chartArea:{left:0,top:0,width:"90%",height:"90%"}
+        colors: chartColors
+      };
 			chart.draw(data, options);
 		)
 		$(word).mouseout( () ->
