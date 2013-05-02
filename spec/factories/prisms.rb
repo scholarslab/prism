@@ -9,6 +9,9 @@ FactoryGirl.define do
     description Forgery::LoremIpsum.paragraphs(1)
     publication_date Forgery::Basic.number
     license 'cc0'
+    user_id Forgery::Basic.number
+    unlisted false
+    language 'English'
   end
 
   factory :prism_unlisted do

@@ -58,7 +58,6 @@ describe PrismsController do
 
 
   #describe "Get 'visualize'" do
-  ##TODO write a factory for word_markings
 
   #it 'is successful' do
   #get :visualize, :id => @prism.uuid
@@ -75,7 +74,7 @@ describe PrismsController do
   #response.should render_template('visualize')
   #end
 
-  #end
+  # end
 
   describe "GET 'new'" do
     it 'is successful' do
@@ -100,23 +99,40 @@ describe PrismsController do
     end
   end
 
-
   describe "POST 'create'" do
 
-    context "The save is successful" do
+    context "The save is successful for a not-unlisted prism" do
       before(:each) do
         Prism.should_receive(:new).and_return(@prism)
         @prism.should_receive(:save).and_return(true)
       end
 
-      it "redirects to the 'visualize' action" do
+      it "redirects to the 'highlight' action" do
         post :create, :prism => @prism.attributes
-        response.should redirect_to(visualize_path(@prism))
+        response.should redirect_to(highlight_path(@prism))
       end
 
       it "sets a flash message" do
         post :create, :prism => @prism.attributes
         flash[:notice].should == 'Prism was successfully created.'
+      end
+    end
+    
+     context "The save is successful for an unlisted prism" do
+      before(:each) do
+        @unl_prism = Factory.create(:prism, unlisted:true)
+        Prism.should_receive(:new).and_return(@unl_prism)
+        @unl_prism.should_receive(:save).and_return(true)
+      end
+
+      it "redirects to the 'highlight' action" do
+        post :create, :prism => @unl_prism.attributes
+        response.should redirect_to(highlight_path(@unl_prism))
+      end
+
+      it "sets a flash message" do
+        post :create, :prism => @unl_prism.attributes
+        flash[:notice].should == 'Success! Keep in mind that this prism will not show up in the public browse page. Be sure to copy the link to send to your friends!'
       end
     end
 
@@ -137,27 +153,27 @@ describe PrismsController do
       end
     end
   end
-
-  describe "PUT 'update'" do
-
-    context "the update is successful" do
-      before(:each) do
-        @prism.should_receive(:update_attributes).and_return(true)
-        Prism.should_receive(:find).with(@prism.id).and_return(@prism)
-      end
-
-      it "redirects to 'show' action" do
-        put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'} 
-        response.should redirect_to(visualize_path(@prism))
-      end
-
-      it "sets a flash message" do
-        put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'}
-        flash[:notice].should == 'Prism was successfully updated.'
-      end
-    end
-
-  end
+# 
+  # describe "PUT 'update'" do
+# 
+    # context "the update is successful" do
+      # before(:each) do
+        # @prism.should_receive(:update_attributes).and_return(true)
+        # Prism.should_receive(:find).with(@prism.id).and_return(@prism)
+      # end
+# 
+      # it "redirects to 'show' action" do
+        # put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'} 
+        # response.should redirect_to(visualize_path(@prism))
+      # end
+# 
+      # it "sets a flash message" do
+        # put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'}
+        # flash[:notice].should == 'Prism was successfully updated.'
+      # end
+    # end
+# 
+  # end
 
   #describe "DELETE 'destroy'" do
 
