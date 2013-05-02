@@ -232,6 +232,10 @@ p.motto {
 	font-family: $headerfont;
 }
 
+div[role=main] {
+  @include clearfix;
+}
+
 //sign-in elements---------------------------
 #socialmedia {
 	text-align:center; 
