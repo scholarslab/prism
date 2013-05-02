@@ -57,7 +57,7 @@ window.setup_visualize = ->
 			data = google.visualization.arrayToDataTable(dataArray);
 			options = {
         legend: {'position':'bottom'}
-        chartArea:{left:0,top:0,width:"90%",height:"90%"}
+        chartArea:{left:0,top:0,width:"99%",height:"50%"}
         colors: chartColors
       };
 			chart.draw(data, options);
