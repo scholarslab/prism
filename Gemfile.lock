@@ -151,6 +151,7 @@ GEM
     minitest (4.7.4)
     multi_json (1.0.4)
     multipart-post (1.2.0)
+    mysql2 (0.3.11)
     newrelic_rpm (3.6.1.88)
     nokogiri (1.5.9)
     nyan-cat-formatter (0.0.9)
@@ -318,6 +319,7 @@ DEPENDENCIES
   language_list
   memcachier (~> 0.0.2)
   minitest
+  mysql2
   newrelic_rpm
   nokogiri (~> 1.5.0)
   nyan-cat-formatter (~> 0.0.3)

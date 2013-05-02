@@ -78,6 +78,7 @@ end
 group :production, :staging do
   #gem "heroku", "~>2.9.0"
   gem "pg"
+  gem "mysql2"
   gem "thin" # use thin as the production server
   gem 'jasmine-jquery-rails'
   gem 'newrelic_rpm'
