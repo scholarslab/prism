@@ -4,16 +4,16 @@
 }
 
 html {	
-  background: white;
+	background: white;
 }
 
 body {
-  max-width: 800px; 
-  background: white; 
-  margin: 20px auto;
-  padding-top: 0 px;
-  @include border-radius(20px);
-  font-family: $headerfont;
+	max-width: 800px; 
+	background: white; 
+	margin: 20px auto;
+	padding-top: 0 px;
+	@include border-radius(20px);
+	font-family: $headerfont;
 }
 
 // Form elements
@@ -68,41 +68,41 @@ figure {
 }
 
 .button {
-  display: block;
-  background-color: $yellow;
-  color: white !important;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 10px;
-  @include border-radius(10px);
-  margin-bottom: 20px;
+	display: block;
+	background-color: $yellow;
+	color: white !important;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 10px;
+	@include border-radius(10px);
+	margin-bottom: 20px;
 }
 
-#corner-banner {
-  position: absolute;
-  left: -140px;
-  top: 100px;
-  display: none;
-  width: 600px;
-  background: $yellow;
-  text-align:center;
-  font-size:20px;
-  line-height:20px;
-  padding:3px 200px;
-  @include rotate(315deg);
-  @include box-sizing(border-box);
+ #corner-banner {
+        position: absolute;
+        left: -140px;
+        top: 100px;
+        display: none;
+        width: 600px;
+        background: $yellow;
+        text-align:center;
+        font-size:20px;
+        line-height:20px;
+        padding:3px 200px;
+        @include rotate(315deg);
+        @include box-sizing(border-box);
 }
-
+       
 
 
 header {
-
-  text-align: center;
-  padding-top: 0px;
+	
+	text-align: center;
+	padding-top: 0px;
 }
 
 .motto {text-align: center;
-  font-size: 16px;
+	font-size: 16px;
 }
 
 #buttons {
@@ -152,28 +152,27 @@ header {
 
 nav {
 
-  font-family: $headerfont;
-  text-align: center;
-  width: 428px;
-  margin-left: auto;
-  margin-right: auto;
+	font-family: $headerfont;
+	text-align: center;
+	width: 428px;
+	margin-left: auto;
+	margin-right: auto;
 
-  ul {
-    list-style: none;
-    margin-left: 0px;
-    padding-top: 25px;
-    padding-left: 0px;
-    padding-bottom: 0px;
-  }
+	ul {
+		list-style: none;
+		margin-left: 0px;
+		padding-top: 25px;
+		padding-left: 0px;
+		padding-bottom: 0px;
+	}
 
-  li {
-    display:inline-block;
-    padding: 30px 30px;
-    padding-bottom: 0px;
-  }
+	li {
+		display:inline-block;
+		padding: 30px 30px;
+		padding-bottom: 0px;
+	}
 
-  a {
-
+	a {
     &:link,
     &:visited {
       color:lighten(black, 50%);
@@ -184,16 +183,17 @@ nav {
       color: $gray;
     }
 
-
+  
     #about &.about_link,  
-    #browse &.browse_link,
+    #browse_prisms &.browse_link,
     #myprisms &.myprisms_link,
     #sign_in &.sign_in_link {
       color: $blue;
     } 
+
   }
 }
-
+ 
 a {
   text-decoration: none;
   color: $blue;
@@ -211,34 +211,35 @@ a {
 
 nav, h1, h2,
 .motto {text-transform: uppercase;
-  font-weight: normal;
-  font-size: 18px;
+		font-weight: normal;
+		font-size: 18px;
 }
 
 h2 {
-  padding-top: 20px;	
+	padding-top: 20px;	
 }
 
 h3 {
-  font-weight: normal;
-  font-size: 18px;
+	font-weight: normal;
+	font-size: 18px;
+  font-family: "source sans pro", sans-serif;
 }
 
 table {
-  width: 100%;
+	width: 100%;
 
-  th {
-    text-align:left;
-  }
+	th {
+	 text-align:left;
+	}
 }
 
 p {
-  font-family: $parafont;
-  font-size:15px;
+	font-family: $parafont;
+	font-size:15px;
 }
 
 p.motto {
-  font-family: $headerfont;
+	font-family: $headerfont;
 }
 
 div[role=main] {
@@ -247,39 +248,39 @@ div[role=main] {
 
 //sign-in elements---------------------------
 #socialmedia {
-  text-align:center; 
-  border-bottom: 1px solid #ccc;
-  padding: 20px 0;
+	text-align:center; 
+	border-bottom: 1px solid #ccc;
+	padding: 20px 0;
 
-  img{
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    display: inline-block;
+	img{
+    	width: 50px;
+    	height: 50px;
+    	padding: 10px;
+    	display: inline-block;
 
-  }
-}
+    }
+    }
 
 #signinpage {
-  width: 650px;
-  margin: 0 auto;
-  @include clearfix;
+	width: 650px;
+	margin: 0 auto;
+	@include clearfix;
 }
 
 #signinform {
-  width: 47%;
-  float:left;
+	width: 47%;
+	float:left;
 }
 
 #userform {
-  width: 47%;
-  float:right;
+	width: 47%;
+	float:right;
 }
 
 #user_meta {
-  float: right;
-  font-size: 13px;
-  color: lighten(black, 50%);
+	float: right;
+	font-size: 13px;
+	color: lighten(black, 50%);
 }
 
 
@@ -287,14 +288,14 @@ div[role=main] {
 //footer elements-----------------------------
 
 #footernav {
-  text-align: center;	
-  margin-top: 200px;
-  clear: both;
+	text-align: center;	
+	margin-top: 200px;
+	clear: both;
 
-  a {
-    text-transform: uppercase;
-    padding-left: 20px;
-    padding-right: 20px;
+	a {
+		text-transform: uppercase;
+		padding-left: 20px;
+		padding-right: 20px;
 
     &:link,
     &:visited {
@@ -326,30 +327,30 @@ div[role=main] {
         height:auto;
       }
     }
-  }
+	}
 }
 
 //flash notice---------------------------------
 
 .flashmessage{
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 394px;
-  font-weight: bold;
-  padding-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  text-transform: uppercase;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 394px;
+	font-weight: bold;
+	padding-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
 }
 
 #flash_notice {
-  color: $blue;
+	color: $blue;
 
 }
 
 #flash_alert {
-  color: $red;
+	color: $red;
 
 }
 
@@ -357,50 +358,51 @@ div[role=main] {
 
 
 th, td {
-  border-bottom: 1px solid $gray;
+	border-bottom: 1px solid $gray;
   padding: 10px;
-}
+  }
 
 th {
-  height: 50px;
-  border-bottom-width: 3px;
+	height: 50px;
+	border-bottom-width: 3px;
   padding-left: 0px;
   padding-right: 40px;
 }
 
 td {
-  height:50px;
-  vertical-align:bottom;
-  &.visualize,
-  &.highlight {width: 10%;}
+	height:50px;
+	vertical-align:bottom;
+	&.visualize,
+	&.highlight {width: 10%;}
   padding-left: 15px;
 }
 
 #new-prism {
-  float: right;
+	float: right;
   margin-right: 25px;
 }
 
 //highlight pages------------------------------
 
 #Prismabob {
-  width: 60%;
-  display: inline-block;
-  float: left;
+	width: 60%;
+	display: inline-block;
+	float: left;
 }
 
 #highlight_sidebar {
-  width: 30%;
-  float: right;	
+	width: 30%;
+	float: right;	
 }
 
 #tools {
-  padding-bottom: 50px;
+	padding-bottom: 50px;
 }
 
 #highlighters {
   list-style:none;
   padding-left:0;
+  padding-top: 76px;
 
   li {
     @include clearfix;
@@ -412,44 +414,29 @@ td {
       height: 30px;
       margin-right: 2%;
       @include border-radius(16px);
-    }
-  }
+      }
+   }
 
-  li.facet{
-    padding: 5px;
-  }
-  span.facet {
-    display: block;
-    float: left;
-    width: 30px;
-    height: 30px;
-    margin-right: 2%;
-    @include border-radius(16px);
-  }
+li.facet{
+	padding: 5px;
 }
 
-li.vis_facet, li.vis_button {
-  padding: 5px;
+
+span.facet.blue:hover {
+background-color: $blueroll;
 }
 
-span.vis-selected-word {
-  background: $yellow;
+span.facet.red:hover {
+background-color: $redroll;
+}
 
-  span.facet.blue:hover {
-    background-color: $blueroll;
-  }
+span.facet.green:hover {
+background-color: $greenroll;
+}
 
-  span.facet.red:hover {
-    background-color: $redroll;
-  }
-
-  span.facet.green:hover {
-    background-color: $greenroll;
-  }
-
-  li.vis_facet{
-    padding: 5px;
-  }
+li.vis_facet{
+	padding: 5px;
+}
 }
 
 
@@ -465,8 +452,8 @@ span.vis-selected-word {
 }
 
 #sidebar {
-  width: 30%;
-  float: right;
+	width: 30%;
+	float: right;
 }
 
 #facetbutton {
@@ -496,20 +483,3 @@ span.vis-selected-word {
   }
 }
 
-#visualizations {
-  border-bottom: 1px solid #ccc;
-
-  > div {
-    padding-bottom:0.5em;
-  }
-}
-
-#chart_div {
-  height: 300px;
-  background: #f0f0f0;
-
-  text {
-    font-family: $parafont;
-    font-size: 14px;
-  }
-}
