@@ -9,6 +9,15 @@ module ApplicationHelper
     end
   end
 
+  def page_id
+    base_id = "prism"
+    if @title.nil?
+      base_id
+    else
+      @title.downcase
+    end
+  end
+
   # Use this with <%= image_tag avatar_url(user) %>.
   def avatar_url(user)
     default_url = "#{root_url}images/guest.png"
