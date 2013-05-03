@@ -349,24 +349,27 @@ div[role=main] {
 
 th, td {
 	border-bottom: 1px solid $gray;
-	padding: 10px;
-	}
+  padding: 10px;
+  }
 
 th {
 	height: 50px;
 	border-bottom-width: 3px;
+  padding-left: 0px;
+  padding-right: 40px;
 }
 
 td {
 	height:50px;
 	vertical-align:bottom;
 	&.visualize,
-	&.highlight {width: 15%;}
+	&.highlight {width: 10%;}
+  padding-left: 15px;
 }
 
 #new-prism {
 	float: right;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 //highlight pages------------------------------
