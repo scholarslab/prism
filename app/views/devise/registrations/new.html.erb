@@ -1,5 +1,42 @@
-<div class="page-margin">
-	<div id="userform">
+<div id="signinpage">
+
+<%#= TO DO TO DO TO DO TO DO. THIS PAGE VIEW COPIES THE SESSIONS/NEW.HTML.ERB VIEW AS A HACK BECAUSE I COULD NOT FIGURE OUT HOW TO REDIRECT AFTER SIGN UP FAILURE TODO%>
+<div id="socialmedia">
+<h2>Sign In with Social Media</h2>
+
+<%#= link_to image_tag('facebook.png'), omniauth_authorize_path(resource_name, "facebook")%>
+<%= link_to image_tag('persona.png'), url_for("/users/auth/browser_id"), :id => 'browser_id_link' %>
+<%= link_to image_tag('google.png'), omniauth_authorize_path(resource_name, "google") %>
+
+</div>
+
+<!--browser_id-->
+
+
+<div id="signinform">
+
+  <h2><%= t 'log-in.in' %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+
+  <% if devise_mapping.rememberable? -%> 
+    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+  <% end -%>
+
+  <%= f.submit "Sign in" %>
+<% end %>
+
+<p><%= render "links" %></p>
+
+</div>
+
+<div id="userform">
 
     <h2><%= t 'log-in.up' %></h2>
 
@@ -9,7 +46,7 @@
    <%= f.label :email %>
    <%= f.email_field :email %>
 
-    <p id="privacy"><%= t 'log-in.privacy_html' %></p>
+    <p id="privacy"> <%= t'log-in.privacy_html' %></p>
 
   <%= f.label :password %>
   <%= f.password_field :password %>
@@ -27,5 +64,28 @@
 <p><%= render "links" %></p>
 
 
-	</div>
+  </div>
 </div>
+
+<form id='browser_id_form' action='<%= url_for('/users/auth/browser_id/callback') %>'>
+  <input type='hidden' name='assertion' />
+</form>
+
+<script src="//browserid.org/include.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+    $('#browser_id_link').each(function(i, el) {
+      var $el = $(el);
+      $el.click(function () {
+        navigator.id.get(function(assertion) {
+          if (assertion) {
+            $('input[name=assertion]').val(assertion);
+            $('#browser_id_form').submit();
+          }
+        });
+
+        return false;
+      });
+    });
+  });
+</script>
