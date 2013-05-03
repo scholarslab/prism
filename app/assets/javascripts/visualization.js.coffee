@@ -48,7 +48,8 @@ window.setup_visualize = ->
 
 		$(word).click( () ->
 			current_word = this.textContent 
-			$("span.current-word").text(this.textContent)
+			current_word=current_word.replace(/[^a-zA-Z0-9]+/g,"")
+			$("span.current_word").text(current_word)
 
 			$("span.word").css("background","none")
 			$(this).css("background","yellow")
