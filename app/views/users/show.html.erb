@@ -21,13 +21,15 @@
         <%= link_to(highlight_path(prism), :class => 'highlight') do %>
           <%= image_tag('highlight_button.png') %>
         <% end %>
-        <%= link_to(destroy_path(prism)), :class => 'destroy') do %>
-          <%= image_tag('highlight_button.png') %>
-        <% end %>
       </td>
       <td class="visualize">
         <%= link_to(visualize_path(prism), :class => 'visualize') do %>
           <%= image_tag('visualize_button.png') %>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to(destroy_path(prism), :class => 'destroy') do %>
+          <%= image_tag('highlight_button.png') %>
         <% end %>
       </td>
     </tr>
