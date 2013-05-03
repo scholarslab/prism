@@ -403,6 +403,7 @@ td {
   list-style:none;
   padding-left:0;
   padding-top: 76px;
+  }
 
   li {
     @include clearfix;
@@ -421,7 +422,6 @@ li.facet{
 	padding: 5px;
 }
 
-
 span.facet.blue:hover {
 background-color: $blueroll;
 }
@@ -437,8 +437,6 @@ background-color: $greenroll;
 li.vis_facet{
 	padding: 5px;
 }
-}
-
 
 
 //new prism page-------------------------------
