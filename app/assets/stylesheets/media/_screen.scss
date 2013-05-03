@@ -182,14 +182,14 @@ nav {
     &:active {
       color: $gray;
     }
+
   
-    #about &.about_link, 
+    #about &.about_link,  
     #browse_prisms &.browse_link,
     #myprisms &.myprisms_link,
     #sign_in &.sign_in_link {
-      color: $gray;
+      color: $blue;
     } 
-
   }
 }
  
