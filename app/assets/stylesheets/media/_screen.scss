@@ -182,6 +182,14 @@ nav {
     &:active {
       color: $gray;
     }
+  
+    #about &.about_link, 
+    #browse_prisms &.browse_link,
+    #myprisms &.myprisms_link,
+    #sign_in &.sign_in_link {
+      color: $gray;
+    } 
+
   }
 }
  
@@ -198,12 +206,6 @@ a {
   &:active {
     color: darken($blue, 20%);
   }
-}
-
-body#About a#about,
-body#Browse a#browse,
-body#myPrisms a#myPrisms {
-  text-decoration: underline;
 }
 
 nav, h1, h2,
