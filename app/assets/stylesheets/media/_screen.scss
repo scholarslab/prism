@@ -200,6 +200,12 @@ a {
   }
 }
 
+body#About a#about,
+body#Browse a#browse,
+body#myPrisms a#myPrisms {
+  text-decoration: underline;
+}
+
 nav, h1, h2,
 .motto {text-transform: uppercase;
 		font-weight: normal;
