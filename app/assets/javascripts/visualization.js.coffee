@@ -33,7 +33,7 @@ window.setup_visualize = ->
 	window.chart = new google.visualization.PieChart(document.getElementById('chart_div'));
 
 	#default empty chart for page load
-	dataArray = [['Facet', 'Highlights'],['Click a word to see highlight data.',1]]
+	dataArray = [['Facet', 'Highlights'],['No Word Selected',1]]
 	chartColors = ["lightgrey"]
 	window.drawChart(dataArray,chartColors)
 
@@ -49,7 +49,8 @@ window.setup_visualize = ->
 		$(word).click( () ->
 			current_word = this.textContent 
 			current_word=current_word.replace(/[^a-zA-Z0-9]+/g,"")
-			$("span.current_word").text(current_word)
+			chart_title = 'Highlights for "' + current_word + '":'
+			$("p.chart_title").text(chart_title)
 
 			$("span.word").css("background","none")
 			$(this).css("background","yellow")
