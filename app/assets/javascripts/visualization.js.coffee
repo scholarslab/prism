@@ -125,9 +125,9 @@ window.select_facet = (facet) ->
 window.select_vis = (vis) ->
 	vis_type = $("input.vis_type", vis).val()
 	if vis_type == "font_size"
-		window.select_facet($("li.vis_button").first())
+		window.select_facet($("li.vis_button")[1])
 	else if vis_type == "winning_facet"
-		window.select_facet($("li.vis_button").last())
+		window.select_facet($("li.vis_button")[0])
 
 window.drawChart = (dataArray,chartColors) ->
 	data = google.visualization.arrayToDataTable(dataArray);
