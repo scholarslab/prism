@@ -52,8 +52,10 @@ window.setup_visualize = ->
 			chart_title = 'Highlights for "' + current_word + '":'
 			$("p.chart_title").text(chart_title)
 
-			$("span.word").css("background","none")
-			$(this).css("background","yellow")
+			#$("span.word").css("background","none")
+			$("span.word").removeClass("vis-selected-word")
+			#$(this).css("background","yellow")
+			$(this).addClass("vis-selected-word")
 
 			dataArray = [['Facet', 'Highlights']]
 			totalHighlights = 0
