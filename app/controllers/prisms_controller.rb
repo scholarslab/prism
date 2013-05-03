@@ -163,4 +163,25 @@ class PrismsController < ApplicationController
         end
       end
   end
+  def destroy
+    @prism = Prism.find(params[:id])
+    for facet in @prism.facets
+      marking.destroy
+    end
+
+    for word_marking in @prism.word_markings
+      word_marking.destroy
+    end
+
+    respond_to do |format|
+      if @prism.destroy
+        format.html { redirect_to prisms_path, notice: 'Prism was successfully destroyed.' }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to prisms_path, notice: 'Prism could not be destroyed.' }
+        format.json { head :no_content }
+      end
+    end
+  end
+
 end
