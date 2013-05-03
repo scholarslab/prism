@@ -13,6 +13,7 @@
     </tr>
   </thead>
 
+
   <tbody>
   <% @prisms.each do |prism| %>
     <tr>
@@ -28,8 +29,10 @@
         <% end %>
       </td>
       <td>
+        <% if can? :destroy, prism %>
         <%= link_to(destroy_path(prism), :class => 'destroy') do %>
-          <%= image_tag('highlight_button.png') %>
+          <%= image_tag('delete_button.png') %>
+          <% end %>
         <% end %>
       </td>
     </tr>
@@ -71,6 +74,13 @@
       <td class="visualize">
         <%= link_to(visualize_path(prism), :class => 'visualize') do %>
           <%= image_tag('visualize_button.png') %>
+        <% end %>
+      </td>
+            <td>
+        <% if can? :destroy, prism %>
+        <%= link_to(destroy_path(prism), :class => 'destroy') do %>
+          <%= image_tag('delete_button.png') %>
+          <% end %>
         <% end %>
       </td>
     </tr>

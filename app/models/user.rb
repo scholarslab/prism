@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  ROLES = %w[admin user]
+
   has_many :prisms
   has_many :word_markings
 

@@ -19,6 +19,7 @@ gem "uuidtools"
 
 gem "language_list"
 gem 'figaro'
+gem 'cancan'
 
 # Error notifications
 gem 'airbrake', '~> 3.1.6'
