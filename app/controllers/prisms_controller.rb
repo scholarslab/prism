@@ -165,18 +165,20 @@ class PrismsController < ApplicationController
   end
   def destroy
     @prism = Prism.find(params[:id])
-    for facet in @prism.facets
-      authorize! :destory, facet
-      facet.destroy
-    end
+
 
     for word_marking in @prism.word_markings
-      authorize! :destroy, word_marking
       word_marking.destroy
     end
 
     respond_to do |format|
       if authorize! :destroy, @prism
+        for facet in @prism.facets
+          facet.destroy
+        end
+        for word_marking in @prism.word_markings
+          word_marking.destroy
+        end
         @prism.destroy 
         format.html { redirect_to users_path, notice: 'Prism was successfully destroyed.' }
         format.json { head :no_content }

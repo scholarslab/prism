@@ -14,8 +14,8 @@ class Ability
     else
         can :create, :all
         can :read, :all
-        can :update, [Prism, User], :user_id => user.id
-        can :destroy, [Prism, User], :user_id => user.id 
+        can :update, [Prism, User, Facet, WordMarking], :user_id => user.id
+        can :destroy, [Prism, User, Facet, WordMarking], :user_id => user.id 
     end
     #
     # The first argument to `can` is the action you are giving the user 
