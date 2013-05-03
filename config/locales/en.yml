@@ -105,7 +105,7 @@ en:
     instructions: Select one of the facets below to display the visualization of that category.  The larger the font size, the more users have highlighted that word with the relevant cateogry.
     sketches: You can also take a look at these sketches for potential visualizations imagined by the 2011-2012 Praxis Team. 
     winningdescription: In this visualization, each word is colored according to the color for the category which received the most highlights.  
-    mouse: Mouse over the pie chart to see the exact number of users who picked each category.  
+    mouse: Click on a word to generate a pie chart showing the percentage of highlights for each facet.  Mouse over the pie chart to see the exact number of highlights per facet.  
          
   alumni:
     alumni_title: Praxis Alumni
