@@ -14,7 +14,7 @@ module ApplicationHelper
     if @title.nil?
       base_id
     else
-      @title.gsub(/ /,'_')
+      @title.gsub('/ /', '_').downcase
     end
   end
 
