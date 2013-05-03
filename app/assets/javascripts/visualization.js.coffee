@@ -38,42 +38,33 @@ window.setup_visualize = ->
 	window.drawChart(dataArray,chartColors)
 
 
-	# moseover shows highlight data
-	words = $("span.word")	
-	words.each( (i,word) ->
 
-		#r = frequencies[0][i]
-		#g = frequencies[1][i]
-		#b = frequencies[2][i]
 
-		$(word).click( () ->
-			current_word = this.textContent 
-			current_word=current_word.replace(/[^a-zA-Z0-9]+/g,"")
-			chart_title = 'Highlights for "' + current_word + '":'
-			$("p.chart_title").text(chart_title)
+window.select_word = (i,word) ->
+	current_word = word.textContent 
+	current_word = current_word.replace(/[^a-zA-Z0-9]+/g,"")
+	chart_title = 'Highlights for "' + current_word + '":'
+	$("p.chart_title").text(chart_title)
 
-			#$("span.word").css("background","none")
-			$("span.word").removeClass("vis-selected-word")
-			#$(this).css("background","yellow")
-			$(this).addClass("vis-selected-word")
+	$("span.word").removeClass("vis-selected-word")
+	$(word).addClass("vis-selected-word")
 
-			dataArray = [['Facet', 'Highlights']]
-			totalHighlights = 0
-			for facet_num in all_facet_nums
-				dataArray.push([window.all_facet_names[facet_num], frequencies[facet_num][i]])
-				totalHighlights += frequencies[facet_num][i]
+	dataArray = [['Facet', 'Highlights']]
+	totalHighlights = 0
+	for facet_num in all_facet_nums
+		dataArray.push([window.all_facet_names[facet_num], frequencies[facet_num][i]])
+		totalHighlights += frequencies[facet_num][i]
 
-			chartColors = [];
-			for facetColor in window.all_colors
-				chartColors.push($('.'+facetColor+'-vis').css('color'))
+	chartColors = [];
+	for facetColor in window.all_colors
+		chartColors.push($('.'+facetColor+'-vis').css('color'))
 		
-			if totalHighlights==0
-				dataArray = [['Facet', 'Highlights'],['No Highlights',1]]
-				chartColors = ["lightgrey"]
+	if totalHighlights==0
+		dataArray = [['Facet', 'Highlights'],['No Highlights',1]]
+		chartColors = ["lightgrey"]
 
-			window.drawChart(dataArray,chartColors)
-		)
-	)
+	window.drawChart(dataArray,chartColors)
+
 
 # This function selects a facet, gives the box a border, and highlights text
 window.select_facet = (facet) ->
@@ -130,8 +121,25 @@ window.select_vis = (vis) ->
 	vis_type = $("input.vis_type", vis).val()
 	if vis_type == "font_size"
 		window.select_facet($("li.vis_button")[1])
+
+		#remove highlighting for winning facet vis
+		$("span.word").each( (i,word) ->
+			$(word).unbind('click') 
+			if $(word).hasClass("vis-selected-word")
+				$(word).removeClass("vis-selected-word")
+				$(word).addClass("vis-selected-word-hidden")
+		)
 	else if vis_type == "winning_facet"
 		window.select_facet($("li.vis_button")[0])
+
+		#clicking word updates pie chart 
+		$("span.word").each( (i,word) ->
+			$(word).click -> 
+				window.select_word(i,word)
+			if $(word).hasClass("vis-selected-word-hidden")
+				$(word).removeClass("vis-selected-word-hidden")
+				$(word).addClass("vis-selected-word")
+		)
 
 window.drawChart = (dataArray,chartColors) ->
 	data = google.visualization.arrayToDataTable(dataArray);
