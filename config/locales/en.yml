@@ -51,7 +51,11 @@ en:
   about:
     prism_title: About Prism
     description_p1_html: >-
-      Prism is a tool for "crowdsourcing interpretation." The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia, and specifically from <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">transparency mark-up games</a> designed by Bethany Nowviskie for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a>:
+      Prism is a tool for "crowdsourcing interpretation." Users are invited to provide an interpretation of a text by highlighting words according to different categories, 
+      or "facets."  Each individual interpretation then contributes to the generation of a visualization which demonstrates the combined interpretation of all the users.
+      We envision Prism as a tool for both pedagogical use and scholarly exploration, revealing patterns that exist in the subjective experience of reading a text. 
+    description_p1half_html: >  
+      The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia, and specifically from <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">transparency mark-up games</a> designed by Bethany Nowviskie for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a>:
     description_p2: >
       the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
       somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion. (Nowviskie)
@@ -66,7 +70,9 @@ en:
     description_p5_html: >-
       The 2012-2013 cohort of Praxis fellows (listed below) retained the vision set by the original team.  Their goal was to expand Prism to a format that would promote classroom use and scholarly conversation.  This led them to define two primary objectives.  
       The first was the ability for users to upload their own texts and to define their own interpretive categories.   The second was to create a more inviting and user-friendly environment that would encourage participation and exploration.  To that end, they redesigned the website, paying special attention to workflow, ease of use, and aesthetic concerns.  
-      In addition, both the simple visualization feature and highlighting function were refined, in hope that Prism can now be more easily employed by the user for a variety of interpretive projects.  Be sure to check out the <a href='/pages/future'>future directions</a> page to learn more about additional potential capabilities of Prism, including enhanced visualizations, image annotation, and computational linguistic analysis.
+      In addition, both the simple visualization feature and highlighting function were refined, in hope that Prism can now be more easily employed by the user for a variety of interpretive projects.  
+    description_p6_html: >-
+      Be sure to check out the <a href='/pages/future'>future directions</a> page to learn more about additional potential capabilities of Prism, including enhanced visualizations, image annotation, and computational linguistic analysis.
     praxis_title: The Praxis Program
     praxis_description_html: >
       <a href='http://praxis.scholarslab.org/'>The Praxis Program</a> is a key mentoring and training project of the <a href='http://www2.lib.virginia.edu/scholarslab/'>

@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.vis_facet, #highlighters {
+  .blue { background:  $blue; }
+  .red { background:   $red; }
+  .green { background: $green; }
+}
+
 
 .noselect {
    -moz-user-select: -moz-none;
@@ -9,14 +15,6 @@
    -webkit-user-select: none;
    -ms-user-select: none;
    user-select: none;
-}
-
-#highlighters span.facet.border {
-  border: 2px solid black;
-}
-
-#visualizations span.facet.border {
-  border: 2px solid black;
 }
 
 .red-vis{

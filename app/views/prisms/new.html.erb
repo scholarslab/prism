@@ -55,9 +55,15 @@
       <%= f.text_field :publication_date, :placeholder => 'You know the drill...mm/dd/year'  %>
     </div>
     <div class="field">
+      <% @language_dump = LanguageList::COMMON_LANGUAGES %>
+      <% @languages = [] %>
+      <% @language_dump.each do |lang| %>
+        <% @languages.push(lang.name) %>
+      <% end %>
       <%= f.label :language %>
-      <%= f.text_field :language, :placeholder => 'Language of the text' %>
+      <%= f.select :language, options_for_select(@languages, "English") %>
     </div>
+
     <div class="field">
       <%= f.label :description %>
       <%= f.text_area :description, :rows => 6, :placeholder => 'What do you want people to know about this text or your facet categories?' %>

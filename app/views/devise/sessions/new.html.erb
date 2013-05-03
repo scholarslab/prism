@@ -1,10 +1,10 @@
 <div id="signinpage">
-
+<% @title = "Sign in" %>
 
 <div id="socialmedia">
 <h2>Sign In with Social Media</h2>
 
-<%= link_to image_tag('facebook.png'), omniauth_authorize_path(resource_name, "facebook")%>
+<%#= link_to image_tag('facebook.png'), omniauth_authorize_path(resource_name, "facebook")%>
 <%= link_to image_tag('persona.png'), url_for("/users/auth/browser_id"), :id => 'browser_id_link' %>
 <%= link_to image_tag('google.png'), omniauth_authorize_path(resource_name, "google") %>
 
