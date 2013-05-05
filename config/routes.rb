@@ -32,7 +32,7 @@ Testing::Application.routes.draw do
   match '/prisms/:id/highlight(.:format)' => 'prisms#highlight', :as => :highlight, :via => :get
   match '/prisms/:id/highlight(.:format)' => 'prisms#highlight_post', :as => :highlight_post, :via => :post
   match '/myprisms/' => 'users#show', :as => :users
-  match '/users/auth/facebook/callback' => 'users/omniauth_callbacks#facebook'
+  match '/users/auth/facebook/callback' => 'users/omniauth_callbacks#facebook', :via => :get
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
