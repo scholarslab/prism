@@ -221,8 +221,12 @@ Devise.setup do |config|
 
   require "omniauth-google"
   config.omniauth :google, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
+
   require "omniauth-google-oauth2"
-  config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
+  config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"],
+  {
+    :redirect_uri => 'https://www.prism-staging12.herokuapp.com/users/auth/google/'
+  }
 
   require "omniauth-browserid"
   config.omniauth :browser_id
