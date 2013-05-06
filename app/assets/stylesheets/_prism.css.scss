@@ -64,5 +64,6 @@
 .word {
   @include pie;
   line-height:150%;
+  cursor:pointer;
 }
 
