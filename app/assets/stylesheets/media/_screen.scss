@@ -361,7 +361,8 @@ td {
 	height:50px;
 	vertical-align:bottom;
 	&.visualize,
-	&.highlight {width: 15%;}
+	&.highlight,
+  &.delete {width: 15%;}
 }
 
 #new-prism {
