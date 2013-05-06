@@ -64,6 +64,19 @@
 .word {
   @include pie;
   line-height:150%;
-  cursor:pointer;
+
+  .winning & {
+    cursor:pointer;
+
+    &:hover,
+    &:focus {
+      background: lighten($yellow, 20%);
+    }
+
+    &:active {
+      background: $yellow;
+    }
+
+  }
 }
 

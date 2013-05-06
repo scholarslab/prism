@@ -73,6 +73,7 @@ window.select_facet = (facet) ->
 	current_num = $("input.order", facet).val()
 	$("span.facet.border").removeClass("border")
 	$(facet).find("span.facet").addClass("border")
+	$("body").attr('class', current_color)
 
 	words = d3.selectAll("span.word")
 	for color in window.all_colors
