@@ -78,6 +78,24 @@ figure {
 	margin-bottom: 20px;
 }
 
+// jQuery UI styles
+.ui-accordion-header {
+  font-family: $parafont;
+  outline:none;
+  cursor:pointer;
+  border-top: 1px solid #ccc;
+  display:block;
+  color: $blue;
+
+  &.ui-state-hover {
+    color: darken($blue, 20%);
+  }
+
+  &.ui-state-active {
+    color: #333;
+  }
+}
+
  #corner-banner {
         position: absolute;
         left: -140px;
@@ -484,3 +502,15 @@ span.vis-selected-word{
   }
 }
 
+#visualizations {
+  border-bottom: 1px solid #ccc;
+
+  > div {
+    padding-bottom:0.5em;
+  }
+}
+
+#chart_div {
+  height: 200px;
+  background: #f0f0f0;
+}
