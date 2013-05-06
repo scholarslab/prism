@@ -214,6 +214,7 @@ nav {
 a {
   text-decoration: none;
   color: $blue;
+  outline:none;
 
   &:link,
   &:visited {
