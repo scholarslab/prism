@@ -85,10 +85,10 @@ figure {
   cursor:pointer;
   border-top: 1px solid #ccc;
   display:block;
-  color: #bbb;
+  color: $blue;
 
   &.ui-state-hover {
-    color: #777;
+    color: darken($blue, 20%);
   }
 
   &.ui-state-active {
