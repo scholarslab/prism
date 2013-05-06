@@ -63,6 +63,14 @@ input {
 
 }
 
+select {
+  margin-bottom:1em;
+}
+
+figure {
+  margin-left:0;
+}
+
 .button {
 	display: block;
 	background-color: $yellow;
@@ -74,11 +82,29 @@ input {
 	margin-bottom: 20px;
 }
 
+// jQuery UI styles
+.ui-accordion-header {
+  font-family: $parafont;
+  outline:none;
+  cursor:pointer;
+  border-top: 1px solid #ccc;
+  display:block;
+  color: $blue;
+
+  &.ui-state-hover {
+    color: darken($blue, 20%);
+  }
+
+  &.ui-state-active {
+    color: #333;
+  }
+}
+
  #corner-banner {
         position: absolute;
         left: -140px;
         top: 100px;
-        display: block;
+        display: none;
         width: 600px;
         background: $yellow;
         text-align:center;
@@ -176,14 +202,23 @@ nav {
     &:hover,
     &:focus,
     &:active {
-      color: black;
+      color: $gray;
     }
+
+  
+    #about &.about_link,  
+    #browse &.browse_link,
+    #myprisms &.myprisms_link,
+    #sign_in &.sign_in_link {
+      color: $blue;
+    } 
   }
 }
  
 a {
   text-decoration: none;
   color: $blue;
+  outline:none;
 
   &:link,
   &:visited {
@@ -209,6 +244,7 @@ h2 {
 h3 {
 	font-weight: normal;
 	font-size: 18px;
+  font-family: "source sans pro", sans-serif;
 }
 
 table {
@@ -226,6 +262,10 @@ p {
 
 p.motto {
 	font-family: $headerfont;
+}
+
+div[role=main] {
+  @include clearfix;
 }
 
 //sign-in elements---------------------------
@@ -341,24 +381,27 @@ p.motto {
 
 th, td {
 	border-bottom: 1px solid $gray;
-	padding: 10px;
-	}
+  padding: 10px;
+  }
 
 th {
 	height: 50px;
 	border-bottom-width: 3px;
+  padding-left: 0px;
+  padding-right: 40px;
 }
 
 td {
 	height:50px;
 	vertical-align:bottom;
 	&.visualize,
-	&.highlight {width: 15%;}
+	&.highlight {width: 10%;}
+  padding-left: 15px;
 }
 
 #new-prism {
 	float: right;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 //highlight pages------------------------------
@@ -382,6 +425,7 @@ td {
   list-style:none;
   padding-left:0;
   padding-top: 76px;
+  }
 
   li {
     @include clearfix;
@@ -400,7 +444,6 @@ li.facet{
 	padding: 5px;
 }
 
-
 span.facet.blue:hover {
 background-color: $blueroll;
 }
@@ -416,8 +459,10 @@ background-color: $greenroll;
 li.vis_facet{
 	padding: 5px;
 }
-}
 
+span.vis-selected-word{
+	background: $yellow;
+}
 
 
 //new prism page-------------------------------
@@ -462,3 +507,15 @@ li.vis_facet{
   }
 }
 
+#visualizations {
+  border-bottom: 1px solid #ccc;
+
+  > div {
+    padding-bottom:0.5em;
+  }
+}
+
+#chart_div {
+  height: 200px;
+  background: #f0f0f0;
+}

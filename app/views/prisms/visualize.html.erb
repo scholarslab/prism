@@ -1,43 +1,28 @@
 <% content_for :extra_head do %>
-  <script type="text/javascript" charset="utf-8">
-    $(function() {
-      setup_visualize();
-      select_facet($("li.vis_facet").eq(0));
-    })
-  </script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" charset="utf-8">
+$(function() {
+  setup_visualize();
+  select_vis($("span.vis_selection")[0]);
+  $( "#visualizations" ).accordion({heightStyle: "content"});
+});
+
+google.load("visualization", "1", {packages:["corechart"]});
+</script>
 <% end %>
 
-<div class="page-margin">
-    <div id="Prismabob">
-    <h1><%= @prism.title.html_safe %></h1>
-    <h2><%= @prism.author %></h2>
+<div id="Prismabob">
+  <h1><%= @prism.title.html_safe %></h1>
+  <h2><%= @prism.author %></h2>
 
-    <div class="text">
-      <%= @prism.content.html_safe %>
-    </div>
-  </div>
-  <div id="sidebar">
-    <div id="visualizations">
-      <ul id="highlighters">
-        <% for facet in @prism.facets %>
-          <li class="vis_facet">
-            <input type="hidden" class="color" value="<%=facet.color%>"/>
-            <input type="hidden" class="order" value="<%=facet.order%>"/>
-            <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
-            <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%></li>
-        <% end %>
-  <p id="visualization-help"><%= t "visualize.instructions" %> </p>
-     
-      </ul>
-      <p><%= render 'cc_license' %></p>
-      <p id="viz-count">
-      <span><% if @prism.word_markings.map(&:user_id).uniq != nil %>
-          <%=@prism.word_markings.map(&:user_id).uniq.size %></span> <% if @prism.word_markings.map(&:user_id).uniq.size == 1%>user <% else%>users <%end%>contributed to this visualization.
-    <% end %>
-    </p>
-    
-
-    </div>
+  <div class="text">
+    <%= @prism.content.html_safe %>
   </div>
 </div>
-
+<div id="sidebar">
+  <%= render 'vizopts' %>
+  <p><%= render 'cc_license' %></p>
+  <p id="viz-count">
+    <span><% if @prism.word_markings.map(&:user_id).uniq != nil %><%=@prism.word_markings.map(&:user_id).uniq.size %></span> <% if @prism.word_markings.map(&:user_id).uniq.size == 1%>user <% else%>users <%end%>contributed to this visualization.<% end %>
+  </p>
+</div>

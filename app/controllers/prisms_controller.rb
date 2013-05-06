@@ -17,7 +17,7 @@ class PrismsController < ApplicationController
         @prisms << prism
       end
     end
-    @title = "Browse prisms"
+    @title = "Browse"
 
     respond_to do |format|
       format.html

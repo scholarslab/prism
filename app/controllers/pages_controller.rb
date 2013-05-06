@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   end
   
   def about
-    @title = "About Prism"
+    @title = "About"
   end
 
   def alumni
