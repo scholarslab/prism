@@ -221,6 +221,8 @@ Devise.setup do |config|
 
   require "omniauth-google"
   config.omniauth :google, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
+  require "omniauth-google-oauth2"
+  config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
 
   require "omniauth-browserid"
   config.omniauth :browser_id
