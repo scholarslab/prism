@@ -12,7 +12,7 @@ fr:
     description_html: "Prism est un outil pour <a href='%{about_url}'>collectiviser l'interprétation,</a> partie d'un projet en cours du <a href='http://praxis.scholarslab.org'>Programme Praxis</a> au <a href='http://scholarslab.org'>Scholars' Lab</a> de l'Université de Virginie."
     link_home: "Accueil"
     link_instructions: "Instructions"
-    link_documents: "Documents"
+    link_documents: "Naviguer"
     link_about: "Informations"
     signed_in: "Connecté comme "
     form_email: "Email:"

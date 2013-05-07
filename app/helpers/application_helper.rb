@@ -20,9 +20,8 @@ module ApplicationHelper
 
   # Use this with <%= image_tag avatar_url(user) %>.
   def avatar_url(user)
-    default_url = "#{root_url}images/guest.png"
+    default_url = "#{root_url}images/guest.jpg"
     gravatar_id = Digest::MD5.hexdigest(user.email.downcase)
-    "http://gravatar.com/avatar/#{gravatar_id}.png?s=48&d=#{CGI.escape(default_url)}"
+    url = "http://gravatar.com/avatar/#{gravatar_id}.png"
   end
-
 end

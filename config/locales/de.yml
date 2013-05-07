@@ -13,7 +13,7 @@ de:
       <i>Prism</i> ist ein digitales Werkzeug zur <a href='%{about_url}'>kollaborativen Textinterpretation</a> und ein  laufendes Projekt des <a href='http://praxis.scholarslab.org'>Praxis-Programms</a> am <a href='http://scholarslab.org'>Scholars' Lab</a> der University of Virginia.
     link_home: "Startseite"
     link_instructions: "Anleitung"
-    link_documents: "Dokumente"
+    link_documents: "Verzeichnis"
     link_about: "Mehr über Prism"
     signed_in: "Angemeldet als "
     form_email: "Email:"
