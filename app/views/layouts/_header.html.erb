@@ -13,14 +13,14 @@
 <nav>
   <ul>
     <li>
-      <%= link_to t('About'), about_path, {:class => 'about_link'}  %>
+      <%= link_to t('header.about'), about_path, {:class => 'about_link'}  %>
     </li>
     <li>
-      <%= link_to t('Browse'), prisms_path, {:class => "browse_link"} %>
+      <%= link_to t('header.documents'), prisms_path, {:class => "browse_link"} %>
     </li>
     <li>
     <% if user_signed_in? %>
-        <%= link_to t('myPrisms'), users_path(current_user), {:class => "myprisms_link"} %>
+        <%= link_to 'myPrisms', users_path(current_user), {:class => "myprisms_link"} %>
     <% else %>
           <%= link_to t('header.sign_in'), new_user_session_path, {:class => "sign_in_link"} %>
     <% end %>
