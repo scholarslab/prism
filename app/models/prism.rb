@@ -5,14 +5,13 @@ class Prism < ActiveRecord::Base
   attr_accessible :title, :author, :content, :num_words, :description, :user_id, :unlisted, :publication_date, :language, :license, :uuid
   validates_presence_of :title, :content, :license
 
-  # Develop had self.primary_key ='uuid' pre-merge, if the following doesn't work.
-  set_primary_key "uuid"
+  self.primary_key ='uuid'
 
-	before_create :set_uuid
-	def set_uuid
-	    require 'uuidtools'
-	    self.uuid = UUIDTools::UUID.timestamp_create().to_s
-	end
+  before_create :set_uuid
+  def set_uuid
+    require 'uuidtools'
+    self.uuid = UUIDTools::UUID.timestamp_create().to_s
+  end
 end
-  
+
 
