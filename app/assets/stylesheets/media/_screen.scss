@@ -54,10 +54,10 @@ input {
   &[type=submit] {
     border:none;
     @extend .button;
-    background-color: $blue !important;
+    background-color: $aqua !important;
     cursor:pointer;
     &:hover {
-      background-color: darken($blue, 20%) !important;
+      background-color: darken($aqua, 20%) !important;
     }
   }
 
@@ -421,7 +421,7 @@ td {
 #highlighters {
   list-style:none;
   padding-left:0;
-  padding-top: 76px;
+  padding-top: 87px;
   }
 
 #tools {
@@ -442,6 +442,10 @@ td {
 
 #visualizations #highlighters {
   padding-top: 0px;
+}
+
+#visualizations {
+  padding-top: 87px;
 }
 
   li {
@@ -525,4 +529,8 @@ span.vis-selected-word{
   background: #f0f0f0;
   text-align: center;
   background-color: white;
+}
+
+.text {
+  text-align: justify;
 }
