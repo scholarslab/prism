@@ -15,42 +15,30 @@ class User < ActiveRecord::Base
 
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
-    user = User.where(:provider => auth.provider, :uid => auth.uid).first
-    unless user
-      user = User.create(name:auth.extra.raw_info.name,
-                         provider:auth.provider,
-                         uid:auth.uid,
-                         email:auth.info.email,
-                         password:Devise.friendly_token[0,20],
-                        )
-    end
-    user
+    User.find_from_auth(
+      auth.provider, auth.info.email, auth.extra.raw_info.name, auth.uid
+    )
   end
 
-    def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+  def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info
-    user = User.where(:email => data["email"]).first
-    unless user
-      user = User.create(name: data["name"],
-                         provider:"google",
-                         uid:data["uid"],
-                         email: data["email"],
-                         password: Devise.friendly_token[0,20],
-                        )
-    end
-    user
+    User.find_from_auth('google', data['email'], data['name'], data['uid'])
   end
 
   def self.find_for_browserid_oauth(access_token, signed_in_resource=nil)
     data = access_token.info
-    user = User.where(:email => data['email']).first
+    User.find_from_auth('browserid', data['email'], data['name'], data['uid'])
+  end
+
+  def self.find_from_auth(provider, email, name, uid)
+    user = User.where(:email => email).first
     unless user
       user = User.create(
-        name: data['name'],
-        provider: 'browserid',
-        uid: data['uid'],
-        email: data['email'],
-        password: Devise.friendly_token[0,20],
+        name: name,
+        provider: provider,
+        uid: uid,
+        email: email,
+        password: Devise.friendly_token[0,20]
       )
     end
     user
