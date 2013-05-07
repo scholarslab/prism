@@ -13,10 +13,10 @@
 <nav>
   <ul>
     <li>
-      <%= link_to t('header.about'), about_path, {:class => 'about_link'}  %>
+      <%= link_to t('header.link_about'), about_path, {:class => 'about_link'}  %>
     </li>
     <li>
-      <%= link_to t('header.documents'), prisms_path, {:class => "browse_link"} %>
+      <%= link_to t('header.link_documents'), prisms_path, {:class => "browse_link"} %>
     </li>
     <li>
     <% if user_signed_in? %>
