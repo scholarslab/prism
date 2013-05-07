@@ -18,7 +18,6 @@ gem 'omniauth-browserid'
 gem "uuidtools"
 
 gem "language_list"
-gem 'figaro'
 gem 'cancan'
 
 # Error notifications
@@ -51,6 +50,7 @@ group :development do
   gem 'annotate',"2.4.1.beta1"
   gem "ffaker", "~> 1.8.1"
   gem "rails_best_practices"
+  gem 'figaro'
 end
 
 group :development, :test do
