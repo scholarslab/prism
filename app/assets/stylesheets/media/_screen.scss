@@ -9,7 +9,7 @@ html {
 
 body {
 	max-width: 800px; 
-	background: white; 
+	background: white !important;
 	margin: 20px auto;
 	padding-top: 0 px;
 	@include border-radius(20px);
