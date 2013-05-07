@@ -143,9 +143,13 @@ window.select_vis = (vis) ->
 
 window.drawChart = (dataArray,chartColors) ->
   data = google.visualization.arrayToDataTable(dataArray);
-  options = {
-    legend: {'position':'bottom'}
-    chartArea:{left:0,top:0,width:"99%",height:"50%"}
+  options = 
+    legend:
+      'position':'bottom'
+    chartArea:
+      left: 0
+      top: 10
+      width: "99%"
+      height: "50%"
     colors: chartColors
-  };
   window.chart.draw(data, options);
