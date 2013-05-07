@@ -89,10 +89,10 @@ figure {
   cursor:pointer;
   border-top: 1px solid #ccc;
   display:block;
-  color: $blue;
+  color: $aqua;
 
   &.ui-state-hover {
-    color: darken($blue, 20%);
+    color: darken($aqua, 20%);
   }
 
   &.ui-state-active {
@@ -138,7 +138,7 @@ header {
 
   a {
     color: white;
-    background-color: $blue;
+    background-color: $aqua;
     width: 220px;
     line-height: 220px;
     text-align:center;
@@ -210,24 +210,24 @@ nav {
     #browse &.browse_link,
     #myprisms &.myprisms_link,
     #sign_in &.sign_in_link {
-      color: $blue;
+      color: $aqua;
     } 
   }
 }
  
 a {
   text-decoration: none;
-  color: $blue;
+  color: $aqua;
   outline:none;
 
   &:link,
   &:visited {
-    color: $blue;
+    color: $aqua;
   }
   &:hover,
   &:focus,
   &:active {
-    color: darken($blue, 20%);
+    color: darken($aqua, 20%);
   }
 }
 
@@ -367,7 +367,7 @@ div[role=main] {
 }
 
 #flash_notice {
-	color: $blue;
+	color: $aqua;
 
 }
 
