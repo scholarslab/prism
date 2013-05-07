@@ -147,9 +147,9 @@ window.drawChart = (dataArray,chartColors) ->
     legend:
       'position':'bottom'
     chartArea:
-      left: 0
-      top: 10
-      width: "99%"
-      height: "50%"
+      left   : 0
+      top    : 10
+      width  : "99%"
+      height : "50%"
     colors: chartColors
   window.chart.draw(data, options);
