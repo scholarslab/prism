@@ -87,19 +87,18 @@ window.select_facet = (facet) ->
     words = $("span.word")
     words.each( (i,word) ->
 
-      word_freqs = []
-      for facet_num in all_facet_nums
-        word_freqs.push([window.all_colors[facet_num],frequencies[facet_num][i]])
+      word_freqs = for facet_num in all_facet_nums
+        [frequencies[facet_num][i], window.all_colors[facet_num]]
 
-      word_freqs.sort (a,b) ->
-        return ((a[1] < b[1]) ? -1 : ((a[1] > b[1]) ? 1 : 0));
+      word_freqs.sort()
+      word_freqs.reverse()
 
       #no highlighting gets grey, ties get black
 
-      if word_freqs[0][1] > word_freqs[1][1]
-        winning_color = word_freqs[0][0]
+      if word_freqs[0][0] > word_freqs[1][0]
+        winning_color = word_freqs[0][1]
         $(word).toggleClass(winning_color + "-vis", true)
-      else if word_freqs[0][1] != 0
+      else if word_freqs[0][0] != 0
         $(word).css('color', 'black')
       else
         $(word).css('color', 'lightgrey')
