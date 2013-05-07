@@ -32,7 +32,15 @@ class User < ActiveRecord::Base
 
   def self.find_from_auth(provider, email, name, uid)
     user = User.where(:email => email).first
-    unless user
+    if user
+      # Update the login information to the most current every time someone
+      # logs in. This makes sure that the avatar is coming from wherever they
+      # logged in from for that session.
+      user.update_attributes(
+        :provider => provider,
+        :uid      => uid,
+      )
+    else
       user = User.create(
         name: name,
         provider: provider,
