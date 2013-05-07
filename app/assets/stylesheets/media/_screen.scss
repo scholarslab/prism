@@ -73,7 +73,7 @@ figure {
 
 .button {
 	display: block;
-	background-color: $yellow;
+	background-color: $aqua;
 	color: white !important;
 	text-transform: uppercase;
 	text-align: center;
@@ -89,10 +89,10 @@ figure {
   cursor:pointer;
   border-top: 1px solid #ccc;
   display:block;
-  color: $blue;
+  color: $aqua;
 
   &.ui-state-hover {
-    color: darken($blue, 20%);
+    color: darken($aqua, 20%);
   }
 
   &.ui-state-active {
@@ -106,7 +106,7 @@ figure {
         top: 100px;
         display: none;
         width: 600px;
-        background: $yellow;
+        background: $aqua;
         text-align:center;
         font-size:20px;
         line-height:20px;
@@ -138,7 +138,7 @@ header {
 
   a {
     color: white;
-    background-color: $blue;
+    background-color: $aqua;
     width: 220px;
     line-height: 220px;
     text-align:center;
@@ -207,24 +207,24 @@ nav {
     #browse &.browse_link,
     #myprisms &.myprisms_link,
     #sign_in &.sign_in_link {
-      color: $blue;
+      color: $aqua;
     } 
   }
 }
  
 a {
   text-decoration: none;
-  color: $blue;
+  color: $aqua;
   outline:none;
 
   &:link,
   &:visited {
-    color: $blue;
+    color: $aqua;
   }
   &:hover,
   &:focus,
   &:active {
-    color: darken($blue, 20%);
+    color: darken($aqua, 20%);
   }
 }
 
@@ -364,7 +364,7 @@ div[role=main] {
 }
 
 #flash_notice {
-	color: $blue;
+	color: $aqua;
 
 }
 
@@ -424,6 +424,10 @@ td {
   padding-top: 76px;
   }
 
+#visualizations #highlighters {
+  padding-top: 0px;
+}
+
   li {
     @include clearfix;
 
@@ -439,18 +443,6 @@ td {
 
 li.facet{
 	padding: 5px;
-}
-
-span.facet.blue:hover {
-background-color: $blueroll;
-}
-
-span.facet.red:hover {
-background-color: $redroll;
-}
-
-span.facet.green:hover {
-background-color: $greenroll;
 }
 
 li.vis_facet{

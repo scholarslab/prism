@@ -17,8 +17,19 @@
    user-select: none;
 }
 
-#visualizations span.facet.border {
-  border: 2px solid black;
+#visualizations {
+
+span.facet.blue:hover {
+background-color: $blueroll;
+}
+
+span.facet.red:hover {
+background-color: $redroll;
+}
+
+span.facet.green:hover {
+background-color: $greenroll;
+}
 }
 
 .red-vis{

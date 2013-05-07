@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(:version => 20130503172648) do
     t.string   "authentication_token"
     t.string   "password_confirmation"
     t.string   "provider"
+    t.string   "uid"
+    t.integer  "facet_num"
     t.string   "role",                   :default => "user"
   end
 
