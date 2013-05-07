@@ -17,6 +17,10 @@
    user-select: none;
 }
 
+#visualizations span.facet.border {
+  border: 2px solid black;
+}
+
 .red-vis{
   color: $red;
 }
@@ -60,4 +64,19 @@
 .word {
   @include pie;
   line-height:150%;
+
+  .winning & {
+    cursor:pointer;
+
+    &:hover,
+    &:focus {
+      background: lighten($yellow, 20%);
+    }
+
+    &:active {
+      background: $yellow;
+    }
+
+  }
 }
+

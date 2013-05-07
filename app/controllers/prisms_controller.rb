@@ -17,7 +17,7 @@ class PrismsController < ApplicationController
         @prisms << prism
       end
     end
-    @title = "Browse prisms"
+    @title = "Browse"
 
     respond_to do |format|
       format.html
@@ -94,9 +94,7 @@ class PrismsController < ApplicationController
     @facet3.order = 2
     @facet3.color = "green"
     
-    #validate_colors
-    
-    process_text(@prism)
+    process_content(@prism)
     success = @prism.save
     
     if @facet1.description.to_s.length > 0
@@ -128,7 +126,18 @@ class PrismsController < ApplicationController
     end
   end         
 
-  def process_text(prism)
+  def process_content(prism)
+    # Do not process content if content is empty
+    if prism.content.to_s == ''
+      return
+    end
+    
+    # Do not process content if title or license is empty. If this check is not done, then processed content will be returned to the front end.
+    # Should be checked on the front-end instead. 
+    if prism.title.to_s == '' or prism.license.to_s == ''
+      return
+    end
+    
     text = prism.content
     doc = Nokogiri::XML("")
     doc << doc.create_element("content")
