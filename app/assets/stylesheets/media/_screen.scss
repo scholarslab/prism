@@ -427,6 +427,22 @@ td {
   padding-top: 76px;
   }
 
+#tools {
+
+  span.facet.blue:hover {
+  background-color: $blueroll;
+  }
+
+  span.facet.red:hover {
+  background-color: $redroll;
+  }
+
+  span.facet.green:hover {
+  background-color: $greenroll;
+  }
+}
+
+
 #visualizations #highlighters {
   padding-top: 0px;
 }
@@ -510,4 +526,6 @@ span.vis-selected-word{
 #chart_div {
   height: 200px;
   background: #f0f0f0;
+  text-align: center;
+  background-color: white;
 }
