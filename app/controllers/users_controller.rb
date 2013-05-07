@@ -5,5 +5,6 @@ class UsersController < ApplicationController
 
     @highlighted_prisms = @user.word_markings.map(&:prism_id).uniq
 
+    @title = "myprisms"
   end
 end

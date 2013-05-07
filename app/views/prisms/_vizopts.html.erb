@@ -1,0 +1,45 @@
+<div id="visualizations">
+
+  <span class="vis_selection">
+    <h3>Winning Facet Visualization</h3>
+    <input type="hidden" class="vis_type" value="winning_facet" />
+  </span>
+  <div>
+	  <p class="chart_title">Click a word to display highlight data.</p>
+    <div id="chart_div"></div>
+    <li class="vis_button" style="display:none;">
+      <input type="hidden" class="color" value="winning"/>
+      <input type="hidden" class="order" value=""/>
+      <input type="hidden" value="<%=@frequencies[0]%>" class="freq"/>
+      <span class="facet red green blue"></span>Winning Facet 
+    </li>
+    <span class="current-word" style="display:none;"></span>
+    <ul id="mousevoer-stats" style="display:none;">
+      <li><span class="red-percent red-vis"></span></li>
+      <li><span class="green-percent green-vis"></span></li>
+      <li><span class="blue-percent blue-vis"></span></li>
+    </ul>
+
+    <p id="visualization-help"><%= t "visualize.winningdescription" %> </p>
+    <p id="visualization-mouse"><%= t "visualize.mouse" %> </p>
+  </div>
+
+    <span class="vis_selection">
+    <h3>Font Size Visualization</h3>
+    <input type="hidden" class="vis_type" value="font_size" />
+  </span>
+  <div>
+    <p id="visualization-help"><%= t "visualize.instructions" %></p>
+    <ul id="highlighters">
+    <% for facet in @prism.facets %>
+      <li class="vis_facet vis_button">
+        <input type="hidden" class="color" value="<%=facet.color%>"/>
+        <input type="hidden" class="order" value="<%=facet.order%>"/>
+        <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
+        <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+
+</div>

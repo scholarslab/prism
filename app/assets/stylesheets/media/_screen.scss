@@ -63,6 +63,10 @@ input {
 
 }
 
+select {
+  margin-bottom:1em;
+}
+
 figure {
   margin-left:0;
 }
@@ -76,6 +80,24 @@ figure {
 	padding: 10px;
 	@include border-radius(10px);
 	margin-bottom: 20px;
+}
+
+// jQuery UI styles
+.ui-accordion-header {
+  font-family: $parafont;
+  outline:none;
+  cursor:pointer;
+  border-top: 1px solid #ccc;
+  display:block;
+  color: $blue;
+
+  &.ui-state-hover {
+    color: darken($blue, 20%);
+  }
+
+  &.ui-state-active {
+    color: #333;
+  }
 }
 
  #corner-banner {
@@ -180,14 +202,23 @@ nav {
     &:hover,
     &:focus,
     &:active {
-      color: black;
+      color: $gray;
     }
+
+  
+    #about &.about_link,  
+    #browse &.browse_link,
+    #myprisms &.myprisms_link,
+    #sign_in &.sign_in_link {
+      color: $blue;
+    } 
   }
 }
  
 a {
   text-decoration: none;
   color: $blue;
+  outline:none;
 
   &:link,
   &:visited {
@@ -213,6 +244,7 @@ h2 {
 h3 {
 	font-weight: normal;
 	font-size: 18px;
+  font-family: "source sans pro", sans-serif;
 }
 
 table {
@@ -349,12 +381,14 @@ div[role=main] {
 
 th, td {
 	border-bottom: 1px solid $gray;
-	padding: 10px;
-	}
+  padding: 10px;
+  }
 
 th {
 	height: 50px;
 	border-bottom-width: 3px;
+  padding-left: 0px;
+  padding-right: 40px;
 }
 
 td {
@@ -367,7 +401,7 @@ td {
 
 #new-prism {
 	float: right;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 //highlight pages------------------------------
@@ -391,6 +425,7 @@ td {
   list-style:none;
   padding-left:0;
   padding-top: 76px;
+  }
 
   li {
     @include clearfix;
@@ -409,7 +444,6 @@ li.facet{
 	padding: 5px;
 }
 
-
 span.facet.blue:hover {
 background-color: $blueroll;
 }
@@ -425,8 +459,10 @@ background-color: $greenroll;
 li.vis_facet{
 	padding: 5px;
 }
-}
 
+span.vis-selected-word{
+	background: $yellow !important;
+}
 
 
 //new prism page-------------------------------
@@ -471,3 +507,15 @@ li.vis_facet{
   }
 }
 
+#visualizations {
+  border-bottom: 1px solid #ccc;
+
+  > div {
+    padding-bottom:0.5em;
+  }
+}
+
+#chart_div {
+  height: 200px;
+  background: #f0f0f0;
+}
