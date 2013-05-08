@@ -75,6 +75,11 @@ window.select_facet = (facet) ->
   $(facet).find("span.facet").addClass("border")
   $("body").attr('class', current_color)
 
+  dump_freqs = (fqs) ->
+    parts = for pair in fqs
+      "#{pair[1]} => #{pair[0]}"
+    parts.join("; ")
+
   words = d3.selectAll("span.word")
   for color in window.all_colors
     words.classed(color+"-vis", false)
@@ -88,20 +93,25 @@ window.select_facet = (facet) ->
     words.each( (i,word) ->
 
       word_freqs = for facet_num in all_facet_nums
-        [frequencies[facet_num][i], window.all_colors[facet_num]]
+        [+frequencies[facet_num][i], window.all_colors[facet_num]]
 
-      word_freqs.sort()
-      word_freqs.reverse()
+      word_freqs.sort( (a, b) ->
+        if b[0] < a[0]
+          -1
+        else if b[0] == a[0]
+          0
+        else
+          1
+      )
 
       #no highlighting gets grey, ties get black
-
-      if word_freqs[0][0] > word_freqs[1][0]
-        winning_color = word_freqs[0][1]
-        $(word).toggleClass(winning_color + "-vis", true)
-      else if word_freqs[0][0] != 0
+      if word_freqs[0][0] == 0
+        $(word).css('color', 'lightgrey')
+      else if word_freqs[0][0] == word_freqs[1][0]
         $(word).css('color', 'black')
       else
-        $(word).css('color', 'lightgrey')
+        winning_color = word_freqs[0][1]
+        $(word).toggleClass(winning_color + "-vis", true)
 
       #$(word).css('color', 'rgb('+Math.round(f*frequencies['red'][i])+','+Math.round(f*frequencies['green'][i])+','+Math.round(f*frequencies['blue'][i])+')')
     )
