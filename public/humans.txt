@@ -2,15 +2,68 @@
 /* the humans responsible & colophon */
 /* humanstxt.org */
 
-
 /* TEAM */
-  <your title>: <your name>
-  Site:
-  Twitter:
-  Location:
 
-/* THANKS */
-  Names (& URL):
+Praxis Fellows, 2012-2013
+
+Name:  Shane Lin
+Email: ssl2ab@virginia.edu
+
+Name:  Cecilia Márquez
+Email: cmarque1@gmail.com 
+
+Name:  Claire Maiers
+Email: cdm6zf@virginia.edu 
+
+Name:  Gwen Nally
+Email: egn9b@virginia.edu 
+
+Name:  Chris Peck
+Email: peckpeckpeck@gmail.com 
+
+Name:  Brandon Walsh
+Email: bmw9t@virginia.edu 
+Twitter: @walshbr
+
+Praxis Fellows, 2011-2012
+
+Name:  Alex Gil
+Email: colibri.alex@gmail.com 
+
+Name:  Brooke Lestock
+Email: bnl2ja@virginia.edu 
+
+Name:  Lindsay O'Connor
+Email: lo3m@virginia.edu 
+
+Name:  Sarah Storti
+Email: sas3ca@virginia.edu 
+
+Name:  Joanna Swafford
+Email: jes8zv@virginia.edu 
+
+Name:  Ed Triplett
+Email: edward.triplett@gmail.com 
+
+The Scholars' Lab
+
+Name:  Jeremy Boggs
+Email: jeremy@clioweb.org 
+
+Name:  Wayne Graham
+Email: wayne.graham@virginia.edu 
+
+Name: Eric Johnson
+Email: ej9k@virginia.edu
+
+Name: David McClure
+Email: dm4fn@virginia.edu
+
+Name:  Bethany Nowviskie
+Email: bethany@virginia.edu 
+
+Name:  Eric Rochester
+Email: erochest@virginia.edu 
 
 /* SITE */
   Standards: HTML5, CSS3
