@@ -10,48 +10,48 @@ Name:  Shane Lin
 Email: ssl2ab@virginia.edu
 
 Name:  Cecilia Márquez
-Email: cmarque1@gmail.com 
+Email: cmarque1@gmail.com
 
 Name:  Claire Maiers
-Email: cdm6zf@virginia.edu 
+Email: cdm6zf@virginia.edu
 
 Name:  Gwen Nally
-Email: egn9b@virginia.edu 
+Email: egn9b@virginia.edu
 
 Name:  Chris Peck
-Email: peckpeckpeck@gmail.com 
+Email: peckpeckpeck@gmail.com
 
 Name:  Brandon Walsh
-Email: bmw9t@virginia.edu 
+Email: bmw9t@virginia.edu
 Twitter: @walshbr
 
 Praxis Fellows, 2011-2012
 
 Name:  Alex Gil
-Email: colibri.alex@gmail.com 
+Email: colibri.alex@gmail.com
 
 Name:  Brooke Lestock
-Email: bnl2ja@virginia.edu 
+Email: bnl2ja@virginia.edu
 
 Name:  Lindsay O'Connor
-Email: lo3m@virginia.edu 
+Email: lo3m@virginia.edu
 
 Name:  Sarah Storti
-Email: sas3ca@virginia.edu 
+Email: sas3ca@virginia.edu
 
 Name:  Joanna Swafford
-Email: jes8zv@virginia.edu 
+Email: jes8zv@virginia.edu
 
 Name:  Ed Triplett
-Email: edward.triplett@gmail.com 
+Email: edward.triplett@gmail.com
 
 The Scholars' Lab
 
 Name:  Jeremy Boggs
-Email: jeremy@clioweb.org 
+Email: jeremy@clioweb.org
 
 Name:  Wayne Graham
-Email: wayne.graham@virginia.edu 
+Email: wayne.graham@virginia.edu
 
 Name: Eric Johnson
 Email: ej9k@virginia.edu
@@ -60,10 +60,13 @@ Name: David McClure
 Email: dm4fn@virginia.edu
 
 Name:  Bethany Nowviskie
-Email: bethany@virginia.edu 
+Email: bethany@virginia.edu
 
-Name:  Eric Rochester
-Email: erochest@virginia.edu 
+Name:    Eric Rochester
+Email:   erochest@virginia.edu
+Twitter: @erochest
+Site:    http://www.ericrochester.com/
+
 
 /* SITE */
   Standards: HTML5, CSS3
@@ -96,9 +99,9 @@ Email: erochest@virginia.edu
                      -////:-                 --//:
                        --                       -:
 
-  ______          __             __                       _   _____            __        
-.' ____ \        [  |           [  |                     | | |_   _|          [  |       
-| (___ \_| .---.  | |--.   .--.  | |  ,--.   _ .--.  .--.\_|   | |      ,--.   | |.--.   
- _.____`. / /'`\] | .-. |/ .'`\ \| | `'_\ : [ `/'`\]( (`\]     | |   _ `'_\ :  | '/'`\ \ 
-| \____) || \__.  | | | || \__. || | // | |, | |     `'.'.    _| |__/ |// | |, |  \__/ | 
+  ______          __             __                       _   _____            __
+.' ____ \        [  |           [  |                     | | |_   _|          [  |
+| (___ \_| .---.  | |--.   .--.  | |  ,--.   _ .--.  .--.\_|   | |      ,--.   | |.--.
+ _.____`. / /'`\] | .-. |/ .'`\ \| | `'_\ : [ `/'`\]( (`\]     | |   _ `'_\ :  | '/'`\ \
+| \____) || \__.  | | | || \__. || | // | |, | |     `'.'.    _| |__/ |// | |, |  \__/ |
  \______.''.___.'[___]|__]'.__.'[___]\'-;__/[___]   [\__) )  |________|\'-;__/[__;.__.'
