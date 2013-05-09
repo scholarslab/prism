@@ -69,7 +69,7 @@ window.select_word = (i,word) ->
 # This function selects a facet, gives the box a border, and highlights text
 window.select_facet = (facet) ->
   current_color = $("input.color", facet).val()
-  console.log(current_color)
+  # console.log(current_color)
   current_num = $("input.order", facet).val()
   $("span.facet.border").removeClass("border")
   $(facet).find("span.facet").addClass("border")
@@ -85,7 +85,8 @@ window.select_facet = (facet) ->
     words.classed(color+"-vis", false)
 
   if current_color=='winning'
-    words.data(window.frequencies[0])
+    fqs = window.frequencies[0] ? []
+    words.data(fqs)
       .transition()
       .style("font-size", (d) -> min_size + "px")
 
@@ -105,7 +106,9 @@ window.select_facet = (facet) ->
       )
 
       #no highlighting gets grey, ties get black
-      if word_freqs[0][0] == 0
+      if not word_freqs[0]?
+        null
+      else if word_freqs[0][0] == 0
         $(word).css('color', 'lightgrey')
       else if word_freqs[0][0] == word_freqs[1][0]
         $(word).css('color', 'black')
