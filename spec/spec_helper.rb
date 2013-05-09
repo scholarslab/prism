@@ -1,26 +1,17 @@
 require 'rubygems'
 require 'spork'
 
+require 'active_record'
 require 'simplecov'
+require 'capybara/rspec'
+require 'capybara-screenshot/rspec'
+
+Capybara.default_driver    = :webkit
+Capybara.javascript_driver = :webkit
 SimpleCov.start 'rails'
 
 # Devise.stretches = 1   # speed up password generation from bcrypt passes
 # Rails.logger.level = 4 # Reduce IO during tests
-
-# Uncomment is suing Capybara
-# class ActiveRecord::Base
-#  mattr_accessor :shared_connection
-#  @@shared_connection = nil
-
-#  def self.connection
-#    @@shared_connection || retrieve_connection
-#  end
-#end
-
-# Forces all threads to share the same connection. This works on
-# Capybara because it starts the web server in a thread
-# ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
-
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However, 
@@ -78,6 +69,20 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
+
+  # Uncomment is suing Capybara
+  class ActiveRecord::Base
+    mattr_accessor :shared_connection
+    @@shared_connection = nil
+
+    def self.connection
+      @@shared_connection || retrieve_connection
+    end
+  end
+
+  # Forces all threads to share the same connection. This works on
+  # Capybara because it starts the web server in a thread
+  ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
 
 end
 

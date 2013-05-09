@@ -67,6 +67,7 @@ end
 group :test do
   gem 'turn', :require => false # Pretty printed test output
   gem "capybara", "~> 1.1.1"
+  gem "capybara-webkit"
   gem "spork", "~> 1.0rc"
   gem 'rake'
   gem 'database_cleaner'
