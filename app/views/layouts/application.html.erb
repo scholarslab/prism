@@ -17,6 +17,17 @@
   <%= yield :extra_head %>
   <script type="text/javascript">
     var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-12081576-4']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();
+
+    <script type="text/javascript" src="https://raw.github.com/snaptortoise/konami-js/master/konami.js"></script>
+<script type="text/javascript">
+  var success = function() {
+    alert("You have hit up four times.  Why you did this, I don't know.")
+  }
+  konami = new Konami(success)
+  konami.pattern = "383838383838383838383838"
+
+</script>
+
   </script>
 </head>
 <body id="<%= page_id %>">
