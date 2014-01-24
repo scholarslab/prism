@@ -12,6 +12,12 @@ FactoryGirl.define do
     user_id Forgery::Basic.number
     unlisted false
     language 'English'
+
+    after_create do |prism, evaluator|
+      FactoryGirl.create(:facet_blue)
+      FactoryGirl.create(:facet_red)
+      FactoryGirl.create(:facet_green ) #, prism_id: prism.uuid)
+    end
   end
 
   factory :prism_unlisted do

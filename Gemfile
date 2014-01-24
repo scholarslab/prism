@@ -61,6 +61,8 @@ group :development, :test do
   gem "nyan-cat-formatter", "~> 0.0.3"
   gem "guard"
   gem "guard-coffeescript"
+  gem "guard-shell"
+  gem "guard-livereload"
   gem 'forgery', '0.3.12'
 end
 
@@ -68,12 +70,15 @@ group :test do
   gem 'turn', :require => false # Pretty printed test output
   gem "capybara", "~> 1.1.1"
   gem "capybara-webkit"
+  gem 'capybara-screenshot'
+  gem 'poltergeist'
+  gem 'faye-websocket', '0.4.4'
   gem "spork", "~> 1.0rc"
   gem 'rake'
   gem 'database_cleaner'
   gem 'minitest'
   gem 'ruby-prof'
-  gem "cucumber-rails"
+  gem "cucumber-rails", :require => false
   gem "jasmine"
   gem 'jasmine-jquery-rails'
 end

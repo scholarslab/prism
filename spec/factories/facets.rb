@@ -8,19 +8,19 @@ FactoryGirl.define do
 
   factory :facet_blue, class: Facet do
     color "blue"
-    description "sad"
+    description Forgery::LoremIpsum.words(3)
     order 0
   end
 
   factory :facet_red, class: Facet do
     color "red"
-    description "happy"
+    description Forgery::LoremIpsum.words(3)
     order 1
   end
 
   factory :facet_green, class: Facet do
     color "green"
-    description "peaceful"
+    description Forgery::LoremIpsum.words(3)
     order 2
   end
 end

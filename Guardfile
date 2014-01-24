@@ -9,7 +9,15 @@ guard 'coffeescript', :output => 'spec/javascripts/compiled' do
   watch(/^spec\/javascripts\/unit\/(.*).coffee/)
 end
 
+=begin
 guard 'livereload' do
-  watch('^spec/javascripts/compiled/.+\.js$')
-  watch('^public/javascripts/compiled/.+\.js$')
+  watch(/^spec\/javascripts\/compiled\/.+\.js$/)
+  watch(/^public\/javascripts\/compiled\/.+\.js$/)
+end
+=end
+
+guard :shell do
+  watch(/.*\.js$/)  { `rake spec SPEC=spec/features/` }
+  watch(/.*\.erb$/) { `rake spec SPEC=spec/features/` }
+  watch(/.*\.rb$/)  { `rake spec SPEC=spec/features/` }
 end

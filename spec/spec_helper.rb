@@ -5,9 +5,10 @@ require 'active_record'
 require 'simplecov'
 require 'capybara/rspec'
 require 'capybara-screenshot/rspec'
+require 'capybara/poltergeist'
 
-Capybara.default_driver    = :webkit
-Capybara.javascript_driver = :webkit
+Capybara.default_driver    = :poltergeist  # :poltergeist  # :webkit
+Capybara.javascript_driver = :poltergeist  # :poltergeist  # :webkit
 SimpleCov.start 'rails'
 
 # Devise.stretches = 1   # speed up password generation from bcrypt passes
