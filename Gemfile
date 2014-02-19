@@ -82,6 +82,6 @@ group :production, :staging do
   gem "pg"
   gem "mysql2"
   gem "thin" # use thin as the production server
-  gem 'jasmine-jquery-rails'
+  #gem 'jasmine-jquery-rails'
   gem 'newrelic_rpm'
 end
