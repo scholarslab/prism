@@ -1,5 +1,0 @@
-rvm use 1.9.3@prism --create
-
-git pull
-
-bundle install
