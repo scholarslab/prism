@@ -14,6 +14,8 @@
 
 	<tbody>
 
+<% @prisms = Prism.paginate(:page => params[:page], :per_page => 10)%>
+
 <% @prisms.each do |prism| %>
 <tr> 
 
@@ -39,3 +41,4 @@
 
 </table>
 
+<%= will_paginate @prisms %>
