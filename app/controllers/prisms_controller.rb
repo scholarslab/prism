@@ -11,7 +11,8 @@ class PrismsController < ApplicationController
   end
 
   def index
-    @prisms = []
+    @prisms = Prism.paginate(:page => params[:page], :per_page => 10)
+
     for prism in Prism.all
       if !prism.unlisted
         @prisms << prism
