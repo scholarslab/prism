@@ -3,6 +3,9 @@ require 'set'
 class PrismsController < ApplicationController 
   before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
 
+  caches_action :index
+  caches_action :show, :layout => false
+  caches_action :visualize, :layout => false
 
   # this method appears in both the model and the controller. Shane deleted it on his controller on the feature branch.
   def before_create()
@@ -26,22 +29,22 @@ class PrismsController < ApplicationController
   end
 
   def highlight
-      @title = "Highlight"
-      @prism = Prism.find(params[:id])
+    @title = "Highlight"
+    @prism = Prism.find(params[:id])
   end
 
   def highlight_post
-      @prism = Prism.find(params[:id])
-      for facet in @prism.facets
-          indices = params[("facet#{facet.order}_indices").to_sym]
-          if JSON.load(indices)
-            for index in JSON.load(indices)
-                word_marking = WordMarking.new(user:current_user, index:index, facet:facet, prism:@prism)
-                word_marking.save()
-            end
-          end
+    @prism = Prism.find(params[:id])
+    for facet in @prism.facets
+      indices = params[("facet#{facet.order}_indices").to_sym]
+      if JSON.load(indices)
+        for index in JSON.load(indices)
+          word_marking = WordMarking.new(user:current_user, index:index, facet:facet, prism:@prism)
+          word_marking.save()
+        end
       end
-      redirect_to(visualize_path(@prism))    
+    end
+    redirect_to(visualize_path(@prism))    
   end
 
   def visualize
@@ -49,17 +52,17 @@ class PrismsController < ApplicationController
     @prism = Prism.find(params[:id])
     @word_markings = @prism.word_markings 
     @usercounter = 0
-    
+
     users = []
     @frequencies = {}
-    
+
     for facet in @prism.facets
       @frequencies[facet.order] = [0.0] * @prism.num_words
     end
-    
+
     for word_marking in @prism.word_markings
-        # Make accessible the count of all the markings per word per facet
-        @frequencies[word_marking.facet.order][word_marking.index] += 1.0
+      # Make accessible the count of all the markings per word per facet
+      @frequencies[word_marking.facet.order][word_marking.index] += 1.0
     end   
   end
 
@@ -81,22 +84,26 @@ class PrismsController < ApplicationController
   end
 
   def create
+
+    # expire the cache
+    expire_action :action => :index
+
     @prism = Prism.new(params[:prism])
     @prism.user_id = current_user.id
     @facet1 = Facet.new(params[:facet1]) 
     @facet2 = Facet.new(params[:facet2]) 
     @facet3 = Facet.new(params[:facet3]) 
-    
+
     @facet1.order = 0
     @facet1.color = "blue"
     @facet2.order = 1
     @facet2.color = "red"
     @facet3.order = 2
     @facet3.color = "green"
-    
+
     process_content(@prism)
     success = @prism.save
-    
+
     if @facet1.description.to_s.length > 0
       @facet1.prism = @prism
       success = success && @facet1.save
@@ -109,7 +116,7 @@ class PrismsController < ApplicationController
       @facet3.prism = @prism
       success = success && @facet3.save
     end
-    
+
     respond_to do |format|
       if success 
         if @prism.unlisted?
@@ -117,8 +124,8 @@ class PrismsController < ApplicationController
         else
           notice = "Prism was successfully created."
         end
-          format.html { redirect_to highlight_path(@prism), notice: notice }
-          format.json { render json: @prism, status: :created, location: @prism }
+        format.html { redirect_to highlight_path(@prism), notice: notice }
+        format.json { render json: @prism, status: :created, location: @prism }
       else
         format.html { render action: "new" }
         format.json { render json: @prism.errors, status: :unprocessable_entity }
@@ -131,13 +138,13 @@ class PrismsController < ApplicationController
     if prism.content.to_s == ''
       return
     end
-    
+
     # Do not process content if title or license is empty. If this check is not done, then processed content will be returned to the front end.
     # Should be checked on the front-end instead. 
     if prism.title.to_s == '' or prism.license.to_s == ''
       return
     end
-    
+
     text = prism.content
     doc = Nokogiri::XML("")
     doc << doc.create_element("content")
@@ -165,12 +172,12 @@ class PrismsController < ApplicationController
   end
 
   def validate_colors
-      for facet in [@facet1, @facet2, @facet3]
-        if facet.color.to_s.strip.length!=6
-          facet.color = "000000"
-          facet.color[facet.order*2,2] = "FF"
-        end
+    for facet in [@facet1, @facet2, @facet3]
+      if facet.color.to_s.strip.length!=6
+        facet.color = "000000"
+        facet.color[facet.order*2,2] = "FF"
       end
+    end
   end
   def destroy
     @prism = Prism.find(params[:id])
