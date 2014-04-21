@@ -44,16 +44,19 @@ class PrismsController < ApplicationController
         end
       end
     end
-    redirect_to(visualize_path(@prism))    
+    redirect_to(visualize_path(@prism))
   end
 
   def visualize
     @title = "Visualize"
-    @prism = Prism.find(params[:id])
-    @word_markings = @prism.word_markings 
+
+    @prism = Prism.includes(:word_markings).find(params[:id])
+    @word_markings = @prism.word_markings
     @usercounter = 0
 
     users = []
+
+    puts users
     @frequencies = {}
 
     for facet in @prism.facets
