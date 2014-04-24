@@ -7,7 +7,7 @@ class PrismsController < ApplicationController
   caches_action :show, :layout => false
   caches_action :visualize, :layout => false
 
-  # this method appears in both the model and the controller. Shane deleted it on his controller on the feature branch.
+  # this method appears in the model and the controller. Shane deleted it on his controller on the feature branch.
   def before_create()
     require 'uuidtools'
     self.id = UUID.timestamp_create().to_s
