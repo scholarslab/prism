@@ -1,3 +1,15 @@
+<div style="display:none;">view updated</div>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+$(function() {
+    setup_visualize();
+    select_vis($("span.vis_selection")[0]);
+
+    $( "#visualizations" ).accordion({heightStyle: "content"});
+});
+
+google.load("visualization", "1", {packages:["corechart"]});
+</script>
 
 <div id="Prismabob">
   <h1><%= @prism.title.html_safe %></h1>
@@ -15,16 +27,5 @@
   </p>
 </div>
 
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" charset="utf-8">
-$(function() {
-    setup_visualize();
-    console.log('visualization set up');
-    select_vis($("span.vis_selection")[0]);
 
-    $( "#visualizations" ).accordion({heightStyle: "content"});
-});
-
-google.load("visualization", "1", {packages:["corechart"]});
-</script>
 
