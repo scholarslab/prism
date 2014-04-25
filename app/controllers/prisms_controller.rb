@@ -3,7 +3,7 @@ require 'set'
 class PrismsController < ApplicationController 
   before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
 
-  caches_action :index
+  caches_action :index, :layout => false
   caches_action :show, :layout => false
   caches_action :visualize, :layout => false
 
@@ -86,7 +86,7 @@ class PrismsController < ApplicationController
   def create
 
     # expire the cache
-    expire_action :action => :index
+    expire_action :action => :visualize
 
     @prism = Prism.new(params[:prism])
     @prism.user_id = current_user.id
