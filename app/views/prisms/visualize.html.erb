@@ -1,15 +1,3 @@
-<% content_for :extra_head do %>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript" charset="utf-8">
-$(function() {
-  setup_visualize();
-  select_vis($("span.vis_selection")[0]);
-  $( "#visualizations" ).accordion({heightStyle: "content"});
-});
-
-google.load("visualization", "1", {packages:["corechart"]});
-</script>
-<% end %>
 
 <div id="Prismabob">
   <h1><%= @prism.title.html_safe %></h1>
@@ -26,3 +14,19 @@ google.load("visualization", "1", {packages:["corechart"]});
     <span><% if @prism.word_markings.map(&:user_id).uniq != nil %><%=@prism.word_markings.map(&:user_id).uniq.size %></span> <% if @prism.word_markings.map(&:user_id).uniq.size == 1%>user <% else%>users <%end%>contributed to this visualization.<% end %>
   </p>
 </div>
+
+<%# content_for :extra_head do %>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" charset="utf-8">
+$(function() {
+    setup_visualize();
+    console.log('visualization set up');
+    select_vis($("span.vis_selection")[0]);
+
+    $( "#visualizations" ).accordion({heightStyle: "content"});
+});
+
+google.load("visualization", "1", {packages:["corechart"]});
+</script>
+<%# end %>
+
