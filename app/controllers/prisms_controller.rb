@@ -86,7 +86,7 @@ class PrismsController < ApplicationController
   def create
 
     # expire the cache
-    expire_action :action => :visualize
+    #expire_action :action => :visualize
 
     @prism = Prism.new(params[:prism])
     @prism.user_id = current_user.id
