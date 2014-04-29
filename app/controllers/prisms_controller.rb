@@ -42,6 +42,8 @@ class PrismsController < ApplicationController
           word_marking = WordMarking.new(user:current_user, index:index, facet:facet, prism:@prism)
           word_marking.save()
         end
+        # expire the cache
+        expire_action :action => :visualize
       end
     end
     redirect_to(visualize_path(@prism))    
@@ -84,9 +86,6 @@ class PrismsController < ApplicationController
   end
 
   def create
-
-    # expire the cache
-    expire_action :action => :visualize
 
     @prism = Prism.new(params[:prism])
     @prism.user_id = current_user.id
