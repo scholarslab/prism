@@ -3,11 +3,11 @@ require 'set'
 class PrismsController < ApplicationController 
   before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
 
-  caches_action :index
+  #caches_action :index, :layout => false
   caches_action :show, :layout => false
   caches_action :visualize, :layout => false
 
-  # this method appears in both the model and the controller. Shane deleted it on his controller on the feature branch.
+  # this method appears in the model and the controller. Shane deleted it on his controller on the feature branch.
   def before_create()
     require 'uuidtools'
     self.id = UUID.timestamp_create().to_s
@@ -89,7 +89,7 @@ class PrismsController < ApplicationController
   def create
 
     # expire the cache
-    expire_action :action => :index
+    expire_action :action => :visualize
 
     @prism = Prism.new(params[:prism])
     @prism.user_id = current_user.id
