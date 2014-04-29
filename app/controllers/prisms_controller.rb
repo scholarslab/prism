@@ -4,8 +4,8 @@ class PrismsController < ApplicationController
   before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
 
   #caches_action :index, :layout => false
-  caches_action :show, :layout => false
-  caches_action :visualize, :layout => false
+  #caches_action :show, :layout => false
+  #caches_action :visualize, :layout => false
 
   # this method appears in the model and the controller. Shane deleted it on his controller on the feature branch.
   def before_create()
