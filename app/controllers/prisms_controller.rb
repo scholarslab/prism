@@ -35,14 +35,18 @@ class PrismsController < ApplicationController
 
   def highlight_post
     @prism = Prism.find(params[:id])
-    for facet in @prism.facets
-      indices = params[("facet#{facet.order}_indices").to_sym]
-      if JSON.load(indices)
-        for index in JSON.load(indices)
-          word_marking = WordMarking.new(user:current_user, index:index, facet:facet, prism:@prism)
-          word_marking.save()
-        end
+    @prism.facets.each do |facet|
+      param    = params[("facet#{facet.order}_indices").to_sym] || '[]'
+      param    = '[]' if param.nil?
+      indices  = JSON.load param
+      markings = []
+      indices.each do |index|
+        markings << WordMarking.new(user: current_user,
+                                    index: index,
+                                    facet_id: facet.id,
+                                    prism_id: @prism.id)
       end
+      WordMarking.import markings
     end
     redirect_to(visualize_path(@prism))    
   end
