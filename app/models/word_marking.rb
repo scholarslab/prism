@@ -20,14 +20,18 @@ class WordMarking < ActiveRecord::Base
     indexes
   end
 
-  def self.importIndexes(user, prism_id, facet_id, indexes)
-    markings = []
-    indexes.each do |index|
-      markings << WordMarking.new(user: user,
-                                  prism_id: prism_id,
-                                  facet_id: facet_id,
-                                  index: index)
+  def self.importIndexes(user, prism, facet, indexes)
+    word_count = prism.num_words
+    prism_id   = prism.id
+    facet_id   = facet.id
+
+    markings   = indexes.each.reject { |i| i > word_count }.map do |index|
+      WordMarking.new(user: user,
+                      prism_id: prism_id,
+                      facet_id: facet_id,
+                      index: index)
     end
+
     WordMarking.import markings
   end
 end

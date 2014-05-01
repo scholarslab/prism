@@ -56,6 +56,43 @@ describe PrismsController do
     end
   end
 
+  describe "POST 'highlight'", :current => true do
+    before :each do
+      Facet.create :description => "Facet 0",
+                   :prism_id    => @prism.id,
+                   :order       => 0,
+                   :color       => "Red"
+      Facet.create :description => "Facet 1",
+                   :prism_id    => @prism.id,
+                   :order       => 1,
+                   :color       => "Blue"
+      @prism.add_content_spans
+      @prism.save
+    end
+
+    it "should take time and do something" do
+      n = 1000
+      indexes = JSON.generate(Array(1..n))
+      t1 = Time.now
+      post :highlight_post, :id => @prism.uuid, :facet0_indices => indexes,
+        :facet1_indices => indexes
+      t2 = Time.now
+      puts ">>> POST highlight (#{n}) elapsed: #{t2 - t1}"
+
+      max_markings = [@prism.num_words, n].min
+      WordMarking.count.should eq(@prism.facets.count * max_markings)
+    end
+
+    it "should not allow invalid indexes" do
+      n = 1000
+      indexes = JSON.generate(Array(1..n))
+      post :highlight_post, :id => @prism.uuid, :facet0_indices => indexes,
+        :facet1_indices => indexes
+
+      WordMarking.all.map { |wm| wm.index } .max.should eq(@prism.num_words)
+    end
+  end
+
 
   #describe "Get 'visualize'" do
 

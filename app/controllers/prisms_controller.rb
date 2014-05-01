@@ -38,7 +38,7 @@ class PrismsController < ApplicationController
     @prism.facets.each do |facet|
       param   = params[("facet#{facet.order}_indices").to_sym]
       indexes = WordMarking.parseJSONArray param
-      WordMarking.importIndexes current_user, @prism.id, facet.id, indexes
+      WordMarking.importIndexes current_user, @prism, facet, indexes
     end
     redirect_to(visualize_path(@prism))    
   end
