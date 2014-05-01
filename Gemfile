@@ -51,6 +51,7 @@ group :development do
   gem "ffaker", "~> 1.8.1"
   gem "rails_best_practices"
   gem 'figaro'
+  gem "foreman"
 end
 
 group :development, :test do
