@@ -97,7 +97,7 @@ class PrismsController < ApplicationController
     @facet3.order = 2
     @facet3.color = "green"
 
-    process_content(@prism)
+    @prism.add_content_spans
     success = @prism.save
 
     if @facet1.description.to_s.length > 0
@@ -128,44 +128,6 @@ class PrismsController < ApplicationController
       end
     end
   end         
-
-  def process_content(prism)
-    # Do not process content if content is empty
-    if prism.content.to_s == ''
-      return
-    end
-
-    # Do not process content if title or license is empty. If this check is not done, then processed content will be returned to the front end.
-    # Should be checked on the front-end instead. 
-    if prism.title.to_s == '' or prism.license.to_s == ''
-      return
-    end
-
-    text = prism.content
-    doc = Nokogiri::XML("")
-    doc << doc.create_element("content")
-    counter = 0
-    for line in text.split("\n")
-      leading_spaces = line[/\A +/]
-      if leading_spaces
-        line = "&nbsp;"*leading_spaces.size() + line[leading_spaces.size()..-1]
-      end
-      line.gsub!("\t","&nbsp;&nbsp;&nbsp;")
-
-      paragraph = doc.create_element("p")
-      doc.root().add_child(paragraph)
-      span_list = line.split(" ").map do |word|
-        span = doc.create_element("span", :class => "word word_"+counter.to_s)
-        span << word + ' '
-        counter += 1
-        span
-      end
-      span_nodeset = Nokogiri::XML::NodeSet.new(doc, span_list)
-      paragraph << span_nodeset
-    end
-    prism.content=doc.root().to_s()
-    prism.num_words = counter
-  end
 
   def validate_colors
     for facet in [@facet1, @facet2, @facet3]
