@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "1.9.3"
+ruby "2.1.1"
 
 gem 'rails', '~>3.2.13'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
@@ -51,6 +51,7 @@ group :development do
   gem "ffaker", "~> 1.8.1"
   gem "rails_best_practices"
   gem 'figaro'
+  gem "foreman"
 end
 
 group :development, :test do
