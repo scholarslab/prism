@@ -81,6 +81,7 @@ end
 
 group :production, :staging do
   gem "mysql2"
+  gem "pg"
   gem 'newrelic_rpm'
   gem "unicorn" # use unicorn as the production server
 end
