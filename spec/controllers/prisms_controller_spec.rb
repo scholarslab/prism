@@ -68,28 +68,41 @@ describe PrismsController do
                    :color       => "Blue"
       @prism.add_content_spans
       @prism.save
+
+      @n = 1000
+      @indexes = JSON.generate(Array(1..@n))
     end
 
     it "should take time and do something" do
-      n = 1000
-      indexes = JSON.generate(Array(1..n))
       t1 = Time.now
-      post :highlight_post, :id => @prism.uuid, :facet0_indices => indexes,
-        :facet1_indices => indexes
+      post :highlight_post, :id => @prism.uuid, :facet0_indices => @indexes,
+        :facet1_indices => @indexes
       t2 = Time.now
-      puts ">>> POST highlight (#{n}) elapsed: #{t2 - t1}"
+      puts ">>> POST highlight (#{@n}) elapsed: #{t2 - t1}"
 
-      max_markings = [@prism.num_words, n].min
+      max_markings = [@prism.num_words, @n].min
       WordMarking.count.should eq(@prism.facets.count * max_markings)
     end
 
     it "should not allow invalid indexes" do
-      n = 1000
-      indexes = JSON.generate(Array(1..n))
-      post :highlight_post, :id => @prism.uuid, :facet0_indices => indexes,
-        :facet1_indices => indexes
+      post :highlight_post, :id => @prism.uuid, :facet0_indices => @indexes,
+        :facet1_indices => @indexes
 
       WordMarking.all.map { |wm| wm.index } .max.should eq(@prism.num_words)
+    end
+
+    it "should not allow duplicate indexes" do
+      max_markings = [@prism.num_words, @n].min
+
+      post :highlight_post, :id => @prism.uuid, :facet0_indices => @indexes,
+        :facet1_indices => []
+      WordMarking.count.should eq(max_markings)
+      WordMarking.all.map { |m| m.index } .keep_if { |i| i == 10 } .should eq([10])
+
+      post :highlight_post, :id => @prism.uuid, :facet0_indices => @indexes,
+        :facet1_indices => []
+      WordMarking.count.should eq(max_markings)
+      WordMarking.all.map { |m| m.index } .keep_if { |i| i == 10 } .should eq([10])
     end
   end
 

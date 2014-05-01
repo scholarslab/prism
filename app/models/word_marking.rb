@@ -22,16 +22,22 @@ class WordMarking < ActiveRecord::Base
 
   def self.importIndexes(user, prism, facet, indexes)
     word_count = prism.num_words
+    user_id    = user.id
     prism_id   = prism.id
     facet_id   = facet.id
+    existing   = WordMarking
+      .where(user_id: user_id,
+             prism_id: prism_id,
+             facet_id: facet_id)
+      .map { |m| m.index }
+      .to_set
 
-    markings   = indexes.each.reject { |i| i > word_count }.map do |index|
-      WordMarking.new(user: user,
-                      prism_id: prism_id,
-                      facet_id: facet_id,
-                      index: index)
-    end
+    columns  = [:user_id, :prism_id, :facet_id, :index]
+    markings = indexes
+      .reject { |i| i > word_count }
+      .reject { |i| existing.include? i }
+      .map { |index| [user_id, prism_id, facet_id, index] }
 
-    WordMarking.import markings
+    WordMarking.import columns, markings
   end
 end
