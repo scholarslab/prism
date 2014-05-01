@@ -167,7 +167,7 @@ describe PrismsController do
         flash[:notice].should == 'Prism was successfully created.'
       end
     end
-    
+
      context "The save is successful for an unlisted prism" do
       before(:each) do
         @unl_prism = Factory.create(:prism, unlisted:true)
@@ -203,26 +203,26 @@ describe PrismsController do
       end
     end
   end
-# 
+#
   # describe "PUT 'update'" do
-# 
+#
     # context "the update is successful" do
       # before(:each) do
         # @prism.should_receive(:update_attributes).and_return(true)
         # Prism.should_receive(:find).with(@prism.id).and_return(@prism)
       # end
-# 
+#
       # it "redirects to 'show' action" do
-        # put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'} 
+        # put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'}
         # response.should redirect_to(visualize_path(@prism))
       # end
-# 
+#
       # it "sets a flash message" do
         # put :update, :id => @prism.uuid, :prism => {'title' => 'waynebot'}
         # flash[:notice].should == 'Prism was successfully updated.'
       # end
     # end
-# 
+#
   # end
 
   #describe "DELETE 'destroy'" do

@@ -1,7 +1,7 @@
 require 'set'
 
-class PrismsController < ApplicationController 
-  before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post] 
+class PrismsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post]
 
   #caches_action :index, :layout => false
   caches_action :show, :layout => false
@@ -40,13 +40,13 @@ class PrismsController < ApplicationController
       indexes = WordMarking.parseJSONArray param
       WordMarking.importIndexes current_user, @prism, facet, indexes
     end
-    redirect_to(visualize_path(@prism))    
+    redirect_to(visualize_path(@prism))
   end
 
   def visualize
     @title = "Visualize"
     @prism = Prism.find(params[:id])
-    @word_markings = @prism.word_markings 
+    @word_markings = @prism.word_markings
     @usercounter = 0
 
     users = []
@@ -59,7 +59,7 @@ class PrismsController < ApplicationController
     for word_marking in @prism.word_markings
       # Make accessible the count of all the markings per word per facet
       @frequencies[word_marking.facet.order][word_marking.index] += 1.0
-    end   
+    end
   end
 
   def new
@@ -75,7 +75,7 @@ class PrismsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @prism }  
+      format.json { render json: @prism }
     end
   end
 
@@ -86,9 +86,9 @@ class PrismsController < ApplicationController
 
     @prism = Prism.new(params[:prism])
     @prism.user_id = current_user.id
-    @facet1 = Facet.new(params[:facet1]) 
-    @facet2 = Facet.new(params[:facet2]) 
-    @facet3 = Facet.new(params[:facet3]) 
+    @facet1 = Facet.new(params[:facet1])
+    @facet2 = Facet.new(params[:facet2])
+    @facet3 = Facet.new(params[:facet3])
 
     @facet1.order = 0
     @facet1.color = "blue"
@@ -114,7 +114,7 @@ class PrismsController < ApplicationController
     end
 
     respond_to do |format|
-      if success 
+      if success
         if @prism.unlisted?
           notice = "Success! Keep in mind that this prism will not show up in the public browse page. Be sure to copy the link to send to your friends!"
         else
@@ -127,7 +127,7 @@ class PrismsController < ApplicationController
         format.json { render json: @prism.errors, status: :unprocessable_entity }
       end
     end
-  end         
+  end
 
   def validate_colors
     for facet in [@facet1, @facet2, @facet3]
@@ -153,7 +153,7 @@ class PrismsController < ApplicationController
         for word_marking in @prism.word_markings
           word_marking.destroy
         end
-        @prism.destroy 
+        @prism.destroy
         format.html { redirect_to users_path, notice: 'Prism was successfully destroyed.' }
         format.json { head :no_content }
       else
