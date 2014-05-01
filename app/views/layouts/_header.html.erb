@@ -22,24 +22,22 @@
     <% if user_signed_in? %>
         <%= link_to 'myPrisms', users_path(current_user), {:class => "myprisms_link"} %>
     <% else %>
-          <%= link_to t('header.sign_in'), new_user_session_path, {:class => "sign_in_link"} %>
+        <%= link_to t('header.sign_in'), new_user_session_path, {:class => "sign_in_link"} %>
     <% end %>
-
     </li>
-    
-</ul>
+  </ul>
 </nav>
 
 <header>
-<div class="header">
+  <div class="header">
 
-  <%= link_to image_tag('LOGO.png'), home_path %>
-  <% if current_page?('/') %>
-  <p class="motto">A Tool for Collaborative Interpretation of Texts</p>
-  <% end %>
+    <%= link_to image_tag('LOGO.png'), root_path %>
+    <% if current_page?('/') %>
+      <p class="motto">A Tool for Collaborative Interpretation of Texts</p>
+      <p><%= link_to('A Note to Teachers', about_path(:anchor =>'note-to-teachers'), :class => 'note') %></p>
+    <% end %>
 
-</div>
-
+  </div>
 
 </header>
 

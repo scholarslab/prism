@@ -1,5 +1,5 @@
 class Prism < ActiveRecord::Base
-  has_many :word_markings
+  has_many :word_markings, :include => [:facet]
   belongs_to :users
   has_many :facets
   attr_accessible :title, :author, :content, :num_words, :description, :user_id, :unlisted, :publication_date, :language, :license, :uuid
