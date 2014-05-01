@@ -25,7 +25,7 @@ describe Prism do
     end
   end
 
-  describe "add_content_spans", :current => true do
+  describe "add_content_spans" do
     it "should not process prisms with no title." do
       prism   = Factory.build(:prism, title: nil)
       content = prism.content

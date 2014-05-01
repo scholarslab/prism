@@ -56,7 +56,7 @@ describe PrismsController do
     end
   end
 
-  describe "POST 'highlight'", :current => true do
+  describe "POST 'highlight'" do
     before :each do
       Facet.create :description => "Facet 0",
                    :prism_id    => @prism.id,
