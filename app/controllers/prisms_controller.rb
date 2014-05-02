@@ -2,25 +2,21 @@ require 'set'
 
 class PrismsController < ApplicationController
   before_filter :authenticate_user!, :only => [:new, :highlight, :highlight_post]
+  before_filter :get_prism, :only => [:highlight, :highlight_post, :destroy]
 
   #caches_action :index, :layout => false
   caches_action :show, :layout => false
   caches_action :visualize, :layout => false
 
-  # this method appears in the model and the controller. Shane deleted it on his controller on the feature branch.
-  def before_create()
-    require 'uuidtools'
-    self.id = UUID.timestamp_create().to_s
-  end
-
   def index
     @prisms = []
+    @title = "Browse"
+
     for prism in Prism.all
       if !prism.unlisted
         @prisms << prism
       end
     end
-    @title = "Browse"
 
     respond_to do |format|
       format.html
@@ -30,11 +26,10 @@ class PrismsController < ApplicationController
 
   def highlight
     @title = "Highlight"
-    @prism = Prism.find(params[:id])
   end
 
   def highlight_post
-    @prism = Prism.find(params[:id])
+
     @prism.facets.each do |facet|
       param   = params[("facet#{facet.order}_indices").to_sym]
       indexes = WordMarking.parseJSONArray param
@@ -138,22 +133,11 @@ class PrismsController < ApplicationController
       end
     end
   end
+
   def destroy
-    @prism = Prism.find(params[:id])
-
-
-    for word_marking in @prism.word_markings
-      word_marking.destroy
-    end
 
     respond_to do |format|
       if authorize! :destroy, @prism
-        for facet in @prism.facets
-          facet.destroy
-        end
-        for word_marking in @prism.word_markings
-          word_marking.destroy
-        end
         @prism.destroy
         format.html { redirect_to users_path, notice: 'Prism was successfully destroyed.' }
         format.json { head :no_content }
@@ -162,6 +146,12 @@ class PrismsController < ApplicationController
         format.json { head :no_content }
       end
     end
+  end
+
+  private
+
+  def get_prism
+    @prism = Prism.find(params[:id])
   end
 
 end
