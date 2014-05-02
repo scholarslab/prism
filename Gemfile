@@ -8,7 +8,8 @@ gem 'rails', '~>3.2.13'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "devise", "~> 2.2.0"
 
-gem 'omniauth', '~> 1.2.1'
+gem 'omniauth'
+gem 'omniauth-oauth2', '~> 1.1.2'
 
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
@@ -60,7 +61,7 @@ end
 group :development, :test do
   gem 'sqlite3', "~> 1.3.4"
   gem "rspec-rails", "~> 2.8.0"
-  gem "simplecov", "~> 0.5.4"
+  gem "simplecov", "~> 0.8.2"
   gem "factory_girl_rails", "~> 1.3.0"
   gem "nyan-cat-formatter", "~> 0.0.3"
   gem "guard"
