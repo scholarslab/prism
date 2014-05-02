@@ -8,7 +8,7 @@ gem 'rails', '~>3.2.13'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "devise", "~> 2.2.0"
 
-gem 'omniauth'
+gem 'omniauth', '~> 1.2.1'
 
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
@@ -85,5 +85,4 @@ group :production, :staging do
   gem "mysql2"
   gem "pg"
   gem 'newrelic_rpm'
-  gem "unicorn" # use unicorn as the production server
 end
