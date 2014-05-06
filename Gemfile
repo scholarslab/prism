@@ -9,6 +9,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem "devise", "~> 2.2.0"
 
 gem 'omniauth'
+gem 'omniauth-oauth2', '~> 1.1.2'
 
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
@@ -27,6 +28,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem "nokogiri", "~> 1.5.0"
 
+gem 'activerecord-import'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -44,6 +47,7 @@ end
 group :production, :staging, :development do
   gem 'dalli', '~>1.0.5' # for memcached
   gem 'memcachier', "~> 0.0.2"
+  gem "unicorn"
 end
 
 group :development do
@@ -51,12 +55,13 @@ group :development do
   gem "ffaker", "~> 1.8.1"
   gem "rails_best_practices"
   gem 'figaro'
+  gem "foreman"
 end
 
 group :development, :test do
   gem 'sqlite3', "~> 1.3.4"
   gem "rspec-rails", "~> 2.8.0"
-  gem "simplecov", "~> 0.5.4"
+  gem "simplecov", "~> 0.8.2"
   gem "factory_girl_rails", "~> 1.3.0"
   gem "nyan-cat-formatter", "~> 0.0.3"
   gem "guard"
@@ -78,10 +83,7 @@ group :test do
 end
 
 group :production, :staging do
-  #gem "heroku", "~>2.9.0"
-  gem "pg"
   gem "mysql2"
-  gem "thin" # use thin as the production server
-  #gem 'jasmine-jquery-rails'
+  gem "pg"
   gem 'newrelic_rpm'
 end
