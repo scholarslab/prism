@@ -41,11 +41,11 @@ namespace :import do
       #doc.save()
       #prism.save
       #for facet in facets
-        #facet.save()
+      #facet.save()
       #end
     end
   end
-  
+
   desc "Delete all prisms, documents, markings, and facets"
   task :clear => :environment do
     Prism.delete_all()
@@ -65,8 +65,8 @@ namespace :import do
     pub_date = doc.xpath("//div[@id='bib']/div[@class='pub_date']").text
     format = doc.xpath("//div[@id='bib']/div[@class='format']").text
     facet_tags = doc.css("div#facets div.facet")
-   # prompt = doc.xpath("//div[@id='bib']/div[@class='prompt']").text
-   # sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']").text.to_bool
+    # prompt = doc.xpath("//div[@id='bib']/div[@class='prompt']").text
+    # sandbox = doc.xpath("//div[@id='bib']/div[@class='sandbox']").text.to_bool
     body_p = doc.xpath("//body/p")
 
     counter = 0
@@ -80,10 +80,10 @@ namespace :import do
     #facets = []
 
     #for facet_data in facet_tags
-      #color = facet_data.css("div.color").text
-      #category = facet_data.css("div.category").text
-      #facet = Facet.create(color: color, category: category, prism: prism)
-      #facets.push(facet)
+    #color = facet_data.css("div.color").text
+    #category = facet_data.css("div.category").text
+    #facet = Facet.create(color: color, category: category, prism: prism)
+    #facets.push(facet)
     #end
     f.close
     #return [html, prism, facets]
