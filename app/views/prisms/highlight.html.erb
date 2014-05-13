@@ -9,44 +9,44 @@ $(setup_highlight);
   <h2><%= @prism.author %></h2>
   <div class="text noselect" unselectable="on">
     <%= @prism.content.html_safe %>
-  <p id ="publication_date"><%= @prism.publication_date %> </p>
+    <p id ="publication_date"><%= @prism.publication_date %> </p>
   </div>
 </div>
 
-  <div id="highlight_sidebar" class="noselect" unselectable="on">
-    <div id="tools">
-        <ul id="highlighters">
-         <% for facet in @prism.facets %>
-            <li class ="facet">
-              <input type="hidden" name = "order" value="<%=facet.order%>"/>
-              <input type="hidden" name = "color" value="<%=facet.color%>"/>
-              <span class="facet <%=facet.color%>"></span><%=facet.description%>
-            </li>
-          <% end %>
-          <li class="facet eraser"><input type="hidden" name="order" value="delete"/><span class="facet"><%= image_tag ('eraser3.png'), :id => 'eraser' %></span><%= t "highlight.eraser" %></li>
-        </ul>
+<div id="highlight_sidebar" class="noselect" unselectable="on">
+  <div id="tools">
+    <ul id="highlighters">
+      <% for facet in @prism.facets %>
+        <li class ="facet">
+      <input type="hidden" name = "order" value="<%=facet.order%>"/>
+      <input type="hidden" name = "color" value="<%=facet.color%>"/>
+      <span class="facet <%=facet.color%>"></span><%=facet.description%>
+    </li>
+    <% end %>
+      <li class="facet eraser"><input type="hidden" name="order" value="delete"/><span class="facet"><%= image_tag ('eraser3.png'), :id => 'eraser' %></span><%= t "highlight.eraser" %></li>
+    </ul>
 
-          <%= form_tag do %>
-          <% for facet in @prism.facets %>
-          <input type="hidden" value="" name="facet<%=facet.order%>_indices" id="facet<%=facet.order%>_indices"/>
-          <% end %>
-          <input type="submit" value="Save Highlights" class='button'/>
-          <% end %>
-          
-          <div id="highlight_instructions">
-            <h1>INSTRUCTIONS</h1>
-            <p><%= t "highlight.instructions" %></p>
-          </div>
+    <%= form_tag do %>
+      <% for facet in @prism.facets %>
+      <input type="hidden" value="" name="facet<%=facet.order%>_indices" id="facet<%=facet.order%>_indices"/>
+  <% end %>
+    <input type="submit" value="Save Highlights" class='button'/>
+  <% end %>
 
-          <div id="description">
-            <h1>DESCRIPTION</h1>
-            <p><%= @prism.description %></p>
-          </div>
-              
-        <div id="license">
-        <h1>LICENSE</h1>
-        <p><%= render 'cc_license' %></p>
-        </div>
-    
-      </div>
+    <div id="highlight_instructions">
+      <h1>INSTRUCTIONS</h1>
+      <p><%= t "highlight.instructions" %></p>
     </div>
+
+    <div id="description">
+      <h1>DESCRIPTION</h1>
+      <p><%= @prism.description %></p>
+    </div>
+
+    <div id="license">
+      <h1>LICENSE</h1>
+      <p><%= render 'cc_license' %></p>
+    </div>
+
+  </div>
+</div>

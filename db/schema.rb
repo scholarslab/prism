@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503172648) do
+ActiveRecord::Schema.define(:version => 20140513130938) do
 
   create_table "facets", :force => true do |t|
     t.string   "color"
@@ -77,7 +77,10 @@ ActiveRecord::Schema.define(:version => 20130503172648) do
     t.string   "prism_id",   :limit => 36
   end
 
+  add_index "word_markings", ["facet_id"], :name => "index_word_markings_on_facet_id"
   add_index "word_markings", ["index"], :name => "index_word_markings_on_index"
   add_index "word_markings", ["index"], :name => "index_word_markings_on_prism_id_and_index"
+  add_index "word_markings", ["prism_id"], :name => "index_word_markings_on_prism_id"
+  add_index "word_markings", ["user_id"], :name => "index_word_markings_on_user_id"
 
 end
