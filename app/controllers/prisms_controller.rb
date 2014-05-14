@@ -46,19 +46,8 @@ class PrismsController < ApplicationController
     @word_markings = @prism.word_markings
     @usercounter = 0
 
-    users = []
+    @frequencies = @prism.calc_frequencies
 
-    puts users
-    @frequencies = {}
-
-    for facet in @prism.facets
-      @frequencies[facet.order] = [0.0] * @prism.num_words
-    end
-
-    for word_marking in @prism.word_markings
-      # Make accessible the count of all the markings per word per facet
-      @frequencies[word_marking.facet.order][word_marking.index] += 1.0
-    end
   end
 
   def new
