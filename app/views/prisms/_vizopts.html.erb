@@ -10,7 +10,7 @@
     <li class="vis_button" style="display:none;">
       <input type="hidden" class="color" value="winning"/>
       <input type="hidden" class="order" value=""/>
-      <input type="hidden" value="<%=@frequencies[0]%>" class="freq"/>
+      <input type="hidden" value="<%= frequencies[0] %>" class="freq"/>
       <span class="facet red green blue"></span>Winning Facet 
     </li>
     <span class="current-word" style="display:none;"></span>
@@ -31,12 +31,12 @@
   <div>
     <p id="visualization-help"><%= t "visualize.instructions" %></p>
     <ul id="highlighters">
-    <% for facet in @prism.facets %>
+    <% facets.each do |facet| %>
       <li class="vis_facet vis_button">
-        <input type="hidden" class="color" value="<%=facet.color%>"/>
-        <input type="hidden" class="order" value="<%=facet.order%>"/>
-        <input type="hidden" value="<%=@frequencies[facet.order]%>" class="freq"/>
-        <span class="facet <%=facet.order%> <%=facet.color%>"></span><%=facet.description%>
+        <input type="hidden" class="color" value="<%= facet.color %>"/>
+        <input type="hidden" class="order" value="<%= facet.order %>"/>
+        <input type="hidden" value="<%= frequencies[facet.order] %>" class="freq"/>
+        <span class="facet <%= facet.order %> <%= facet.color %>"></span><%= facet.description %>
       </li>
     <% end %>
     </ul>
