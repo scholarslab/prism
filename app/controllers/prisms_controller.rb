@@ -46,19 +46,8 @@ class PrismsController < ApplicationController
     @word_markings = @prism.word_markings
     @usercounter = 0
 
-    users = []
+    @frequencies = @prism.calc_frequencies
 
-    puts users
-    @frequencies = {}
-
-    for facet in @prism.facets
-      @frequencies[facet.order] = [0.0] * @prism.num_words
-    end
-
-    for word_marking in @prism.word_markings
-      # Make accessible the count of all the markings per word per facet
-      @frequencies[word_marking.facet.order][word_marking.index] += 1.0
-    end
   end
 
   def new
@@ -125,14 +114,14 @@ class PrismsController < ApplicationController
     end
   end
 
-  def validate_colors
-    for facet in [@facet1, @facet2, @facet3]
-      if facet.color.to_s.strip.length!=6
-        facet.color = "000000"
-        facet.color[facet.order*2,2] = "FF"
-      end
-    end
-  end
+  #def validate_colors
+    #for facet in [@facet1, @facet2, @facet3]
+      #if facet.color.to_s.strip.length!=6
+        #facet.color = "000000"
+        #facet.color[facet.order*2,2] = "FF"
+      #end
+    #end
+  #end
 
   def destroy
 
