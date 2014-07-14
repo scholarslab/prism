@@ -1,5 +1,7 @@
 Master: {<img src="https://secure.travis-ci.org/scholarslab/prism.png?branch=master,develop" />}[http://travis-ci.org/scholarslab/prism?branch=master,develop]
 
+[![DOI](https://zenodo.org/badge/5103/scholarslab/prism.png)](http://dx.doi.org/10.5281/zenodo.10869)
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
