@@ -1,5 +1,7 @@
 # Prism
 
+[![DOI](https://zenodo.org/badge/5103/scholarslab/prism.png)](http://dx.doi.org/10.5281/zenodo.10869)
+
 Prism is a tool for collective interpretation, an experiment in crowd-sourcing and visualizing many readings of  a set of common texts.  As part of our project to make crowd-sourcing more meaningful and less mechanical, users interact subjectively with a text, highlighting it in accordance with certain interpretive categories, such as sound, sense, and modernism, to produce an aggregate visualization of all other users' markings that shows points of analytical agreement or disagreement.   
 
 The basic workflow is simple:
