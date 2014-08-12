@@ -1,0 +1,7 @@
+{
+  "name": "Prism",
+  "description": "A tool for collective interpretation. It's an ongoing experiment by the Praxis Program at the University of Virginia Scholars' Lab",
+  "repository": "https://github.com/scholarslab/prism",
+  "logo": "https://raw.githubusercontent.com/scholarslab/prism/develop/app/assets/images/LOGO.png",
+  "keywords": ["rails", "interpretation", "crowd source", "scholarslab", "praxis"]
+}
