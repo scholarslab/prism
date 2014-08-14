@@ -2,8 +2,6 @@
 
 [![DOI](https://zenodo.org/badge/5103/scholarslab/prism.png)](http://dx.doi.org/10.5281/zenodo.10869)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
 Prism is a tool for collective interpretation, an experiment in crowd-sourcing and visualizing many readings of  a set of common texts.  As part of our project to make crowd-sourcing more meaningful and less mechanical, users interact subjectively with a text, highlighting it in accordance with certain interpretive categories, such as sound, sense, and modernism, to produce an aggregate visualization of all other users' markings that shows points of analytical agreement or disagreement.   
 
 The basic workflow is simple:
@@ -50,6 +48,24 @@ For a list of people who have contributed to the codebase, see the
 * Send us a [pull request][pull], with a clear explanation of the
 changes. Bonus points for topic branches.
 
+### Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+Deploy your own Prism installation to Heroku by clicking the "Deploy to Heroku button." Follow the Heroku instructions for importing your source code and cloning the new repository to your desktop. From within your new app's repository, you will need to run the following command to set up the database:
+
+```
+$ heroku run rake db:migrate
+```
+
+Note: the Facebook and Google login functions will only work on your personal installation if you integrate into heroku your own set of login credentials.
+
+```
+$ heroku config:add FACEBOOK_KEY=‘your Facebook key’
+$ heroku config:add FACEBOOK_SECRET=“your Facebook secret”
+$ heroku config:add GOOGLE_KEY=‘your google key’
+$ heroku config:add GOOGLE_SECRET=“your google secret”
+```
 
 ### Feedback
 We rely on the [Github issues tracker][issues] for feedback on issues
