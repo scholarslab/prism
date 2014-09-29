@@ -9,7 +9,7 @@ class PrismsController < ApplicationController
   caches_action :visualize, :layout => false
 
   def index
-    @prisms = []
+    @prisms = Prism.paginate(:page => params[:page], :per_page => 10)
     @title = "Browse"
 
     for prism in Prism.all
