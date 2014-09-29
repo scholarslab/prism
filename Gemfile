@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.1"
+ruby "2.1.3"
 
 gem 'will_paginate', '~> 3.0'
 gem 'rails', '~>3.2.13'
