@@ -1,5 +1,13 @@
 <%= link_to 'New prism', new_prism_path, :id => 'new-prism', :class => 'button' %>
 
+<div class="search">
+  <%= form_tag prisms_path, :method => "get" do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>
+
+
 <h1>Browse Prisms</h1>
 
 <table cellpadding="0" cellspacing="0">

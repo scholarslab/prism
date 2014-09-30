@@ -17,6 +17,14 @@ class Prism < ActiveRecord::Base
     self.uuid = UUIDTools::UUID.timestamp_create().to_s
   end
 
+  def self.search(search)
+    if search
+      where('title LIKE ?', "%#{search}")
+    else
+      scoped
+    end
+  end
+
   def add_content_spans
     return if content.nil? or content.empty?
     return if title.nil?   or title.empty?
