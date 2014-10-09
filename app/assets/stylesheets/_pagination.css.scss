@@ -4,14 +4,24 @@
 }
 
 #search{
-	text-align:center;
-	padding-top:10px;
+	text-align:left;
 }
 
 #search_box{
-	width:299.5px;
+	position:relative;
+	float:left;
+	width:188px;
+	margin-bottom:0px;
 }
 
 #submit_tag{
-
+ width:16px;
+ height:16px;
+ background-image:image-url("search.png");
+ background-repeat: no-repeat;
+ background-color:transparent !important;
+ background-position:1px 2px;
+ background-size:16px 16px;
+ border:none;
+ cursor:pointer;
 }

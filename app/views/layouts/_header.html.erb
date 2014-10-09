@@ -10,6 +10,13 @@
 
 <% end %>
 
+<div id="search">
+  <%= form_tag prisms_path, :method => "get" do %>
+    <%= text_field_tag :search, params[:search], :placeholder => "Search prisms by title", :id => "search_box", :type => "search" %>
+    <%= submit_tag "", :name => nil, :id => "submit_tag" %>
+  <% end %>
+</div>
+
 <nav>
   <ul>
     <li>

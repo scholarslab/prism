@@ -1,6 +1,5 @@
 <%= link_to 'New prism', new_prism_path, :id => 'new-prism', :class => 'button' %>
 
-
 <h1>Browse Prisms</h1>
 
 <table cellpadding="0" cellspacing="0">
@@ -44,9 +43,3 @@
 	<%= will_paginate @prisms %>
 </div>
 
-<div id="search">
-  <%= form_tag prisms_path, :method => "get" do %>
-    <%= text_field_tag :search, params[:search], :placeholder => "Search prisms by title", :id => "search_box" %>
-<!--     <%= submit_tag "Search", :name => nil, :id => "submit_tag" %> -->
-  <% end %>
-</div>
