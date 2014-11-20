@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.3"
+ruby "2.1.5"
 
 gem 'will_paginate', '~> 3.0'
 gem 'rails', '~>3.2.13'
@@ -66,7 +66,7 @@ group :development, :test do
   gem "factory_girl_rails", "~> 1.3.0"
   gem "nyan-cat-formatter", "~> 0.0.3"
   gem "guard"
-  gem "guard-coffeescript"
+  #gem "guard-coffeescript"
   gem 'forgery', '0.3.12'
 end
 
@@ -78,7 +78,7 @@ group :test do
   gem 'database_cleaner'
   gem 'minitest'
   gem 'ruby-prof'
-  gem "cucumber-rails"
+  gem "cucumber-rails", :require => false
   gem "jasmine"
   gem 'jasmine-jquery-rails'
 end
