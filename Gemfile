@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.1.5"
+ruby "2.2.0"
 
 gem 'will_paginate', '~> 3.0'
 gem 'rails', '~>3.2.13'
@@ -16,6 +16,8 @@ gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-browserid'
+
+gem 'puma'
 
 gem "uuidtools"
 
