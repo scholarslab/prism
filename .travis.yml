@@ -1,7 +1,10 @@
 env:
-  - DB=sqlite
   - DB=mysql
-  - DB=postgresql
+
+language: ruby
+
+ruby:
+  - 2.2.0
 
 notifications:
   irc: "irc.freenode.org#slab"
@@ -13,5 +16,4 @@ script:
 
 before_script:
   - mysql -e 'create database prism_test'
-  - psql -c 'create database prism_test' -U postgres
 
