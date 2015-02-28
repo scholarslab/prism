@@ -55,12 +55,12 @@ en:
       or "facets."  Each individual interpretation then contributes to the generation of a visualization which demonstrates the combined interpretation of all the users.
       We envision Prism as a tool for both pedagogical use and scholarly exploration, revealing patterns that exist in the subjective experience of reading a text. 
     description_p1half_html: >  
-      The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia, and specifically from <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">transparency mark-up games</a> designed by Bethany Nowviskie for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a>:
+      The concept emerged from a decade-long conversation on categories of textual interpretation which took place at the University of Virginia, and specifically from <a href="http://www.scholarslab.org/digital-humanities/crowdsourcing-interpretation/">transparency mark-up games</a> played by Bethany Nowviskie for her Media Studies students and her colleagues in <a href="http://books.google.com/books/about/SpecLab.html?id=VPXCk396uPYC">SpecLab</a>:
     description_p2: >
       the original game involved shared, Xeroxed page images, transparent overlays, dry-erase markers, a common interpretive prompt, and a moment in which 
       somebody yelled ‘Stop!’ and the transparencies were stacked up for discussion. (Nowviskie)
     description_p3_html: >-
-      At SpecLab, Jerome McGann <a href="http://nora.lis.uiuc.edu:3030/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-3-4&toc.depth=1&toc.id=ss1-3-4">further 
+      At SpecLab, Jerome McGann and Johanna Drucker <a href="http://nora.lis.uiuc.edu:3030/companion/view?docId=blackwell/9781405103213/9781405103213.xml&chunk.id=ss1-3-4&toc.depth=1&toc.id=ss1-3-4">further 
       developed the concept</a>, which became known as the "Patacritical Demon" &mdash; the best bit of vaporware (not) to emerge from UVa at the turn of the century.
     description_p4_html: >-
       The Scholars' Lab offered these un-realized concepts as inspiration for the first project to be undertaken by graduate student fellows of the
@@ -96,7 +96,6 @@ en:
       <h3>Gwen Nally</h3> <p>Gwen Nally was our Prism Designer.  She worked with Cecilia Márquez to create wire frames and to style the website.  She is a PhD candidate in the Philosophy department.</p> 
       <h3>Chris Peck</h3> <p>Chris Peck worked on improvements to the highlighter tool and visualizations. He is a PhD student in the Music Department.</p>
       <h3>Brandon Walsh</h3> <p>Brandon Walsh worked on implementing Omniauth, helped with user uploads, and generally made snarky comments while the rest of the design team was working. He is a PhD student in the English department.</p>    <h3>With thanks to our <a href='/pages/alumni'>2011-12 Praxis Alumni</a></h3> 
-      
     contributors_advisors_html:
       <h3>Jeremy Boggs</h3> <p>Humanities Design Architect (of Dreams), UVa Library Scholars' Lab; Wizard of Web Aesthetics</p>
       <h3>Wayne Graham</h3> <p>Head of R&D, UVa Library Scholars' Lab; The Obi-Wan Kenobi of Programming</p>
