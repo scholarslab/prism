@@ -117,23 +117,6 @@ figure {
   }
 }
 
-#corner-banner {
-  position: absolute;
-  left: -140px;
-  top: 100px;
-  display: none;
-  width: 600px;
-  background: $aqua;
-  text-align:center;
-  font-size:20px;
-  line-height:20px;
-  padding:3px 200px;
-  @include rotate(315deg);
-  @include box-sizing(border-box);
-}
-
-
-
 header {
 
   text-align: center;
