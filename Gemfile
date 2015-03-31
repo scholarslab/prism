@@ -52,7 +52,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 1.0.3'
 
 gem 'actionpack-xml_parser'
-gem 'actionpack-page_caching'
 
 group :production, :staging, :development do
   gem 'dalli', '~>2.7.4' # for memcached
@@ -73,7 +72,7 @@ group :development, :test do
   gem "rspec-rails", "~> 3.2.1"
   gem "simplecov", "~> 0.9.2"
   gem "factory_girl_rails", "~> 4.5.0"
-  gem "nyan-cat-formatter", "~> 0.11"
+  #gem "nyan-cat-formatter", "~> 0.11"
   gem "guard"
   #gem "guard-coffeescript"
   gem 'forgery', '0.6'
@@ -85,8 +84,8 @@ end
 
 group :test do
   gem 'turn', :require => false # Pretty printed test output
-  gem "capybara", "~> 1.1.1"
-  gem "spork", "~> 1.0rc"
+  gem "capybara", "~> 2.4.4"
+  #gem "spork", "~> 1.0rc"
   gem 'rake'
   gem 'database_cleaner'
   gem 'minitest'
