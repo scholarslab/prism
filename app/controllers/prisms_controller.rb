@@ -69,7 +69,7 @@ class PrismsController < ApplicationController
 
   def create
 
-    @prism = Prism.new(params[:prism])
+    @prism = Prism.new(prism_params)
     @prism.user_id = current_user.id
     @facet1 = Facet.new(params[:facet1])
     @facet2 = Facet.new(params[:facet2])
@@ -113,15 +113,6 @@ class PrismsController < ApplicationController
       end
     end
   end
-
-  #def validate_colors
-    #for facet in [@facet1, @facet2, @facet3]
-      #if facet.color.to_s.strip.length!=6
-        #facet.color = "000000"
-        #facet.color[facet.order*2,2] = "FF"
-      #end
-    #end
-  #end
 
   def destroy
 

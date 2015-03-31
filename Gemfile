@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby "2.2.0"
 
 gem 'will_paginate', '~> 3.0'
-gem 'rails', '~>3.2.13'
+gem 'rails', '~>4'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
 
 gem 'bcrypt-ruby', '~> 3.0.0'
@@ -16,6 +16,8 @@ gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'omniauth-browserid'
+
+gem 'activerecord-deprecated_finders'
 
 gem 'puma'
 
@@ -35,17 +37,18 @@ gem 'activerecord-import'
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
-  #gem 'compass', git: 'https://github.com/chriseppstein/compass.git' # beta until release
-  gem 'compass', '~> 0.12.1'
-  gem 'compass-rails', '~> 1.0.1'
-  gem 'compass-susy-plugin', '~> 0.9'
-  gem 'sass-rails'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'execjs', '1.3.0'
-  gem 'uglifier', '>= 1.0.3'
-end
 
+  #gem 'compass', git: 'https://github.com/chriseppstein/compass.git' # beta until release
+gem 'compass', '~> 0.12.1'
+gem 'compass-rails', '~> 1.0.1'
+gem 'compass-susy-plugin', '~> 0.9'
+gem 'sass-rails'
+gem 'coffee-rails', '~> 3.2.1'
+gem 'execjs', '1.3.0'
+gem 'uglifier', '>= 1.0.3'
+
+gem 'actionpack-xml_parser'
+gem 'actionpack-page_caching'
 
 group :production, :staging, :development do
   gem 'dalli', '~>1.0.5' # for memcached

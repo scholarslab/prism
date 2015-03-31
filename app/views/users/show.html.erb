@@ -30,7 +30,7 @@
       </td>
       <td class="delete">
         <% if can? :destroy, prism %>
-        <%= link_to(destroy_path(prism), :confirm => 'Are you sure you want to delete this prism? The prism, collaborative interpretation, and all of its related highlights will be permanently deleted.', :class => 'destroy') do %>
+        <%= link_to(destroy_path(prism), data: {confirm: 'Are you sure you want to delete this prism? The prism, collaborative interpretation, and all of its related highlights will be permanently deleted.'}, :class => 'destroy') do %>
           <%= image_tag('delete_button.png') %>
           <% end %>
         <% end %>
