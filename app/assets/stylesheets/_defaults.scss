@@ -69,7 +69,8 @@ header {
   background-color: #333;
   margin-bottom: 5em;
   @include clearfix;
-  @include pie;
+  /* TODO: find replacement for this mixin*/
+  /*@include pie;*/
   @include background(
   linear-gradient(left, rgb(0,0,0) 0%, rgb(100,100,100) 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%),
   linear-gradient(top, rgba(0,179,179,0.8) 0%, rgba(0,179,89,0.8) 25%, rgba(179,179,0,0.8) 50%, rgba(179,89,0,0.8) 75%, rgba(179,0,0,0.8) 100%)

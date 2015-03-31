@@ -73,7 +73,8 @@ background-color: $greenroll;
 }
 
 .word {
-  @include pie;
+  /*TODO: find replacement for this mixin*/
+  /*@include pie;*/
   line-height:150%;
 
   .winning & {

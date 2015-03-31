@@ -109,6 +109,9 @@ Devise.setup do |config|
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
   # config.remember_for = 2.weeks
+  
+  # Invalidates all the remember me tokens when the user signs out.
+  config.expire_all_remember_me_on_sign_out = true
 
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
@@ -122,8 +125,8 @@ Devise.setup do |config|
   # config.cookie_options = {}
 
   # ==> Configuration for :validatable
-  # Range for password length. Default is 6..128.
-  # config.password_length = 6..128
+  # Range for password length.
+  config.password_length = 8..128
 
   # Email regex used to validate email formats. It simply asserts that
   # an one (and only one) @ exists in the given string. This is mainly
@@ -212,23 +215,31 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  require "omniauth-facebook"
-  config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"],
-    {
-      :redirect_uri => 'http://prism-staging12.herokuapp.com/users/auth/facebook/',
-      :scope => 'email',
-      :client_options => { :ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}
-    }
-  }
 
-  require "omniauth-google"
-  config.omniauth :google, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
-
-  require "omniauth-google-oauth2"
+  # new stuff
+  config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"]
   config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
-
-  require "omniauth-browserid"
   config.omniauth :browser_id
+
+
+  # old stuff
+  #require "omniauth-facebook"
+  #config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"],
+    #{
+      #:redirect_uri => 'http://prism-staging12.herokuapp.com/users/auth/facebook/',
+      #:scope => 'email',
+      #:client_options => { :ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}
+    #}
+  #}
+
+  #require "omniauth-google"
+  #config.omniauth :google, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
+
+  #require "omniauth-google-oauth2"
+  #config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
+
+  #require "omniauth-browserid"
+  #config.omniauth :browser_id
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
