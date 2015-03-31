@@ -3,14 +3,14 @@ source 'https://rubygems.org'
 ruby "2.2.0"
 
 gem 'will_paginate', '~> 3.0'
-gem 'rails', '~>4'
+gem 'rails', '~> 4.2.1'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
 
-gem 'bcrypt-ruby', '~> 3.0.0'
-gem "devise", "~> 2.2.0"
+gem 'bcrypt-ruby', '~> 3.1.0'
+gem "devise", "~> 3.4.0"
 
 gem 'omniauth'
-gem 'omniauth-oauth2', '~> 1.1.2'
+gem 'omniauth-oauth2', '~> 1.2'
 
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
@@ -27,11 +27,11 @@ gem "language_list"
 gem 'cancan'
 
 # Error notifications
-gem 'airbrake', '~> 3.1.6'
+#gem 'airbrake', '~> 4.1.0'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem "nokogiri", "~> 1.5.0"
+gem "nokogiri", "~> 1.6"
 
 gem 'activerecord-import'
 
@@ -39,40 +39,45 @@ gem 'activerecord-import'
 # in production environments by default.
 
   #gem 'compass', git: 'https://github.com/chriseppstein/compass.git' # beta until release
-gem 'compass', '~> 0.12.1'
-gem 'compass-rails', '~> 1.0.1'
-gem 'compass-susy-plugin', '~> 0.9'
+gem 'compass', '~> 1.0.3'
+gem 'compass-rails', '~> 2.0.4'
+gem 'susy', '~> 2.2.2'
+#gem 'compass-susy-plugin', '~> 0.9'
 gem 'sass-rails'
-gem 'coffee-rails', '~> 3.2.1'
-gem 'execjs', '1.3.0'
+gem 'coffee-rails', '~> 4.1.0'
+#gem 'execjs', '1.3.0'
 gem 'uglifier', '>= 1.0.3'
 
 gem 'actionpack-xml_parser'
 gem 'actionpack-page_caching'
 
 group :production, :staging, :development do
-  gem 'dalli', '~>1.0.5' # for memcached
+  gem 'dalli', '~>2.7.4' # for memcached
   gem 'memcachier', "~> 0.0.2"
-  gem "unicorn"
+  #gem "unicorn"
 end
 
 group :development do
-  gem 'annotate',"2.4.1.beta1"
-  gem "ffaker", "~> 1.8.1"
+  gem 'annotate',"2.6.8"
+  gem "ffaker"
   gem "rails_best_practices"
   gem 'figaro'
   gem "foreman"
 end
 
 group :development, :test do
-  gem 'sqlite3', "~> 1.3.4"
-  gem "rspec-rails", "~> 2.8.0"
-  gem "simplecov", "~> 0.8.2"
-  gem "factory_girl_rails", "~> 1.3.0"
-  gem "nyan-cat-formatter", "~> 0.0.3"
+  gem 'sqlite3'
+  gem "rspec-rails", "~> 3.2.1"
+  gem "simplecov", "~> 0.9.2"
+  gem "factory_girl_rails", "~> 4.5.0"
+  gem "nyan-cat-formatter", "~> 0.11"
   gem "guard"
   #gem "guard-coffeescript"
-  gem 'forgery', '0.3.12'
+  gem 'forgery', '0.6'
+
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
 end
 
 group :test do
