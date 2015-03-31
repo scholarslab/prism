@@ -6,8 +6,6 @@ class WordMarking < ActiveRecord::Base
 # A word_marking is a single marking instance on a single word.
 # When visualizing, the system collects and totals all the word_markings associated with a particular word on a particular facet.
 
-  attr_accessible :index, :prism, :prism_id, :user, :user_id, :facet, :facet_id
-
   def self.parseJSONArray(json)
     indexes = nil
 

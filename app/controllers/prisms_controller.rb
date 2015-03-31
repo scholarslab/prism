@@ -143,4 +143,8 @@ class PrismsController < ApplicationController
     @prism = Prism.find(params[:id])
   end
 
+  def prism_params
+    params.require(:title, :content, :license, :user_id, :uuid, :unlisted).permit(:description, :language, :publication_date, :frequencies, :num_words)
+  end
+
 end

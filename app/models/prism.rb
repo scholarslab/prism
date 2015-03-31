@@ -2,7 +2,6 @@ class Prism < ActiveRecord::Base
   has_many :word_markings, :include => [:facet], :dependent => :delete_all
   belongs_to :users
   has_many :facets, :dependent => :delete_all
-  attr_accessible :title, :author, :content, :num_words, :description, :user_id, :unlisted, :publication_date, :language, :license, :uuid, :frequencies
   validates_presence_of :title, :content, :license
 
 # A prism is the document a user wishes other readers to interpret along particular facets.
