@@ -15,25 +15,24 @@ Testing::Application.routes.draw do
  resources :prisms
 
   # Add routes to your pages, using get "pages/pagename"
-  get 'home', to: "pages/index", as: :home
-  get 'about', to: "pages/about", as: :about
-  get 'alumni', to: "pages/alumni", as: :alumni
-  get 'terms', to: "pages/terms", as: :terms
-  get 'future', to: "pages/future", as: :future
-  get 'demo', to: "pages/demo", as: :demo
+  get 'home', to: "pages#index", as: :home
+  get 'about', to: "pages#about", as: :about
+  get 'alumni', to: "pages#alumni", as: :alumni
+  get 'terms', to: "pages#terms", as: :terms
+  get 'future', to: "pages#future", as: :future
+  get 'demo', to: "pages#demo", as: :demo
 
 
   #match '/prisms/sandbox/highlight(.:format)' => 'prisms#sandbox_highlight', :as => :sandbox_highlight, :via => :get
   #match '/prisms/sandbox/highlight(.:format)' => 'prisms#sandbox_post', :as => :sandbox_post, :via => :post
   #match '/prisms/sandbox/visualize(.:format)' => 'prisms#sandbox_visualize', :as => :sandbox_visualize
   
-  # TODO: these five routes are an issue
-  #match '/prisms/:id/visualize(.:format)', to: 'prisms#visualize', as: 'visualize'
-  #match '/prisms/:id/highlight(.:format)', to: 'prisms#highlight', as: 'highlight', via: [:get]
-  #match '/prisms/:id/highlight(.:format)', to: 'prisms#highlight_post', as: 'highlight_post', via: :post
-  #match '/myprisms/', to: 'users#show', as: :users
-  #match '/prisms/:id/destroy(.:format)', to: 'prisms#destroy', as: :destroy
-  #match '/users/auth/facebook/callback', to: 'users/omniauth_callbacks#facebook', via: :get
+  match '/prisms/:id/visualize(.:format)', to: 'prisms#visualize', as: 'visualize', via: [:get]
+  match '/prisms/:id/highlight(.:format)', to: 'prisms#highlight', as: 'highlight', via: [:get]
+  match '/prisms/:id/highlight(.:format)', to: 'prisms#highlight_post', as: 'highlight_post', via: [:post]
+  match '/myprisms/', to: 'users#show', as: :users, via: [:get]
+  match '/prisms/:id/destroy(.:format)', to: 'prisms#destroy', as: :destroy, via: [:all]
+  match '/users/auth/facebook/callback', to: 'users/omniauth_callbacks#facebook', via: [:get]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

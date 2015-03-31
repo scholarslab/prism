@@ -35,10 +35,13 @@ gem "nokogiri", "~> 1.6"
 
 gem 'activerecord-import'
 
+# page caching
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
+
 # Gems used only for assets and not required
 # in production environments by default.
 
-  #gem 'compass', git: 'https://github.com/chriseppstein/compass.git' # beta until release
 gem 'compass', '~> 1.0.3'
 gem 'compass-rails', '~> 2.0.4'
 gem 'susy', '~> 2.2.2'
