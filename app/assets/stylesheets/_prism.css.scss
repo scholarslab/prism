@@ -10,26 +10,26 @@
 
 
 .noselect {
-   -moz-user-select: -moz-none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #visualizations {
 
-span.facet.blue:hover {
-background-color: $blueroll;
-}
+  span.facet.blue:hover {
+    background-color: $blueroll;
+  }
 
-span.facet.red:hover {
-background-color: $redroll;
-}
+  span.facet.red:hover {
+    background-color: $redroll;
+  }
 
-span.facet.green:hover {
-background-color: $greenroll;
-}
+  span.facet.green:hover {
+    background-color: $greenroll;
+  }
 }
 
 .red-vis{
@@ -73,7 +73,8 @@ background-color: $greenroll;
 }
 
 .word {
-  @include pie;
+  /*TODO: find replacement for this mixin*/
+  /*@include pie;*/
   line-height:150%;
 
   .winning & {
