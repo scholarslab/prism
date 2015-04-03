@@ -1,7 +1,11 @@
 Rails.application.configure do
 
+  # Do not eager load code on boot.
   config.eager_load = false
-  
+
+  # for Sprockets better errors. See https://github.com/schneems/sprockets_better_errors
+  config.assets.raise_production_errors = true
+
   # Settings specified here will take precedence over those in config/application.rb
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   # In the development environment your application's code is reloaded on
@@ -27,9 +31,6 @@ Rails.application.configure do
 
   # Only use best-standards-support built into browsers
   # config.action_dispatch.best_standards_support = :builtin
-
-  # Do not compress assets
-  config.assets.js_compressor = false
 
   # Expands the lines which load the assets
   config.assets.debug = true

@@ -7,8 +7,8 @@
   <title><%= title %></title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="icon" type="image/png" href="<%= asset_path('favicon.png') %>">
-  <link rel="apple-touch-icon" type="image/png" href="<%= asset_path ('apple-touch-icon.png')%>">
+  <%= favicon_link_tag 'favicon.png' %>
+  <%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png' %>
   <link href='http://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "application", :media => nil %>
   <%= csrf_meta_tags %>

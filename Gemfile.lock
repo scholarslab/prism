@@ -36,7 +36,7 @@ GEM
       activemodel (= 4.2.1)
       activesupport (= 4.2.1)
       arel (~> 6.0)
-    activerecord-deprecated_finders (1.0.3)
+    activerecord-deprecated_finders (1.0.4)
     activerecord-import (0.7.0)
       activerecord (>= 3.0)
     activesupport (4.2.1)
@@ -56,7 +56,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (4.0.4)
+    byebug (4.0.5)
       columnize (= 0.9.0)
     cancan (1.6.10)
     capybara (2.4.4)
@@ -151,6 +151,8 @@ GEM
       shellany (~> 0.0)
       thor (>= 0.18.1)
     hashie (3.4.1)
+    heroku-deflater (0.5.3)
+      rack (>= 1.4.5)
     hike (1.2.3)
     hitimes (1.2.2)
     i18n (0.7.0)
@@ -258,6 +260,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_best_practices (1.15.7)
       activesupport
       code_analyzer (>= 0.4.3)
@@ -267,6 +272,8 @@ GEM
       json
       require_all
       ruby-progressbar
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.3)
     railties (4.2.1)
       actionpack (= 4.2.1)
       activesupport (= 4.2.1)
@@ -377,13 +384,13 @@ DEPENDENCIES
   foreman
   forgery (= 0.6)
   guard
+  heroku-deflater
   jasmine
   jasmine-jquery-rails
   jquery-rails
   jquery-ui-rails
   language_list
   memcachier (~> 0.0.2)
-  minitest
   mysql2
   newrelic_rpm
   nokogiri (~> 1.6)
@@ -396,6 +403,7 @@ DEPENDENCIES
   pg
   puma
   rails (~> 4.2.1)
+  rails_12factor
   rails_best_practices
   rake
   rspec-rails (~> 3.2.1)
