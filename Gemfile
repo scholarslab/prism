@@ -20,7 +20,7 @@ gem 'puma'
 
 gem "uuidtools"
 
-gem "language_list"
+gem "language_list", "~> 1.0.0"
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
