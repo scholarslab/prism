@@ -33,6 +33,12 @@ include Devise::TestHelpers # to give your spec access to helpers
 			get 'show'
 			expect(assigns(:title)).to eq('myprisms')
 		end
+
+		it "should display highlighted prisms if they exist" do
+		end
+
+		it "should display owned prisms if they exist" do
+		end
 	end
 	
 	describe "user not signed in" do
