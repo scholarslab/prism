@@ -19,9 +19,22 @@ include Devise::TestHelpers # to give your spec access to helpers
 			expect(assigns(:current_user)).to eq(assigns(:user))
 		end
 
-		it "should assign the current user's prisms, highlighted_prisms, title" do
+		it "should assign the current user's prisms" do
 			get 'show'
 			expect(assigns(:prisms)).to eq(assigns(:current_user).prisms)
+		end
+
+		it "should assign the highlighted prisms to the user" do
+			get 'show'
+			expect(assigns(:highlighted_prisms)).to eq(assigns(:current_user).word_markings.map(&:prism_id).uniq)
+		end
+
+		it "should get the title of the page" do
+			get 'show'
+			expect(assigns(:title)).to eq('myprisms')
+		end
+		
+		it "should assign prisms if they exist" do
 		end
 	end
 	
