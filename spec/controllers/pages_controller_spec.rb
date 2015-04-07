@@ -52,7 +52,7 @@ describe "GET 'alumni'" do
     end
   end
 
-  describe "GET 'about'" do
+  describe "GET 'future'" do
     it "returns http success" do
       get :future
       expect(response).to be_success
@@ -64,7 +64,7 @@ describe "GET 'alumni'" do
     end
   end
 
-  describe "GET 'about'" do
+  describe "GET 'demo'" do
     it "returns http success" do
       get :demo
       expect(response).to be_success

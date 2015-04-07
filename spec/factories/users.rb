@@ -3,8 +3,7 @@
 FactoryGirl.define do
 
   factory :user do
-    email "fred.foonly@example.com"
+    email "fredfsdf.foonly@example.com"
     password "my_password"
-    # association :prism, factory: :prism, strategy: :build
   end
 end
