@@ -1,5 +1,5 @@
 class Prism < ActiveRecord::Base
-  has_many :word_markings, :include => [:facet], :dependent => :delete_all
+  has_many :word_markings, -> {:facet}, :dependent => :delete_all
   belongs_to :users
   has_many :facets, :dependent => :delete_all
   validates_presence_of :title, :content, :license
