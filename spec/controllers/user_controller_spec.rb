@@ -33,13 +33,19 @@ include Devise::TestHelpers # to give your spec access to helpers
 			get 'show'
 			expect(assigns(:title)).to eq('myprisms')
 		end
-		
-		it "should assign prisms if they exist" do
-		end
 	end
 	
 	describe "user not signed in" do
 		it "should redirect if not signed in" do
+			get 'show'
+			expect(response).to redirect_to(:home)
 		end
+
+		it "should tell them to sign in" do
+			get 'show'
+			expect(flash[:error]).to be_present
+			expect(flash[:error]).to eq('Sign in first!')
+		end
+	
 	end
 end
