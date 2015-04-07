@@ -13,5 +13,5 @@ When /^I visit the "([^"]*)" homepage$/ do |lang|
 end
 
 Then /^the header should have the words ([a-z]*|[A-Z]*)/ do |desc|
-  page.should have_content(desc)
+  expect(page).to have_content(desc)
 end
