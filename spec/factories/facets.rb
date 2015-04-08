@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :facet do
     color "MyString"
     category "MyString"
+    association :prism
   end
 end

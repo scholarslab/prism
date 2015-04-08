@@ -12,6 +12,7 @@ FactoryGirl.define do
     user_id Forgery::Basic.number
     unlisted false
     language 'English'
+ 
   end
 
   factory :prism_unlisted do

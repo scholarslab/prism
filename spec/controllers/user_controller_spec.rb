@@ -8,6 +8,7 @@ include Devise::TestHelpers # to give your spec access to helpers
 	describe "signed in users" do
 
 		login_user
+		@prism = FactoryGirl.create(:prism)
 
 		it "should have a current_user" do
 			get 'show'
@@ -21,23 +22,21 @@ include Devise::TestHelpers # to give your spec access to helpers
 
 		it "should assign the current user's prisms" do
 			get 'show'
-			expect(assigns(:prisms)).to eq(assigns(:current_user).prisms)
+			if assigns(:prisms)
+				expect(assigns(:prisms)).to eq(assigns(:current_user).prisms)
+			end
 		end
 
 		it "should assign the highlighted prisms to the user" do
 			get 'show'
-			expect(assigns(:highlighted_prisms)).to eq(assigns(:current_user).word_markings.map(&:prism_id).uniq)
+			if assigns(:highlighted_prisms)
+				expect(assigns(:highlighted_prisms)).to eq(assigns(:current_user).word_markings.map(&:prism_id).uniq)
+			end
 		end
 
 		it "should get the title of the page" do
 			get 'show'
 			expect(assigns(:title)).to eq('myprisms')
-		end
-
-		it "should display highlighted prisms if they exist" do
-		end
-
-		it "should display owned prisms if they exist" do
 		end
 	end
 	
