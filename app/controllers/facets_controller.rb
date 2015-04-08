@@ -4,6 +4,7 @@ class FacetsController < ApplicationController
 	end
 
 	def create
+		Facet.create(facet_params)
 	end
 
 	def edit

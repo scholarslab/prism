@@ -1,15 +1,7 @@
 require 'spec_helper'
-require 'factory_girl'
 
 describe PagesController, :type => :controller do
-  include Devise::TestHelpers # to give your spec access to helpers
   #render_views
-
-  before(:each) do
-    10.times do |populate|
-      #Factory.create(:prism)
-    end
-  end
 
   describe "GET 'index'" do
     it "returns http success" do
@@ -60,7 +52,7 @@ describe "GET 'alumni'" do
     end
   end
 
-  describe "GET 'about'" do
+  describe "GET 'future'" do
     it "returns http success" do
       get :future
       expect(response).to be_success
@@ -72,7 +64,7 @@ describe "GET 'alumni'" do
     end
   end
 
-  describe "GET 'about'" do
+  describe "GET 'demo'" do
     it "returns http success" do
       get :demo
       expect(response).to be_success
@@ -84,7 +76,11 @@ describe "GET 'alumni'" do
     end
   end
 
-
+  before(:each) do
+    10.times do |populate|
+      #Factory.create(:prism)
+    end
+  end
 
   # describe "when user is not signed in" do
   #   it "should have a sign in link" do
