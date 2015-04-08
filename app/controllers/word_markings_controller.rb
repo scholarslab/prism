@@ -4,6 +4,7 @@ class WordMarkingsController < ApplicationController
 	end
 
 	def create
+		WordMarkings.create(word_marking_params)
 	end
 
 	def edit

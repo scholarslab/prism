@@ -8,7 +8,9 @@ include Devise::TestHelpers # to give your spec access to helpers
 	describe "signed in users" do
 
 		login_user
-		@prism = FactoryGirl.create(:prism)
+		# @prism = FactoryGirl.create(:prism)
+		# note - right now the factories don't register associations.
+		# so some of these might break when they are linked.
 
 		it "should have a current_user" do
 			get 'show'
