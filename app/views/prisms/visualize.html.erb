@@ -25,6 +25,9 @@ google.load("visualization", "1", {packages:["corechart"]});
   <p id="viz-count">
     <span><% if @prism.word_markings.map(&:user_id).uniq != nil %><%=@prism.word_markings.map(&:user_id).uniq.size %></span> <% if @prism.word_markings.map(&:user_id).uniq.size == 1%>user <% else%>users <%end%>contributed to this visualization.<% end %>
   </p>
+  <p id="highlight-link">
+    <%= link_to "Highlight Text", highlight_path(@prism), class: "button", id: "highlight-button" %>
+  </p>
 </div>
 
 
