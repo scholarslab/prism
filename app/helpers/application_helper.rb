@@ -1,12 +1,7 @@
 module ApplicationHelper
 
-  def title
-    base_title = "Prism"
-    if @title.nil?
-      base_title
-    else
-      "#{base_title} | #{@title}"
-    end
+  def title(page_title)
+    content_for(:title) { " | #{page_title}" }
   end
 
   def page_id
