@@ -10,7 +10,6 @@ class PrismsController < ApplicationController
 
   def index
     @prisms = Prism.paginate(:page => params[:page], :per_page => 10)
-    @title = "Browse"
 
     for prism in Prism.all
       if !prism.unlisted
@@ -25,7 +24,6 @@ class PrismsController < ApplicationController
   end
 
   def highlight
-    @title = "Highlight"
   end
 
   def highlight_post
