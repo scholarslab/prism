@@ -112,15 +112,6 @@ class PrismsController < ApplicationController
     end
   end
 
-  #def validate_colors
-    #for facet in [@facet1, @facet2, @facet3]
-      #if facet.color.to_s.strip.length!=6
-        #facet.color = "000000"
-        #facet.color[facet.order*2,2] = "FF"
-      #end
-    #end
-  #end
-
   def destroy
 
     respond_to do |format|
