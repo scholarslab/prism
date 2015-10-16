@@ -11,8 +11,8 @@ set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_i
 # Default value for :scm is :git
 # set :scm, :git
 
-# Default branch is :master
-#ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+# Default :15 is :master
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # if you want to clean up old releases on each deploy uncomment this:
 after "deploy:restart", "deploy:cleanup"
@@ -41,6 +41,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/sockets',
 set :migration_role, 'migrator'
 # Skip migration if files in db/migrate were not modified
 set :conditionally_migrate, true
+
 
 # Default value for keep_releases is 5
 set :keep_releases, 3
