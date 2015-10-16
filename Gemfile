@@ -59,6 +59,8 @@ group :development do
   gem "rails_best_practices"
   gem 'figaro'
   gem "foreman"
+  gem "capistrano"
+  gem "capistrano-passenger"
 end
 
 group :development, :test do
