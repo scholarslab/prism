@@ -1,9 +1,15 @@
-require "bundler/capistrano"
+# config valid only for current version of Capistrano
+lock '3.4.0'
 
 set :application, "prism"
-set :repository,  "git://github.com/scholarslab/prism.git"
-set :bundle_jobs, 2
-set :scm, :git
+set :repo_url,  "git://github.com/scholarslab/prism.git"
+
+set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
+
+set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_id_rsa")
+
+# Default value for :scm is :git
+# set :scm, :git
 
 # Default branch is :master
 #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -15,10 +21,6 @@ before "deploy", "deploy:assets:precompile"
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
-
-set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
-
-set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_id_rsa")
 
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -39,7 +41,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/sockets',
 # Default value for keep_releases is 5
 set :keep_releases, 3
 #set :rvm_map_bins, fetch(:rvm_map_bins, []).push('rvmsudo')
-set :passenger_restart_command, '/usr/local/rvm/gems/ruby-2.1.4/bin/passenger-config restart-app'
+#set :passenger_restart_command, '/usr/local/rvm/gems/ruby-2.1.4/bin/passenger-config restart-app'
 #set :passenger_restart_command, 'sudo passenger-config restart-app'
 set :passenger_restart_with_sudo, true
 
