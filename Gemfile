@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby "2.2.3"
-
 gem 'will_paginate', '~> 3.0'
 gem 'rails', '~>3.2.13'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'

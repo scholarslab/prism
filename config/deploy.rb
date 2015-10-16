@@ -38,6 +38,10 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/sockets',
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
+set :migration_role, 'migrator'
+# Skip migration if files in db/migrate were not modified
+set :conditionally_migrate, true
+
 # Default value for keep_releases is 5
 set :keep_releases, 3
 #set :rvm_map_bins, fetch(:rvm_map_bins, []).push('rvmsudo')
