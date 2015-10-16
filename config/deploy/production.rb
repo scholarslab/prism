@@ -6,7 +6,8 @@
 # server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
-server 'prism.lib.virginia.edu', user: 'deploy', roles: %w{app db web}
+#server 'prism.lib.virginia.edu', user: 'deployer', roles: %w{app db web}
+server 'prism.lib.virginia.edu', uuser: ENV['USER'], roles: %w{app db web}
 
 # role-based syntax
 # ==================

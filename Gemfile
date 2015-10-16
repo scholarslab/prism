@@ -60,6 +60,7 @@ group :development do
   gem 'figaro'
   gem "foreman"
   gem "capistrano"
+  gem "capistrano-rails"
   gem "capistrano-passenger"
 end
 
