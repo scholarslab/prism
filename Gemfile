@@ -29,7 +29,7 @@ gem 'airbrake', '~> 3.1.6'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem "nokogiri", "~> 1.5.0"
+gem "nokogiri", "~> 1.6"
 
 gem 'activerecord-import'
 
@@ -77,7 +77,7 @@ end
 group :test do
   gem 'turn', :require => false # Pretty printed test output
   gem "capybara", "~> 1.1.1"
-  gem "spork", "~> 1.0rc"
+  # gem "spork", "~> 1.0rc"
   gem 'rake'
   gem 'database_cleaner'
   gem 'minitest'
@@ -89,6 +89,6 @@ end
 
 group :production, :staging do
   gem "mysql2"
-  gem "pg"
+  # gem "pg"
   gem 'newrelic_rpm'
 end
