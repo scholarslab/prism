@@ -3,6 +3,7 @@ lock '3.4.0'
 
 set :application, "prism"
 set :repo_url,  "git://github.com/scholarslab/prism.git"
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
 
@@ -12,7 +13,6 @@ set :ssh_options, keys: ["config/deploy_id_rsa"] if File.exist?("config/deploy_i
 # set :scm, :git
 
 # Default :15 is :master
-ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # if you want to clean up old releases on each deploy uncomment this:
 after "deploy:restart", "deploy:cleanup"
