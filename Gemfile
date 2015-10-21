@@ -29,7 +29,9 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem "nokogiri", "~> 1.6"
 
+# Gems passenger compains about
 gem 'activerecord-import'
+gem 'rake'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -77,7 +79,6 @@ group :test do
   gem 'turn', :require => false # Pretty printed test output
   gem "capybara", "~> 1.1.1"
   # gem "spork", "~> 1.0rc"
-  gem 'rake'
   gem 'database_cleaner'
   gem 'minitest'
   gem 'ruby-prof'
