@@ -379,7 +379,7 @@ DEPENDENCIES
   puma
   rails (~> 3.2.13)
   rails_best_practices
-  rake
+  rake (~> 10.4.2)
   rspec-rails (~> 2.8.0)
   ruby-prof
   sass-rails

@@ -31,7 +31,7 @@ gem "nokogiri", "~> 1.6"
 
 # Gems passenger compains about
 gem 'activerecord-import'
-gem 'rake'
+gem 'rake', '~>10.4.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
