@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'spork'
+#require 'spork'
 
 require 'simplecov'
 SimpleCov.start 'rails'
@@ -22,7 +22,7 @@ SimpleCov.start 'rails'
 # ActiveRecord::Base.shared_connection = ActiveRecord::Base.connection
 
 
-Spork.prefork do
+#Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However, 
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
@@ -74,11 +74,11 @@ Spork.prefork do
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
   end
-end
+#end
 
-Spork.each_run do
+#Spork.each_run do
   # This code will be run each time you run your specs.
 
-end
+#end
 
 

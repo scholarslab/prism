@@ -4,7 +4,10 @@ env:
 language: ruby
 
 rvm:
-  - 2.2.0
+  - 2.2.3
+
+sudo: false
+cache: bundler
 
 notifications:
   irc: "irc.freenode.org#slab"
