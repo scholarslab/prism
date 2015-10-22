@@ -173,7 +173,7 @@ GEM
     multi_test (0.1.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.4.1)
+    mysql2 (0.3.16)
     nenv (0.2.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -370,7 +370,7 @@ DEPENDENCIES
   language_list
   memcachier (~> 0.0.2)
   minitest
-  mysql2
+  mysql2 (~> 0.3.10)
   newrelic_rpm
   nokogiri (~> 1.6)
   nyan-cat-formatter (~> 0.0.3)
