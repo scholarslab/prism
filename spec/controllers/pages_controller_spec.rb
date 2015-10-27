@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'factory_girl_rails'
 
 describe PagesController, :type => :controller do
   #render_views
@@ -64,22 +65,42 @@ describe "GET 'alumni'" do
     end
   end
 
-  describe "GET 'demo'" do
-    it "returns http success" do
-      get :demo
-      expect(response).to be_success
-      expect(response).to have_http_status(200)
+  describe "when user is signed in" do
+    before :each do
+      @users = User.where(:email => "fred.foonly@example.com")
+      if @users.length == 0
+        @user = Factory(:user)
+      else
+        @user = @users[0]
+      end
+      visit '/users/sign_in'
+      fill_in 'user_email', :with => @user.email
+      fill_in 'user_password', :with => "my_password"#@user.password
+      click_button 'Sign in'
     end
-    it "sets the title" do
-      get :demo
-      expect(assigns(:title)).to eq('Demo')
+    it "should have a sign out link" do
+      visit '/'
+      page.should have_selector('a', :text => 'Sign out')
     end
   end
 
-  before(:each) do
-    10.times do |populate|
-      #Factory.create(:prism)
+   describe "when user is signed in" do
+    before :each do
+      @users = User.where(:email => "fred.foonly_noemail@example.com")
+      if @users.length == 0
+        @user =Factory(:user)
+      else
+        @user = @users[0]
+      end
+      visit '/users/sign_in'
+      fill_in 'user_email', :with => @user.email
+      fill_in 'user_password', :with => "my_password"#@user.password
+      click_button 'Sign in'
     end
+    it "should display the current user's email." do
+        visit '/'
+        page.should have_content (@user.email)
+      end
   end
 
   # describe "when user is not signed in" do
@@ -91,7 +112,7 @@ describe "GET 'alumni'" do
 
 
   #describe "when user is signed in" do
-    #before :each do 
+    #before :each do
       #@users = User.where(:email => "fred.foonly@example.com")
       #if @users.length == 0
         #@user = Factory(:user)
@@ -106,7 +127,7 @@ describe "GET 'alumni'" do
     #it "should have a sign out link" do
       #visit '/'
       #page.should have_selector('a', :text => 'Sign out')
-    #end 
+    #end
   #end
 
    #describe "when user is signed in" do
@@ -121,11 +142,10 @@ describe "GET 'alumni'" do
       #fill_in 'user_email', :with => @user.email
       #fill_in 'user_password', :with => "my_password"#@user.password
       #click_button 'Sign in'
-    #end 
+    #end
     #it "should display the current user's email." do
         #visit '/'
         #page.should have_content (@user.email)
       #end
   #end
 end
-

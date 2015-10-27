@@ -1,3 +1,4 @@
+<% title "New Prism" %>
 <h1>New Prism</h1>
 
 <%= form_for(@prism) do |f| %>
@@ -15,7 +16,7 @@
 
   <div class="field" id="content">
     <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :placeholder => 'Required: The Text Your Group Will Be Highlighting' %>
   </div>
 
   <div id="sidebar">
@@ -44,7 +45,7 @@
 
     <div class="field">
       <%= f.label :title %>
-      <%= f.text_field :title, :placeholder => 'Required: Give your Prism a title!'  %>
+      <%= f.text_field :title, :placeholder => 'Required: Give Your Prism a Title!'  %>
     </div>
     <div class="field">
       <%= f.label :author %>
@@ -52,7 +53,7 @@
     </div>
     <div class="field">
       <%= f.label :publication_date %>
-      <%= f.text_field :publication_date, :placeholder => 'You know the drill...mm/dd/year'  %>
+      <%= f.text_field :publication_date, :placeholder => 'You Know the Drill...mm/dd/year'  %>
     </div>
     <div class="field">
       <% @language_dump = LanguageList::COMMON_LANGUAGES %>
