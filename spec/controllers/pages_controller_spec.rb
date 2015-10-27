@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'factory_girl'
+require 'factory_girl_rails'
 
 describe PagesController do
   include Devise::TestHelpers # to give your spec access to helpers
@@ -27,7 +27,7 @@ describe PagesController do
 
 
   describe "when user is signed in" do
-    before :each do 
+    before :each do
       @users = User.where(:email => "fred.foonly@example.com")
       if @users.length == 0
         @user = Factory(:user)
@@ -42,7 +42,7 @@ describe PagesController do
     it "should have a sign out link" do
       visit '/'
       page.should have_selector('a', :text => 'Sign out')
-    end 
+    end
   end
 
    describe "when user is signed in" do
@@ -57,11 +57,10 @@ describe PagesController do
       fill_in 'user_email', :with => @user.email
       fill_in 'user_password', :with => "my_password"#@user.password
       click_button 'Sign in'
-    end 
+    end
     it "should display the current user's email." do
         visit '/'
         page.should have_content (@user.email)
       end
   end
 end
-

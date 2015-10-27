@@ -74,12 +74,13 @@ group :development, :test do
   gem "guard"
   #gem "guard-coffeescript"
   gem 'forgery', '0.3.12'
+  gem 'test-unit'
 end
 
 group :test do
   gem 'turn', :require => false # Pretty printed test output
   gem "capybara", "~> 1.1.1"
-  # gem "spork", "~> 1.0rc"
+  gem "spork", "~> 1.0rc"
   gem 'database_cleaner'
   gem 'minitest'
   gem 'ruby-prof'
