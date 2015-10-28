@@ -63,6 +63,7 @@ group :development do
   gem "capistrano-rails"
   gem "capistrano-passenger"
   gem "capistrano-rvm"
+  gem "capistrano3-notification"
 end
 
 group :development, :test do

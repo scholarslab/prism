@@ -9,6 +9,10 @@ set :pty, true
 
 set :deploy_to, "/usr/local/projects/#{fetch(:application)}"
 
+# IRC notification settings
+set :irc_host, 'irc.freenode.net'
+set :irc_channel, '#slab'
+
 # Default value for :scm is :git
 # set :scm, :git
 
