@@ -52,7 +52,7 @@ set :keep_releases, 3
 #set :rvm_map_bins, fetch(:rvm_map_bins, []).push('rvmsudo')
 #set :passenger_restart_command, '/usr/local/rvm/gems/ruby-2.1.4/bin/passenger-config restart-app'
 #set :passenger_restart_command, 'sudo passenger-config restart-app'
-set :passenger_restart_with_sudo, true
+set :passenger_restart_with_sudo, false
 
 set :tmp_dir, "/tmp/#{ENV['USER']}"
 
