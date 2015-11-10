@@ -27,7 +27,7 @@ gem 'airbrake', '~> 3.1.6'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem "nokogiri", "~> 1.6"
+gem "nokogiri"
 
 # Gems passenger compains about
 gem 'activerecord-import'

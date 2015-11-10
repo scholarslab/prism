@@ -384,7 +384,7 @@ DEPENDENCIES
   minitest
   mysql2 (~> 0.3.10)
   newrelic_rpm
-  nokogiri (~> 1.6)
+  nokogiri
   nyan-cat-formatter (~> 0.0.3)
   omniauth
   omniauth-browserid
