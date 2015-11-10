@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, "prism"
-set :repo_url,  "git://github.com/scholarslab/prism.git"
+set :repo_url,  "https://github.com/scholarslab/prism.git"
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 set :pty, true
