@@ -86,7 +86,7 @@ group :test do
 end
 
 group :production, :staging do
-  gem "mysql2"
+  gem "mysql2", "~> 0.3.10"
   gem "pg"
   gem 'newrelic_rpm'
 end
