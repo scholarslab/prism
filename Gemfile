@@ -16,7 +16,7 @@ gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook', '~>3.0.0'
 gem 'omniauth-browserid'
-
+gem 'test-unit'
 
 gem 'puma'
 
