@@ -217,8 +217,8 @@ Devise.setup do |config|
       :client_options => 
         { 
           :ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'},
-          :site => 'https://graph.facebook.com/v1.6',
-          :authorize_url => "https://www.facebook.com/v2.1h"
+          :site => 'https://graph.facebook.com/v2.1',
+          :authorize_url => "https://www.facebook.com/v2.1/dialog/oauth"
         }
     }
 
