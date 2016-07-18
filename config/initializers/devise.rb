@@ -213,7 +213,6 @@ Devise.setup do |config|
   require "omniauth-facebook"
   config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"],
     {
-      :redirect_uri => 'http://prism-staging12.herokuapp.com/users/auth/facebook/',
       :scope => 'email',
       :client_options => 
         { 
