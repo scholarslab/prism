@@ -10,12 +10,13 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem "devise", "~> 2.2.0"
 
 gem 'omniauth'
-gem 'omniauth-oauth2', '~> 1.1.2'
+gem 'omniauth-oauth2', '~> 1.2'
 
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '~>3.0.0'
 gem 'omniauth-browserid'
+
 
 gem 'puma'
 
