@@ -1,6 +1,68 @@
 // Place all the styles related to the prism controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$alert-padding:               15px !default;
+$alert-link-font-weight:      bold !default;
+
+$border-radius-base:          4px !default;
+$alert-border-radius:         $border-radius-base !default;
+/*$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px*/
+$line-height-computed:        20px;
+$border-radius-base:          4px !default;
+
+$alert-border-radius:         $border-radius-base !default;
+$state-warning-bg:            #fcf8e3 !default;
+$state-warning-border:        darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-warning-text:          #8a6d3b !default;
+
+
+$state-warning-bg:            #fcf8e3 !default;
+$alert-warning-bg:            $state-warning-bg !default;
+$alert-warning-border:        $state-warning-border !default;
+$alert-warning-text:          $state-warning-text !default;
+
+@mixin alert-variant($background, $border, $text-color) {
+  background-color: $background;
+  border-color: $border;
+  color: $text-color;
+
+  hr {
+    border-top-color: darken($border, 5%);
+  }
+  .alert-link {
+    color: darken($text-color, 10%);
+  }
+}
+
+
+.alert {
+  padding: $alert-padding;
+  margin-bottom: $line-height-computed;
+  border: 1px solid transparent;
+  border-radius: $alert-border-radius;
+
+  h4 {
+    margin-top: 0;
+    color: inherit;
+  }
+
+  .alert-link {
+      font-weight: $alert-link-font-weight;
+  }
+
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  > p + p {
+    margin-top: 5px;
+  }
+}
+
+.alert-warning {
+  @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+}
 
 .vis_facet, #highlighters {
   .blue { background:  $blue; }

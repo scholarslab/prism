@@ -213,11 +213,14 @@ Devise.setup do |config|
   require "omniauth-facebook"
   config.omniauth :facebook, ENV["FACEBOOK_KEY"], ENV["FACEBOOK_SECRET"],
     {
-      :redirect_uri => 'http://prism-staging12.herokuapp.com/users/auth/facebook/',
       :scope => 'email',
-      :client_options => { :ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}
+      :client_options => 
+        { 
+          :ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'},
+          :site => 'https://graph.facebook.com/v2.1',
+          :authorize_url => "https://www.facebook.com/v2.1/dialog/oauth"
+        }
     }
-  }
 
   require "omniauth-google"
   config.omniauth :google, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]

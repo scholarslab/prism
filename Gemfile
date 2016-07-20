@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.2.3"
+
 gem 'will_paginate', '~> 3.0'
 gem 'rails', '~>3.2.13'
 # gem 'rails', github: 'rails/rails', branch: '3-2-stable'
@@ -8,12 +10,13 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem "devise", "~> 2.2.0"
 
 gem 'omniauth'
-gem 'omniauth-oauth2', '~> 1.1.2'
+gem 'omniauth-oauth2', '~> 1.2'
 
 gem 'omniauth-google'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-facebook'
+gem 'omniauth-facebook', '~>3.0.0'
 gem 'omniauth-browserid'
+gem 'test-unit'
 
 gem 'puma'
 
