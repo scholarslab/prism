@@ -41,9 +41,11 @@ class PrismsController < ApplicationController
     @title = "Visualize"
 
     @prism = Prism.includes(:word_markings).find(params[:id])
-    @word_markings = @prism.word_markings
-    @usercounter = 0
 
+    # doesn't seem to ever get used?
+    # @word_markings = @prism.word_markings
+    @usercounter = 0
+    @user_num = @prism.word_markings.map(&:user_id).uniq
     @frequencies = @prism.calc_frequencies
 
   end

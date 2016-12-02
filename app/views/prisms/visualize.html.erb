@@ -24,7 +24,16 @@ google.load("visualization", "1", {packages:["corechart"]});
   <%= render 'vizopts', :facets => @prism.facets, :frequencies => @frequencies %>
   <p><%= render 'cc_license', :license => @prism.license.downcase %></p>
   <p id="viz-count">
-    <span><% if @prism.word_markings.map(&:user_id).uniq != nil %><%=@prism.word_markings.map(&:user_id).uniq.size %></span> <% if @prism.word_markings.map(&:user_id).uniq.size == 1%>user <% else%>users <%end%>contributed to this visualization.<% end %>
+    <span>
+    <% if @user_num != nil %>
+    <%=@user_num.size %></span> 
+    <% if @user_num.size == 1%>
+      user 
+    <% else%>
+      users 
+      <%end%>
+      contributed to this visualization.
+    <% end %>
   </p>
   <p id="highlight-link">
     <%= link_to "Highlight Text", highlight_path(@prism), class: "button", id: "highlight-button" %>
