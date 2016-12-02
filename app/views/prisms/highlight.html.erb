@@ -6,11 +6,10 @@ $(setup_highlight);
 <% end %>
 
 <div id="Prismabob">
-  <h1><%= @prism.title.html_safe %></h1>
+  <h1><%= @prism.title.html_safe + " - " + @prism.publication_date %></h1>
   <h2><%= @prism.author %></h2>
   <div class="text noselect" unselectable="on">
     <%= @prism.content.html_safe %>
-    <p id ="publication_date"><%= @prism.publication_date %> </p>
   </div>
 </div>
 
