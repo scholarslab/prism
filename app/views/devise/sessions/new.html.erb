@@ -5,7 +5,6 @@
     <h2>Sign In with Social Media</h2>
 
     <%= link_to image_tag('facebook.png'), omniauth_authorize_path(resource_name, "facebook") %>
-    <%= link_to image_tag('persona.png'), url_for("/users/auth/browser_id"), :id => 'browser_id_link' %>
     <%= link_to image_tag('google.png'), omniauth_authorize_path(resource_name, "google_oauth2") %>
 
   </div>
@@ -49,7 +48,8 @@
     <p id="privacy"> <%= t'log-in.privacy_html' %></p>
 
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :placeholder => 
+      'Must be at least six characters' %>
 
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
