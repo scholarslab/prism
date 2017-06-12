@@ -24,6 +24,7 @@ gem "uuidtools"
 
 gem "language_list"
 gem 'cancan'
+gem 'yaml_db'
 
 # Error notifications
 gem 'airbrake', '~> 3.1.6'
