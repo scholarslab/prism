@@ -218,10 +218,15 @@ Devise.setup do |config|
         {
           :ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'},
           :site => 'https://graph.facebook.com/v2.8',
-          :authorize_url => "https://www.facebook.com/v2.1/dialog/oauth"
+          :authorize_url => "https://www.facebook.com/v2.8/dialog/oauth"
         }
     }
-
+  puts "======"
+  puts 'Facebook key: '
+  puts ENV['FACEBOOK_KEY']
+  puts 'Facebook secret:'
+  puts ENV['FACEBOOK_SECRET']
+  puts '======'
   require "omniauth-google"
   config.omniauth :google, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
 
