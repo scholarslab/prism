@@ -36,6 +36,7 @@ gem "nokogiri"
 # Gems passenger compains about
 gem 'activerecord-import'
 gem 'rake', '~>10.4.2'
+gem 'sqlite3', "~> 1.3.4"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -71,7 +72,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'sqlite3', "~> 1.3.4"
   gem "rspec-rails", "~> 2.8.0"
   gem "simplecov", "~> 0.8.2"
   gem "factory_girl_rails", "~> 1.3.0"
