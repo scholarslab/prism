@@ -16,3 +16,4 @@ latest.dump
 # Ignore application configuration
 /config/application.yml
 db/data.yml
+Capfile
