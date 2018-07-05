@@ -79,7 +79,7 @@ This software is released under the [Apache 2.0][license].
 [license]: LICENSE "LICENSE"
 
 ## Production Workflow
-
+```
 Make sure you're up to date:
 $ git pull
 edit
@@ -98,3 +98,4 @@ To deploy to capistrano
 git checkout feature/capistrano
 git merge master
 cap production deploy
+```
