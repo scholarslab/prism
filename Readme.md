@@ -77,3 +77,24 @@ This software is released under the [Apache 2.0][license].
 [fork]: http://help.github.com/fork-a-repo/
 [pull]: http://help.github.com/send-pull-requests/
 [license]: LICENSE "LICENSE"
+
+## Production Workflow
+
+Make sure you're up to date:
+$ git pull
+edit
+test things locally:
+$ rails s
+Commit things if working:
+$ git add files
+$ git commit –m 'message'
+If works, test on staging, where staging is the name of the git remote pointing to the heroku: staging site – prism-staging12
+$ git push staging master
+if functionality is there, push to the github repository –
+$ git push origin master
+
+To deploy to capistrano
+[after editing and committing to master branch]
+git checkout feature/capistrano
+git merge master
+cap production deploy
