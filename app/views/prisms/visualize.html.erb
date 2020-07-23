@@ -9,7 +9,8 @@ $(function() {
     $( "#visualizations" ).accordion({heightStyle: "content"});
 });
 
-google.load("visualization", "1", {packages:["corechart"]});
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 </script>
 
 <div id="Prismabob">
