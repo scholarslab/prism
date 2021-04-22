@@ -164,7 +164,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     nyan-cat-formatter (0.0.9)
-    oauth (0.4.7)
+    oauth (0.5.6)
     oauth2 (1.2.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
