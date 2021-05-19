@@ -151,6 +151,7 @@ GEM
     memcachier (0.0.2)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mini_portile2 (2.4.0)
     minitest (4.7.5)
     multi_json (1.12.1)
     multi_test (0.1.2)
@@ -159,7 +160,8 @@ GEM
     mysql2 (0.3.18)
     nenv (0.2.0)
     newrelic_rpm (3.14.0.305)
-    nokogiri (1.5.11)
+    nokogiri (1.9.1)
+      mini_portile2 (~> 2.4.0)
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -349,7 +351,7 @@ DEPENDENCIES
   minitest
   mysql2 (~> 0.3.10)
   newrelic_rpm
-  nokogiri (~> 1.5.0)
+  nokogiri (~> 1.9.1)
   nyan-cat-formatter (~> 0.0.3)
   omniauth
   omniauth-browserid

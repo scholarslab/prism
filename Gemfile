@@ -31,7 +31,7 @@ gem 'airbrake', '~> 3.1.6'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem "nokogiri", "~> 1.5.0"
+gem "nokogiri", "~> 1.9.1"
 
 gem 'activerecord-import'
 gem 'sqlite3', "~> 1.3.4"
